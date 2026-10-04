@@ -732,5 +732,149 @@
       "forest_mushroom_small": 3,
       "forest_waterfall": 1
     }
+  },
+  {
+    "asset": "environment/components/forest_butterfly_cyan",
+    "asset_id": "environment/components/forest_butterfly_cyan",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "a925fc587a27d1bd8c3060694574692a189d26eae3996947501923629d662d23",
+    "glb_sha256": "43067049e83fc117922c16f186133bb991bd31793fe353e6f5f597615028fcf6"
+  },
+  {
+    "asset": "environment/components/forest_butterfly_sunset",
+    "asset_id": "environment/components/forest_butterfly_sunset",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "a925fc587a27d1bd8c3060694574692a189d26eae3996947501923629d662d23",
+    "glb_sha256": "56134d27ae19dabdf491ef5ae923305196bcc18a1815cf78d3d52ef2ee963594"
+  },
+  {
+    "asset": "environment/components/forest_hollow_tree",
+    "asset_id": "environment/components/forest_hollow_tree",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "a925fc587a27d1bd8c3060694574692a189d26eae3996947501923629d662d23",
+    "glb_sha256": "c8f5cf4f06aef9cc7414d879cd3bb4755407fbec4169c5c4f5aa8d22e678f8ea"
+  },
+  {
+    "asset": "environment/components/forest_jackalope",
+    "asset_id": "environment/components/forest_jackalope",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "a925fc587a27d1bd8c3060694574692a189d26eae3996947501923629d662d23",
+    "glb_sha256": "f6d8ff16aec90fb4e3960a99f9412a0fc80365a6aef1fb463159883e29ab5448"
+  },
+  {
+    "asset": "environment/components/forest_lantern_flower",
+    "asset_id": "environment/components/forest_lantern_flower",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "a925fc587a27d1bd8c3060694574692a189d26eae3996947501923629d662d23",
+    "glb_sha256": "cb386f1001b948e126970bb0d51fc3e87e19639d9cd1e8269070066d89ab456e"
+  },
+  {
+    "asset": "environment/components/forest_lantern_snail",
+    "asset_id": "environment/components/forest_lantern_snail",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "a925fc587a27d1bd8c3060694574692a189d26eae3996947501923629d662d23",
+    "glb_sha256": "b2693993b574e86743cfa5cb133831be1483e70d99af8121886f731bae4b9c65"
+  },
+  {
+    "asset": "environment/components/forest_moon_moth",
+    "asset_id": "environment/components/forest_moon_moth",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "a925fc587a27d1bd8c3060694574692a189d26eae3996947501923629d662d23",
+    "glb_sha256": "d5f8a0224aa3d36342d9c2c9b993e630919985ce9071a8a4c445c6e0549aef48"
+  },
+  {
+    "asset": "environment/components/forest_spiral_fern",
+    "asset_id": "environment/components/forest_spiral_fern",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "a925fc587a27d1bd8c3060694574692a189d26eae3996947501923629d662d23",
+    "glb_sha256": "dbc8161adb560e647dfdbe1965f660e33d882ba666b1f2a7d411b4e3e3a8b306"
+  },
+  {
+    "asset": "environment/components/forest_spiral_tree",
+    "asset_id": "environment/components/forest_spiral_tree",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "a925fc587a27d1bd8c3060694574692a189d26eae3996947501923629d662d23",
+    "glb_sha256": "c49a9dfd4cd1ebd52a05c04eddeeb72c88fb83eee599410764fe1c2981b82260"
+  },
+  {
+    "asset": "environment/hex_butterfly_glade",
+    "asset_id": "environment/hex_butterfly_glade",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "82a553ff192d20a66fec81da7c4065fe6abd6fe3f23f7aa77d44a8ce7d4b8c8b",
+    "glb_sha256": "88f0569f9c880509f93acb2f8c4f3bebee94506b070d66d3de339d3fef233cb9",
+    "shared_kit_instances": {
+      "forest_boulder": 1,
+      "forest_butterfly_cyan": 2,
+      "forest_butterfly_sunset": 2,
+      "forest_fern": 4,
+      "forest_hex_meadow": 1,
+      "forest_lantern_flower": 3,
+      "forest_leaf_clump": 18,
+      "forest_moon_moth": 1,
+      "forest_moss": 6,
+      "forest_mushroom_purple": 1,
+      "forest_mushroom_small": 3,
+      "forest_spiral_fern": 1,
+      "forest_spiral_tree": 1
+    }
+  },
+  {
+    "asset": "environment/hex_dream_menagerie",
+    "asset_id": "environment/hex_dream_menagerie",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "3152a9c23c5affdbce818aad11c4e4c1dd51482c634fbc7d8754a922c5adc285",
+    "glb_sha256": "b951f6fffc707a2b7ef3314e0659f4c72450dddec9ebb58bb4f55098433bb67a",
+    "shared_kit_instances": {
+      "forest_boulder": 1,
+      "forest_butterfly_cyan": 1,
+      "forest_butterfly_sunset": 1,
+      "forest_crystal_purple": 1,
+      "forest_fern": 4,
+      "forest_hex_meadow": 1,
+      "forest_jackalope": 2,
+      "forest_lantern_flower": 1,
+      "forest_lantern_snail": 1,
+      "forest_leaf_clump": 18,
+      "forest_moss": 6,
+      "forest_mushroom_blue": 1,
+      "forest_mushroom_purple": 1,
+      "forest_mushroom_small": 3,
+      "forest_spiral_fern": 2
+    }
+  },
+  {
+    "asset": "environment/hex_hollow_watchers",
+    "asset_id": "environment/hex_hollow_watchers",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "8f9c6ff4c7383ff94ba709ee8cadfffa4369bcb8ffa0ece18ef85d597ddb53de",
+    "glb_sha256": "c3e7367fea62376e21fad6866b1fd8b94fdfb1af3f1005316d7e2353600f9701",
+    "shared_kit_instances": {
+      "forest_boulder": 1,
+      "forest_crystal_purple": 1,
+      "forest_fern": 4,
+      "forest_hex_meadow": 1,
+      "forest_hollow_tree": 1,
+      "forest_lantern_flower": 1,
+      "forest_lantern_snail": 1,
+      "forest_leaf_clump": 18,
+      "forest_moon_moth": 2,
+      "forest_moss": 6,
+      "forest_mushroom_blue": 1,
+      "forest_mushroom_purple": 1,
+      "forest_mushroom_small": 3,
+      "forest_spiral_fern": 1
+    }
   }
 ]

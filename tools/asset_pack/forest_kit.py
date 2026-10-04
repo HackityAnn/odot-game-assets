@@ -29,16 +29,17 @@ def reset():
     PROTOTYPES.clear();palette()
 
 
-def place(kind,pos=(0,0,0),scale=1,rotation=(0,0,0)):
-    if kind not in PROTOTYPES:
-        with bpy.data.libraries.load(str(LIBRARY),link=False) as (_,dest):
+def place(kind,pos=(0,0,0),scale=1,rotation=(0,0,0),*,library=LIBRARY,prototypes=None):
+    prototypes=PROTOTYPES if prototypes is None else prototypes
+    if kind not in prototypes:
+        with bpy.data.libraries.load(str(library),link=False) as (_,dest):
             dest.collections=['forest_'+kind]
         if dest.collections[0] is None:raise ValueError('Unknown forest component: '+kind)
-        PROTOTYPES[kind]=dest.collections[0]
+        prototypes[kind]=dest.collections[0]
     root=g.empty(kind+'_instance',pos);root.rotation_euler=rotation
     root.scale=(scale,)*3 if isinstance(scale,(int,float)) else scale
-    root['kit_asset']='forest_'+kind;root['kit_source']='sources/environment/shared_forest_kit.blend'
-    for original in PROTOTYPES[kind].objects:
+    root['kit_asset']='forest_'+kind;root['kit_source']=library.relative_to(g.ROOT).as_posix()
+    for original in prototypes[kind].objects:
         obj=original.copy();g.CURRENT.objects.link(obj);obj.parent=root
         obj.matrix_parent_inverse=Matrix.Identity(4);obj.matrix_basis=original.matrix_basis.copy()
     return root

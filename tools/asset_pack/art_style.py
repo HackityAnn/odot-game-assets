@@ -33,6 +33,7 @@ def material_name(name):
 
 
 FAMILY_PREFIXES = (
+    ('wing', 'wing'), ('fur', 'fur'),
     ('crystal', 'crystal'), ('mushroom', 'mushroom'), ('forest_leaf', 'leaf'),
     ('leaf', 'leaf'), ('grass', 'ground'), ('moss', 'moss'), ('pine', 'leaf'),
     ('wood', 'wood'), ('bark', 'wood'), ('roof', 'roof'), ('stone', 'stone'),
@@ -223,6 +224,19 @@ BASE_COLORS = {'wood': (0.43, 0.245, 0.115),
  'magic': (0.86, 0.19, 1)}
 
 PAINTED_COLORS = {'wood': (0.36, 0.18, 0.075),
+ 'bark_haunted': (0.29, 0.24, 0.32),
+ 'bark_haunted_light': (0.43, 0.36, 0.45),
+ 'forest_leaf_lilac': (0.59, 0.40, 0.70),
+ 'forest_leaf_teal': (0.22, 0.53, 0.46),
+ 'wing_cyan': (0.18, 0.73, 0.77),
+ 'wing_coral': (0.89, 0.44, 0.40),
+ 'wing_moon': (0.70, 0.75, 0.86),
+ 'wing_lilac': (0.66, 0.38, 0.76),
+ 'wing_border': (0.20, 0.23, 0.33),
+ 'fur_lavender': (0.56, 0.48, 0.63),
+ 'fur_cream': (0.86, 0.80, 0.65),
+ 'fur_teal': (0.32, 0.55, 0.49),
+ 'fur_coral': (0.89, 0.44, 0.40),
  'wood_light': (0.56, 0.3, 0.12),
  'wood_edge': (0.74, 0.43, 0.18),
  'wood_dark': (0.17, 0.085, 0.035),

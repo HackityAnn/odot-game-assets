@@ -251,6 +251,34 @@ The catalog maps each component to its source collection in the shared library.
 once in `forest_kit.py`. Repeated instances share mesh datablocks in each source.
 Rebuild the library and tiles explicitly to propagate a library edit.
 
+The dreaming forest expansion adds nine reusable components in
+`sources/environment/shared_enchanted_kit.blend`: a hollow watcher tree, spiral
+willow, cyan and sunset butterflies, a long-tailed moon moth, lavender jackalope,
+lantern snail, hanging lantern flower, and spiral fern. The animals are static
+scenery; butterflies and moths have body-centered flight pivots, while the other
+components have ground-zero placement origins. Painted wing eyespots and soft fur
+washes travel as packed image maps. Trees retain broad wood planes, and glow is
+limited to eyes, seed lanterns and mushroom undersides.
+
+Three complete tiles combine these pieces with the original forest library:
+`hex_hollow_watchers`, `hex_butterfly_glade`, and `hex_dream_menagerie`. Each has
+an editable source, GLB and rendered preview; every new component also has a GLB
+and catalog thumbnail. The companion library preserves the original library and
+its authored tiles. To explicitly rebuild this expansion:
+
+```sh
+python3 -m tools.asset_pack.worker tools/asset_pack/enchanted_kit.py --label enchanted-kit
+python3 -m tools.asset_pack.worker tools/asset_pack/enchanted_tiles.py --label enchanted-tiles
+mise run asset-check -- environment/hex_hollow_watchers environment/hex_butterfly_glade environment/hex_dream_menagerie
+python3 -m tools.asset_pack.worker tools/asset_pack/verify_forest_blender.py --label dreaming-grid-validation hex_hollow_watchers hex_butterfly_glade hex_dream_menagerie
+```
+
+Pass tile names and `--no-render` to the tile builder to select sources or skip
+rendering. As with the original library, preserve manual edits before rebuilding.
+Use canonical `environment/components/forest_<name>` IDs to check or refresh
+individual component exports. Forest grid validation covers both libraries and
+checks that embedded components match their respective authored prototypes.
+
 Forest hexes use a flat-top footprint with radius **2.55**, meadow surface
 **Z = 0**, and foundation bottom **Z = −0.36** in Blender. Neighbor columns are
 **3.825** apart; rows are **4.41672956** apart, with alternate columns offset by

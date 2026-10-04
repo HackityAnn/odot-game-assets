@@ -69,6 +69,19 @@ def fields(kind, size):
         tint[:, :, 0] = .83 + .23 * v
         tint[:, :, 2] = 1.04 - .20 * v
         height += .012 * vein + .004 * branches
+    elif kind == 'wing':
+        # Soft eye markings and veins stay in the map, with darker wing roots.
+        value = .66 + .32 * v + .07 * wash
+        veins = np.exp(-(np.sin((u - .5) * 15 / (.25 + v)) / .13) ** 2)
+        eye = np.minimum(np.sqrt(((u - .26) / .14) ** 2 + ((v - .68) / .15) ** 2),
+                         np.sqrt(((u - .70) / .13) ** 2 + ((v - .58) / .14) ** 2))
+        value -= .32 * np.exp(-((eye - .78) / .20) ** 2)
+        value += .19 * np.exp(-(eye / .42) ** 2) - .035 * veins
+        tint[:, :, 0] = .83 + .27 * v
+        tint[:, :, 2] = 1.09 - .12 * v
+    elif kind == 'fur':
+        value = .79 + .17 * v + .06 * wash + .012 * grain
+        tint[:, :, 0] = .95 + .07 * v
     elif kind == 'wood':
         lines = np.sin(u * 124 + .8 * np.sin(v * 15) + .3 * wash)
         knots = np.exp(-((u - .36) / .13) ** 2 - ((v - .64) / .09) ** 2)
@@ -126,6 +139,18 @@ def texture_material(mat, directory):
     value, tint, height = fields(kind, size)
     color = np.array(shader.inputs['Base Color'].default_value[:3], dtype=np.float32)
     linear = np.clip(color * value[:, :, None] * tint, 0, 1)
+    if kind == 'wing' and base != 'wing_border':
+        v, u = np.mgrid[0:size, 0:size].astype(np.float32) / (size - 1)
+        tips = {'wing_cyan': (.68, .38, .76), 'wing_coral': (.98, .73, .32),
+                'wing_moon': (.53, .47, .73), 'wing_lilac': (.28, .69, .75)}
+        tip = np.array(style.srgb_to_linear(tips[base]), dtype=np.float32)
+        blend = np.clip((v - .46) * 1.35, 0, .63)
+        linear = linear * (1 - blend[:, :, None]) + tip * blend[:, :, None] * value[:, :, None]
+        eye = np.minimum(np.sqrt(((u - .26) / .14) ** 2 + ((v - .68) / .15) ** 2),
+                         np.sqrt(((u - .70) / .13) ** 2 + ((v - .58) / .14) ** 2))
+        center = np.exp(-(eye / .42) ** 4) * .74
+        seed = np.array(style.srgb_to_linear((.94, .83, .57)), dtype=np.float32)
+        linear = linear * (1 - center[:, :, None]) + seed * center[:, :, None]
     if kind == 'crystal':
         v,u=np.mgrid[0:size,0:size].astype(np.float32)/(size-1)
         def linear_color(rgb):
@@ -249,7 +274,8 @@ def ground(collection, name, category='environment'):
         scale = max(abs(c) for c in obj.matrix_world.to_scale())
         if pos.z > .15:
             continue
-        if any(word in kind for word in ('boulder', 'monolith', 'mushroom', 'crystal', 'tree_snag')):
+        if any(word in kind for word in ('boulder', 'monolith', 'mushroom', 'crystal', 'tree_snag',
+                                         'hollow_tree', 'spiral_tree', 'jackalope', 'snail', 'lantern_flower')):
             radius = (.21 if 'crystal' in kind else .28) * scale
             shadow = np.exp(-((x - pos.x) ** 2 + (y - pos.y) ** 2) / max(.02, radius ** 2))
             linear *= (1 - style.TEXTURES.contact_strength * shadow[:, :, None])

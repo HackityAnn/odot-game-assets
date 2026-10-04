@@ -493,6 +493,75 @@
         "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png"
       },
       "preview": null
+    },
+    "exports/environment/components/forest_hollow_tree.glb": {
+      "title": "Hollow Watcher Tree",
+      "source": "sources/environment/shared_enchanted_kit.blend",
+      "export_collection": "forest_hollow_tree",
+      "preview": null
+    },
+    "exports/environment/components/forest_spiral_tree.glb": {
+      "title": "Dream Spiral Willow",
+      "source": "sources/environment/shared_enchanted_kit.blend",
+      "export_collection": "forest_spiral_tree",
+      "preview": null
+    },
+    "exports/environment/components/forest_butterfly_cyan.glb": {
+      "title": "Painted Cyan Butterfly",
+      "source": "sources/environment/shared_enchanted_kit.blend",
+      "export_collection": "forest_butterfly_cyan",
+      "preview": null
+    },
+    "exports/environment/components/forest_butterfly_sunset.glb": {
+      "title": "Painted Sunset Butterfly",
+      "source": "sources/environment/shared_enchanted_kit.blend",
+      "export_collection": "forest_butterfly_sunset",
+      "preview": null
+    },
+    "exports/environment/components/forest_moon_moth.glb": {
+      "title": "Long-Tailed Moon Moth",
+      "source": "sources/environment/shared_enchanted_kit.blend",
+      "export_collection": "forest_moon_moth",
+      "preview": null
+    },
+    "exports/environment/components/forest_jackalope.glb": {
+      "title": "Lavender Jackalope",
+      "source": "sources/environment/shared_enchanted_kit.blend",
+      "export_collection": "forest_jackalope",
+      "preview": null
+    },
+    "exports/environment/components/forest_lantern_snail.glb": {
+      "title": "Lantern Snail",
+      "source": "sources/environment/shared_enchanted_kit.blend",
+      "export_collection": "forest_lantern_snail",
+      "preview": null
+    },
+    "exports/environment/components/forest_lantern_flower.glb": {
+      "title": "Hanging Lantern Flower",
+      "source": "sources/environment/shared_enchanted_kit.blend",
+      "export_collection": "forest_lantern_flower",
+      "preview": null
+    },
+    "exports/environment/components/forest_spiral_fern.glb": {
+      "title": "Dream Spiral Fern",
+      "source": "sources/environment/shared_enchanted_kit.blend",
+      "export_collection": "forest_spiral_fern",
+      "preview": null
+    },
+    "exports/environment/hex_hollow_watchers.glb": {
+      "title": "Hollow Watchers Grove",
+      "source": "sources/environment/hex_hollow_watchers.blend",
+      "preview": "exports/previews/hex_hollow_watchers.png"
+    },
+    "exports/environment/hex_butterfly_glade.glb": {
+      "title": "Butterfly Dream Glade",
+      "source": "sources/environment/hex_butterfly_glade.blend",
+      "preview": "exports/previews/hex_butterfly_glade.png"
+    },
+    "exports/environment/hex_dream_menagerie.glb": {
+      "title": "Dream Forest Menagerie",
+      "source": "sources/environment/hex_dream_menagerie.blend",
+      "preview": "exports/previews/hex_dream_menagerie.png"
     }
   }
 }
