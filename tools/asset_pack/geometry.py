@@ -187,6 +187,7 @@ def empty(name, pos=(0,0,0)):
     obj=bpy.data.objects.new(name,None)
     CURRENT.objects.link(obj)
     obj.location=pos
+    obj.empty_display_size=.06
     return obj
 
 
@@ -339,11 +340,22 @@ def fence(a,b,posts=4,height=.65):
         beam('Fence rail',a+Vector((0,0,z)),b+Vector((0,0,z)),.11,.09,'wood_edge',.015)
 
 
+def drop_reference_images(keep=None):
+    """Discard packed references from previous assets in an owned worker file."""
+    keep=Path(keep).resolve() if keep else None
+    for image in list(bpy.data.images):
+        if not image.filepath: continue
+        path=Path(bpy.path.abspath(image.filepath)).resolve()
+        if path.is_relative_to(ROOT/'sources/reference') and path!=keep:
+            bpy.data.images.remove(image)
+
+
 def clear_scene():
     if bpy.context.object and bpy.context.object.mode != 'OBJECT': bpy.ops.object.mode_set(mode='OBJECT')
     for obj in list(bpy.data.objects): bpy.data.objects.remove(obj,do_unlink=True)
     for col in list(bpy.data.collections): bpy.data.collections.remove(col)
     for action in list(bpy.data.actions): bpy.data.actions.remove(action)
+    drop_reference_images()
     RNG.seed(407)
     palette()
 
@@ -382,4 +394,5 @@ def studio(target_z=1.6, scale=6.7):
             if area.type=='VIEW_3D':
                 enum(area.spaces.active.region_3d,'view_perspective','CAMERA')
                 enum(area.spaces.active.shading,'type','MATERIAL')
+                area.spaces.active.overlay.show_overlays=False
     return col

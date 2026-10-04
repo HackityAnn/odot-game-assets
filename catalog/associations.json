@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "assets": {
+    "exports/buildings/tree_house.glb": {
+      "title": "Tree House",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          0,
+          0,
+          382,
+          440
+        ]
+      },
+      "preview": "exports/previews/tree_house.png"
+    },
+    "exports/buildings/bakery.glb": {
+      "title": "Bakery",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          383,
+          0,
+          384,
+          440
+        ]
+      },
+      "preview": "exports/previews/bakery.png"
+    },
+    "exports/buildings/gold_mine.glb": {
+      "title": "Gold Mine",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          769,
+          0,
+          383,
+          440
+        ]
+      },
+      "preview": "exports/previews/gold_mine.png"
+    },
+    "exports/buildings/woodcutter_hut.glb": {
+      "title": "Woodcutter’s Hut",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          1153,
+          0,
+          383,
+          440
+        ]
+      },
+      "preview": "exports/previews/woodcutter_hut.png"
+    },
+    "exports/characters/knight.glb": {
+      "title": "Knight",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          0,
+          515,
+          486,
+          388
+        ]
+      },
+      "preview": "exports/previews/knight.png",
+      "animation_policy": {
+        "idle": true,
+        "walk": true,
+        "run": true,
+        "attack": false,
+        "hit": false,
+        "death": false
+      }
+    },
+    "exports/characters/mage.glb": {
+      "title": "Mage",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          488,
+          515,
+          499,
+          388
+        ]
+      },
+      "preview": "exports/previews/mage.png",
+      "animation_policy": {
+        "idle": true,
+        "walk": true,
+        "run": true,
+        "attack": false,
+        "hit": false,
+        "death": false
+      }
+    },
+    "exports/characters/archer.glb": {
+      "title": "Archer",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          989,
+          515,
+          547,
+          388
+        ]
+      },
+      "preview": "exports/previews/archer.png",
+      "animation_policy": {
+        "idle": true,
+        "walk": true,
+        "run": true,
+        "attack": false,
+        "hit": false,
+        "death": false
+      }
+    },
+    "exports/buildings/arrow_tower.glb": {
+      "title": "Arrow Tower",
+      "reference": {
+        "path": "sources/reference/autobattler/arrow_tower.png"
+      },
+      "preview": "exports/previews/arrow_tower.png"
+    },
+    "exports/buildings/barracks.glb": {
+      "title": "Barracks",
+      "reference": {
+        "path": "sources/reference/autobattler/barracks.png"
+      },
+      "preview": "exports/previews/barracks.png"
+    },
+    "exports/characters/berserker.glb": {
+      "title": "Berserker",
+      "reference": {
+        "path": "sources/reference/autobattler/berserker.png"
+      },
+      "preview": "exports/previews/berserker.png"
+    },
+    "exports/buildings/bombarding_tower.glb": {
+      "title": "Bombarding Tower",
+      "reference": {
+        "path": "sources/reference/autobattler/bombarding_tower.png"
+      },
+      "preview": "exports/previews/bombarding_tower.png"
+    },
+    "exports/buildings/magic_academy.glb": {
+      "title": "Magic Academy",
+      "reference": {
+        "path": "sources/reference/autobattler/magic_academy.png"
+      },
+      "preview": "exports/previews/magic_academy.png"
+    },
+    "exports/buildings/stone_cutter.glb": {
+      "title": "Stone Cutter",
+      "reference": {
+        "path": "sources/reference/autobattler/stone_cutter.png"
+      },
+      "preview": "exports/previews/stone_cutter.png"
+    },
+    "exports/buildings/tavern.glb": {
+      "title": "Tavern",
+      "reference": {
+        "path": "sources/reference/autobattler/tavern.png"
+      },
+      "preview": "exports/previews/tavern.png"
+    },
+    "exports/buildings/trade_market.glb": {
+      "title": "Trade Market",
+      "reference": {
+        "path": "sources/reference/autobattler/trade_market.png"
+      },
+      "preview": "exports/previews/trade_market.png"
+    },
+    "exports/environment/hex_meadow_building.glb": {
+      "export_collection": "DISPLAY_TERRAIN"
+    },
+    "exports/environment/hex_meadow_character.glb": {
+      "export_collection": "DISPLAY_TERRAIN"
+    }
+  }
+}

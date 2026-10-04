@@ -1,0 +1,94 @@
+name: Asset catalog
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  BLENDER_VERSION: '5.2.2'
+
+concurrency:
+  group: catalog-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Test discovery, metadata, and static packaging
+        run: python -m unittest tools.asset_catalog.test_catalog tools.asset_catalog.test_build_site tools.asset_catalog.test_export_sources -v
+      - name: Install Blender system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends libegl1 libgl1 libxkbcommon0 libxrender1 libxi6 libxxf86vm1 libsm6
+      - name: Restore pinned Blender installation
+        id: blender
+        uses: actions/cache@v5
+        with:
+          path: .cache/blender
+          key: ${{ runner.os }}-${{ runner.arch }}-blender-${{ env.BLENDER_VERSION }}
+      - name: Install pinned Blender from the official archive
+        if: steps.blender.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          blender_archive="blender-${BLENDER_VERSION}-linux-x64.tar.xz"
+          blender_release="${BLENDER_VERSION%.*}"
+          blender_install_path="${GITHUB_WORKSPACE}/.cache/blender"
+          mkdir -p "$blender_install_path"
+          cd "$RUNNER_TEMP"
+          curl --fail --location --retry 3 --output "$blender_archive" "https://download.blender.org/release/Blender${blender_release}/${blender_archive}"
+          curl --fail --location --retry 3 --output blender.sha256 "https://download.blender.org/release/Blender${blender_release}/blender-${BLENDER_VERSION}.sha256"
+          sha256sum --check --ignore-missing blender.sha256
+          tar --extract --xz --file "$blender_archive" --strip-components=1 --directory "$blender_install_path"
+      - name: Add Blender to PATH
+        run: |
+          echo "${GITHUB_WORKSPACE}/.cache/blender" >> "$GITHUB_PATH"
+          .cache/blender/blender --version
+      - name: Export authored Blender sources to GLB
+        run: python -m tools.asset_catalog export
+      - name: Restore incremental thumbnail state
+        uses: actions/cache@v5
+        with:
+          path: exports/thumbnails
+          key: catalog-thumbnails-${{ runner.os }}-${{ env.BLENDER_VERSION }}-${{ hashFiles('exports/**/*.glb', 'tools/asset_catalog/render_blender.py', 'tools/asset_catalog/thumbnails.py') }}
+          restore-keys: |
+            catalog-thumbnails-${{ runner.os }}-${{ env.BLENDER_VERSION }}-
+      - name: Render missing or changed thumbnails explicitly
+        run: python -m tools.asset_catalog thumbnails
+      - name: Build static catalog from exported assets
+        run: python -m tools.asset_catalog build
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist/catalog
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy catalog
+        id: deployment
+        uses: actions/deploy-pages@v4

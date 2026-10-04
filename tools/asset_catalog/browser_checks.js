@@ -1,0 +1,82 @@
+async () => {
+  // Optional real-browser acceptance checks, run through chrome-devtools-axi eval.
+  const $ = id => document.getElementById(id), results = [];
+  const staticSite = document.querySelector('meta[name="catalog-mode"]').content === 'static';
+  const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+  const until = async (predicate, description) => {
+    const end = Date.now() + 20000;
+    while (!predicate()) {
+      if (Date.now() > end) throw new Error(`Timeout: ${description}`);
+      await delay(100);
+    }
+  };
+  const assert = (condition, description) => {if (!condition) throw new Error(description); results.push(description);};
+  const change = (id, value, event = 'change') => {$(id).value = value; $(id).dispatchEvent(new Event(event));};
+  const open = async id => {
+    if ($('detail').open) $('close').click();
+    document.querySelector(`[data-id="${id}"]`).click();
+    await until(() => $('load-status').textContent.startsWith('Drag to orbit'), id);
+    return document.querySelector('model-viewer');
+  };
+  await until(() => document.querySelectorAll('.card').length > 0, 'initial index');
+  if ($('detail').open) $('close').click();
+  assert(!document.querySelector('model-viewer'), 'Grid does not create full 3D viewers');
+  const endpoint = new URL(document.querySelector('meta[name="catalog-endpoint"]').content, document.baseURI);
+  const metadata = await (await fetch(endpoint)).json();
+  assert(document.querySelectorAll('.card').length === metadata.assets.length, 'All discovered GLBs appear in the grid');
+  change('search', 'sword', 'input');
+  assert([...document.querySelectorAll('.card')].every(card => card.dataset.id.includes('sword')), 'Search narrows the grid');
+  assert(new URL(location.href).searchParams.get('q') === 'sword', 'Search is preserved in URL');
+  change('search', '', 'input'); change('category', 'props');
+  assert([...document.querySelectorAll('.card')].every(card => card.dataset.id.startsWith('props/')), 'Category filter works');
+  assert(new URL(location.href).searchParams.get('category') === 'props', 'Category is preserved in URL');
+  change('category', ''); $('animated').checked = true; $('animated').dispatchEvent(new Event('change'));
+  assert(document.querySelectorAll('.card').length === metadata.assets.filter(asset => asset.animations.length).length, 'Animated filter uses discovered GLB clips');
+  assert(new URL(location.href).searchParams.get('animated') === '1', 'Animated filter is preserved in URL');
+  $('animated').checked = false; $('animated').dispatchEvent(new Event('change'));
+  let viewer = await open('buildings/bakery');
+  assert(viewer.loaded && viewer.availableAnimations.length === 0, 'Real building loads without animation controls');
+  assert($('animations').disabled && $('reference').querySelector('svg'), 'Building has its explicit reference crop');
+  assert($('preview').querySelector('img')?.naturalWidth > 0, 'Real rendered preview loads');
+  const orbit = viewer.getCameraOrbit(); $('zoom-in').click();
+  await until(() => viewer.getCameraOrbit().radius < orbit.radius, 'camera zoom');
+  assert(viewer.getCameraOrbit().radius < orbit.radius, 'Zoom control changes the actual camera');
+  viewer.cameraOrbit = '90deg 50deg auto'; await delay(200); $('reset-camera').click();
+  await until(() => Math.abs(viewer.getCameraOrbit().theta - Math.PI / 6) < .01, 'camera reset');
+  assert(Math.abs(viewer.getCameraOrbit().theta - Math.PI / 6) < .01, 'Reset restores the camera');
+  viewer = await open('characters/knight');
+  await until(() => !$('animations').disabled && viewer.duration > 0, 'character clips');
+  const character = metadata.assets.find(asset => asset.id === 'characters/knight');
+  assert(JSON.stringify([...$('clip').options].map(option => option.value)) === JSON.stringify(viewer.availableAnimations), 'Clip selector comes from loaded GLB');
+  assert(viewer.availableAnimations.length === character.animations.length, 'Animation count matches the actual GLB');
+  const looping = character.animations.find(clip => clip.loop === true).name;
+  const oneShot = character.animations.find(clip => clip.loop === false).name;
+  change('clip', looping); await delay(100);
+  assert(viewer.animationName === looping && $('loop').checked, 'Clip selection respects looping metadata');
+  change('speed', '2'); $('play').click();
+  await until(() => viewer.currentTime > .1, 'loop playback advances');
+  assert(!viewer.paused && viewer.timeScale === 2, 'Playback and speed control work');
+  change('timeline', String(viewer.duration * .35), 'input');
+  assert(viewer.paused && Math.abs(viewer.currentTime - viewer.duration * .35) < .003, 'Scrubbing seeks accurately at 2x and pauses');
+  change('clip', oneShot); await delay(100);
+  assert(!$('loop').checked, 'One-shot selection disables looping from metadata');
+  change('speed', '1'); $('play').click();
+  await until(() => viewer.paused && viewer.currentTime >= viewer.duration - .001, 'one-shot completes');
+  assert($('play').textContent === 'Play', 'One shot stops and holds its final pose');
+  change('timeline', String(viewer.duration * .5), 'input');
+  assert(viewer.paused && Math.abs(viewer.currentTime - viewer.duration * .5) < .003, 'Completed one-shot can be scrubbed to a new pose');
+  $('loop').checked = true; $('loop').dispatchEvent(new Event('change')); $('play').click();
+  let loopEvents = 0; viewer.addEventListener('loop', () => ++loopEvents);
+  await until(() => loopEvents > 0, 'loop override');
+  assert(!viewer.paused, 'Loop override repeats a one-shot clip');
+  $('play').click(); assert(viewer.paused, 'Pause stops playback');
+  viewer = await open('props/sword');
+  assert(viewer.loaded && viewer.availableAnimations.length === 0, 'Standalone prop loads');
+  if (staticSite) assert($('links').textContent.includes('Source download not published'), 'Static site excludes editable source downloads');
+  else assert([...$('links').querySelectorAll('a')].some(link => link.textContent === 'Editable .blend'), 'Standalone prop links to its editable source');
+  assert($('reference').textContent.includes('No reference associated'), 'Absent reference has a clear placeholder');
+  assert(new URL(location.href).searchParams.get('asset') === 'props/sword', 'Selected asset is preserved in URL');
+  const remote = performance.getEntriesByType('resource').filter(entry => new URL(entry.name).origin !== location.origin && !entry.name.startsWith('blob:'));
+  assert(remote.length === 0, 'Browser assets load entirely from localhost');
+  return results;
+}

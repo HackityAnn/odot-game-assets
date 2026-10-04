@@ -1,0 +1,47 @@
+{
+  "archive_name": "evil_autobattler_units.zip",
+  "archive_sha256": "03dd4966df84b5bfe0ed44857b87ca0e1af923c3dc2649347723cd248935a313",
+  "originals_preserved": true,
+  "assets": [
+    {
+      "id": "evil_melee_unit",
+      "title": "Evil Melee Unit",
+      "category": "characters",
+      "image": "evil_melee_unit.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "856210e62968b55391b0942f59530a7d44f2a998a6ac06142af4eed0805d1b79",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "evil_mage_unit",
+      "title": "Evil Mage Unit",
+      "category": "characters",
+      "image": "evil_mage_unit.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "d1b1d2a5a2e5b47013d9266b4a4c35f026d04339ca4f1c552c0e7bd662a53c13",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "evil_ranged_unit",
+      "title": "Evil Ranged Unit",
+      "category": "characters",
+      "image": "evil_ranged_unit.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "576e0a0d4c32f86a79cc023d574ef73279ef15cc3c85717b675eef09183eeb28",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "evil_berserker_unit",
+      "title": "Evil Berserker Unit",
+      "category": "characters",
+      "image": "evil_berserker_unit.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "12e210b3e8396ab5c68434ef1da002ec3b1ab5d0372bc24c2e3b16175bc21525",
+      "source": "user-supplied archive"
+    }
+  ]
+}

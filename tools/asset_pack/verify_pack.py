@@ -1,5 +1,6 @@
 """Round-trip validation: geometry, materials, rig playback, and attached equipment."""
 import json
+import hashlib
 import math
 import sys
 from pathlib import Path
@@ -34,7 +35,27 @@ def main():
         bpy.context.scene.frame_set(1)
         objects=list(bpy.data.collections[name].objects)
         if name in CHARACTERS: objects+=list(bpy.data.collections['EQUIPMENT'].objects)
+        instances=[obj for obj in objects if obj.get('kit_asset')]
+        reuse={}
+        for root in instances:
+            reuse[root['kit_asset']]=reuse.get(root['kit_asset'],0)+1
+        # Repeated kit parts must share mesh datablocks in the editable source.
+        for kind,count in reuse.items():
+            parts=[obj for root in instances if root['kit_asset']==kind for obj in root.children if obj.type=='MESH']
+            if count>1:
+                assert len({obj.data.as_pointer() for obj in parts})<len(parts),(name,kind,'geometry was copied instead of reused')
         before=snapshot(objects)
+        source_clip_bounds={}
+        if name in CHARACTERS:
+            source_rig=next(obj for obj in objects if obj.type=='ARMATURE')
+            for clip in sorted(CLIPS):
+                source_rig.animation_data.action=bpy.data.actions[clip]
+                start,end=source_rig.animation_data.action.frame_range
+                frames=[int(round(frame)) for frame in [start,start+(end-start)/4,(start+end)/2,end]]
+                source_clip_bounds[clip]=[]
+                for frame in frames:
+                    bpy.context.scene.frame_set(frame)
+                    source_clip_bounds[clip].append(snapshot(objects))
         for obj in list(bpy.data.objects): bpy.data.objects.remove(obj,do_unlink=True)
         for action in list(bpy.data.actions): bpy.data.actions.remove(action)
         bpy.ops.import_scene.gltf(filepath=str(g.ROOT/'exports'/category/f'{name}.glb'))
@@ -50,6 +71,9 @@ def main():
         assert imported_root and imported_root.location.length<.005,(name,'root pivot')
         assert after['min'][2]>(-.35 if category=='buildings' else -.05),(name,'excessive ground penetration',after)
         report={'asset':name,'round_trip_max_bounds_error':round(error,6),'geometry_finite':True}
+        report['source_sha256']=hashlib.sha256((g.ROOT/'sources'/category/f'{name}.blend').read_bytes()).hexdigest()
+        report['glb_sha256']=hashlib.sha256((g.ROOT/'exports'/category/f'{name}.glb').read_bytes()).hexdigest()
+        if reuse: report['shared_kit_instances']=reuse
         if name in CHARACTERS:
             rig=next(o for o in imported if o.type=='ARMATURE')
             assert len(rig.data.bones)==19,(name,'bone count')
@@ -69,6 +93,10 @@ def main():
                 if clip in ['idle','walk','run']:
                     delta=max(abs(snapshots[0][k][i]-snapshots[-1][k][i]) for k in ['min','max'] for i in range(3))
                     assert delta<.005,(name,clip,'loop discontinuity',delta)
+                pose_error=max(abs(source[key][i]-imported_pose[key][i])
+                               for source,imported_pose in zip(source_clip_bounds[clip],snapshots)
+                               for key in ['min','max'] for i in range(3))
+                assert pose_error<.005,(name,clip,'animated export differs from source',pose_error)
                 samples[clip]='finite geometry; playback checked'
             report['clips']=samples
         results.append(report)

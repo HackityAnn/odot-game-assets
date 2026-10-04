@@ -1,5 +1,6 @@
 {
-  "reference": "sources/reference/fantasy_village.png",
+  "reference": "sources/reference/index.html",
+  "shared_kit": "sources/props/shared_village_kit.blend",
   "blender": "5.2.2 LTS",
   "art_direction": "supplied reference; independent of existing game",
   "coordinates": {
@@ -22,22 +23,26 @@
   ],
   "assets": [
     {
-      "file": "exports/buildings/woodcutter_hut.glb",
-      "bytes": 1366964,
-      "meshes": 325,
-      "triangles": 24399,
-      "materials": 20,
+      "file": "exports/buildings/tree_house.glb",
+      "bytes": 753476,
+      "meshes": 136,
+      "triangles": 11784,
+      "materials": 15,
       "animations": [],
-      "skins": 0
-    },
-    {
-      "file": "exports/environment/hex_meadow_building.glb",
-      "bytes": 228668,
-      "meshes": 104,
-      "triangles": 1972,
-      "materials": 14,
-      "animations": [],
-      "skins": 0
+      "skins": 0,
+      "title": "Tree House",
+      "source": "sources/buildings/tree_house.blend",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          0,
+          0,
+          382,
+          440
+        ]
+      },
+      "preview": "exports/previews/tree_house.png",
+      "modeling_stage": "first_visual_pass"
     },
     {
       "file": "exports/buildings/bakery.glb",
@@ -46,7 +51,20 @@
       "triangles": 30455,
       "materials": 18,
       "animations": [],
-      "skins": 0
+      "skins": 0,
+      "title": "Bakery",
+      "source": "sources/buildings/bakery.blend",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          383,
+          0,
+          384,
+          440
+        ]
+      },
+      "preview": "exports/previews/bakery.png",
+      "modeling_stage": "first_visual_pass"
     },
     {
       "file": "exports/buildings/gold_mine.glb",
@@ -55,16 +73,261 @@
       "triangles": 11790,
       "materials": 15,
       "animations": [],
+      "skins": 0,
+      "title": "Gold Mine",
+      "source": "sources/buildings/gold_mine.blend",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          769,
+          0,
+          383,
+          440
+        ]
+      },
+      "preview": "exports/previews/gold_mine.png",
+      "modeling_stage": "first_visual_pass"
+    },
+    {
+      "file": "exports/buildings/woodcutter_hut.glb",
+      "bytes": 1366956,
+      "meshes": 325,
+      "triangles": 24399,
+      "materials": 20,
+      "animations": [],
+      "skins": 0,
+      "title": "Woodcutter\u2019s Hut",
+      "source": "sources/buildings/woodcutter_hut.blend",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          1153,
+          0,
+          383,
+          440
+        ]
+      },
+      "preview": "exports/previews/woodcutter_hut.png",
+      "modeling_stage": "first_visual_pass"
+    },
+    {
+      "file": "exports/environment/hex_meadow_building.glb",
+      "bytes": 228636,
+      "meshes": 104,
+      "triangles": 1972,
+      "materials": 14,
+      "animations": [],
       "skins": 0
     },
     {
-      "file": "exports/buildings/tree_house.glb",
-      "bytes": 753476,
-      "meshes": 136,
-      "triangles": 11784,
-      "materials": 15,
+      "file": "exports/buildings/arrow_tower.glb",
+      "bytes": 1034108,
+      "meshes": 195,
+      "triangles": 16516,
+      "materials": 36,
       "animations": [],
-      "skins": 0
+      "skins": 0,
+      "title": "Arrow Tower",
+      "source": "sources/buildings/arrow_tower.blend",
+      "reference": {
+        "path": "sources/reference/autobattler/arrow_tower.png",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "preview": "exports/previews/arrow_tower.png",
+      "modeling_stage": "modeled_for_review",
+      "shared_kit_instances": {
+        "stone_block": 138,
+        "roof_tile": 84,
+        "lantern": 1,
+        "target": 1,
+        "open_barrel": 1,
+        "arrow": 9,
+        "crate": 1,
+        "shrub": 4
+      }
+    },
+    {
+      "file": "exports/buildings/barracks.glb",
+      "bytes": 1437052,
+      "meshes": 260,
+      "triangles": 23529,
+      "materials": 35,
+      "animations": [],
+      "skins": 0,
+      "title": "Barracks",
+      "source": "sources/buildings/barracks.blend",
+      "reference": {
+        "path": "sources/reference/autobattler/barracks.png",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "preview": "exports/previews/barracks.png",
+      "modeling_stage": "modeled_for_review",
+      "shared_kit_instances": {
+        "roof_tile": 70,
+        "stone_block": 240,
+        "lantern": 1,
+        "spear": 3,
+        "barrel": 1,
+        "crate": 1,
+        "shrub": 4
+      }
+    },
+    {
+      "file": "exports/buildings/bombarding_tower.glb",
+      "bytes": 1012008,
+      "meshes": 179,
+      "triangles": 16497,
+      "materials": 29,
+      "animations": [],
+      "skins": 0,
+      "title": "Bombarding Tower",
+      "source": "sources/buildings/bombarding_tower.blend",
+      "reference": {
+        "path": "sources/reference/autobattler/bombarding_tower.png",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "preview": "exports/previews/bombarding_tower.png",
+      "modeling_stage": "modeled_for_review",
+      "shared_kit_instances": {
+        "stone_block": 160,
+        "lantern": 1,
+        "open_crate": 1,
+        "cannonball": 7,
+        "barrel": 2,
+        "shrub": 4
+      }
+    },
+    {
+      "file": "exports/buildings/magic_academy.glb",
+      "bytes": 1418108,
+      "meshes": 259,
+      "triangles": 23038,
+      "materials": 32,
+      "animations": [],
+      "skins": 0,
+      "title": "Magic Academy",
+      "source": "sources/buildings/magic_academy.blend",
+      "reference": {
+        "path": "sources/reference/autobattler/magic_academy.png",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "preview": "exports/previews/magic_academy.png",
+      "modeling_stage": "modeled_for_review",
+      "shared_kit_instances": {
+        "roof_tile": 142,
+        "stone_block": 132,
+        "book": 3,
+        "lantern": 1,
+        "shrub": 4
+      }
+    },
+    {
+      "file": "exports/buildings/stone_cutter.glb",
+      "bytes": 1236180,
+      "meshes": 256,
+      "triangles": 21271,
+      "materials": 27,
+      "animations": [],
+      "skins": 0,
+      "title": "Stone Cutter",
+      "source": "sources/buildings/stone_cutter.blend",
+      "reference": {
+        "path": "sources/reference/autobattler/stone_cutter.png",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "preview": "exports/previews/stone_cutter.png",
+      "modeling_stage": "modeled_for_review",
+      "shared_kit_instances": {
+        "roof_tile": 70,
+        "stone_block": 12,
+        "open_barrel": 1,
+        "shrub": 4
+      }
+    },
+    {
+      "file": "exports/buildings/tavern.glb",
+      "bytes": 1478796,
+      "meshes": 284,
+      "triangles": 25626,
+      "materials": 35,
+      "animations": [],
+      "skins": 0,
+      "title": "Tavern",
+      "source": "sources/buildings/tavern.blend",
+      "reference": {
+        "path": "sources/reference/autobattler/tavern.png",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "preview": "exports/previews/tavern.png",
+      "modeling_stage": "modeled_for_review",
+      "shared_kit_instances": {
+        "roof_tile": 74,
+        "lantern": 2,
+        "barrel": 2,
+        "bench": 2,
+        "mug": 2,
+        "shrub": 4
+      }
+    },
+    {
+      "file": "exports/buildings/trade_market.glb",
+      "bytes": 1135756,
+      "meshes": 241,
+      "triangles": 19488,
+      "materials": 29,
+      "animations": [],
+      "skins": 0,
+      "title": "Trade Market",
+      "source": "sources/buildings/trade_market.blend",
+      "reference": {
+        "path": "sources/reference/autobattler/trade_market.png",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "preview": "exports/previews/trade_market.png",
+      "modeling_stage": "modeled_for_review",
+      "shared_kit_instances": {
+        "roof_tile": 70,
+        "parcel": 6,
+        "crate": 3,
+        "lantern": 1,
+        "barrel": 2,
+        "shrub": 4
+      }
     },
     {
       "file": "exports/characters/knight.glb",
@@ -81,6 +344,19 @@
         "walk"
       ],
       "skins": 1,
+      "title": "Knight",
+      "source": "sources/characters/knight.blend",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          0,
+          515,
+          486,
+          388
+        ]
+      },
+      "preview": "exports/previews/knight.png",
+      "modeling_stage": "first_visual_pass",
       "bones": 19
     },
     {
@@ -125,6 +401,19 @@
         "walk"
       ],
       "skins": 1,
+      "title": "Mage",
+      "source": "sources/characters/mage.blend",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          488,
+          515,
+          499,
+          388
+        ]
+      },
+      "preview": "exports/previews/mage.png",
+      "modeling_stage": "first_visual_pass",
       "bones": 19
     },
     {
@@ -151,6 +440,19 @@
         "walk"
       ],
       "skins": 1,
+      "title": "Archer",
+      "source": "sources/characters/archer.blend",
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "crop": [
+          989,
+          515,
+          547,
+          388
+        ]
+      },
+      "preview": "exports/previews/archer.png",
+      "modeling_stage": "first_visual_pass",
       "bones": 19
     },
     {
@@ -170,6 +472,456 @@
       "materials": 3,
       "animations": [],
       "skins": 0
+    },
+    {
+      "file": "exports/characters/berserker.glb",
+      "bytes": 1080084,
+      "meshes": 183,
+      "triangles": 9335,
+      "materials": 17,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "skins": 1,
+      "title": "Berserker",
+      "source": "sources/characters/berserker.blend",
+      "reference": {
+        "path": "sources/reference/autobattler/berserker.png",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "preview": "exports/previews/berserker.png",
+      "modeling_stage": "modeled_for_review",
+      "shared_kit_instances": {
+        "axe": 2
+      },
+      "bones": 19
+    },
+    {
+      "file": "exports/props/axe.glb",
+      "bytes": 64960,
+      "meshes": 11,
+      "triangles": 1202,
+      "materials": 6,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/props/axe_offhand.glb",
+      "bytes": 64968,
+      "meshes": 11,
+      "triangles": 1202,
+      "materials": 6,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/characters/evil_melee_unit.glb",
+      "bytes": 791840,
+      "meshes": 86,
+      "triangles": 8535,
+      "materials": 15,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "skins": 1,
+      "title": "Evil Melee Unit",
+      "source": "sources/characters/evil_melee_unit.blend",
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_melee_unit.png",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": "exports/previews/evil_melee_unit.png",
+      "modeling_stage": "initial_model",
+      "shared_kit_instances": {
+        "skull": 1,
+        "spike": 5
+      },
+      "bones": 19
+    },
+    {
+      "file": "exports/props/evil_sword.glb",
+      "bytes": 41580,
+      "meshes": 8,
+      "triangles": 718,
+      "materials": 4,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/props/evil_shield.glb",
+      "bytes": 65076,
+      "meshes": 10,
+      "triangles": 1064,
+      "materials": 4,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/characters/evil_mage_unit.glb",
+      "bytes": 631112,
+      "meshes": 76,
+      "triangles": 6821,
+      "materials": 16,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "skins": 1,
+      "title": "Evil Mage Unit",
+      "source": "sources/characters/evil_mage_unit.blend",
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_mage_unit.png",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": "exports/previews/evil_mage_unit.png",
+      "modeling_stage": "initial_model",
+      "shared_kit_instances": {
+        "skull": 1
+      },
+      "bones": 19
+    },
+    {
+      "file": "exports/props/evil_staff.glb",
+      "bytes": 44572,
+      "meshes": 11,
+      "triangles": 758,
+      "materials": 5,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/props/evil_hand_flame.glb",
+      "bytes": 11568,
+      "meshes": 4,
+      "triangles": 154,
+      "materials": 2,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/characters/evil_ranged_unit.glb",
+      "bytes": 712228,
+      "meshes": 90,
+      "triangles": 7151,
+      "materials": 23,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "skins": 1,
+      "title": "Evil Ranged Unit",
+      "source": "sources/characters/evil_ranged_unit.blend",
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_ranged_unit.png",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": "exports/previews/evil_ranged_unit.png",
+      "modeling_stage": "initial_model",
+      "shared_kit_instances": {
+        "skull": 1,
+        "spike": 2
+      },
+      "bones": 19
+    },
+    {
+      "file": "exports/props/crossbow.glb",
+      "bytes": 49168,
+      "meshes": 10,
+      "triangles": 814,
+      "materials": 7,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/characters/evil_berserker_unit.glb",
+      "bytes": 716616,
+      "meshes": 81,
+      "triangles": 7821,
+      "materials": 15,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "skins": 1,
+      "title": "Evil Berserker Unit",
+      "source": "sources/characters/evil_berserker_unit.blend",
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_berserker_unit.png",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": "exports/previews/evil_berserker_unit.png",
+      "modeling_stage": "initial_model",
+      "shared_kit_instances": {
+        "skull": 2,
+        "spike": 1,
+        "axe": 2
+      },
+      "bones": 19
+    },
+    {
+      "file": "exports/props/evil_axe_offhand.glb",
+      "bytes": 66040,
+      "meshes": 12,
+      "triangles": 1207,
+      "materials": 7,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/props/evil_axe.glb",
+      "bytes": 66040,
+      "meshes": 12,
+      "triangles": 1207,
+      "materials": 7,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/props/kit_arrow.glb",
+      "bytes": 4840,
+      "meshes": 4,
+      "triangles": 28,
+      "materials": 3,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_axe.glb",
+      "bytes": 64840,
+      "meshes": 11,
+      "triangles": 1202,
+      "materials": 6,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_barrel.glb",
+      "bytes": 43640,
+      "meshes": 16,
+      "triangles": 688,
+      "materials": 4,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_bench.glb",
+      "bytes": 31024,
+      "meshes": 5,
+      "triangles": 540,
+      "materials": 3,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_book.glb",
+      "bytes": 36232,
+      "meshes": 6,
+      "triangles": 648,
+      "materials": 4,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_cannonball.glb",
+      "bytes": 7420,
+      "meshes": 1,
+      "triangles": 80,
+      "materials": 1,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_crate.glb",
+      "bytes": 106308,
+      "meshes": 18,
+      "triangles": 1944,
+      "materials": 3,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_lantern.glb",
+      "bytes": 44856,
+      "meshes": 8,
+      "triangles": 804,
+      "materials": 3,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_mug.glb",
+      "bytes": 45640,
+      "meshes": 8,
+      "triangles": 704,
+      "materials": 4,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_open_barrel.glb",
+      "bytes": 52532,
+      "meshes": 18,
+      "triangles": 836,
+      "materials": 4,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_open_crate.glb",
+      "bytes": 90172,
+      "meshes": 15,
+      "triangles": 1620,
+      "materials": 3,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_parcel.glb",
+      "bytes": 24268,
+      "meshes": 4,
+      "triangles": 432,
+      "materials": 2,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_pine.glb",
+      "bytes": 12328,
+      "meshes": 4,
+      "triangles": 142,
+      "materials": 3,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_roof_tile.glb",
+      "bytes": 7012,
+      "meshes": 1,
+      "triangles": 108,
+      "materials": 1,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_shrub.glb",
+      "bytes": 33280,
+      "meshes": 4,
+      "triangles": 320,
+      "materials": 3,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_skull.glb",
+      "bytes": 126200,
+      "meshes": 12,
+      "triangles": 1913,
+      "materials": 2,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_spear.glb",
+      "bytes": 18508,
+      "meshes": 5,
+      "triangles": 322,
+      "materials": 3,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_spike.glb",
+      "bytes": 2240,
+      "meshes": 1,
+      "triangles": 20,
+      "materials": 1,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_stone_block.glb",
+      "bytes": 6976,
+      "meshes": 1,
+      "triangles": 108,
+      "materials": 1,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/props/kit_target.glb",
+      "bytes": 41276,
+      "meshes": 8,
+      "triangles": 784,
+      "materials": 4,
+      "animations": [],
+      "skins": 0,
+      "source": "sources/props/shared_village_kit.blend"
     }
   ]
 }

@@ -2,6 +2,21 @@
 python = "3.11"
 uv = "0"
 
+[tasks.catalog]
+description = "Browse the local asset catalog with automatic export updates"
+dir = "{{config_root}}"
+run = "python3 -m tools.asset_catalog serve"
+
+[tasks.catalog-build]
+description = "Build the deployable static asset catalog in dist/catalog"
+dir = "{{config_root}}"
+run = "python3 -m tools.asset_catalog build"
+
+[tasks.catalog-export]
+description = "Export existing Blender asset sources without modifying them"
+dir = "{{config_root}}"
+run = "python3 -m tools.asset_catalog export"
+
 [tasks.blender-mcp]
 description = "Run the Blender MCP stdio server (normally started by Codex)"
 run = "uvx --python 3.11 mcp-for-blender==2.1.3"

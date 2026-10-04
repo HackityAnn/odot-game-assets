@@ -1,28 +1,143 @@
 [
   {
-    "asset": "woodcutter_hut",
+    "asset": "tree_house",
     "round_trip_max_bounds_error": 0.0,
-    "geometry_finite": true
+    "geometry_finite": true,
+    "source_sha256": "b1467d0619eaa0fad2640dab5450e35e8cf1451604bdf62324b7609e68102110",
+    "glb_sha256": "a0209ad5c1cdf97a4432932ca751e5f49dc872914d82da878d5bf702d43230af"
   },
   {
     "asset": "bakery",
     "round_trip_max_bounds_error": 0.0,
-    "geometry_finite": true
+    "geometry_finite": true,
+    "source_sha256": "296936fbb825102c5d834e803ba3e593d049d1f941f5c9e440c65617fc531441",
+    "glb_sha256": "44dfbd8816f840355f1763ba918bf4f68e00e852f93c7f0d7cc54459beba8f94"
   },
   {
     "asset": "gold_mine",
     "round_trip_max_bounds_error": 0.0,
-    "geometry_finite": true
+    "geometry_finite": true,
+    "source_sha256": "e6380986198aaa3c16907c539e7e0abe97b548811a90206fe68a61c802f95802",
+    "glb_sha256": "d94de8defbdf16c8458ef4cfaaafa422048f18faf41de8a279910fa79aa41cf1"
   },
   {
-    "asset": "tree_house",
+    "asset": "woodcutter_hut",
     "round_trip_max_bounds_error": 0.0,
-    "geometry_finite": true
+    "geometry_finite": true,
+    "source_sha256": "608f24b751ed00963a15bdac6fcffac8640e1a33c54d8acf00127e637e30c6bf",
+    "glb_sha256": "34668f9d5c21fd2e21195aa1492be258c864e6a31cc9c2d9552e40dc4c962188"
+  },
+  {
+    "asset": "arrow_tower",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "f6cbb1fb8e176aafa469e3789c0fdae91420bf8fca68fbe131271726c3236c34",
+    "glb_sha256": "8ebf47ae26623acdb3471071240047faf914fd3ab56bf90de36dc789b49c1b35",
+    "shared_kit_instances": {
+      "stone_block": 138,
+      "roof_tile": 84,
+      "lantern": 1,
+      "target": 1,
+      "open_barrel": 1,
+      "arrow": 9,
+      "crate": 1,
+      "shrub": 4
+    }
+  },
+  {
+    "asset": "barracks",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "c714f969aa97419653a4f32d035b10c3226c9b7560087d919dd43ad30287423d",
+    "glb_sha256": "18d120544f465c180488c779ac0f480b1e722121bce9896869ca6a0a4662f9fd",
+    "shared_kit_instances": {
+      "roof_tile": 70,
+      "stone_block": 240,
+      "lantern": 1,
+      "spear": 3,
+      "barrel": 1,
+      "crate": 1,
+      "shrub": 4
+    }
+  },
+  {
+    "asset": "bombarding_tower",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "6445e927962bc4dd5f80bc682a03ef943d17ab958153888c264c11cb87d1cda6",
+    "glb_sha256": "d5efd70043628dede6c2b7e092b623d073d0f1ffe1472686cce6a6c267d02d52",
+    "shared_kit_instances": {
+      "stone_block": 160,
+      "lantern": 1,
+      "open_crate": 1,
+      "cannonball": 7,
+      "barrel": 2,
+      "shrub": 4
+    }
+  },
+  {
+    "asset": "magic_academy",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "4b5f3c9137c55fd626286975423ac5f83ca8d8b517544d83d4e12c9063d262fe",
+    "glb_sha256": "484f1861d2b777dd907e294c1e2f060f4c59c81341168e9a28f8897dff03f343",
+    "shared_kit_instances": {
+      "roof_tile": 142,
+      "stone_block": 132,
+      "book": 3,
+      "lantern": 1,
+      "shrub": 4
+    }
+  },
+  {
+    "asset": "stone_cutter",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "c4d5589526fe94cff7a73310517ad87ca08d2882b9625c47e885d616125887e5",
+    "glb_sha256": "0c65155fd1d44d71da7016f60d9cc65ac3da404842e19018991a298c197d4403",
+    "shared_kit_instances": {
+      "roof_tile": 70,
+      "stone_block": 12,
+      "open_barrel": 1,
+      "shrub": 4
+    }
+  },
+  {
+    "asset": "tavern",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "2130bacabafd25bb83e6fde3f43e5b7d52b457c99aac83e3ae34d42912340bb1",
+    "glb_sha256": "2d485ad6614ac63997f7df464374e856b73293a2004a5c7eb19c177c48f76f60",
+    "shared_kit_instances": {
+      "roof_tile": 74,
+      "lantern": 2,
+      "barrel": 2,
+      "bench": 2,
+      "mug": 2,
+      "shrub": 4
+    }
+  },
+  {
+    "asset": "trade_market",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "8bb4841d884536d7afeb7a07ac6be22e01089f619d29e543e48262ba502880f5",
+    "glb_sha256": "12060279b5a455eb3189e6bde761238aca1663a8310a4d7c91d0ee56b536ef35",
+    "shared_kit_instances": {
+      "roof_tile": 70,
+      "parcel": 6,
+      "crate": 3,
+      "lantern": 1,
+      "barrel": 2,
+      "shrub": 4
+    }
   },
   {
     "asset": "knight",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
+    "source_sha256": "950180d36ace11a1845a5ef23256d2bacf357bb8e4f5a6838584d55d0557c6ee",
+    "glb_sha256": "1ffa02091ffae7617cd7cbb1c1108150703409086e8380f12c080e9f6bbb2130",
     "clips": {
       "attack": "finite geometry; playback checked",
       "death": "finite geometry; playback checked",
@@ -36,6 +151,8 @@
     "asset": "mage",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
+    "source_sha256": "e31baa615009d47957884008367f8b25877cfcf3725794c5a7f99c09224693ce",
+    "glb_sha256": "76b9980295c51ea178878afb6fc7a5ea7e93af2ccf2930e0bcffcbd99ff6ff55",
     "clips": {
       "attack": "finite geometry; playback checked",
       "death": "finite geometry; playback checked",
@@ -49,6 +166,102 @@
     "asset": "archer",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
+    "source_sha256": "7c2378e144542d58a93175807797351a89c612e72a0683e0122209912fa20262",
+    "glb_sha256": "904f890755acd43276e5f4f832a0194ac7f2485b07095f44a40f1990d700fc42",
+    "clips": {
+      "attack": "finite geometry; playback checked",
+      "death": "finite geometry; playback checked",
+      "hit": "finite geometry; playback checked",
+      "idle": "finite geometry; playback checked",
+      "run": "finite geometry; playback checked",
+      "walk": "finite geometry; playback checked"
+    }
+  },
+  {
+    "asset": "berserker",
+    "round_trip_max_bounds_error": 1e-06,
+    "geometry_finite": true,
+    "source_sha256": "d32b95443b052ac23cda3c9a506a1404fe8ffa3ecffe726546aabcac47ee5b07",
+    "glb_sha256": "a9782457f77466439d5881f6c0051cd84ad7173ec6a364aac8a094a4cfa25930",
+    "shared_kit_instances": {
+      "axe": 2
+    },
+    "clips": {
+      "attack": "finite geometry; playback checked",
+      "death": "finite geometry; playback checked",
+      "hit": "finite geometry; playback checked",
+      "idle": "finite geometry; playback checked",
+      "run": "finite geometry; playback checked",
+      "walk": "finite geometry; playback checked"
+    }
+  },
+  {
+    "asset": "evil_melee_unit",
+    "round_trip_max_bounds_error": 1e-06,
+    "geometry_finite": true,
+    "source_sha256": "74ff32dce87cbae236e49670333f5ca6cd3c0a77a52052ee8ca7c85cb6b52fbf",
+    "glb_sha256": "9d97c29db7eb0e1639508b0ec7943bb7bd062bda5fed8a24219d92c9a7bc3e84",
+    "shared_kit_instances": {
+      "skull": 1,
+      "spike": 5
+    },
+    "clips": {
+      "attack": "finite geometry; playback checked",
+      "death": "finite geometry; playback checked",
+      "hit": "finite geometry; playback checked",
+      "idle": "finite geometry; playback checked",
+      "run": "finite geometry; playback checked",
+      "walk": "finite geometry; playback checked"
+    }
+  },
+  {
+    "asset": "evil_mage_unit",
+    "round_trip_max_bounds_error": 1e-06,
+    "geometry_finite": true,
+    "source_sha256": "21c5a5699a9e529554fdc37d04bf1ba8b534b3f81d242d2179e9ddb7d5af623a",
+    "glb_sha256": "e7c0d79a21d618124db1a43258110c830e0a6a4163144f092107294edfab438d",
+    "shared_kit_instances": {
+      "skull": 1
+    },
+    "clips": {
+      "attack": "finite geometry; playback checked",
+      "death": "finite geometry; playback checked",
+      "hit": "finite geometry; playback checked",
+      "idle": "finite geometry; playback checked",
+      "run": "finite geometry; playback checked",
+      "walk": "finite geometry; playback checked"
+    }
+  },
+  {
+    "asset": "evil_ranged_unit",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "d580d1f9c5f8a1b7f5e12a0bc1bbdd03228d3d4033c383d9ae78eaa582c1e6ac",
+    "glb_sha256": "5808c64a27e3ae9e0ce193c1b979625d76c55b50d96bc390e73415a5df7a95bc",
+    "shared_kit_instances": {
+      "skull": 1,
+      "spike": 2
+    },
+    "clips": {
+      "attack": "finite geometry; playback checked",
+      "death": "finite geometry; playback checked",
+      "hit": "finite geometry; playback checked",
+      "idle": "finite geometry; playback checked",
+      "run": "finite geometry; playback checked",
+      "walk": "finite geometry; playback checked"
+    }
+  },
+  {
+    "asset": "evil_berserker_unit",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "774f19be402b03dc3c5645c8ee0db01be47953e33da2d46d00cdef4e9751d01a",
+    "glb_sha256": "3902fd908b742c9ab2b3e5d8dfcb052a2e61dde50ee56fc48eec0041893fe3fb",
+    "shared_kit_instances": {
+      "skull": 2,
+      "spike": 1,
+      "axe": 2
+    },
     "clips": {
       "attack": "finite geometry; playback checked",
       "death": "finite geometry; playback checked",

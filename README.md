@@ -2,7 +2,230 @@
 
 Blender asset workspace with [MCP for Blender](https://github.com/ahujasid/mcp-for-blender).
 
+## Local asset catalog
+
+From the repository root, start the permanent catalog with Python 3.11+:
+
+```sh
+mise run catalog
+```
+
+Without mise, use `python3 -m tools.asset_catalog serve` instead.
+
+Open **http://127.0.0.1:8000** (`--port 8001` selects another port). No npm
+install, CDN, AI service, Lavish, or game checkout is required. The viewer and
+compression decoders are bundled in `catalog/vendor/`. Stop with Ctrl-C.
+
+Search by asset name or path, select any discovered category, or filter to animated
+assets. Opening a card loads its GLB on demand, with orbit, zoom, reset camera,
+reference, rendered preview, file statistics, and downloads for available sources.
+Animation choices come from the loaded model. Select a clip, play/pause, choose
+speed, scrub the timeline (which pauses playback), and override Loop as needed.
+One-shot clips hold their last frame. Clips without loop metadata default to one
+shot. Search, filters, and the selected asset are preserved in the URL, for example
+`http://127.0.0.1:8000/?category=characters&animated=1&asset=characters%2Fknight`.
+
+The browser polls every two seconds. Changed exports, metadata, sources, references,
+and previews refresh without restarting the server. Only changed GLBs are parsed;
+unchanged open models and grid thumbnails stay loaded. Model URLs include a content
+hash to bypass the viewer's cache. **Refresh index** checks immediately. Neither
+browsing nor indexing starts Blender, saves sources, builds geometry, or renders.
+
+To rebuild only the disposable metadata index:
+
+```sh
+python3 -m tools.asset_catalog index
+```
+
+All GLBs under `exports/` are discovered recursively, including standalone props,
+exported components, nested folders, and new categories. Root-level exports use
+the `uncategorized` category. `exports/catalog.json` is generated and ignored by
+Git. Counts and clip names come from the GLB, even if the manifest is stale.
+Missing optional files have placeholders; a corrupt export stays visible with
+an error and does not hide the other assets. Files are served on localhost only.
+
+### Refresh exports without rebuilding models
+
+To export selected **existing sources** without saving or modifying their `.blend`
+files, building geometry, or rendering previews:
+
+```sh
+mise run catalog-export buildings/bakery characters/knight props/sword --blender /path/to/blender
+```
+
+Omit the asset IDs to export all authored asset sources. Without mise, use
+`python3 -m tools.asset_catalog export --blender /path/to/blender` (optionally adding
+the asset IDs). The direct Blender worker invocation also remains available.
+
+The `--blender` option selects your executable. Each source must have an
+asset collection or root object matching the asset ID's final segment; descendants
+and a character's optional `EQUIPMENT` collection are exported, while presentation
+collections are omitted. Explicit source mappings support shared component libraries.
+This command writes the requested GLBs, updates their manifest records, and
+refreshes the index. Exports are replaced atomically. The original
+`tools/asset_pack/export_pack.py` workflow also refreshes the index when it finishes;
+that older pack workflow can regenerate standalone component sources. Keep using
+the selected-source command for manual refinements. Exports from other tools are
+picked up automatically by the running catalog.
+
+### Render thumbnails explicitly
+
+```sh
+python3 -m tools.asset_catalog thumbnails --blender /path/to/blender
+python3 -m tools.asset_catalog thumbnails props/sword characters/knight --blender /path/to/blender
+```
+
+The first command considers all exports; the second selects specific asset IDs.
+Only missing or changed thumbnails render. `--force` explicitly rerenders the
+selection. A separate background Blender process imports each GLB, fits a neutral
+studio camera, and writes `exports/thumbnails/<asset-id>.png`. It never opens or
+saves a Blender source. Content hashes in `exports/thumbnails/state.json` track
+the rendered export and image; the renderer version tracks changes to the setup.
+Thumbnail PNGs can be committed for deployment; their cache state and temporary
+render files are ignored by Git. Existing rendered
+previews are used in the grid when a thumbnail is absent. Nothing renders just
+because you refresh an export or browse the catalog.
+
+### Associate references and optional metadata
+
+Edit the tracked [`catalog/associations.json`](catalog/associations.json). See
+[`catalog/SCHEMA.md`](catalog/SCHEMA.md) for the small schema, merge priorities,
+and examples. Keys are exact repository-relative export paths. Reference mappings
+are explicit; a matching filename alone never associates a reference. The initial
+mappings preserve the old gallery's seven reference crops and the existing
+autobattler pack's reference associations. Unexported mappings are harmless.
+
+Matching sources default to `sources/<export-relative-path>.blend`; set `source`
+to override this for shared component libraries. Set `preview` and `thumbnail` for
+custom images, and `animation_policy` for clip-specific loop/one-shot behavior.
+Updates appear automatically. Export manifest entries may also carry those fields;
+the associations file takes precedence. The pack-wide loop defaults only apply
+to assets actually listed in that manifest.
+
+The implementation keeps GLB inspection and merging in `tools/asset_catalog/metadata.py`,
+discovery in `index.py`, local serving in `server.py`, explicit Blender operations
+in separate scripts, and the static UI in `catalog/`. Run focused tests with:
+
+```sh
+python3 -m unittest tools.asset_catalog.test_catalog -v
+```
+
+Browser verification results and the optional acceptance script are described in
+[`catalog/VERIFICATION.md`](catalog/VERIFICATION.md).
+
+### Build and deploy to GitHub Pages
+
+```sh
+mise run catalog-build
+```
+
+This creates `dist/catalog/`: a complete static website containing the viewer,
+fresh catalog JSON, and referenced GLBs, thumbnails, previews, and reference
+images. The static packaging command never invokes Blender or changes assets. Editable `.blend` downloads
+are excluded from the deployed site; local browsing retains them. Optional
+`--include-sources` includes them for other deployments. Build output is ignored
+by Git. URLs work both at a domain root and under `/odot-game-assets/`, without
+needing a configurable base path.
+
+Preview the artifact using any static HTTP server:
+
+```sh
+python3 -m http.server 8001 --bind 127.0.0.1 --directory dist/catalog
+```
+
+Open `http://127.0.0.1:8001/`. The static site reads `catalog.json` instead of the
+local discovery API and checks for newly deployed metadata once per minute.
+**Check for updates** fetches immediately. Local `mise run catalog` still discovers
+arbitrary file changes every two seconds.
+
+The workflow at [`.github/workflows/catalog-pages.yml`](.github/workflows/catalog-pages.yml)
+tests and builds pull requests targeting `main`; pushes to `main` and manual runs
+on `main` also upload the artifact and deploy it to GitHub Pages. Its build steps are:
+
+1. Checkout (including Git LFS assets) and set up Python 3.11.
+2. Install Linux dependencies and restore or download pinned Blender 5.2.2 from
+   the official archive, verifying its published SHA-256 checksums.
+3. Export authored `.blend` sources into GLBs in an isolated background Blender
+   worker, including explicitly mapped components from shared libraries.
+4. Restore cached thumbnail images and state, then explicitly render only missing
+   or changed thumbnails. The first run initializes the cache.
+5. Package the static website, upload the Pages artifact, and deploy on `main`.
+
+The pipeline reads authored geometry from the `.blend` files. It never calls the
+procedural `build_pack.py` builders or saves source files. Root-level overview
+scenes are excluded. Per-asset `export_collection` or `export_object` metadata
+selects terrain and shared components when the default naming convention does
+not apply. Existing GLBs without editable sources remain browsable.
+
+Deployment uses
+the standard GitHub Pages artifact and environment with OIDC; no custom token,
+backend, framework, or generated-output branch is needed. The workflow publishes
+models and images only. To enable it:
+
+1. Commit the catalog code, workflow, exported assets, associated reference images,
+   and desired thumbnail PNGs. CI only sees committed files; untracked local models
+   and ignored thumbnail cache state are not available in a fresh checkout.
+2. In the repository's **Settings → Pages**, set **Source** to **GitHub Actions**.
+3. Push to `main` or run the **Asset catalog** workflow on `main`. The deployment
+   job reports the website URL (normally `https://seraph1nia.github.io/odot-game-assets/`).
+
+You can generate or update thumbnails locally before committing, using the
+commands above. CI also has a separate explicit rendering step backed by an
+incremental cache, so unchanged GLBs do not rerender their thumbnails. If the cache
+is unavailable, that step regenerates the required thumbnails from the exports.
+Missing optional images retain their placeholders; invalid exports or malformed
+metadata fail the build before a new artifact replaces the last working site.
+The builder copies referenced files only, strips local Blender source links by
+default, deduplicates shared files, and gives files content hashes so fresh
+checkouts produce the same index. Use `--out <directory>` for a different artifact
+location; only an output directory previously created by this builder is replaced.
+
+This repository is private. Pages from a private repository requires an eligible
+GitHub plan, and a private repository does not by itself make its Pages site
+private. [GitHub's Pages availability](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+and [Pages access control](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site)
+describe those constraints. [GitHub's published site size limit](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)
+is 1 GB; this artifact is currently well below that limit.
+
+Run discovery and static packaging tests together with:
+
+```sh
+python3 -m unittest tools.asset_catalog.test_catalog tools.asset_catalog.test_build_site tools.asset_catalog.test_export_sources -v
+```
+
 ## Reference asset set
+
+Browse [the offline reference library](sources/reference/index.html) for all three
+reference sets, full-size images, and matching source/render/export links.
+The eight original PNGs from `new_autobattler_assets.zip` are preserved in
+`sources/reference/autobattler/`; its manifest records archive and image checksums.
+
+`sources/autobattler.blend` assembles the new arrow tower, bombarding tower,
+barracks, magic academy, stone cutter, tavern, trade market, and berserker.
+Each has an individual source, GLB export, and preview alongside the original set.
+The berserker uses the shared 19-bone skeleton and six starter animation clips,
+with a dual-axe attack. The building details and berserker modeling pass are ready
+for art review before optimization.
+
+`sources/evil_autobattler.blend` assembles initial models of four evil units:
+the skeleton melee fighter, horned mage, hooded crossbowman, and horned berserker.
+Their untouched PNG references and archive checksums are in
+`sources/reference/evil_autobattler/`. Individual editable sources, renders, and
+GLBs sit alongside the existing characters. All four use the shared skeleton and
+six starter clips; the crossbow, sword/shield, flame staff, and dual axes are
+removable equipment. These evil models are a starting pass for further art review.
+
+`sources/props/shared_village_kit.blend` contains twenty reusable, Asset Browser
+collections: barrel, crate, lantern, shrub, pine, stone block, roof tile, target,
+spear, arrow, mug, book, parcel, bench, axe, cannonball, open barrel, open crate,
+skull, and armor spike. New building copies
+share mesh datablocks; both equipped axes share geometry too. Portable kit props
+are exported as `exports/props/kit_*.glb`. Edit the kit and rebuild the new set to
+propagate changes across the individual files; existing sources remain editable
+without requiring a live link to the library.
+Skulls reuse one mesh set across evil faces, belt buckles, and display dressing;
+armor spikes reuse geometry across helmets and shoulders. Equip helpers preserve
+each part's authored scale when attaching it to a bone.
 
 `sources/fantasy_village.blend` assembles four buildings and three characters
 modeled from `sources/reference/fantasy_village.png`: tree house, bakery, gold
@@ -27,16 +250,25 @@ polygon and draw-call optimization can follow art review.
 Rebuild with Blender 5.2's Python runner (substitute your Blender executable):
 
 ```sh
+blender -b --python-exit-code 1 --python tools/asset_pack/village_kit.py
+blender -b --python-exit-code 1 --python tools/asset_pack/build_pack.py -- arrow_tower bombarding_tower barracks stone_cutter tavern trade_market magic_academy berserker
+blender -b --python-exit-code 1 --python tools/asset_pack/build_pack.py -- evil_melee_unit evil_mage_unit evil_ranged_unit evil_berserker_unit
 blender -b --python-exit-code 1 --python tools/asset_pack/build_pack.py -- woodcutter_hut bakery gold_mine tree_house knight mage archer
 blender -b --python-exit-code 1 --python tools/asset_pack/export_pack.py
 blender -b --python-exit-code 1 --python tools/asset_pack/verify_pack.py
 blender -b --python-exit-code 1 --python tools/asset_pack/showcase.py
+blender -b --python-exit-code 1 --python tools/asset_pack/showcase.py -- --autobattler
+blender -b --python-exit-code 1 --python tools/asset_pack/showcase.py -- --evil
+python3 tools/asset_pack/reference_index.py
+python3 tools/asset_pack/gallery.py
 ```
 
 The scripts overwrite this generated set; keep manual refinements separately
 before regenerating. The manifest records export geometry/material counts.
 Round-trip verification checks reimported bounds, materials, skinning, animation
-playback, and loop endpoints. The local `.lavish/asset-gallery.html` review surface
+playback, loop endpoints, and source-versus-GLB animated poses. Validation records
+source and export SHA-256 hashes to detect stale results.
+The local `.lavish/asset-gallery.html` review surface
 also offers a 3D viewer and a downloadable ZIP of the sources, exports, and scripts.
 
 ## Folder layout

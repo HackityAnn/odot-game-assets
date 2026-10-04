@@ -10,8 +10,7 @@ import bpy
 from mathutils import Matrix
 import geometry as g
 
-BUILDINGS=['woodcutter_hut','bakery','gold_mine','tree_house']
-CHARACTERS=['knight','mage','archer']
+from catalog import BUILDINGS, CHARACTERS, BY_ID
 CLIPS={'idle','walk','run','attack','hit','death'}
 
 
@@ -34,6 +33,7 @@ def write_source(path,objects,name):
         if obj.name not in keep: bpy.data.objects.remove(obj,do_unlink=True)
     bpy.context.scene.name=name
     bpy.context.scene.camera=None
+    g.drop_reference_images()
     bpy.ops.wm.save_as_mainfile(filepath=str(path),copy=True)
 
 
@@ -73,6 +73,15 @@ def main():
         path=g.ROOT/'exports'/category/f'{name}.glb'
         export(path,objects,animated)
         report=inspect_glb(path)
+        description=BY_ID[name]
+        report.update(title=description['title'],source=f'sources/{category}/{name}.blend',
+                      reference={'path':'sources/reference/'+description['reference'],'crop':description['crop']},
+                      preview=f'exports/previews/{name}.png',
+                      modeling_stage=bpy.data.objects[name+'_root'].get('modeling_stage','first_visual_pass'))
+        kit_usage={}
+        for obj in objects:
+            if obj.get('kit_asset'): kit_usage[obj['kit_asset']]=kit_usage.get(obj['kit_asset'],0)+1
+        if kit_usage: report['shared_kit_instances']=kit_usage
         if animated:
             assert set(report['animations'])==CLIPS,(name,report['animations'])
             assert report['skins']>0,name
@@ -104,13 +113,27 @@ def main():
         else:
             objects=list(bpy.data.collections[col_name].objects)
         write_source(g.ROOT/'sources'/category/f'{name}.blend',objects,name)
-    manifest={'reference':'sources/reference/fantasy_village.png',
+    # The common kit also travels as individual portable props.
+    bpy.ops.wm.open_mainfile(filepath=str(g.ROOT/'sources/props/shared_village_kit.blend'))
+    for col in list(bpy.data.collections):
+        if not col.name.startswith('kit_'): continue
+        bpy.context.scene.collection.children.link(col)
+        path=g.ROOT/'exports/props'/f'{col.name}.glb'
+        export(path,list(col.objects))
+        report=inspect_glb(path); report['source']='sources/props/shared_village_kit.blend'
+        reports.append(report)
+    manifest={'reference':'sources/reference/index.html',
+              'shared_kit':'sources/props/shared_village_kit.blend',
               'blender':bpy.app.version_string,'art_direction':'supplied reference; independent of existing game',
               'coordinates':{'source_up':'+Z','source_forward':'-Y','export_up':'+Y','export_forward':'+Z','ground':0},
               'animation_fps':24,'looping_clips':['idle','walk','run'],
               'one_shot_clips':['attack','hit','death'],
               'assets':reports}
     (g.ROOT/'exports'/'asset_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+    # Metadata indexing is independent of Blender geometry and thumbnail rendering.
+    sys.path.insert(0, str(g.ROOT))
+    from tools.asset_catalog.index import CatalogIndex
+    CatalogIndex(g.ROOT).refresh()
     print(json.dumps(manifest,indent=2))
 
 

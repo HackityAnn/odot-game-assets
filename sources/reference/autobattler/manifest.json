@@ -1,0 +1,87 @@
+{
+  "archive_name": "new_autobattler_assets.zip",
+  "archive_sha256": "aaaf60b937e0c09eba6cb32e737fb1bd9293af978b889d7fbe39f88e82f1297c",
+  "originals_preserved": true,
+  "assets": [
+    {
+      "id": "arrow_tower",
+      "title": "Arrow Tower",
+      "category": "buildings",
+      "image": "arrow_tower.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "5bf640be5a094ee208b6696e9d4843777cb5279ab0440c8f25235f4fd5751c05",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "barracks",
+      "title": "Barracks",
+      "category": "buildings",
+      "image": "barracks.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "2793d83d2bcdc0e4ae2e5f1207e4ad1e2029da5c72bb94f5b19e8b94dfce6085",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "berserker",
+      "title": "Berserker",
+      "category": "characters",
+      "image": "berserker.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "2d99bbd6edd74aaf4b860f8ea0e76ad4766f2be1233089568a65dfa9cfa14e05",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "bombarding_tower",
+      "title": "Bombarding Tower",
+      "category": "buildings",
+      "image": "bombarding_tower.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "1ad1048ebc0535e6dbd0861be104841c208435c065520632b5be4f9561e572de",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "magic_academy",
+      "title": "Magic Academy",
+      "category": "buildings",
+      "image": "magic_academy.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "33dbe652ee0101e6d15148b52e4b5e4b1a5cdbbae51710999b698f5177067475",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "stone_cutter",
+      "title": "Stone Cutter",
+      "category": "buildings",
+      "image": "stone_cutter.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "76808fc1cd077b5658ed7de2b83248213a194e09a65b6794c859b373323058fd",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "tavern",
+      "title": "Tavern",
+      "category": "buildings",
+      "image": "tavern.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "9ec237a6113ea27481129f8368fe81d2af7a93bd14b773b1f5fb47d512f8fe93",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "trade_market",
+      "title": "Trade Market",
+      "category": "buildings",
+      "image": "trade_market.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "a0403cc931c47d20f6265b43cc9f31d6ff3c11c31166659bc1b782c8345133dc",
+      "source": "user-supplied archive"
+    }
+  ]
+}

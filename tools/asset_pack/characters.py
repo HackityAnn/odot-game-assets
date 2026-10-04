@@ -245,7 +245,7 @@ def quiver():
                          (x-.12+sign*.08,y,2.16),(x-.07+sign*.07,y,1.98)],[(0,1,2,3)],'cream'),'spine')
 
 
-def create_rig(asset):
+def create_rig(asset,leg_spread=0):
     g.target(asset)
     data=bpy.data.armatures.new('Chibi shared skeleton')
     rig=bpy.data.objects.new('rig',data); asset.objects.link(rig)
@@ -261,9 +261,9 @@ def create_rig(asset):
                         (f'forearm.{side}',(s*.60,-.005,1.16),(s*.76,-.08,.94),f'upper_arm.{side}'),
                         (f'hand.{side}',(s*.76,-.08,.94),(s*.83,-.105,.80),f'forearm.{side}'),
                         (f'weapon_socket.{side}',(s*.79,-.105,.885),(s*.79,-.105,1.035),f'hand.{side}'),
-                        (f'thigh.{side}',(s*.235,0,.80),(s*.235,-.015,.48),'pelvis'),
-                        (f'shin.{side}',(s*.235,-.015,.48),(s*.235,-.035,.19),f'thigh.{side}'),
-                        (f'foot.{side}',(s*.235,-.035,.19),(s*.235,-.30,.13),f'shin.{side}')]
+                        (f'thigh.{side}',(s*(.235+leg_spread),0,.80),(s*(.235+leg_spread),-.015,.48),'pelvis'),
+                        (f'shin.{side}',(s*(.235+leg_spread),-.015,.48),(s*(.235+leg_spread),-.035,.19),f'thigh.{side}'),
+                        (f'foot.{side}',(s*(.235+leg_spread),-.035,.19),(s*(.235+leg_spread),-.30,.13),f'shin.{side}')]
     for name,a,b,parent in definitions:
         bone=data.edit_bones.new(name); bone.head=a; bone.tail=b
         if parent: bone.parent=data.edit_bones[parent]
@@ -284,8 +284,8 @@ def equip(prop,rig,bone,location,rotation=(0,0,0)):
     from mathutils import Euler
     # Keep prop coordinates centered on the grip, and keep the parent inverse explicit.
     prop.parent=rig; g.enum(prop,'parent_type','BONE'); prop.parent_bone=bone
-    rig.data.bones[bone].use_deform=False
-    desired=Matrix.Translation(Vector(location)) @ Euler(rotation).to_matrix().to_4x4()
+    if bone.startswith('weapon_socket.'): rig.data.bones[bone].use_deform=False
+    desired=Matrix.Translation(Vector(location)) @ Euler(rotation).to_matrix().to_4x4() @ Matrix.Diagonal((*prop.scale,1))
     bpy.context.view_layer.update()
     # Blender bone parenting uses the bone tail as the parent-space origin.
     parent_matrix=rig.matrix_world @ rig.pose.bones[bone].matrix @ Matrix.Translation((0,rig.data.bones[bone].length,0))
@@ -317,6 +317,27 @@ def aim_pose(rig,strength):
         for segment in ['upper_arm','forearm','hand']:
             bone=p[f'{segment}.{side}']
             bone.rotation_euler=tuple(angle*strength for angle in bone.rotation_euler)
+
+
+def define_arm_stance(rig,directions):
+    """Bake a costume's rest arm pose as offsets on the common skeleton."""
+    reset_pose(rig)
+    offsets={}
+    for side,(upper_direction,fore_direction) in directions.items():
+        for name,direction in [(f'upper_arm.{side}',upper_direction),(f'forearm.{side}',fore_direction)]:
+            bone=rig.pose.bones[name]
+            bpy.context.view_layer.update()
+            rest=bone.bone.tail_local-bone.bone.head_local
+            rotation=rest.rotation_difference(Vector(direction).normalized()).to_matrix().to_4x4()
+            bone.matrix=Matrix.Translation(bone.head.copy()) @ rotation @ bone.bone.matrix_local.to_3x3().to_4x4()
+        bpy.context.view_layer.update()
+        hand=rig.pose.bones[f'hand.{side}']
+        hand.matrix=Matrix.Translation(hand.head.copy()) @ hand.bone.matrix_local.to_3x3().to_4x4()
+        for segment in ['upper_arm','forearm','hand']:
+            bone=rig.pose.bones[f'{segment}.{side}']
+            offsets[bone.name]=list(bone.rotation_euler)
+    rig['rest_arm_offsets']=offsets
+    reset_pose(rig)
 
 
 def pose(rig,kind,clip,t):
@@ -351,6 +372,16 @@ def pose(rig,kind,clip,t):
             p['forearm.R'].rotation_euler.x=-.30*pulse
             p['upper_arm.L'].rotation_euler.x=-.85*pulse
             p['spine'].rotation_euler.x=-.06*pulse
+        elif kind=='crossbow':
+            p['spine'].rotation_euler.x=-.12*pulse
+            p['forearm.R'].rotation_euler.x=-.15*pulse
+            p['upper_arm.L'].rotation_euler.x=.06*pulse
+        elif kind=='berserker':
+            for side,sign in [('L',1),('R',-1)]:
+                p[f'upper_arm.{side}'].rotation_euler.x=-1.25*pulse
+                p[f'upper_arm.{side}'].rotation_euler.z=sign*.32*math.sin(t*math.pi*2)
+                p[f'forearm.{side}'].rotation_euler.x=-.42*pulse
+            p['spine'].rotation_euler.x=.16*pulse
         else:
             aim_pose(rig,pulse)
     elif clip=='hit':
@@ -363,6 +394,8 @@ def pose(rig,kind,clip,t):
         p['root'].location.z=.24*ease
         p['spine'].rotation_euler.x=.13*ease
         p['upper_arm.L'].rotation_euler.z=.40*ease; p['upper_arm.R'].rotation_euler.z=-.40*ease
+    for name,angles in rig.get('rest_arm_offsets',{}).items():
+        for axis in range(3): p[name].rotation_euler[axis]+=angles[axis]
 
 
 def animate(rig,kind):

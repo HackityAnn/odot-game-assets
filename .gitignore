@@ -12,3 +12,9 @@ __pycache__/
 mise.local.toml
 mise.local.lock
 .DS_Store
+
+# Disposable catalog output and thumbnail cache; rendered PNGs can be committed.
+/exports/catalog.json
+/exports/thumbnails/state.json
+/exports/thumbnails/**/*.rendering.png
+/dist/
