@@ -96,7 +96,7 @@
       "materials": 20,
       "animations": [],
       "skins": 0,
-      "title": "Woodcutter\u2019s Hut",
+      "title": "Woodcutter’s Hut",
       "source": "sources/buildings/woodcutter_hut.blend",
       "reference": {
         "path": "sources/reference/fantasy_village.png",
@@ -922,6 +922,497 @@
       "animations": [],
       "skins": 0,
       "source": "sources/props/shared_village_kit.blend"
+    },
+    {
+      "file": "exports/buildings/archery_range.glb",
+      "bytes": 2354816,
+      "triangles": 41298,
+      "materials": 38,
+      "animations": [],
+      "source": "sources/buildings/archery_range.blend",
+      "shared_kit_instances": {
+        "arrow": 12,
+        "lantern": 1,
+        "open_barrel": 1,
+        "roof_tile": 44,
+        "shrub": 4,
+        "stone_block": 60,
+        "target": 1
+      },
+      "shared_kits": [
+        "sources/props/shared_village_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/buildings/metal_mine.glb",
+      "bytes": 2083852,
+      "triangles": 36015,
+      "materials": 37,
+      "animations": [],
+      "source": "sources/buildings/metal_mine.blend",
+      "shared_kit_instances": {
+        "crate": 2,
+        "lantern": 1,
+        "open_crate": 1,
+        "roof_tile": 40,
+        "shrub": 4
+      },
+      "shared_kits": [
+        "sources/props/shared_village_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/buildings/research_tower.glb",
+      "bytes": 2339936,
+      "triangles": 41962,
+      "materials": 36,
+      "animations": [],
+      "source": "sources/buildings/research_tower.blend",
+      "shared_kit_instances": {
+        "book": 6,
+        "crate": 1,
+        "lantern": 1,
+        "roof_tile": 44,
+        "shrub": 4
+      },
+      "shared_kits": [
+        "sources/props/shared_village_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/buildings/town_hall.glb",
+      "bytes": 4894880,
+      "triangles": 88355,
+      "materials": 30,
+      "animations": [],
+      "source": "sources/buildings/town_hall.blend",
+      "shared_kit_instances": {
+        "bench": 1,
+        "lantern": 2,
+        "roof_tile": 128,
+        "shrub": 4,
+        "stone_block": 20
+      },
+      "shared_kits": [
+        "sources/props/shared_village_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/buildings/weaver.glb",
+      "bytes": 2197472,
+      "triangles": 38908,
+      "materials": 33,
+      "animations": [],
+      "source": "sources/buildings/weaver.blend",
+      "shared_kit_instances": {
+        "lantern": 1,
+        "open_barrel": 2,
+        "roof_tile": 44,
+        "shrub": 4
+      },
+      "shared_kits": [
+        "sources/props/shared_village_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/environment/components/forest_boulder.glb",
+      "bytes": 26884,
+      "triangles": 260,
+      "materials": 6,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_bridge_plank.glb",
+      "bytes": 21584,
+      "triangles": 296,
+      "materials": 3,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_bridge_post.glb",
+      "bytes": 36580,
+      "triangles": 524,
+      "materials": 4,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_bridge_rail.glb",
+      "bytes": 12896,
+      "triangles": 216,
+      "materials": 2,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_crystal_blue.glb",
+      "bytes": 22044,
+      "triangles": 232,
+      "materials": 6,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_crystal_purple.glb",
+      "bytes": 21984,
+      "triangles": 232,
+      "materials": 6,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_fern.glb",
+      "bytes": 67524,
+      "triangles": 576,
+      "materials": 2,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_foam.glb",
+      "bytes": 58872,
+      "triangles": 976,
+      "materials": 2,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_hex_meadow.glb",
+      "bytes": 13312,
+      "triangles": 132,
+      "materials": 4,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_hex_stream.glb",
+      "bytes": 19068,
+      "triangles": 216,
+      "materials": 5,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_lantern_post.glb",
+      "bytes": 74724,
+      "triangles": 1240,
+      "materials": 7,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_leaf_clump.glb",
+      "bytes": 17284,
+      "triangles": 144,
+      "materials": 3,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_moss.glb",
+      "bytes": 28180,
+      "triangles": 300,
+      "materials": 2,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_mushroom_blue.glb",
+      "bytes": 125396,
+      "triangles": 1496,
+      "materials": 7,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_mushroom_purple.glb",
+      "bytes": 125464,
+      "triangles": 1496,
+      "materials": 7,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_mushroom_small.glb",
+      "bytes": 125568,
+      "triangles": 1496,
+      "materials": 7,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_root.glb",
+      "bytes": 10572,
+      "triangles": 140,
+      "materials": 3,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_rune_circle.glb",
+      "bytes": 94504,
+      "triangles": 1408,
+      "materials": 2,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_rune_diamond.glb",
+      "bytes": 13108,
+      "triangles": 156,
+      "materials": 2,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_rune_monolith.glb",
+      "bytes": 36416,
+      "triangles": 436,
+      "materials": 7,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_shrine_plinth.glb",
+      "bytes": 71176,
+      "triangles": 1304,
+      "materials": 3,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_stone_arch_block.glb",
+      "bytes": 15804,
+      "triangles": 190,
+      "materials": 3,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_stone_block.glb",
+      "bytes": 15812,
+      "triangles": 190,
+      "materials": 3,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_tree_snag.glb",
+      "bytes": 31276,
+      "triangles": 446,
+      "materials": 4,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/components/forest_waterfall.glb",
+      "bytes": 13900,
+      "triangles": 168,
+      "materials": 3,
+      "animations": [],
+      "source": "sources/environment/shared_forest_kit.blend"
+    },
+    {
+      "file": "exports/environment/hex_bioluminescent_grove.glb",
+      "bytes": 685064,
+      "triangles": 7114,
+      "materials": 54,
+      "animations": [],
+      "source": "sources/environment/hex_bioluminescent_grove.blend",
+      "shared_kit_instances": {
+        "forest_boulder": 5,
+        "forest_crystal_blue": 1,
+        "forest_fern": 3,
+        "forest_hex_meadow": 1,
+        "forest_leaf_clump": 32,
+        "forest_moss": 29,
+        "forest_mushroom_blue": 2,
+        "forest_mushroom_purple": 2,
+        "forest_mushroom_small": 3,
+        "forest_root": 1,
+        "forest_tree_snag": 1
+      },
+      "shared_kits": [
+        "sources/environment/shared_forest_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/environment/hex_crystal_grove.glb",
+      "bytes": 701884,
+      "triangles": 7196,
+      "materials": 60,
+      "animations": [],
+      "source": "sources/environment/hex_crystal_grove.blend",
+      "shared_kit_instances": {
+        "forest_boulder": 5,
+        "forest_crystal_blue": 3,
+        "forest_crystal_purple": 1,
+        "forest_fern": 3,
+        "forest_hex_meadow": 1,
+        "forest_leaf_clump": 35,
+        "forest_moss": 32,
+        "forest_mushroom_blue": 1,
+        "forest_mushroom_purple": 1,
+        "forest_mushroom_small": 3,
+        "forest_rune_monolith": 2
+      },
+      "shared_kits": [
+        "sources/environment/shared_forest_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/environment/hex_crystal_shrine.glb",
+      "bytes": 832856,
+      "triangles": 9628,
+      "materials": 60,
+      "animations": [],
+      "source": "sources/environment/hex_crystal_shrine.blend",
+      "shared_kit_instances": {
+        "forest_boulder": 5,
+        "forest_crystal_blue": 5,
+        "forest_crystal_purple": 2,
+        "forest_fern": 3,
+        "forest_hex_meadow": 1,
+        "forest_leaf_clump": 29,
+        "forest_moss": 26,
+        "forest_mushroom_blue": 1,
+        "forest_mushroom_purple": 1,
+        "forest_mushroom_small": 3,
+        "forest_rune_circle": 1,
+        "forest_rune_diamond": 1,
+        "forest_shrine_plinth": 1
+      },
+      "shared_kits": [
+        "sources/environment/shared_forest_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/environment/hex_glowing_mushrooms.glb",
+      "bytes": 658800,
+      "triangles": 6760,
+      "materials": 53,
+      "animations": [],
+      "source": "sources/environment/hex_glowing_mushrooms.blend",
+      "shared_kit_instances": {
+        "forest_boulder": 5,
+        "forest_crystal_blue": 1,
+        "forest_crystal_purple": 1,
+        "forest_fern": 3,
+        "forest_hex_meadow": 1,
+        "forest_leaf_clump": 29,
+        "forest_moss": 26,
+        "forest_mushroom_blue": 2,
+        "forest_mushroom_purple": 2,
+        "forest_mushroom_small": 3
+      },
+      "shared_kits": [
+        "sources/environment/shared_forest_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/environment/hex_lantern_bridge.glb",
+      "bytes": 890100,
+      "triangles": 9376,
+      "materials": 66,
+      "animations": [],
+      "source": "sources/environment/hex_lantern_bridge.blend",
+      "shared_kit_instances": {
+        "forest_boulder": 9,
+        "forest_crystal_blue": 1,
+        "forest_fern": 3,
+        "forest_foam": 3,
+        "forest_hex_stream": 1,
+        "forest_lantern_post": 2,
+        "forest_leaf_clump": 19,
+        "forest_moss": 28,
+        "forest_mushroom_blue": 1,
+        "forest_mushroom_purple": 1,
+        "forest_mushroom_small": 3,
+        "forest_stone_arch_block": 22,
+        "forest_stone_block": 92,
+        "forest_waterfall": 1
+      },
+      "shared_kits": [
+        "sources/environment/shared_forest_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/environment/hex_mystical_grove.glb",
+      "bytes": 660220,
+      "triangles": 6760,
+      "materials": 53,
+      "animations": [],
+      "source": "sources/environment/hex_mystical_grove.blend",
+      "shared_kit_instances": {
+        "forest_boulder": 6,
+        "forest_crystal_blue": 3,
+        "forest_crystal_purple": 1,
+        "forest_fern": 3,
+        "forest_hex_meadow": 1,
+        "forest_leaf_clump": 30,
+        "forest_moss": 27,
+        "forest_mushroom_blue": 2,
+        "forest_mushroom_purple": 1,
+        "forest_mushroom_small": 3
+      },
+      "shared_kits": [
+        "sources/environment/shared_forest_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/environment/hex_rune_shrine.glb",
+      "bytes": 808572,
+      "triangles": 9420,
+      "materials": 59,
+      "animations": [],
+      "source": "sources/environment/hex_rune_shrine.blend",
+      "shared_kit_instances": {
+        "forest_boulder": 5,
+        "forest_crystal_blue": 2,
+        "forest_fern": 3,
+        "forest_hex_meadow": 1,
+        "forest_lantern_post": 2,
+        "forest_leaf_clump": 38,
+        "forest_moss": 35,
+        "forest_mushroom_blue": 1,
+        "forest_mushroom_small": 3,
+        "forest_rune_circle": 1,
+        "forest_rune_monolith": 3,
+        "forest_shrine_plinth": 1
+      },
+      "shared_kits": [
+        "sources/environment/shared_forest_kit.blend"
+      ]
+    },
+    {
+      "file": "exports/environment/hex_woodland_bridge.glb",
+      "bytes": 872992,
+      "triangles": 10184,
+      "materials": 70,
+      "animations": [],
+      "source": "sources/environment/hex_woodland_bridge.blend",
+      "shared_kit_instances": {
+        "forest_boulder": 9,
+        "forest_bridge_plank": 15,
+        "forest_bridge_post": 4,
+        "forest_bridge_rail": 8,
+        "forest_crystal_blue": 1,
+        "forest_fern": 3,
+        "forest_foam": 3,
+        "forest_hex_stream": 1,
+        "forest_lantern_post": 2,
+        "forest_leaf_clump": 19,
+        "forest_moss": 24,
+        "forest_mushroom_blue": 1,
+        "forest_mushroom_purple": 1,
+        "forest_mushroom_small": 3,
+        "forest_waterfall": 1
+      },
+      "shared_kits": [
+        "sources/environment/shared_forest_kit.blend"
+      ]
     }
   ]
 }

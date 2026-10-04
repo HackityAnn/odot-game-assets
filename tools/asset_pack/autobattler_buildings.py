@@ -284,12 +284,12 @@ def dormer(pos=(.77,.23,2.45)):
     group('Glowing roof dormer',make,pos,scale=1.25,rotation=(0,0,math.pi/2))
 
 
-def shield_emblem(pos=(0,-1.17,2.56),size=1.02):
+def shield_emblem(pos=(0,-1.17,2.56),size=1.02,kind='sword'):
     x,y,z=pos
     outline=[(-.43,.45),(.43,.45),(.44,-.10),(.24,-.40),(0,-.59),(-.24,-.40),(-.44,-.10)]
     for factor,dy,mat in [(1,0,'gold'),(.84,-.03,'blue')]:
         cottage.relief('Barracks heraldic shield',[(x+xx*size*factor,z+zz*size*factor) for xx,zz in reversed(outline)],y+dy,.09,mat,.025)
-    glyph('sword',x,y-.10,z,size*.82)
+    glyph(kind,x,y-.10,z,size*.82)
 
 
 def barracks():

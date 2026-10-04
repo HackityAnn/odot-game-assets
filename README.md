@@ -195,7 +195,7 @@ python3 -m unittest tools.asset_catalog.test_catalog tools.asset_catalog.test_bu
 
 ## Reference asset set
 
-Browse [the offline reference library](sources/reference/index.html) for all three
+Browse [the offline reference library](sources/reference/index.html) for all five
 reference sets, full-size images, and matching source/render/export links.
 The eight original PNGs from `new_autobattler_assets.zip` are preserved in
 `sources/reference/autobattler/`; its manifest records archive and image checksums.
@@ -226,6 +226,67 @@ without requiring a live link to the library.
 Skulls reuse one mesh set across evil faces, belt buckles, and display dressing;
 armor spikes reuse geometry across helmets and shoulders. Equip helpers preserve
 each part's authored scale when attaching it to a bone.
+
+The five images from `more_buildings_assets.zip` are preserved in
+`sources/reference/more_buildings/`. They map to `archery_range`,
+`research_tower` (the observatory), `metal_mine`, `weaver`, and `town_hall`.
+The new buildings reuse the village mesh library and architectural helpers,
+with individual editable sources, GLBs, presentation renders, and catalog links.
+
+The eight images from `magical_forest_environment_assets.zip` are preserved in
+`sources/reference/magical_forest/`. Each has a matching complete hex tile:
+`hex_crystal_grove`, `hex_mystical_grove`, `hex_rune_shrine`,
+`hex_glowing_mushrooms`, `hex_lantern_bridge`, `hex_bioluminescent_grove`,
+`hex_woodland_bridge`, and `hex_crystal_shrine`. Their terrain is included in the
+GLB. Crystals and mushroom undersides use emissive materials; visible glow halos
+can be added by the game's renderer. Water is an opaque stylized mesh.
+
+`sources/environment/shared_forest_kit.blend` contains 25 reusable Asset Browser
+collections. Crystals, mushrooms, boulders, moss, leaves, ferns, roots, tree
+snags, rune shapes, shrine platforms, lantern posts, stone arch wedges,
+bridge planks/posts/rails, hex bases, waterfalls, and foam also export as
+individual GLBs under `exports/environment/components/forest_*.glb`.
+The catalog maps each component to its source collection in the shared library.
+`tools/asset_pack/forest_tiles.py` holds the tile compositions; geometry is authored
+once in `forest_kit.py`. Repeated instances share mesh datablocks in each source.
+Rebuild the library and tiles explicitly to propagate a library edit.
+
+Forest hexes use a flat-top footprint with radius **2.55**, meadow surface
+**Z = 0**, and foundation bottom **Z = −0.36** in Blender. Neighbor columns are
+**3.825** apart; rows are **4.41672956** apart, with alternate columns offset by
+half a row. Both bridge rivers connect the north and south edges with matching
+water height and channel width. Individual tile roots retain those dimensions
+as custom properties. `verify_forest_blender.py` checks every vertex against
+the six tile edges and compares embedded component meshes with the current
+library prototypes. The standard asset check also round-trips every tile and
+component through GLB and checks repeated mesh sharing.
+
+Build and review the new sets in isolated workers:
+
+```sh
+python3 -m tools.asset_pack.worker tools/asset_pack/build_pack.py --label more-buildings archery_range research_tower metal_mine weaver town_hall --no-render
+python3 -m tools.asset_pack.worker tools/asset_pack/forest_kit.py --label forest-kit
+python3 -m tools.asset_pack.worker tools/asset_pack/forest_tiles.py --label forest-tiles --no-render
+mise run asset-check -- archery_range research_tower metal_mine weaver town_hall hex_crystal_grove hex_mystical_grove hex_rune_shrine hex_glowing_mushrooms hex_lantern_bridge hex_bioluminescent_grove hex_woodland_bridge hex_crystal_shrine
+python3 -m tools.asset_catalog export environment/components/forest_crystal_blue
+python3 -m tools.asset_pack.worker tools/asset_pack/verify_forest_blender.py --label forest-grid-validation
+python3 -m tools.asset_pack.worker tools/asset_pack/render_previews.py --label new-previews archery_range research_tower metal_mine weaver town_hall
+python3 tools/asset_pack/reference_index.py
+```
+
+`forest_tiles.py` with no asset names builds all eight tiles. Pass names to select
+a subset. Builders overwrite generated sources; preserve manual refinements first.
+`render_previews.py` renders existing presentation scenes without saving sources;
+pass forest tile IDs to render them too. Use the catalog thumbnail command for
+portable component previews. Both archive manifests retain the original filenames
+and checksums; provenance notes record what the supplied archives contain. The new
+buildings and forest tiles also have a reference detail pass: saturated material
+colors, fine timber grain and roof seams, worn stone facets and cracks, bright
+window panes, mushroom stem grooves and spores, and stronger contact shading.
+Small emissive and tinted meshes suggest amber/cyan reflected light in GLBs;
+these cues remain visible without scene lights. The presentation scenes render
+at 1200 × 1200 with 48 samples and stronger contrast. Shared component refinements
+are authored in the library and propagated to every forest tile.
 
 `sources/fantasy_village.blend` assembles four buildings and three characters
 modeled from `sources/reference/fantasy_village.png`: tree house, bakery, gold

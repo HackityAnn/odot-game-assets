@@ -280,5 +280,457 @@
       "run": "finite geometry; playback checked",
       "walk": "finite geometry; playback checked"
     }
+  },
+  {
+    "asset": "archery_range",
+    "asset_id": "buildings/archery_range",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "4e600eb1a3ec2f195fdb8ad1060e457b7f1d7af83c6b396b43e9f1137dffd197",
+    "glb_sha256": "5b0d3349ad86bb8118033850137d6c952af1a24b41a85e9f2aa60e1bf4bb2670",
+    "shared_kit_instances": {
+      "arrow": 12,
+      "lantern": 1,
+      "open_barrel": 1,
+      "roof_tile": 44,
+      "shrub": 4,
+      "stone_block": 60,
+      "target": 1
+    }
+  },
+  {
+    "asset": "metal_mine",
+    "asset_id": "buildings/metal_mine",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "13f5be38f2a0d688ba2ec172116da55d490014b8a68327736286776f0f449280",
+    "glb_sha256": "8cd84138fc9b71c0f67449f9a309843be35f54bcf618c5e6f61ca2601ca21d6a",
+    "shared_kit_instances": {
+      "crate": 2,
+      "lantern": 1,
+      "open_crate": 1,
+      "roof_tile": 40,
+      "shrub": 4
+    }
+  },
+  {
+    "asset": "research_tower",
+    "asset_id": "buildings/research_tower",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "f3019c42a852b44d91797062f9577d547fa572b01dd298f271c4a4c463b058da",
+    "glb_sha256": "4656996ae7ffcdff0f9234ae09777ae6113ae00331047bf455eaf4bfec049a28",
+    "shared_kit_instances": {
+      "book": 6,
+      "crate": 1,
+      "lantern": 1,
+      "roof_tile": 44,
+      "shrub": 4
+    }
+  },
+  {
+    "asset": "town_hall",
+    "asset_id": "buildings/town_hall",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "52e837b23701ec3ae0c3dfc0522f3b8de1820a44a194eca8eb29b3c0c6747a75",
+    "glb_sha256": "ad5b5d1e31302a7821da291ac65f11918589afdd1f79950a41d341c934dc5e20",
+    "shared_kit_instances": {
+      "bench": 1,
+      "lantern": 2,
+      "roof_tile": 128,
+      "shrub": 4,
+      "stone_block": 20
+    }
+  },
+  {
+    "asset": "weaver",
+    "asset_id": "buildings/weaver",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "38b0deb927ef2c399a3d859423a8e04d2df391490bcbe206f4ccd1e21b981376",
+    "glb_sha256": "203c449fba27c27dfdb17561ddc97727c67e3d184f21b911c3796071a8c6f9ca",
+    "shared_kit_instances": {
+      "lantern": 1,
+      "open_barrel": 2,
+      "roof_tile": 44,
+      "shrub": 4
+    }
+  },
+  {
+    "asset": "environment/components/forest_boulder",
+    "asset_id": "environment/components/forest_boulder",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "c6c69026d5a224d5e6492892bae32c823641084726bd6aaaeacdce8b3bc5a2e2"
+  },
+  {
+    "asset": "environment/components/forest_bridge_plank",
+    "asset_id": "environment/components/forest_bridge_plank",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "a760515172e68da49537be4635f0f4e0753489f5b39288d2ad93ecbf58765593"
+  },
+  {
+    "asset": "environment/components/forest_bridge_post",
+    "asset_id": "environment/components/forest_bridge_post",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "2eba5dfd0d512fd534f89b7fa0d1b78743eccac53ca16dd43b885cb7367330f6"
+  },
+  {
+    "asset": "environment/components/forest_bridge_rail",
+    "asset_id": "environment/components/forest_bridge_rail",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "b493bde08d7b7fbbbd3511fadf54d652d045f61c82a443200ee67528d5808580"
+  },
+  {
+    "asset": "environment/components/forest_crystal_blue",
+    "asset_id": "environment/components/forest_crystal_blue",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "ead85d01ae34b3b32b599b7d05a4799beba971cd571820c5709f705bca822d89"
+  },
+  {
+    "asset": "environment/components/forest_crystal_purple",
+    "asset_id": "environment/components/forest_crystal_purple",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "b6e70740a1aff6f89d0ad0f33331bc4dc60dc61a6dde6a8e0416474442fa0e63"
+  },
+  {
+    "asset": "environment/components/forest_fern",
+    "asset_id": "environment/components/forest_fern",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "256c899f369c25e9bd2af15d3a2c641803ae63cbc210f1956bb6e5f752194592"
+  },
+  {
+    "asset": "environment/components/forest_foam",
+    "asset_id": "environment/components/forest_foam",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "f8397516afff274798d3b2691dc779cbe03d1488ca10eed1a515c8ae83d679e7"
+  },
+  {
+    "asset": "environment/components/forest_hex_meadow",
+    "asset_id": "environment/components/forest_hex_meadow",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "6ead2dabd33328e3bae021964e465657fb5f65aa1143bc065321b7af5451ca4b"
+  },
+  {
+    "asset": "environment/components/forest_hex_stream",
+    "asset_id": "environment/components/forest_hex_stream",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "8ffd602e089a1535069a3516fe7873fd6384be88dd6862572756e5ad6b1ec50b"
+  },
+  {
+    "asset": "environment/components/forest_lantern_post",
+    "asset_id": "environment/components/forest_lantern_post",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "d210cae9bfad0faef38003ed1f263392f4a6f1347dd63203b6036acd552e8456"
+  },
+  {
+    "asset": "environment/components/forest_leaf_clump",
+    "asset_id": "environment/components/forest_leaf_clump",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "f469c476ebed71a83fced38db687357bd123b76cae1a8104c144544a8c78dd9a"
+  },
+  {
+    "asset": "environment/components/forest_moss",
+    "asset_id": "environment/components/forest_moss",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "974a81dfb91fa8200813844e6b81b0c4fcb9c2a87164929f4baee264d6589432"
+  },
+  {
+    "asset": "environment/components/forest_mushroom_blue",
+    "asset_id": "environment/components/forest_mushroom_blue",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "bf899def1c6c11d0a7b62af407765732cf8f2b783cf89596298bd70b74c1ebe6"
+  },
+  {
+    "asset": "environment/components/forest_mushroom_purple",
+    "asset_id": "environment/components/forest_mushroom_purple",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "9f4a275f9d4da7f44a8cee51fe6789ea65fdaaa0395cb9dca3b57f5b04c9c3f8"
+  },
+  {
+    "asset": "environment/components/forest_mushroom_small",
+    "asset_id": "environment/components/forest_mushroom_small",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "937d317ceef194e878913972b656da5a23970be993db8ff8756ee35845826743"
+  },
+  {
+    "asset": "environment/components/forest_root",
+    "asset_id": "environment/components/forest_root",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "3cb4c25cdc7aab791fdcebff9c4d76b81524ee55dc726148ca63bfd7a9c6d899"
+  },
+  {
+    "asset": "environment/components/forest_rune_circle",
+    "asset_id": "environment/components/forest_rune_circle",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "7849e263fb5f906e88a7ccaa49b90455c2498ba082d8293f8507c27b11748b0c"
+  },
+  {
+    "asset": "environment/components/forest_rune_diamond",
+    "asset_id": "environment/components/forest_rune_diamond",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "915dd4ada05f5699655ec8d7ea5c6023fac9c3e688504e3ae5686f2b870ace33"
+  },
+  {
+    "asset": "environment/components/forest_rune_monolith",
+    "asset_id": "environment/components/forest_rune_monolith",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "af249688019b35d712f2df5208f702cd42f43d478a041e79627e265e95639e38"
+  },
+  {
+    "asset": "environment/components/forest_shrine_plinth",
+    "asset_id": "environment/components/forest_shrine_plinth",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "6e2b2d563963fc3f74ea700b7fb38edabe7a101d41a3b1b6a8d4836c4f8c49ce"
+  },
+  {
+    "asset": "environment/components/forest_stone_arch_block",
+    "asset_id": "environment/components/forest_stone_arch_block",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "5db9d0a8008bdef8a940de5b7afa4b6a0a018d01d930aa5ba9235245acc8fcc9"
+  },
+  {
+    "asset": "environment/components/forest_stone_block",
+    "asset_id": "environment/components/forest_stone_block",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "d3f613e09956ee856df187fd5822a6f6d481e7c3765b609d9040247ba5b0a39a"
+  },
+  {
+    "asset": "environment/components/forest_tree_snag",
+    "asset_id": "environment/components/forest_tree_snag",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "a01c64ed7a7ad1624ceb37394665439dfa263b710c1d2dda4a6ac23f89593f14"
+  },
+  {
+    "asset": "environment/components/forest_waterfall",
+    "asset_id": "environment/components/forest_waterfall",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "7ef62ad13d1ff33f79576bb7f559782b42fb22cb43d9db7c017d380c68bb1e21",
+    "glb_sha256": "3db174922ee3b5e1f3de3f194ac538350308c8c9cf11068777b921f11ae58f8a"
+  },
+  {
+    "asset": "environment/hex_bioluminescent_grove",
+    "asset_id": "environment/hex_bioluminescent_grove",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "c325b6ad4713c629e2cafebf04dc152c9406e9033b5d4d1c1abed6df714631e1",
+    "glb_sha256": "597b33e30ef1012059cf9e73ad278d0c7ff209f634a0b36bd1f946ddff031d71",
+    "shared_kit_instances": {
+      "forest_boulder": 5,
+      "forest_crystal_blue": 1,
+      "forest_fern": 3,
+      "forest_hex_meadow": 1,
+      "forest_leaf_clump": 32,
+      "forest_moss": 29,
+      "forest_mushroom_blue": 2,
+      "forest_mushroom_purple": 2,
+      "forest_mushroom_small": 3,
+      "forest_root": 1,
+      "forest_tree_snag": 1
+    }
+  },
+  {
+    "asset": "environment/hex_crystal_grove",
+    "asset_id": "environment/hex_crystal_grove",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "384e16053578f1976478940cc076bb1f0e0fed416c1496ea2927d9e850fd0200",
+    "glb_sha256": "b18cbf59d7b3d6edeab057b9197340919bbd723efb8ff5e03523b70e2418d5ce",
+    "shared_kit_instances": {
+      "forest_boulder": 5,
+      "forest_crystal_blue": 3,
+      "forest_crystal_purple": 1,
+      "forest_fern": 3,
+      "forest_hex_meadow": 1,
+      "forest_leaf_clump": 35,
+      "forest_moss": 32,
+      "forest_mushroom_blue": 1,
+      "forest_mushroom_purple": 1,
+      "forest_mushroom_small": 3,
+      "forest_rune_monolith": 2
+    }
+  },
+  {
+    "asset": "environment/hex_crystal_shrine",
+    "asset_id": "environment/hex_crystal_shrine",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "4b4df06ba1e67b209c66c29bc7003de071ceb9beaf2bae596742f7dc91b5e2d7",
+    "glb_sha256": "9f19fe3b8ea219f59da9a239dcf9cb9a96e377da83eff91965d9711f7ccffa1a",
+    "shared_kit_instances": {
+      "forest_boulder": 5,
+      "forest_crystal_blue": 5,
+      "forest_crystal_purple": 2,
+      "forest_fern": 3,
+      "forest_hex_meadow": 1,
+      "forest_leaf_clump": 29,
+      "forest_moss": 26,
+      "forest_mushroom_blue": 1,
+      "forest_mushroom_purple": 1,
+      "forest_mushroom_small": 3,
+      "forest_rune_circle": 1,
+      "forest_rune_diamond": 1,
+      "forest_shrine_plinth": 1
+    }
+  },
+  {
+    "asset": "environment/hex_glowing_mushrooms",
+    "asset_id": "environment/hex_glowing_mushrooms",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "4d892e65b9e346d4aecc7b4530a2c923908ccd701532f0b79b8d85155d6785c9",
+    "glb_sha256": "2d6d0c2b4118624be22ed8b902b44324f7f00280f32739c89e0438ce76c8cada",
+    "shared_kit_instances": {
+      "forest_boulder": 5,
+      "forest_crystal_blue": 1,
+      "forest_crystal_purple": 1,
+      "forest_fern": 3,
+      "forest_hex_meadow": 1,
+      "forest_leaf_clump": 29,
+      "forest_moss": 26,
+      "forest_mushroom_blue": 2,
+      "forest_mushroom_purple": 2,
+      "forest_mushroom_small": 3
+    }
+  },
+  {
+    "asset": "environment/hex_lantern_bridge",
+    "asset_id": "environment/hex_lantern_bridge",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "1f33f3f0e35071b1ec4b8ec2aa77d8d006c1ecb4b497d9bd13b21e968463b793",
+    "glb_sha256": "e259fd640197cc356407dd1858f071729ad8f7fd3d2bef99c1ef35f273dca07a",
+    "shared_kit_instances": {
+      "forest_boulder": 9,
+      "forest_crystal_blue": 1,
+      "forest_fern": 3,
+      "forest_foam": 3,
+      "forest_hex_stream": 1,
+      "forest_lantern_post": 2,
+      "forest_leaf_clump": 19,
+      "forest_moss": 28,
+      "forest_mushroom_blue": 1,
+      "forest_mushroom_purple": 1,
+      "forest_mushroom_small": 3,
+      "forest_stone_arch_block": 22,
+      "forest_stone_block": 92,
+      "forest_waterfall": 1
+    }
+  },
+  {
+    "asset": "environment/hex_mystical_grove",
+    "asset_id": "environment/hex_mystical_grove",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "2e4ef73e41f8fd6b22d32210f91c0063fe03defb5511cae8499fb17dce50c4ff",
+    "glb_sha256": "a7fa5b94d72e19a37c9da606d80092bff22541e2f1769f6a39ee19fe50709e9b",
+    "shared_kit_instances": {
+      "forest_boulder": 6,
+      "forest_crystal_blue": 3,
+      "forest_crystal_purple": 1,
+      "forest_fern": 3,
+      "forest_hex_meadow": 1,
+      "forest_leaf_clump": 30,
+      "forest_moss": 27,
+      "forest_mushroom_blue": 2,
+      "forest_mushroom_purple": 1,
+      "forest_mushroom_small": 3
+    }
+  },
+  {
+    "asset": "environment/hex_rune_shrine",
+    "asset_id": "environment/hex_rune_shrine",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "d2fb2b60bd70e9eab1ce1007260a593b2665aba2c94a8e46fc04e85100e9b610",
+    "glb_sha256": "63188240688436c039f3b3468f410edbf8a94ae89cd7786d9c78ad7ca64e7628",
+    "shared_kit_instances": {
+      "forest_boulder": 5,
+      "forest_crystal_blue": 2,
+      "forest_fern": 3,
+      "forest_hex_meadow": 1,
+      "forest_lantern_post": 2,
+      "forest_leaf_clump": 38,
+      "forest_moss": 35,
+      "forest_mushroom_blue": 1,
+      "forest_mushroom_small": 3,
+      "forest_rune_circle": 1,
+      "forest_rune_monolith": 3,
+      "forest_shrine_plinth": 1
+    }
+  },
+  {
+    "asset": "environment/hex_woodland_bridge",
+    "asset_id": "environment/hex_woodland_bridge",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "source_sha256": "d0d4237d4aab6d40fcb37e56142d6715e51541ab9973b00d57a7ede47ad80a10",
+    "glb_sha256": "f626c1d41e51c7032ba6b38fa3338b7297ced2146db5532d7e69c524e721795c",
+    "shared_kit_instances": {
+      "forest_boulder": 9,
+      "forest_bridge_plank": 15,
+      "forest_bridge_post": 4,
+      "forest_bridge_rail": 8,
+      "forest_crystal_blue": 1,
+      "forest_fern": 3,
+      "forest_foam": 3,
+      "forest_hex_stream": 1,
+      "forest_lantern_post": 2,
+      "forest_leaf_clump": 19,
+      "forest_moss": 24,
+      "forest_mushroom_blue": 1,
+      "forest_mushroom_purple": 1,
+      "forest_mushroom_small": 3,
+      "forest_waterfall": 1
+    }
   }
 ]

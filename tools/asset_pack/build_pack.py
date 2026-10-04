@@ -13,6 +13,8 @@ import village_kit as kit
 import autobattler_buildings
 import berserker
 import evil_units
+import more_buildings
+import reference_finish as finish
 
 
 def build_one(name, render=True):
@@ -31,8 +33,12 @@ def build_one(name, render=True):
         elif name=='berserker': berserker.build(asset,props)
         else: characters.build(name,asset,props)
     else:
-        builder=autobattler_buildings.BUILDERS.get(name) or buildings.BUILDERS[name]
+        builder=(more_buildings.BUILDERS.get(name) or
+                 autobattler_buildings.BUILDERS.get(name) or buildings.BUILDERS[name])
         builder()
+        if name in more_buildings.BUILDERS:
+            more_buildings.details(name)
+            finish.building_finish(name)
     g.attach_all(asset,root)
     terrain=g.collection('DISPLAY_TERRAIN'); g.target(terrain); g.terrain(1.85 if is_character else 2.55)
     # Trees are display dressing, deliberately separate from the building export.
@@ -52,7 +58,9 @@ def build_one(name, render=True):
         if name=='mage': g.mushroom((1.1,-.35,0),.46)
         g.stepping_stone((.2,-1.02),.24); g.stepping_stone((.70,-1.10),.22)
         if name in ['evil_mage_unit','evil_berserker_unit']: kit.place('skull',(-1.02,-.45,.01),.37,(0,0,-.2))
-    if name in catalog.NEW:
+    if name in more_buildings.BUILDERS:
+        g.studio(2.1 if name in ['town_hall','research_tower'] else 1.8,7.0)
+    elif name in catalog.NEW:
         g.studio(1.47 if is_character else 2.55 if name=='magic_academy' else 2.26 if name=='arrow_tower' else 2.05,
                  4.8 if name=='evil_mage_unit' else 4.5 if is_character else 7.2 if name=='magic_academy' else 6.9 if name=='arrow_tower' else 6.6)
     else:
@@ -61,7 +69,7 @@ def build_one(name, render=True):
     category='characters' if is_character else 'buildings'
     path=g.ROOT/'sources'/category/f'{name}.blend'
     scene.render.filepath=str(g.ROOT/'exports'/'previews'/f'{name}.png')
-    if name in catalog.NEW:
+    if name in catalog.NEW or name in more_buildings.BUILDERS:
         reference=bpy.data.images.load(str(g.ROOT/'sources/reference'/catalog.BY_ID[name]['reference']),check_existing=True)
         reference.pack(); reference.use_fake_user=True
         root['reference']='sources/reference/'+catalog.BY_ID[name]['reference']
@@ -70,6 +78,9 @@ def build_one(name, render=True):
     if not is_character:
         root['modeling_stage']='upgraded_reference_pass'
         root['art_direction']='Bold role emblems, substantial timbers, projecting joinery, layered roofs and recessed portals.'
+    if name in more_buildings.BUILDERS:
+        root['modeling_stage']='reference_detail_pass'
+        finish.studio_finish()
     bpy.ops.wm.save_as_mainfile(filepath=str(path))
     if render:
         if name=='archer':

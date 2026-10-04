@@ -15,7 +15,7 @@ ORIGINAL = [
 ASSETS = [dict(id=n, title=t, category=c, crop=v,
                reference='fantasy_village.png', dimensions=[1536, 1024], batch='original')
           for n, t, c, v in ORIGINAL]
-for batch in ['autobattler','evil_autobattler']:
+for batch in ['autobattler','evil_autobattler','more_buildings','magical_forest']:
     manifest=ROOT/'sources/reference'/batch/'manifest.json'
     if not manifest.exists(): continue
     for entry in json.loads(manifest.read_text())['assets']:

@@ -62,15 +62,21 @@ def check_assets(assets=None, *, root=ROOT, blender=None, force=False):
         inputs={'job':job,'source':digest(root/job['source']),'runtime':runtime}
         entry=entries.get(f'exports/{asset_id}.glb',{})
         if entry.get('shared_kit_instances'):
-            library=manifest.get('shared_kit','sources/props/shared_village_kit.blend')
-            path=(root/library).resolve()
-            if not path.is_relative_to(root) or not path.is_file():
-                raise ValueError(f'{asset_id}: missing or invalid shared kit {library}')
-            inputs['shared_kit']=digest(path)
+            libraries=entry.get('shared_kits') or [manifest.get('shared_kit','sources/props/shared_village_kit.blend')]
+            hashes={}
+            for library in libraries:
+                path=(root/library).resolve()
+                if not path.is_relative_to(root) or not path.is_file():
+                    raise ValueError(f'{asset_id}: missing or invalid shared kit {library}')
+                hashes[library]=digest(path)
+            inputs['shared_kit']=hashes
         before=state['assets'].get(asset_id,{})
+        previous_kit=before.get('shared_kit')
+        if isinstance(previous_kit,str):
+            previous_kit={manifest.get('shared_kit','sources/props/shared_village_kit.blend'):previous_kit}
         needs_rebuild=(before.get('source_sha256')==inputs['source'] and
                        (before.get('needs_kit_rebuild') or
-                        (before.get('shared_kit') and before['shared_kit']!=inputs.get('shared_kit'))))
+                        (previous_kit and previous_kit!=inputs.get('shared_kit'))))
         if needs_rebuild:
             notices.append(asset_id)
             print(f'{asset_id}: shared kit changed; embedded copies need a modeling rebuild. '

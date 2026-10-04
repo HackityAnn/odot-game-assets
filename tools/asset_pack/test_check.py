@@ -104,6 +104,25 @@ class IncrementalChecks(unittest.TestCase):
         report=json.loads((self.root/'.cache/asset-check/jobs.json').read_text())
         self.assertEqual(report['status'],'failed')
 
+    def test_forest_dependency_uses_its_library_and_ignores_village_edits(self):
+        forest=self.root/'sources/environment/shared_forest_kit.blend'
+        forest.parent.mkdir(parents=True);forest.write_bytes(b'forest one')
+        village=self.root/'sources/props/shared_village_kit.blend';village.write_bytes(b'village one')
+        manifest_path=self.root/'exports/asset_manifest.json'
+        manifest=json.loads(manifest_path.read_text())
+        manifest['shared_kit']='sources/props/shared_village_kit.blend'
+        manifest['assets'][0].update(shared_kit_instances={'forest_crystal_blue':2},
+                                    shared_kits=['sources/environment/shared_forest_kit.blend'])
+        write_json(manifest_path,manifest)
+        self.run_check(self.ids);self.worker.reset_mock()
+        village.write_bytes(b'village two')
+        self.assertEqual(self.run_check(self.ids)['unchanged'],2)
+        self.worker.assert_not_called()
+        forest.write_bytes(b'forest two')
+        report=self.run_check(self.ids)
+        self.assertEqual(report['verified'],1)
+        self.assertEqual(report['embedded_kit_notices'],['props/alpha'])
+
     def test_force_rechecks_unchanged_assets(self):
         self.run_check();self.worker.reset_mock()
         self.assertEqual(self.run_check(force=True)['verified'],2)

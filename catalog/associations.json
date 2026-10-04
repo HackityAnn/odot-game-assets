@@ -177,6 +177,322 @@
     },
     "exports/environment/hex_meadow_character.glb": {
       "export_collection": "DISPLAY_TERRAIN"
+    },
+    "exports/buildings/archery_range.glb": {
+      "title": "Archery Range",
+      "reference": {
+        "path": "sources/reference/more_buildings/low_poly_fantasy_archery_range.png"
+      },
+      "preview": "exports/previews/archery_range.png"
+    },
+    "exports/buildings/research_tower.glb": {
+      "title": "Research Tower",
+      "reference": {
+        "path": "sources/reference/more_buildings/fantasy_observatory_cottage_diorama.png"
+      },
+      "preview": "exports/previews/research_tower.png"
+    },
+    "exports/buildings/metal_mine.glb": {
+      "title": "Metal Mine",
+      "reference": {
+        "path": "sources/reference/more_buildings/low_poly_medieval_iron_mine_diorama.png"
+      },
+      "preview": "exports/previews/metal_mine.png"
+    },
+    "exports/buildings/weaver.glb": {
+      "title": "Weaver",
+      "reference": {
+        "path": "sources/reference/more_buildings/cozy_fantasy_weaver_s_workshop.png"
+      },
+      "preview": "exports/previews/weaver.png"
+    },
+    "exports/buildings/town_hall.glb": {
+      "title": "Town Hall",
+      "reference": {
+        "path": "sources/reference/more_buildings/fantasy_town_hall_diorama.png"
+      },
+      "preview": "exports/previews/town_hall.png"
+    },
+    "exports/environment/hex_crystal_grove.glb": {
+      "title": "Crystal Grove",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png"
+      },
+      "preview": "exports/previews/hex_crystal_grove.png"
+    },
+    "exports/environment/hex_mystical_grove.glb": {
+      "title": "Mystical Grove",
+      "reference": {
+        "path": "sources/reference/magical_forest/mystical_crystal_grove_diorama.png"
+      },
+      "preview": "exports/previews/hex_mystical_grove.png"
+    },
+    "exports/environment/hex_rune_shrine.glb": {
+      "title": "Rune Shrine",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png"
+      },
+      "preview": "exports/previews/hex_rune_shrine.png"
+    },
+    "exports/environment/hex_glowing_mushrooms.glb": {
+      "title": "Glowing Mushrooms",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_glowing_mushroom_grove.png"
+      },
+      "preview": "exports/previews/hex_glowing_mushrooms.png"
+    },
+    "exports/environment/hex_lantern_bridge.glb": {
+      "title": "Lantern Bridge",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png"
+      },
+      "preview": "exports/previews/hex_lantern_bridge.png"
+    },
+    "exports/environment/hex_bioluminescent_grove.glb": {
+      "title": "Bioluminescent Grove",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_bioluminescent_mushroom_grove.png"
+      },
+      "preview": "exports/previews/hex_bioluminescent_grove.png"
+    },
+    "exports/environment/hex_woodland_bridge.glb": {
+      "title": "Woodland Bridge",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_woodland_bridge_diorama.png"
+      },
+      "preview": "exports/previews/hex_woodland_bridge.png"
+    },
+    "exports/environment/hex_crystal_shrine.glb": {
+      "title": "Crystal Shrine",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_shrine_diorama.png"
+      },
+      "preview": "exports/previews/hex_crystal_shrine.png"
+    },
+    "exports/environment/components/forest_crystal_blue.glb": {
+      "title": "Forest crystal blue",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_crystal_blue",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_crystal_purple.glb": {
+      "title": "Forest crystal purple",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_crystal_purple",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_mushroom_blue.glb": {
+      "title": "Forest mushroom blue",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_mushroom_blue",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_glowing_mushroom_grove.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_mushroom_purple.glb": {
+      "title": "Forest mushroom purple",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_mushroom_purple",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_glowing_mushroom_grove.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_mushroom_small.glb": {
+      "title": "Forest mushroom small",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_mushroom_small",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_glowing_mushroom_grove.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_boulder.glb": {
+      "title": "Forest boulder",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_boulder",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_moss.glb": {
+      "title": "Forest moss",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_moss",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_leaf_clump.glb": {
+      "title": "Forest leaf clump",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_leaf_clump",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_fern.glb": {
+      "title": "Forest fern",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_fern",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_root.glb": {
+      "title": "Forest root",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_root",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_bioluminescent_mushroom_grove.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_tree_snag.glb": {
+      "title": "Forest tree snag",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_tree_snag",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_bioluminescent_mushroom_grove.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_rune_monolith.glb": {
+      "title": "Forest rune monolith",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_rune_monolith",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_rune_diamond.glb": {
+      "title": "Forest rune diamond",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_rune_diamond",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_rune_circle.glb": {
+      "title": "Forest rune circle",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_rune_circle",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_shrine_plinth.glb": {
+      "title": "Forest shrine plinth",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_shrine_plinth",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_lantern_post.glb": {
+      "title": "Forest lantern post",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_lantern_post",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_stone_arch_block.glb": {
+      "title": "Forest stone arch block",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_stone_arch_block",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_stone_block.glb": {
+      "title": "Forest stone block",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_stone_block",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_bridge_plank.glb": {
+      "title": "Forest bridge plank",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_bridge_plank",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_woodland_bridge_diorama.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_bridge_post.glb": {
+      "title": "Forest bridge post",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_bridge_post",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_woodland_bridge_diorama.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_bridge_rail.glb": {
+      "title": "Forest bridge rail",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_bridge_rail",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_woodland_bridge_diorama.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_hex_meadow.glb": {
+      "title": "Forest hex meadow",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_hex_meadow",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_hex_stream.glb": {
+      "title": "Forest hex stream",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_hex_stream",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_waterfall.glb": {
+      "title": "Forest waterfall",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_waterfall",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png"
+      },
+      "preview": null
+    },
+    "exports/environment/components/forest_foam.glb": {
+      "title": "Forest foam",
+      "source": "sources/environment/shared_forest_kit.blend",
+      "export_collection": "forest_foam",
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png"
+      },
+      "preview": null
     }
   }
 }

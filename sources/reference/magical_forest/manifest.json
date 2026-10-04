@@ -1,0 +1,87 @@
+{
+  "archive_name": "magical_forest_environment_assets.zip",
+  "archive_sha256": "670af2c751d63cbebdae2f530828dd61cdad8ee42145b1c1a8084717719b3426",
+  "originals_preserved": true,
+  "assets": [
+    {
+      "id": "hex_crystal_grove",
+      "title": "Crystal Grove",
+      "category": "environment",
+      "image": "enchanted_crystal_grove_tile.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "hex_mystical_grove",
+      "title": "Mystical Grove",
+      "category": "environment",
+      "image": "mystical_crystal_grove_diorama.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "2beb6273fffa63650afc8b4841921a01606f9365bf3c6c453c23e77356c0f488",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "hex_rune_shrine",
+      "title": "Rune Shrine",
+      "category": "environment",
+      "image": "enchanted_forest_rune_shrine.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "c3000fe81c2f8a676f770c9a03d6468e154c36873c9f36f3af02fd8b6ce81dae",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "hex_glowing_mushrooms",
+      "title": "Glowing Mushrooms",
+      "category": "environment",
+      "image": "enchanted_glowing_mushroom_grove.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "0d8e2898d05e862c6bdf7dd9cdeb8a9753db30be789e91c9ddc8d55fb657fdc3",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "hex_lantern_bridge",
+      "title": "Lantern Bridge",
+      "category": "environment",
+      "image": "enchanted_lantern_bridge_diorama.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "1b70936dbe0d39db9121c683712fd98c5825e1fccd16f92401c4c5af2f066d53",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "hex_bioluminescent_grove",
+      "title": "Bioluminescent Grove",
+      "category": "environment",
+      "image": "enchanted_bioluminescent_mushroom_grove.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "0baaa0e3cc9d312e4c4eee2399e6157fca0c68793fda689adda8d22fe68fe481",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "hex_woodland_bridge",
+      "title": "Woodland Bridge",
+      "category": "environment",
+      "image": "enchanted_woodland_bridge_diorama.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "2a35f71da0afc8ea5d77f2324b294db829f24aebb1e668f9f0aba1d01c130d53",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "hex_crystal_shrine",
+      "title": "Crystal Shrine",
+      "category": "environment",
+      "image": "enchanted_crystal_shrine_diorama.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "5aac6480a3fba6d485b2ba53823328039b837a24c3c77bdfbd4d791a1f9107e8",
+      "source": "user-supplied archive"
+    }
+  ]
+}

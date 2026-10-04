@@ -1,0 +1,57 @@
+{
+  "archive_name": "more_buildings_assets.zip",
+  "archive_sha256": "ba92b5cb3d9b4b89f4d8e4324005414e14a6c4935c3187e3724fc4b60b51d48c",
+  "originals_preserved": true,
+  "assets": [
+    {
+      "id": "archery_range",
+      "title": "Archery Range",
+      "category": "buildings",
+      "image": "low_poly_fantasy_archery_range.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "d8e068ee01b45ca5b0ab657095eb6f8513a14534c8fdbf743d52150115e0c7ac",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "research_tower",
+      "title": "Research Tower",
+      "category": "buildings",
+      "image": "fantasy_observatory_cottage_diorama.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "c3b363a31db8c613a6e3c08290249a9921e9cabc80a22a52d1b3b5c94334c81a",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "metal_mine",
+      "title": "Metal Mine",
+      "category": "buildings",
+      "image": "low_poly_medieval_iron_mine_diorama.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "4fe41dbda1eb4caa6cf36c0858c1f686f91b5878bee8ec9018d7ef8e859a7330",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "weaver",
+      "title": "Weaver",
+      "category": "buildings",
+      "image": "cozy_fantasy_weaver_s_workshop.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "049526aa24b29815ed66c9a6c12c9da09ebdea934057d8ffa31fcbdd8557fb91",
+      "source": "user-supplied archive"
+    },
+    {
+      "id": "town_hall",
+      "title": "Town Hall",
+      "category": "buildings",
+      "image": "fantasy_town_hall_diorama.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "14dbfcad395fd4746bfefc68c4d618a7d1f7bcee61fd9385a84d52c900cb3693",
+      "source": "user-supplied archive"
+    }
+  ]
+}

@@ -62,7 +62,17 @@ def main():
         key = target.relative_to(repo_root).as_posix()
         reports[key] = reports.get(key, {}) | {'file': key, 'bytes': facts['bytes'],
                        'triangles': facts['triangles'], 'materials': facts['materials'],
-                       'animations': [clip['name'] for clip in facts['animations']]}
+                       'animations': [clip['name'] for clip in facts['animations']],
+                       'source': job['source']}
+        instances = [obj for obj in objects if obj.get('kit_asset')]
+        if instances:
+            usage = {}
+            for obj in instances:
+                kind = obj['kit_asset']
+                usage[kind] = usage.get(kind, 0) + 1
+            reports[key]['shared_kit_instances'] = usage
+            reports[key]['shared_kits'] = sorted({obj['kit_source'] for obj in instances
+                                                  if obj.get('kit_source')})
         manifest['assets'] = list(reports.values())
         write_json(repo_root / 'exports/asset_manifest.json', manifest)
         index.refresh()
