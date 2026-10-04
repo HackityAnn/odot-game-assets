@@ -1,6 +1,5 @@
 """Export portable assets and verify the binary glTF structure."""
 import json
-import math
 import struct
 import sys
 from pathlib import Path

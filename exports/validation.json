@@ -1,134 +1,144 @@
 [
   {
     "asset": "tree_house",
+    "asset_id": "buildings/tree_house",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "b1467d0619eaa0fad2640dab5450e35e8cf1451604bdf62324b7609e68102110",
-    "glb_sha256": "a0209ad5c1cdf97a4432932ca751e5f49dc872914d82da878d5bf702d43230af"
+    "source_sha256": "892d8a143b105314676e848bf49a3efbb6134bf2834497cc5ae60236b68ef802",
+    "glb_sha256": "77b46f53fa0dc56e1a7102e9f14dd4d04ad474167f4ef626c8c718519d476d5e"
   },
   {
     "asset": "bakery",
+    "asset_id": "buildings/bakery",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "296936fbb825102c5d834e803ba3e593d049d1f941f5c9e440c65617fc531441",
-    "glb_sha256": "44dfbd8816f840355f1763ba918bf4f68e00e852f93c7f0d7cc54459beba8f94"
+    "source_sha256": "05f973a69d7f4e30fcc7c34e3bb3c69a547df11bc8ea16b0eb3f4b32707f8e67",
+    "glb_sha256": "643158e9b686a6a1d9e1f8b90533da47deb57923baa3b7a3e1e1a3bc894e27fe"
   },
   {
     "asset": "gold_mine",
+    "asset_id": "buildings/gold_mine",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "e6380986198aaa3c16907c539e7e0abe97b548811a90206fe68a61c802f95802",
-    "glb_sha256": "d94de8defbdf16c8458ef4cfaaafa422048f18faf41de8a279910fa79aa41cf1"
+    "source_sha256": "2838fe60fa9c884d1396431c94ef8bee2a245aa263bf521d3c074f2e94319fb6",
+    "glb_sha256": "9b7dd112218fe0241c89ec7482cb0175c35219e82f3091f4270de97b1036902f"
   },
   {
     "asset": "woodcutter_hut",
+    "asset_id": "buildings/woodcutter_hut",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "608f24b751ed00963a15bdac6fcffac8640e1a33c54d8acf00127e637e30c6bf",
-    "glb_sha256": "34668f9d5c21fd2e21195aa1492be258c864e6a31cc9c2d9552e40dc4c962188"
+    "source_sha256": "2e4c45eea135d2a8d148df67cd341e7d94bc052e046e8eeb42eb1032d54bbeb2",
+    "glb_sha256": "145107c3a2f3154da970bd1a76ecfba0110af7c841aa211324ac6415d39e33ee"
   },
   {
     "asset": "arrow_tower",
+    "asset_id": "buildings/arrow_tower",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "f6cbb1fb8e176aafa469e3789c0fdae91420bf8fca68fbe131271726c3236c34",
-    "glb_sha256": "8ebf47ae26623acdb3471071240047faf914fd3ab56bf90de36dc789b49c1b35",
+    "source_sha256": "8cda4733c4af5fea4272d955e7ba14d9d35e5abb113ee5addc63852eaa927a21",
+    "glb_sha256": "c23bada7f7e3fee2ba1a954cb55efcb8de68731136e9785e9de9ea7d6a030a76",
     "shared_kit_instances": {
-      "stone_block": 138,
-      "roof_tile": 84,
+      "arrow": 8,
       "lantern": 1,
-      "target": 1,
       "open_barrel": 1,
-      "arrow": 9,
-      "crate": 1,
-      "shrub": 4
+      "open_crate": 1,
+      "shrub": 4,
+      "stone_block": 74,
+      "target": 1
     }
   },
   {
     "asset": "barracks",
+    "asset_id": "buildings/barracks",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "c714f969aa97419653a4f32d035b10c3226c9b7560087d919dd43ad30287423d",
-    "glb_sha256": "18d120544f465c180488c779ac0f480b1e722121bce9896869ca6a0a4662f9fd",
+    "source_sha256": "092e2035de220469f4836809761e81965ee1f9b4a006fb4da2a2bbb7d4858acb",
+    "glb_sha256": "142fc3044369e6e6af04f4dd3c81966280d7ccffe2d335a9033f103d2e1ade7b",
     "shared_kit_instances": {
-      "roof_tile": 70,
-      "stone_block": 240,
-      "lantern": 1,
-      "spear": 3,
       "barrel": 1,
       "crate": 1,
-      "shrub": 4
+      "lantern": 1,
+      "roof_tile": 40,
+      "shrub": 4,
+      "spear": 3,
+      "stone_block": 80
     }
   },
   {
     "asset": "bombarding_tower",
+    "asset_id": "buildings/bombarding_tower",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "6445e927962bc4dd5f80bc682a03ef943d17ab958153888c264c11cb87d1cda6",
-    "glb_sha256": "d5efd70043628dede6c2b7e092b623d073d0f1ffe1472686cce6a6c267d02d52",
+    "source_sha256": "8db85c1bdd78659032fc48f6342a39925c3104ffeb4cdd4144d4cf356c11f2d8",
+    "glb_sha256": "d85259b5fd09e071d15d1da153312b07556017cbbd7b6746b5b1319a709840a8",
     "shared_kit_instances": {
-      "stone_block": 160,
+      "barrel": 2,
+      "cannonball": 7,
       "lantern": 1,
       "open_crate": 1,
-      "cannonball": 7,
-      "barrel": 2,
-      "shrub": 4
+      "shrub": 4,
+      "stone_block": 102
     }
   },
   {
     "asset": "magic_academy",
+    "asset_id": "buildings/magic_academy",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "4b5f3c9137c55fd626286975423ac5f83ca8d8b517544d83d4e12c9063d262fe",
-    "glb_sha256": "484f1861d2b777dd907e294c1e2f060f4c59c81341168e9a28f8897dff03f343",
+    "source_sha256": "adf7846f3806d83a41b9da91b39fb03832f5199edfcd06d62cb58380753039af",
+    "glb_sha256": "e2bcefa7a3ead6afff0400198b895d4b5af448c4e831aa24653c3c92438107c4",
     "shared_kit_instances": {
-      "roof_tile": 142,
-      "stone_block": 132,
       "book": 3,
       "lantern": 1,
-      "shrub": 4
+      "roof_tile": 44,
+      "shrub": 4,
+      "stone_block": 132
     }
   },
   {
     "asset": "stone_cutter",
+    "asset_id": "buildings/stone_cutter",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "c4d5589526fe94cff7a73310517ad87ca08d2882b9625c47e885d616125887e5",
-    "glb_sha256": "0c65155fd1d44d71da7016f60d9cc65ac3da404842e19018991a298c197d4403",
+    "source_sha256": "f66dc2654289a7b5761c8a16ab2341fecf072852168adff7932b7378324e41cc",
+    "glb_sha256": "b794740ad916ed966cdde669e0fe582820b30051524260cdf8564b39e732d384",
     "shared_kit_instances": {
-      "roof_tile": 70,
-      "stone_block": 12,
       "open_barrel": 1,
-      "shrub": 4
+      "roof_tile": 40,
+      "shrub": 4,
+      "stone_block": 12
     }
   },
   {
     "asset": "tavern",
+    "asset_id": "buildings/tavern",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "2130bacabafd25bb83e6fde3f43e5b7d52b457c99aac83e3ae34d42912340bb1",
-    "glb_sha256": "2d485ad6614ac63997f7df464374e856b73293a2004a5c7eb19c177c48f76f60",
+    "source_sha256": "d6e5f2dca578678457074a090fcad30569baad7bd2aececf4c4991f18be937e4",
+    "glb_sha256": "2a72735cd74e43cecee0c2ea777d3657cfad4e2f57a950a545805700f67dff29",
     "shared_kit_instances": {
-      "roof_tile": 74,
-      "lantern": 2,
       "barrel": 2,
       "bench": 2,
+      "lantern": 2,
       "mug": 2,
+      "roof_tile": 44,
       "shrub": 4
     }
   },
   {
     "asset": "trade_market",
+    "asset_id": "buildings/trade_market",
     "round_trip_max_bounds_error": 0.0,
     "geometry_finite": true,
-    "source_sha256": "8bb4841d884536d7afeb7a07ac6be22e01089f619d29e543e48262ba502880f5",
-    "glb_sha256": "12060279b5a455eb3189e6bde761238aca1663a8310a4d7c91d0ee56b536ef35",
+    "source_sha256": "1532a41a797407911b64215090fdc1a755d137fb453e5381efd1fd7dea632b1a",
+    "glb_sha256": "3279b62cc6eb67da1ff95210b91735575daa0aa93f1ddf79e8ad3b8ab6d09fdb",
     "shared_kit_instances": {
-      "roof_tile": 70,
-      "parcel": 6,
+      "barrel": 2,
       "crate": 3,
       "lantern": 1,
-      "barrel": 2,
+      "parcel": 6,
+      "roof_tile": 40,
       "shrub": 4
     }
   },

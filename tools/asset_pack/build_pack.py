@@ -67,6 +67,9 @@ def build_one(name, render=True):
         root['reference']='sources/reference/'+catalog.BY_ID[name]['reference']
         root['modeling_stage']='initial_model' if name in catalog.EVIL else 'modeled_for_review'
         asset.asset_mark(); asset.asset_data.description='Modeled from '+catalog.BY_ID[name]['title']+' reference; visual review precedes optimization.'
+    if not is_character:
+        root['modeling_stage']='upgraded_reference_pass'
+        root['art_direction']='Bold role emblems, substantial timbers, projecting joinery, layered roofs and recessed portals.'
     bpy.ops.wm.save_as_mainfile(filepath=str(path))
     if render:
         if name=='archer':

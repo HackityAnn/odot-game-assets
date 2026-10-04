@@ -159,7 +159,7 @@ def build(name,asset,props):
             if obj.name.startswith(('Tapered tunic','Rounded tunic shoulder','Upper sleeve','Forearm sleeve','Chibi glove','Glove thumb')):
                 recolor([obj],{slot.material.name.split('.')[0]:'skin' for slot in obj.material_slots if slot.material})
         c.ball('Bare barbarian chest',(0,-.24,1.30),(.35,.095,.22),'skin','spine',3)
-        tattoo=c.weighted(g.mesh('Crimson shoulder tattoo',[(-.35,-.247,1.52),(-.54,-.247,1.47),(-.56,-.247,1.37),(-.47,-.247,1.42),(-.46,-.247,1.35),(-.37,-.247,1.43)],[(0,1,2,3,4,5)],'evil_red'),'upper_arm.R')
+        c.weighted(g.mesh('Crimson shoulder tattoo',[(-.35,-.247,1.52),(-.54,-.247,1.47),(-.56,-.247,1.37),(-.47,-.247,1.42),(-.46,-.247,1.35),(-.37,-.247,1.43)],[(0,1,2,3,4,5)],'evil_red'),'upper_arm.R')
         helmet(True); armor(True)
         attached_part('skull',(0,-.32,.81),.35,'pelvis')
     elif kind=='melee': helmet(); armor()

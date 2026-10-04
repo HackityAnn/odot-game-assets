@@ -2,6 +2,21 @@
 python = "3.11"
 uv = "0"
 
+[tasks.check]
+description = "Run Python lint, JS syntax, worker guardrails and fast unit tests"
+dir = "{{config_root}}"
+run = "python3 -m tools.checks"
+
+[tasks.asset-check]
+description = "Incrementally export and verify selected authored assets"
+dir = "{{config_root}}"
+run = "python3 -m tools.asset_pack.check"
+
+[tasks.blender-tests]
+description = "Run attachment regression tests in an isolated Blender worker"
+dir = "{{config_root}}"
+run = "python3 -m tools.asset_pack.worker tools/asset_pack/test_attachments_blender.py"
+
 [tasks.catalog]
 description = "Browse the local asset catalog with automatic export updates"
 dir = "{{config_root}}"

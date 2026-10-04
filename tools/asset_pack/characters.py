@@ -140,7 +140,7 @@ def wizard_hat():
     faces += [tuple(reversed(range(n))),tuple((len(rings)-1)*n+i for i in range(n))]
     hat=weighted(g.mesh('Bent purple wizard hat',verts,faces,'purple'),'head')
     g.facet_colors(hat,['purple','purple_light','purple_dark'])
-    band=weighted(g.lathe('Wizard hat gold ribbon',[(2.55,.397),(2.69,.365)],'gold',12,(-.025,.008,0)),'head')
+    weighted(g.lathe('Wizard hat gold ribbon',[(2.55,.397),(2.69,.365)],'gold',12,(-.025,.008,0)),'head')
     part('Wizard hat ribbon buckle',(-.03,-.389,2.625),(.19,.045,.13),'gold_light','head',.012)
 
 
@@ -236,7 +236,7 @@ def arrow():
 
 def quiver():
     # Quiver is worn equipment, bound to the torso; spare arrows are part of it.
-    obj=weighted(g.tube('Leather arrow quiver',[(-.24,.35,.87),(-.48,.34,1.72)],[.16,.19],'leather',10),'spine')
+    weighted(g.tube('Leather arrow quiver',[(-.24,.35,.87),(-.48,.34,1.72)],[.16,.19],'leather',10),'spine')
     for i in range(5):
         x=-.48+(i-2)*.06; y=.33+(i%2)*.08
         limb('Quiver spare arrow',(x+.13,y,1.26),(x-.075,y,2.13+(.06 if i%2 else 0)),[.018,.018],'wood_edge','spine')

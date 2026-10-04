@@ -24,9 +24,9 @@
   "assets": [
     {
       "file": "exports/buildings/tree_house.glb",
-      "bytes": 753476,
+      "bytes": 796256,
       "meshes": 136,
-      "triangles": 11784,
+      "triangles": 12637,
       "materials": 15,
       "animations": [],
       "skins": 0,
@@ -42,14 +42,14 @@
         ]
       },
       "preview": "exports/previews/tree_house.png",
-      "modeling_stage": "first_visual_pass"
+      "modeling_stage": "upgraded_reference_pass"
     },
     {
       "file": "exports/buildings/bakery.glb",
-      "bytes": 1703676,
+      "bytes": 1607316,
       "meshes": 319,
-      "triangles": 30455,
-      "materials": 18,
+      "triangles": 28185,
+      "materials": 16,
       "animations": [],
       "skins": 0,
       "title": "Bakery",
@@ -64,13 +64,13 @@
         ]
       },
       "preview": "exports/previews/bakery.png",
-      "modeling_stage": "first_visual_pass"
+      "modeling_stage": "upgraded_reference_pass"
     },
     {
       "file": "exports/buildings/gold_mine.glb",
-      "bytes": 760092,
+      "bytes": 789880,
       "meshes": 137,
-      "triangles": 11790,
+      "triangles": 12398,
       "materials": 15,
       "animations": [],
       "skins": 0,
@@ -86,13 +86,13 @@
         ]
       },
       "preview": "exports/previews/gold_mine.png",
-      "modeling_stage": "first_visual_pass"
+      "modeling_stage": "upgraded_reference_pass"
     },
     {
       "file": "exports/buildings/woodcutter_hut.glb",
-      "bytes": 1366956,
+      "bytes": 1376604,
       "meshes": 325,
-      "triangles": 24399,
+      "triangles": 24383,
       "materials": 20,
       "animations": [],
       "skins": 0,
@@ -108,7 +108,7 @@
         ]
       },
       "preview": "exports/previews/woodcutter_hut.png",
-      "modeling_stage": "first_visual_pass"
+      "modeling_stage": "upgraded_reference_pass"
     },
     {
       "file": "exports/environment/hex_meadow_building.glb",
@@ -121,10 +121,10 @@
     },
     {
       "file": "exports/buildings/arrow_tower.glb",
-      "bytes": 1034108,
+      "bytes": 1261112,
       "meshes": 195,
-      "triangles": 16516,
-      "materials": 36,
+      "triangles": 21443,
+      "materials": 35,
       "animations": [],
       "skins": 0,
       "title": "Arrow Tower",
@@ -139,7 +139,7 @@
         ]
       },
       "preview": "exports/previews/arrow_tower.png",
-      "modeling_stage": "modeled_for_review",
+      "modeling_stage": "upgraded_reference_pass",
       "shared_kit_instances": {
         "stone_block": 138,
         "roof_tile": 84,
@@ -153,9 +153,9 @@
     },
     {
       "file": "exports/buildings/barracks.glb",
-      "bytes": 1437052,
+      "bytes": 1480168,
       "meshes": 260,
-      "triangles": 23529,
+      "triangles": 25425,
       "materials": 35,
       "animations": [],
       "skins": 0,
@@ -171,7 +171,7 @@
         ]
       },
       "preview": "exports/previews/barracks.png",
-      "modeling_stage": "modeled_for_review",
+      "modeling_stage": "upgraded_reference_pass",
       "shared_kit_instances": {
         "roof_tile": 70,
         "stone_block": 240,
@@ -184,9 +184,9 @@
     },
     {
       "file": "exports/buildings/bombarding_tower.glb",
-      "bytes": 1012008,
+      "bytes": 1082380,
       "meshes": 179,
-      "triangles": 16497,
+      "triangles": 18091,
       "materials": 29,
       "animations": [],
       "skins": 0,
@@ -202,7 +202,7 @@
         ]
       },
       "preview": "exports/previews/bombarding_tower.png",
-      "modeling_stage": "modeled_for_review",
+      "modeling_stage": "upgraded_reference_pass",
       "shared_kit_instances": {
         "stone_block": 160,
         "lantern": 1,
@@ -214,9 +214,9 @@
     },
     {
       "file": "exports/buildings/magic_academy.glb",
-      "bytes": 1418108,
+      "bytes": 1480140,
       "meshes": 259,
-      "triangles": 23038,
+      "triangles": 24732,
       "materials": 32,
       "animations": [],
       "skins": 0,
@@ -232,7 +232,7 @@
         ]
       },
       "preview": "exports/previews/magic_academy.png",
-      "modeling_stage": "modeled_for_review",
+      "modeling_stage": "upgraded_reference_pass",
       "shared_kit_instances": {
         "roof_tile": 142,
         "stone_block": 132,
@@ -243,9 +243,9 @@
     },
     {
       "file": "exports/buildings/stone_cutter.glb",
-      "bytes": 1236180,
+      "bytes": 1279604,
       "meshes": 256,
-      "triangles": 21271,
+      "triangles": 21979,
       "materials": 27,
       "animations": [],
       "skins": 0,
@@ -261,7 +261,7 @@
         ]
       },
       "preview": "exports/previews/stone_cutter.png",
-      "modeling_stage": "modeled_for_review",
+      "modeling_stage": "upgraded_reference_pass",
       "shared_kit_instances": {
         "roof_tile": 70,
         "stone_block": 12,
@@ -271,9 +271,9 @@
     },
     {
       "file": "exports/buildings/tavern.glb",
-      "bytes": 1478796,
+      "bytes": 1562028,
       "meshes": 284,
-      "triangles": 25626,
+      "triangles": 27134,
       "materials": 35,
       "animations": [],
       "skins": 0,
@@ -289,7 +289,7 @@
         ]
       },
       "preview": "exports/previews/tavern.png",
-      "modeling_stage": "modeled_for_review",
+      "modeling_stage": "upgraded_reference_pass",
       "shared_kit_instances": {
         "roof_tile": 74,
         "lantern": 2,
@@ -301,9 +301,9 @@
     },
     {
       "file": "exports/buildings/trade_market.glb",
-      "bytes": 1135756,
+      "bytes": 1256240,
       "meshes": 241,
-      "triangles": 19488,
+      "triangles": 21808,
       "materials": 29,
       "animations": [],
       "skins": 0,
@@ -319,7 +319,7 @@
         ]
       },
       "preview": "exports/previews/trade_market.png",
-      "modeling_stage": "modeled_for_review",
+      "modeling_stage": "upgraded_reference_pass",
       "shared_kit_instances": {
         "roof_tile": 70,
         "parcel": 6,

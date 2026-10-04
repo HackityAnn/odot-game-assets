@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT))
 from tools.asset_catalog.index import CatalogIndex, write_json
 from tools.asset_catalog.metadata import read_glb
 from tools.asset_catalog.export_sources import plan_exports
+from tools.asset_catalog.blender_selection import load_asset
 
 
 def main():
@@ -32,26 +33,7 @@ def main():
     reports = {entry['file']: entry for entry in manifest.get('assets', [])}
     for job in jobs:
         asset_id = job['id']
-        source = repo_root / job['source']
-        bpy.ops.wm.open_mainfile(filepath=str(source))
-        name = Path(asset_id).name
-        collection = None if job['object'] else bpy.data.collections.get(job['collection'] or name)
-        root = None if job['collection'] else bpy.data.objects.get(job['object'] or name)
-        if collection is not None:
-            if any(obj.name not in bpy.context.view_layer.objects for obj in collection.all_objects):
-                bpy.context.scene.collection.children.link(collection)
-                bpy.context.view_layer.update()
-            objects = list(collection.all_objects)
-        elif root is not None:
-            objects = [root] + list(root.children_recursive)
-        else:
-            raise ValueError(f'{source}: expected asset collection or root object named {name}')
-        equipment = bpy.data.collections.get('EQUIPMENT')
-        if equipment and collection and any(obj.type == 'ARMATURE' for obj in objects):
-            objects = list(set(objects) | set(equipment.all_objects))
-        if not objects:
-            raise ValueError(f'{source}: empty asset collection')
-        bpy.context.scene.frame_set(1)
+        objects = load_asset(job, repo_root)
         bpy.ops.object.select_all(action='DESELECT')
         for obj in objects:
             obj.hide_set(False)

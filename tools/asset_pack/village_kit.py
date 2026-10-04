@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy
-from mathutils import Matrix, Euler, Vector
+from mathutils import Matrix
 import geometry as g
 
 LIBRARY = g.ROOT/'sources/props/shared_village_kit.blend'

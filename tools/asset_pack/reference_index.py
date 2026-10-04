@@ -1,6 +1,5 @@
 """Publish an offline reference catalog without modifying the supplied images."""
 import json
-from pathlib import Path
 from catalog import ASSETS, ROOT
 
 HTML=r'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Odot · Art references</title><style>

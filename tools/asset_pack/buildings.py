@@ -1,7 +1,61 @@
 """Four original buildings, using the supplied image as the art reference."""
 import math
+import bpy
 from mathutils import Vector
 import geometry as g
+
+
+def relief(name, outline, y, depth, mat, bevel=.015):
+    """A closed silhouette with an actual edge, for readable signs and emblems."""
+    n=len(outline)
+    verts=[(x,yy,z) for yy in [y,y+depth] for x,z in outline]
+    faces=[tuple(range(n)),tuple(reversed(range(n,2*n)))]
+    faces += [(i,i+n,(i+1)%n+n,(i+1)%n) for i in range(n)]
+    return g.mesh(name,verts,faces,mat,bevel)
+
+
+def portal(x,y,bottom,width,height):
+    """Carve a shallow arched recess in the structural wall, before its trim."""
+    radius=width/2; spring=bottom+height-radius
+    outline=[(x-radius,bottom-.04),(x+radius,bottom-.04),(x+radius,spring)]
+    outline += [(x+radius*math.cos(i*math.pi/12),spring+radius*math.sin(i*math.pi/12)) for i in range(1,13)]
+    cutter=relief('Temporary arched pocket',outline,y-.22,.60,'shadow',0)
+    bpy.context.view_layer.update()
+    for obj in list(g.CURRENT.objects):
+        if obj.type!='MESH' or not obj.get('wall_surface'): continue
+        bounds=[obj.matrix_world @ Vector(v) for v in obj.bound_box]
+        if (max(v.x for v in bounds)<x-radius or min(v.x for v in bounds)>x+radius
+                or max(v.y for v in bounds)<y-.22 or min(v.y for v in bounds)>y+.38
+                or max(v.z for v in bounds)<bottom or min(v.z for v in bounds)>bottom+height): continue
+        # Shared masonry stays reusable; this instance owns its carved mesh.
+        if obj.data.users>1: obj.data=obj.data.copy()
+        mod=obj.modifiers.new('Recessed architectural opening','BOOLEAN')
+        mod.operation='DIFFERENCE'; mod.solver='EXACT'; mod.object=cutter
+        bpy.context.view_layer.objects.active=obj
+        bpy.ops.object.modifier_apply(modifier=mod.name)
+    bpy.data.objects.remove(cutter,do_unlink=True)
+
+
+def bread(pos, size=(.42,.20,.20)):
+    x,y,z=pos; sx,sy,sz=size
+    g.ico('Hero golden bread loaf',pos,size,'gold',3,.015)
+    for offset in [-.48,0,.48]:
+        xx=x+offset*sx
+        g.tube('Broad bread scoring',[(xx-.045,y-sy*.62,z+sz*.68),(xx,y,z+sz*.96),(xx+.045,y+sy*.62,z+sz*.68)],.024,'cream',6)
+
+
+def timber_depth():
+    """Large projecting joints and side bracing, rather than extra tiny detail."""
+    for x in [-1.01,1.01]:
+        for y in [-.89,.89]:
+            g.cube('Projecting timber footing',(x,y,.21),(.34,.34,.42),'wood_edge',.045)
+            g.cube('Heavy timber capital',(x,y,1.96),(.36,.36,.32),'wood_light',.035)
+            g.beam('Eave knee brace',(x,y,1.55),(x*1.38,y,2.05),.19,.20,'wood_edge',.025)
+        g.beam('Side wall lower tie',(x, -.82,.37),(x,.82,.37),.18,.20,'wood_dark')
+        g.beam('Side wall diagonal',(x*1.065,-.77,.46),(x*1.065,.73,1.81),.15,.15,'wood_edge')
+    for y in [-1.20,1.20]:
+        for x,z in [(0,3.33),(-1.42,2.08),(1.42,2.08)]:
+            g.cube('Chunky roof joinery',(x,y,z),(.30,.30,.35),'wood_edge',.035)
 
 
 def arch(name, x, y, bottom, width, height, mat='window'):
@@ -25,14 +79,15 @@ def window(x,y,z,width=.48,height=.70):
 
 
 def door(x,y,z,width=.60,height=1.15):
-    arch('Doorway recess',x,y,z,width+.16,height+.1,'shadow')
+    portal(x,y,z,width+.16,height+.1)
+    arch('Doorway recess',x,y+.30,z,width+.16,height+.1,'shadow')
     for i in range(5):
         xx=x+(i-2)*width/5
         r=width/2
         top=z+height-r+math.sqrt(max(0,r*r-(xx-x)**2))
-        g.cube('Door plank',(xx,y-.025,(z+top)/2),(width/5-.009,.045,top-z),'wood_light',.008)
-    for dz in [.22,.73]: g.cube('Door iron strap',(x,y-.059,z+dz),(width*.9,.025,.065),'wood_dark',.006)
-    g.ico('Door brass handle',(x+width*.25,y-.09,z+.51),(.038,.022,.038),'gold',2)
+        g.cube('Door plank',(xx,y+.15,(z+top)/2),(width/5-.009,.08,top-z),'wood_light',.015)
+    for dz in [.22,.73]: g.cube('Door iron strap',(x,y+.095,z+dz),(width*.9,.045,.085),'wood_dark',.01)
+    g.ico('Door brass handle',(x+width*.25,y+.05,z+.51),(.05,.035,.05),'gold',2)
     r=width/2+.06; spring=z+height-width/2
     points=[(x-r,y-.045,z),(x-r,y-.045,spring)]
     points += [(x+r*math.cos(math.pi-i*math.pi/10),y-.045,spring+r*math.sin(math.pi-i*math.pi/10)) for i in range(1,11)]
@@ -41,6 +96,7 @@ def door(x,y,z,width=.60,height=1.15):
 
 
 def cottage_body(stone=False):
+    previous=set(g.CURRENT.objects)
     g.cube('Cottage walls',(0,0,1.15),(1.98,1.72,2.15),'wall' if stone else 'wood_dark',.045)
     if not stone:
         for x in [-.87,-.60,-.33,-.06,.21,.48,.75]:
@@ -50,40 +106,45 @@ def cottage_body(stone=False):
             for x in [-1.012,1.012]:
                 g.cube('Side timber board',(x,y,1.10),(.06,.25,2.03),g.RNG.choice(['wood','wood_light']),.012)
     else:
-        for row in range(6):
-            for i in range(6):
-                x=-.86+i*.34+(row%2)*.08
-                g.cube('Front limestone block',(x,-.88,.20+row*.33),(.325,.07,.305),g.RNG.choice(['wall','wall_light','stone_light']),.025)
-                g.cube('Side limestone block',(1.0,-.72+i*.285,.20+row*.33),(.08,.27,.305),g.RNG.choice(['wall','wall_light']),.02)
+        for row in range(5):
+            for i in range(4):
+                x=-.75+i*.50
+                g.cube('Front limestone block',(x,-.88,.24+row*.40),(.48,.18,.38),g.RNG.choice(['wall','wall_light']),.045)
+                for side in [-1,1]:
+                    g.cube('Side limestone block',(side*1.0,-.64+i*.425,.24+row*.40),(.18,.405,.38),g.RNG.choice(['wall','wall_light']),.04)
     for y in [-.89,.89]:
         g.mesh('Timber gable',[(-1,y,2.20),(1,y,2.20),(0,y,3.14)],[(0,1,2)],'wood')
         for x in [-.8,-.4,0,.4,.8]:
             top=3.13-abs(x)*.92
-            g.cube('Gable vertical board',(x,y-.015,(2.2+top)/2),(.28,.05,top-2.2),'wood_light',.012)
+            g.cube('Gable vertical board',(x,y-.015,(2.2+top)/2),(.28,.12,top-2.2),'wood_light',.018)
         g.beam('Gable tie beam',(-1.1,y-.06,2.18),(1.1,y-.06,2.18),.15,.15,'wood_dark')
         g.beam('Gable brace',(-.92,y-.06,2.2),(0,y-.06,3.1),.15,.13,'wood_dark')
         g.beam('Gable brace',(.92,y-.06,2.2),(0,y-.06,3.1),.15,.13,'wood_dark')
         g.beam('Gable king post',(0,y-.07,2.2),(0,y-.07,3.17),.14,.14,'wood_dark')
     for x in [-.99,.99]:
-        for y in [-.88,.88]: g.cube('Corner upright',(x,y,1.15),(.17,.17,2.30),'wood_dark')
+        for y in [-.88,.88]: g.cube('Corner upright',(x,y,1.15),(.27,.27,2.30),'wood_light',.035)
     for z in [.19,1.92]:
         for y in [-.925,.925]: g.cube('Wall cross beam',(0,y,z),(2.16,.16,.17),'wood_dark')
+    for obj in set(g.CURRENT.objects)-previous:
+        if obj.name.startswith(('Cottage walls','Front limestone','Side limestone','Wall timber board','Side timber board')):
+            obj['wall_surface']=True
+    timber_depth()
 
 
 def roof(color='blue'):
     slope=.82; angle=math.atan(slope); peak=3.21
     for sign in [-1,1]:
         g.cube('Roof underlay',(sign*.64,0,peak-.64*slope),(1.75,2.25,.13),'wood_dark',.02,(0,sign*angle,0))
-        for row in range(5):
-            x=sign*(.12+row*.268)
-            for col in range(7):
-                y=-.99+col*.325+(row%2)*.035
+        for row in range(4):
+            x=sign*(.16+row*.35)
+            for col in range(5):
+                y=-.92+col*.46+(row%2)*.035
                 z=peak-abs(x)*slope+.06
-                g.cube('Overlapping roof tile',(x,y,z),(.405,.337,.065),
-                       g.RNG.choice([f'roof_{color}',f'roof_{color}_light',f'roof_{color}_dark']),.028,
+                g.cube('Overlapping roof tile',(x,y,z),(.55,.48,.12),
+                       g.RNG.choice([f'roof_{color}',f'roof_{color}',f'roof_{color}_light']),.04,
                        (0,sign*angle,g.RNG.uniform(-.018,.018)))
         for y in [-1.18,1.18]:
-            g.beam('Carved roof verge',(0,y,peak+.05),(sign*1.48,y,peak-1.48*slope),.18,.16,'wood_light')
+            g.beam('Carved roof verge',(0,y,peak+.05),(sign*1.48,y,peak-1.48*slope),.25,.24,'wood_light')
         g.beam('Roof eave',(sign*1.43,-1.16,2.02),(sign*1.43,1.16,2.02),.13,.17,'wood_dark')
     g.beam('Ridge timber',(0,-1.32,3.32),(0,1.35,3.32),.19,.21,'wood_light')
     for y in [-1.14,.05,1.10]:
@@ -124,10 +185,14 @@ def woodcutter_hut():
         for col in range(2): g.log((1.12+col*.28,-.10,.16+row*.27),.74,.135)
     for x,y,r,h in [(-1.35,-1.44,.25,.46),(.94,-1.58,.23,.36),(1.54,-1.18,.30,.43)]:
         g.log((x,y,0),h,r,'Z')
-    g.beam('Axe handle',(-1.34,-1.44,.45),(-1.08,-1.39,1.04),.07,.065,'wood_light',.01)
-    g.mesh('Axe iron head',[(-1.29,-1.37,.94),(-.86,-1.37,.89),(-.82,-1.37,1.14),(-1.24,-1.37,1.10),
-                            (-1.29,-1.44,.94),(-.86,-1.44,.89),(-.82,-1.44,1.14),(-1.24,-1.44,1.10)],
-           [(0,1,2,3),(4,7,6,5),(0,4,5,1),(1,5,6,2),(2,6,7,3),(3,7,4,0)],'silver',.02)
+    g.beam('Hero axe handle',(-1.34,-1.44,.42),(-.95,-1.39,1.49),.115,.10,'wood_light',.02)
+    relief('Hero axe broad blade',[(-1.22,1.28),(-.61,1.16),(-.51,1.58),(-1.15,1.56)],-1.48,.15,'silver',.035)
+    g.cube('Woodcutter hanging log sign',(-1.43,-1.50,2.00),(.97,.18,.61),'wood_light',.07)
+    g.beam('Log sign bracket',(-1.94,-1.50,2.49),(-.93,-1.50,2.49),.17,.17,'wood_edge')
+    g.beam('Log sign wall arm',(-.96,-.89,2.49),(-1.43,-1.50,2.49),.16,.16,'wood_edge')
+    for x in [-1.76,-1.10]: g.tube('Log sign hanger',[(x,-1.50,2.43),(x,-1.50,2.29)],.025,'silver_dark',6)
+    g.tube('Raised log sign emblem',[(-1.60,-1.64,1.98),(-1.16,-1.64,2.15)],.17,'bark',10)
+    g.tube('Log sign endgrain',[(-1.64,-1.66,1.98),(-1.61,-1.66,1.99)],.145,'wood_edge',10)
     for i in range(4): g.stepping_stone((.30+(i%2)*.10,-1.18-i*.27),.21)
     g.shrub((.68,-.25,2.77),.25)
     for a,b in [((1.86,.23,0),(1.86,1.48,0)),((.8,1.7,0),(1.75,1.7,0))]: g.fence(a,b,3,.60)
@@ -136,7 +201,8 @@ def woodcutter_hut():
 def bakery():
     cottage_body(True); roof('red'); chimney(.66,.51)
     # The door opening sits behind the market canopy; warm loaves read at game distance.
-    arch('Bakery oven opening',.46,-.972,.20,.78,1.13,'shadow')
+    portal(.46,-.972,.20,.88,1.23)
+    arch('Bakery oven opening',.46,-.68,.20,.88,1.23,'shadow')
     window(-.48,-.985,.63,.46,.72)
     g.cube('Bakery threshold',(.47,-1.09,.13),(.95,.39,.25),'stone_light',.04)
     g.cube('Bakery step',(.47,-1.39,.05),(.86,.30,.10),'stone',.025)
@@ -155,19 +221,16 @@ def bakery():
     for x in [-.01,1.17]:
         for y in [-1.73,-1.38]: g.cube('Market counter leg',(x,y,.31),(.115,.115,.63),'wood_light')
     g.cube('Counter lower shelf',(.58,-1.55,.20),(1.29,.45,.07),'wood',.015)
-    for i in range(5):
-        x=.06+i*.24; y=-1.52+(.07 if i%2 else -.04)
-        loaf=g.ico('Golden bread loaf',(x,y,.79),(.16,.12,.11),'gold',2,.035)
-        for j in range(3):
-            g.beam('Bread score',(x-.07+j*.07,y-.065,.864),(x-.07+j*.07,y+.05,.885),.024,.015,'cream',.005)
+    for i in range(3):
+        bread((.12+i*.46,-1.55,.90),(.25,.18,.20))
     for i in range(3): g.ico('Oven bread loaf',(.25+i*.19,-1.02,.33),(.13,.11,.09),'gold',2)
     g.barrel((-1.25,-.72,0),1.15); g.crate((-1.03,-1.42,0),.43)
     g.cube('Bakery sign post',(-1.13,.02,1.88),(.14,.16,3.50),'wood_light')
     g.beam('Bakery hanging sign beam',(-1.65,-.04,3.32),(-.12,-.04,3.32),.18,.16,'wood_edge')
-    for x in [-1.58,-1.04]: g.tube('Sign chain',[(x,-.04,3.23),(x,-.04,2.95)],.015,'silver_dark',6)
-    g.cube('Bakery wooden sign',(-1.31,-.05,2.64),(.81,.14,.58),'wood_light',.12)
-    g.ico('Bread sign emblem',(-1.31,-.139,2.64),(.25,.025,.12),'gold_light',2,.02)
-    for x in [-1.43,-1.31,-1.19]: g.beam('Bread emblem cuts',(x,-.17,2.60),(x+.035,-.17,2.70),.028,.022,'cream',.003)
+    for x in [-1.74,-1.02]: g.tube('Sign chain',[(x,-.36,3.25),(x,-.36,3.00)],.026,'silver_dark',6)
+    g.beam('Forward bread sign bracket',(-1.31,-.04,3.30),(-1.31,-.42,3.30),.17,.17,'wood_edge')
+    g.cube('Bakery wooden sign',(-1.38,-.36,2.62),(1.22,.22,.81),'wood_light',.10)
+    bread((-1.38,-.51,2.62),(.44,.10,.23))
     g.lantern((1.46,-.70,.73),1.1)
     for i in range(4): g.stepping_stone((-.09-i*.13,-1.15-i*.30),.23)
     g.fence((-1.93,-.72,0),(-1.93,1.17,0),4)
@@ -206,9 +269,14 @@ def gold_mine():
         g.cube('Cart end',(cx,cy+side*.39,.63),(.87,.10,.49),'wood_light',.025)
         g.cube('Cart iron side rim',(cx+side*.48,cy,.91),(.095,1.0,.095),'silver_dark',.018)
         g.cube('Cart iron end rim',(cx,cy+side*.44,.91),(1.03,.10,.095),'silver_dark',.018)
-    for i in range(11):
+    for i in range(7):
         x=cx+g.RNG.uniform(-.33,.33); y=cy+g.RNG.uniform(-.29,.29)
-        g.ico('Cart gold ore',(x,y,.93+g.RNG.uniform(0,.11)),(.15,.14,.14),g.RNG.choice(['gold','gold_light']),1)
+        g.ico('Cart gold ore',(x,y,1.00+g.RNG.uniform(0,.16)),(.24,.22,.23),g.RNG.choice(['gold','gold_light']),1)
+    g.cube('Mine projecting lintel cap',(0,-.50,1.98),(2.12,.48,.16),'wood_light',.035)
+    relief('Gold mine raised ore emblem',[(-.40,2.06),(-.23,2.32),(.10,2.37),(.36,2.16),(.25,2.00),(-.18,1.97)],-.77,.10,'gold',.025)
+    for x in [-.79,.79]:
+        g.beam('Mine portal deep side beam',(x,-.44,1.63),(x,.43,1.63),.23,.23,'wood_light')
+        g.cube('Mine portal front capital',(x,-.48,1.75),(.42,.43,.37),'wood_edge',.04)
     for x,y,s in [(-.98,-1.22,.18),(1.13,-1.45,.21),(1.57,-.98,.15)]: g.ico('Scattered gold',(x,y,.11),(s,s*.83,s*.9),'gold',1)
     for p in [(-.94,-.41,.23),(.91,-.32,.29)]: g.lantern(p,.95)
     g.cube('Mine lantern post',(1.39,.95,1.23),(.15,.16,2.46),'wood_light')
@@ -247,7 +315,7 @@ def tree_house():
     for i in range(9): g.cube('Balcony floor board',(-.86+i*.215,-.79,1.85),(.21,.93,.12),'wood_edge',.018)
     for x in [-.82,.0,.82]:
         g.beam('Balcony support',(x*.30,-.08,1.10),(x,-1.02,1.79),.16,.16,'wood')
-    for x in [-.91,-.45,0,.45,.91]: g.cube('Balcony railing post',(x,-1.19,2.10),(.105,.105,.53),'wood_light',.015)
+    for x in [-.91,-.45,0,.45,.91]: g.cube('Balcony railing post',(x,-1.19,2.10),(.15,.15,.53),'wood_light',.025)
     for z in [1.99,2.26]: g.beam('Balcony front rail',(-1,-1.19,z),(1,-1.19,z),.11,.10,'wood_edge',.012)
     for x in [-.97,.97]:
         for z in [1.99,2.26]: g.beam('Balcony side rail',(x,-1.19,z),(x,-.33,z),.11,.10,'wood_edge',.012)
@@ -259,10 +327,14 @@ def tree_house():
     # Upper roots are bridged by a second small landing.
     for i in range(4): g.cube('Tree landing plank',(-.33,-.86-i*.12,1.46),(.72,.12,.085),'wood_light',.012)
     # Cloth banner, visible below the balcony.
-    g.mesh('Blue treehouse banner',[(.46,-1.255,1.88),(.91,-1.255,1.88),(.91,-1.30,1.01),
-                                  (.69,-1.30,1.16),(.46,-1.30,1.01)],[(0,1,2,3,4)],'blue')
+    relief('Blue treehouse banner',[(.39,1.92),(1.08,1.92),(1.08,.84),(.735,1.02),(.39,.84)],-1.34,.05,'blue')
     for a,b in [((.69,-1.313,1.28),(.69,-1.313,1.73)),((.69,-1.313,1.54),(.58,-1.313,1.65)),
-                ((.69,-1.313,1.48),(.81,-1.313,1.61))]: g.beam('Banner white tree emblem',a,b,.022,.014,'cream',0)
+                ((.69,-1.313,1.48),(.81,-1.313,1.61))]:
+        a=(a[0]+.04,-1.39,a[2]); b=(b[0]+.04,-1.39,b[2])
+        g.beam('Banner white tree emblem',a,b,.052,.04,'cream',.008)
+    for sign in [-1,1]:
+        g.beam('Treehouse deep balcony bracket',(sign*.31,-.24,1.03),(sign*.86,-1.11,1.80),.24,.22,'bark_light')
+        g.cube('Treehouse room corner post',(sign*.60,-.82,2.34),(.18,.18,1.15),'wood_edge')
     canopy=[(-1.04,.08,3.53,.71),(-.59,.63,3.93,.77),(.02,.46,4.46,.89),
             (.76,.48,4.11,.79),(1.27,.07,3.68,.70),(.68,-.51,3.45,.76),
             (-.38,-.61,3.63,.75),(-1.24,-.47,3.31,.58),(.15,1.0,3.75,.66)]

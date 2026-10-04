@@ -1,6 +1,5 @@
 """Static artifact tests, using existing-format GLBs without Blender."""
 import hashlib
-import json
 import os
 import tempfile
 import unittest

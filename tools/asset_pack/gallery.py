@@ -3,8 +3,10 @@ import json
 import hashlib
 import shutil
 import zipfile
+import sys
 from pathlib import Path
-from catalog import ASSETS
+sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
+from tools.asset_pack.catalog import ASSETS
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'.lavish'
@@ -30,7 +32,7 @@ dialog{width:min(1200px,94vw);max-height:94vh;padding:25px;border:1px solid var(
 <h2>Buildings</h2><section class="grid" id="buildings" aria-label="Building models"></section>
 <h2>Characters</h2><section class="grid characters" id="characters" aria-label="Character models"></section>
 <h2>The new evil units · Initial models</h2><img class="overview" src="renders/evil_overview.png" alt="Four initial evil unit models in Blender"><p><a href="sources/evil_autobattler.blend" download>Open evil unit overview .blend</a></p><h2>The autobattler village</h2><img class="overview" src="renders/autobattler_overview.png" alt="Seven new buildings and the dual-axe berserker assembled in Blender"><h2>The original set</h2><img class="overview" src="renders/overview.png" alt="All four original buildings and three characters assembled in Blender on separate hex terrain bases">
-<section class="notes"><div><h3>Made for the rebuild</h3><p>Your supplied references drive the shapes, colors, and costumes. Sources and exports are independent of the existing game.</p></div><div><h3>Editable parts</h3><p>Timbers, tiles, branches, costume pieces, and equipment remain separate objects in the Blender sources. Terrain and preview atmosphere have their own collections.</p></div><div><h3>First visual pass</h3><p>These are authored interpretations of a single view. The unseen sides are modeled; the six animation clips are a starter set. Polygon and draw-call optimization remains for the next pass.</p></div></section>
+<section class="notes"><div><h3>Made for the rebuild</h3><p>Your supplied references drive the shapes, colors, and costumes. Sources and exports are independent of the existing game.</p></div><div><h3>Editable parts</h3><p>Timbers, tiles, branches, costume pieces, and equipment remain separate objects in the Blender sources. Terrain and preview atmosphere have their own collections.</p></div><div><h3>Building refinement pass</h3><p>All eleven buildings now emphasize larger signs and signature objects, projecting timber joints, thicker roofs and recessed entrances. Characters retain their current starter models and six animation clips. Polygon and draw-call optimization follows art review.</p></div></section>
 <details><summary>Original reference and export details</summary><img class="reference" src="reference.png" alt="The supplied seven-panel fantasy village reference"><p class="meta">Blender sources use Z up, −Y forward, and ground-contact roots at zero. Portable GLB exports use Y up and +Z forward. Character clips: idle, walk, run, attack, hit, death at 24 fps. The first three loop; locomotion is in place. Props use their grip center as origin. Mine rocks and tree roots extend slightly below ground. Smoke and studio lighting belong to the previews.</p><p><a href="asset_manifest.json">Asset manifest</a> · <a href="validation.json">Round-trip validation</a> · <a href="vendor/LICENSE-model-viewer">3D viewer license</a></p></details>
 </main>
 <dialog id="detail"><div class="dialog-head"><div><div class="eyebrow" id="asset-kind"></div><h2 id="asset-title" style="margin:7px 0"></h2></div><button id="close" aria-label="Close asset review">Close</button></div>
@@ -52,51 +54,55 @@ $('feedback').onsubmit=async event=>{event.preventDefault();const comment=$('com
 </script></body></html>'''
 
 
-def main():
-    manifest=json.loads((ROOT/'exports'/'asset_manifest.json').read_text())
+def build_gallery(root=ROOT, out=None):
+    root=Path(root).resolve()
+    out=Path(out).resolve() if out is not None else root/'.lavish'
+    out.mkdir(parents=True,exist_ok=True)
+    manifest=json.loads((root/'exports'/'asset_manifest.json').read_text())
     metadata={Path(a['file']).stem:a for a in manifest['assets']}
     data=[]
     for asset in sorted(ASSETS,key=lambda a:a['batch']=='original'):
         name,title,category,crop=[asset[key] for key in ['id','title','category','crop']]
         info=metadata[name]
         data.append(dict(asset,triangles=info['triangles'],materials=info['materials']))
-        for source,folder in [(ROOT/'sources'/category/f'{name}.blend','sources'),
-                              (ROOT/'exports'/category/f'{name}.glb','models'),
-                              (ROOT/'exports'/'previews'/f'{name}.png','renders')]:
-            (OUT/folder).mkdir(parents=True,exist_ok=True)
-            shutil.copy2(source,OUT/folder/source.name)
-    (OUT/'vendor').mkdir(parents=True,exist_ok=True)
-    shutil.copy2(ROOT/'scratch'/'model-viewer.min.js',OUT/'vendor'/'model-viewer.min.js')
-    shutil.copy2(ROOT/'sources'/'reference'/'fantasy_village.png',OUT/'reference.png')
-    shutil.copytree(ROOT/'sources/reference/autobattler',OUT/'autobattler',dirs_exist_ok=True)
-    shutil.copy2(ROOT/'sources'/'fantasy_village.blend',OUT/'sources'/'fantasy_village.blend')
-    shutil.copy2(ROOT/'sources'/'autobattler.blend',OUT/'sources'/'autobattler.blend')
-    shutil.copytree(ROOT/'sources/reference/evil_autobattler',OUT/'evil_autobattler',dirs_exist_ok=True)
-    shutil.copy2(ROOT/'sources/evil_autobattler.blend',OUT/'sources/evil_autobattler.blend')
-    shutil.copy2(ROOT/'exports/previews/evil_overview.png',OUT/'renders/evil_overview.png')
-    shutil.copy2(ROOT/'exports/previews/autobattler_overview.png',OUT/'renders/autobattler_overview.png')
-    shutil.copy2(ROOT/'exports'/'previews'/'overview.png',OUT/'renders'/'overview.png')
-    shutil.copy2(ROOT/'exports'/'asset_manifest.json',OUT/'asset_manifest.json')
-    validation=ROOT/'exports'/'validation.json'
-    if validation.exists(): shutil.copy2(validation,OUT/'validation.json')
+        for source,folder in [(root/'sources'/category/f'{name}.blend','sources'),
+                              (root/'exports'/category/f'{name}.glb','models'),
+                              (root/'exports'/'previews'/f'{name}.png','renders')]:
+            (out/folder).mkdir(parents=True,exist_ok=True)
+            shutil.copy2(source,out/folder/source.name)
+    (out/'vendor').mkdir(parents=True,exist_ok=True)
+    shutil.copytree(root/'catalog/vendor',out/'vendor',dirs_exist_ok=True)
+    shutil.copy2(root/'sources'/'reference'/'fantasy_village.png',out/'reference.png')
+    shutil.copytree(root/'sources/reference/autobattler',out/'autobattler',dirs_exist_ok=True)
+    shutil.copy2(root/'sources'/'fantasy_village.blend',out/'sources'/'fantasy_village.blend')
+    shutil.copy2(root/'sources'/'autobattler.blend',out/'sources'/'autobattler.blend')
+    shutil.copytree(root/'sources/reference/evil_autobattler',out/'evil_autobattler',dirs_exist_ok=True)
+    shutil.copy2(root/'sources/evil_autobattler.blend',out/'sources/evil_autobattler.blend')
+    shutil.copy2(root/'exports/previews/evil_overview.png',out/'renders/evil_overview.png')
+    shutil.copy2(root/'exports/previews/autobattler_overview.png',out/'renders/autobattler_overview.png')
+    shutil.copy2(root/'exports'/'previews'/'overview.png',out/'renders'/'overview.png')
+    shutil.copy2(root/'exports'/'asset_manifest.json',out/'asset_manifest.json')
+    validation=root/'exports'/'validation.json'
+    if validation.exists(): shutil.copy2(validation,out/'validation.json')
     checked={a['asset']: a for a in json.loads(validation.read_text())} if validation.exists() else {}
     def current_verification(asset):
         record=checked.get(asset['id'],{})
-        source=ROOT/'sources'/asset['category']/f"{asset['id']}.blend"
-        model=ROOT/'exports'/asset['category']/f"{asset['id']}.glb"
+        source=root/'sources'/asset['category']/f"{asset['id']}.blend"
+        model=root/'exports'/asset['category']/f"{asset['id']}.glb"
         return (record.get('geometry_finite') is True
                 and record.get('source_sha256')==hashlib.sha256(source.read_bytes()).hexdigest()
                 and record.get('glb_sha256')==hashlib.sha256(model.read_bytes()).hexdigest())
     passed=all(current_verification(a) for a in ASSETS)
     html=HTML.replace('__ASSET_DATA__',json.dumps(data)).replace('__VALIDATION__','true' if passed else 'false')
-    (OUT/'asset-gallery.html').write_text(html)
-    with zipfile.ZipFile(OUT/'fantasy_village_assets.zip','w',zipfile.ZIP_DEFLATED) as bundle:
-        for folder in ['sources','exports','tools/asset_pack','tools/asset_catalog','catalog']:
-            for path in (ROOT/folder).rglob('*'):
+    (out/'asset-gallery.html').write_text(html)
+    with zipfile.ZipFile(out/'fantasy_village_assets.zip','w',zipfile.ZIP_DEFLATED) as bundle:
+        for folder in ['sources','exports','tools','catalog']:
+            for path in (root/folder).rglob('*'):
                 if path.is_file() and path.suffix not in ['.blend1','.pyc'] and '__pycache__' not in path.parts:
-                    bundle.write(path,path.relative_to(ROOT))
-        bundle.write(ROOT/'README.md','README.md')
-    print(OUT/'asset-gallery.html')
+                    bundle.write(path,path.relative_to(root))
+        for name in ['README.md','AGENTS.md','mise.toml','pyproject.toml','requirements-checks.txt']:
+            if (root/name).is_file(): bundle.write(root/name,name)
+    return out/'asset-gallery.html'
 
 
-if __name__=='__main__': main()
+if __name__=='__main__': print(build_gallery())

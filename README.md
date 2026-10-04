@@ -239,6 +239,19 @@ the component meshes, palette materials, and rigs. Display terrain, smoke, and
 studio lighting are separate presentation collections; building and character
 exports omit those collections. `exports/previews/` contains the actual renders.
 
+All eleven buildings have a second reference refinement pass: larger role signs
+and signature objects, substantial stone courses and timber joints, thicker
+roof shingles, and recessed entrances. The bakery emphasizes bread, the barracks
+its raised sword shield, the towers arrows and a hollow cannon, and the academy
+its crystal and orb. Geometry stays in broad shapes for readability at game scale.
+The updated sources, GLBs, previews, and catalog thumbnails use the same asset IDs.
+Characters remain at their existing modeling stage.
+
+For a local before/reference/after review, save the previous building previews
+under `.cache/building-upgrade/before/` before rebuilding, refresh the asset
+gallery, then run `python3 -m tools.asset_pack.building_review`. This writes
+`.lavish/building-upgrade.html` using the gallery's source and model downloads.
+
 Characters share a 19-bone skeleton with `weapon_socket.L` and `weapon_socket.R`.
 The starter clips are `idle`, `walk`, `run`, `attack`, `hit`, and `death` at 24 fps.
 The first three loop; locomotion stays in place. Source coordinates use Z up and
@@ -270,6 +283,51 @@ playback, loop endpoints, and source-versus-GLB animated poses. Validation recor
 source and export SHA-256 hashes to detect stale results.
 The local `.lavish/asset-gallery.html` review surface
 also offers a 3D viewer and a downloadable ZIP of the sources, exports, and scripts.
+
+## Asset development checks
+
+Run `mise run check` for Python lint, Python and JavaScript syntax, worker safety
+checks, and fast unit tests. Ruff is pinned in `requirements-checks.txt`; the local
+command uses the installed Python module or `uvx` without installing mise tools.
+CI runs the same checks before exporting sources, followed by attachment regression
+tests and source-to-GLB verification for models, standalone props, and terrain.
+
+```sh
+mise run asset-check -- berserker
+mise run asset-check -- evil_melee_unit props/kit_skull
+mise run asset-check -- --all
+mise run asset-check -- berserker --force
+mise run blender-tests
+```
+
+The incremental check accepts short model names or canonical `category/name` IDs.
+It exports only changed authored sources and verifies only stale results. It never
+rebuilds geometry, saves a `.blend`, renders, or touches the GUI Blender instance.
+Source, export, exporter, verifier, runtime, selection, and shared-kit fingerprints
+invalidate cached results. An unchanged verified run starts no Blender workers.
+Set `BLENDER` or pass `--blender /path/to/blender` to choose the executable; otherwise
+the runner uses PATH or this machine's pinned Blender installation.
+
+Shared kit geometry is embedded in individual models. A kit edit invalidates checks
+for dependent models and library exports, but exporting existing sources cannot
+propagate that edit into their embedded geometry. The command reports this when it
+detects a library change. Rebuild the affected models explicitly using the commands
+above after preserving manual edits, then rerun their checks.
+
+Every worker prints a start, finish, duration, and log location. Full logs and job
+timings are retained in `.cache/asset-check/`; failures print the final twenty log
+lines and return a nonzero exit status. Selected verification merges its records
+into `exports/validation.json`, retaining other asset results. File hashes prevent
+stale records from being reported as current. The cache is disposable.
+
+Generate the review gallery with `python3 tools/asset_pack/gallery.py`. It copies
+the tracked viewer, licenses, and decoder assets from `catalog/vendor/` and works
+without `scratch/` or an existing `.lavish/` directory.
+
+For agent tool discovery, list matching tool names before requesting one schema.
+Use focused Blender RNA queries and print only the relevant fields of
+`structuredContent` or `content`, rather than both. Worker log files provide the
+full evidence when a short terminal summary needs investigation.
 
 ## Folder layout
 

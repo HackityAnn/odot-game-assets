@@ -28,8 +28,13 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
-      - name: Test discovery, metadata, and static packaging
-        run: python -m unittest tools.asset_catalog.test_catalog tools.asset_catalog.test_build_site tools.asset_catalog.test_export_sources -v
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Install pinned check dependencies
+        run: python -m pip install -r requirements-checks.txt
+      - name: Lint, syntax, worker guardrails, and unit tests
+        run: python -m tools.checks
       - name: Install Blender system dependencies
         run: |
           sudo apt-get update
@@ -59,6 +64,10 @@ jobs:
           .cache/blender/blender --version
       - name: Export authored Blender sources to GLB
         run: python -m tools.asset_catalog export
+      - name: Test scaled bone attachments and deforming bones
+        run: python -m tools.asset_pack.worker tools/asset_pack/test_attachments_blender.py
+      - name: Verify geometry, materials, rigs, animation playback, and shared meshes
+        run: python -m tools.asset_pack.worker tools/asset_pack/verify_pack.py --all
       - name: Restore incremental thumbnail state
         uses: actions/cache@v5
         with:

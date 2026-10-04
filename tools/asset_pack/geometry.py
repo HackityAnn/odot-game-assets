@@ -289,7 +289,7 @@ def mushroom(pos, scale=.4, color='mushroom'):
 def terrain(radius=2.55):
     lathe('Hex stone foundation',[(-.36,radius),(-.13,radius),(-.08,radius*.97)],'base',6)
     lathe('Hex earth rim',[(-.13,radius*.98),(-.045,radius*.98),(-.025,radius*.965)],'soil',6)
-    obj=lathe('Hex meadow',[(-.024,radius*.97),(.005,radius*.965)],'grass',6)
+    lathe('Hex meadow',[(-.024,radius*.97),(.005,radius*.965)],'grass',6)
     # The meadow stays flat so each asset has a reliable ground-contact pivot.
     for _ in range(22):
         a=RNG.uniform(0,math.tau); r=RNG.uniform(radius*.72,radius*.86)
@@ -363,7 +363,7 @@ def clear_scene():
 def studio(target_z=1.6, scale=6.7):
     scene=bpy.context.scene
     col=collection('STUDIO — excluded from game exports'); target(col)
-    ground=cube('Studio ground',(0,0,-.415),(200,200,.10),'base',0)
+    cube('Studio ground',(0,0,-.415),(200,200,.10),'base',0)
     cam_data=bpy.data.cameras.new('Orthographic art camera')
     cam=bpy.data.objects.new('Orthographic art camera',cam_data); col.objects.link(cam)
     cam.location=(7,-11,8.0)
