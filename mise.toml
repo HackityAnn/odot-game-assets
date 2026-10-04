@@ -17,6 +17,16 @@ description = "Run attachment regression tests in an isolated Blender worker"
 dir = "{{config_root}}"
 run = "python3 -m tools.asset_pack.worker tools/asset_pack/test_attachments_blender.py"
 
+[tasks.style-tests]
+description = "Test shared Blender style settings, shading, and portable texture maps"
+dir = "{{config_root}}"
+run = "python3 -m tools.asset_pack.worker tools/asset_pack/test_style_blender.py --label style-tests"
+
+[tasks.asset-style-check]
+description = "Inspect existing Blender assets against shared art conventions without rebuilding"
+dir = "{{config_root}}"
+run = "python3 -m tools.asset_pack.worker tools/asset_pack/verify_style_blender.py --label asset-style-check"
+
 [tasks.catalog]
 description = "Browse the local asset catalog with automatic export updates"
 dir = "{{config_root}}"

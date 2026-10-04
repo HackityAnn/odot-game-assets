@@ -11,23 +11,18 @@ import bpy
 from mathutils import Matrix, Vector
 import geometry as g
 import reference_finish as finish
+import painted_finish as paint
+import art_style as style
+import style_blender
 
 LIBRARY=g.ROOT/'sources/environment/shared_forest_kit.blend'
 PROTOTYPES={}
-RADIUS=2.55
-HEIGHT=math.sqrt(3)*RADIUS/2
+RADIUS=style.HEX.radius
+HEIGHT=style.HEX.half_height
 
 
 def palette():
-    for name,color,glow in [
-        ('crystal_cyan',(.03,.67,1),.35),('crystal_blue',(.08,.27,.95),.25),
-        ('crystal_light',(.30,.91,1),.7),('crystal_purple',(.53,.12,.92),.3),
-        ('crystal_lilac',(.76,.36,1),.5),('rune_glow',(.28,.95,1),3.0),
-        ('mushroom_blue',(.16,.25,.81),.20),('mushroom_purple',(.53,.16,.80),.20),
-        ('gill_glow',(.28,.86,.97),1.5),('water',(.10,.66,.80),.25),
-        ('water_light',(.35,.89,.98),.9),('moss',(.39,.58,.12),0),
-        ('forest_leaf',(.32,.62,.22),0),('forest_leaf_light',(.57,.76,.23),0)]:
-        g.material(name,color,.35 if name.startswith(('crystal','water')) else .8,emission=glow)
+    finish.palette()
 
 
 def reset():
@@ -50,25 +45,32 @@ def place(kind,pos=(0,0,0),scale=1,rotation=(0,0,0)):
 
 
 def crystal(purple=False):
-    sides=5
-    verts=[(r*math.cos(i*math.tau/sides+.2),r*math.sin(i*math.tau/sides+.2),z)
-           for z,r in [(0,.19),(.27,.30),(.76,.28),(1.17,.27)] for i in range(sides)]
+    sides=style.GEOMETRY.crystal_sides
+    verts=[(r*(1+.07*math.sin(i*3+j))*math.cos(i*math.tau/sides+.2+.025*j),
+            r*(1+.07*math.sin(i*3+j))*math.sin(i*math.tau/sides+.2+.025*j),
+            z+(.045*math.sin(i*2+j) if j not in (0,3) else 0))
+           for j,(z,r) in enumerate([(0,.19),(.27,.30),(.76,.28),(1.17,.27)]) for i in range(sides)]
     verts.append((.065,-.035,1.64))
     faces=[tuple(reversed(range(sides)))]
     for j in range(3):
         for i in range(sides):
             a=j*sides+i;b=j*sides+(i+1)%sides;c=(j+1)*sides+(i+1)%sides;d=(j+1)*sides+i
             faces.extend([(a,b,d),(b,c,d)] if (j+i)%2 else [(a,b,c),(a,c,d)])
-    faces += [(15+i,15+(i+1)%sides,20) for i in range(sides)]
+    faces += [(3*sides+i,3*sides+(i+1)%sides,4*sides) for i in range(sides)]
     obj=g.mesh('Faceted magical crystal',verts,faces,'crystal_purple' if purple else 'crystal_cyan')
-    g.facet_colors(obj,['crystal_purple','crystal_lilac','crystal_blue'] if purple else ['crystal_cyan','crystal_blue','crystal_light'])
+    materials=['crystal_purple','crystal_lilac'] if purple else ['crystal_cyan','crystal_blue','crystal_light']
+    for name in materials[1:]:obj.data.materials.append(g.M[name])
+    obj.data.update()
+    for poly in obj.data.polygons:
+        poly.material_index=(1 if poly.normal.x<-.3 else 0) if purple else (1 if poly.normal.x<-.35 else 2 if poly.normal.x>.6 else 0)
 
 
 def mushroom(purple=False,small=False):
     stem=g.lathe('Curving luminous mushroom stem',[(0,.15),(.23,.20),(.64,.14),(1.14,.17)],'gill_glow',10)
     for v in stem.data.vertices:v.co.x+=.14*math.sin(v.co.z*2.4)
-    cap=g.lathe('Broad faceted mushroom cap',[(0,.74),(.12,.87),(.30,.76),(.58,.53),(.74,.12),(.76,0)],'mushroom_purple' if purple else 'mushroom_blue',16,(.08,0,1.08))
-    g.facet_colors(cap,['mushroom_purple','crystal_purple'] if purple else ['mushroom_blue','crystal_blue'])
+    cap=g.lathe('Broad faceted mushroom cap',[(0,.74),(.055,.84),(.12,.87),(.21,.83),(.30,.76),(.46,.64),(.58,.53),(.68,.32),(.74,.12),(.76,0)],'mushroom_purple' if purple else 'mushroom_blue',style.GEOMETRY.mushroom_sides,(.08,0,1.08))
+    for obj in [stem,cap]:
+        style_blender.smooth_sides(obj)
     g.lathe('Luminous cap underside',[(0,.74),(.06,.70)],'gill_glow',12,(.08,0,1.075))
     for i in range(12):
         a=i*math.tau/12
@@ -94,10 +96,18 @@ def moss():
 
 def leaves():
     for i in range(6):
-        a=i*math.tau/6
+        a=i*math.tau/6+.13*math.sin(i*2)
         rot=Matrix.Rotation(a,4,'Z')
-        verts=[rot @ Vector(v) for v in [(0,0,.04),(-.12,.18,.15),(0,.42,.17),(.12,.18,.15),(0,.17,.23)]]
-        g.mesh('Broad woodland leaf',verts,[(0,1,4),(1,2,4),(2,3,4),(3,0,4)],'forest_leaf' if i%2 else 'forest_leaf_light')
+        length=.40+.05*math.sin(i*1.7)
+        verts=[rot @ Vector(v) for v in [(0,0,.035),(-.105,.12,.12),(0,.12,.16),(.105,.12,.12),
+                (-.09,.27,.16),(0,.27,.205),(.09,.27,.16),(0,length,.12+.025*math.sin(i))]]
+        faces=[(0,1,2),(0,2,3),(1,4,5,2),(2,5,6,3),(4,7,5),(5,7,6)]
+        obj=g.mesh('Broad woodland leaf',verts,faces,'forest_leaf' if i%2 else 'forest_leaf_light')
+        uv=obj.data.uv_layers.new(name=style.TEXTURES.uv_name)
+        coords=[(.5,0),(0,.30),(.5,.30),(1,.30),(.12,.68),(.5,.68),(.88,.68),(.5,1)]
+        for poly in obj.data.polygons:
+            poly.use_smooth=True
+            for loop in poly.loop_indices:uv.data[loop].uv=coords[obj.data.loops[loop].vertex_index]
 
 
 def fern():
@@ -138,9 +148,10 @@ def monolith():
     for vertex in obj.data.vertices:
         if vertex.co.z>.2:vertex.co.z+=g.RNG.uniform(-.08,.08)
     g.facet_colors(obj,['stone','stone_light'])
-    # Flat inset puts the engraving clearly in front of the stone's facet plane.
-    g.cube('Flat engraved rune face',(0,-.25,.85),(.40,.045,1.05),'stone_dark',.035)
-    diamond((0,-.279,.86),1.5)
+    # Flatten the front of the stone itself; the rune no longer needs a raised slab.
+    for vertex in obj.data.vertices:
+        if vertex.co.y<-.055:vertex.co.y=-.25
+    diamond((0,-.261,.86),1.5)
 
 
 def rune_circle():
@@ -196,14 +207,14 @@ def hex_layer(name,z0,z1,mat):
 
 
 def hex_meadow():
-    hex_layer('Standard hex stone foundation',-.36,-.13,'base')
+    hex_layer('Standard hex stone foundation',style.HEX.bottom,-.13,'base')
     hex_layer('Standard hex earth layer',-.13,-.04,'soil')
-    hex_layer('Standard hex meadow top',-.04,0,'grass')
+    hex_layer('Standard hex meadow top',-.04,style.HEX.surface,'grass')
 
 
 def bank_polygon(sign):
     points=[(RADIUS*math.cos(i*math.tau/6),RADIUS*math.sin(i*math.tau/6)) for i in range(6)]
-    cut=.46;out=[]
+    cut=style.HEX.bank_cut;out=[]
     for p,q in zip(points,points[1:]+points[:1]):
         inside=p[0]*sign>=cut;next_inside=q[0]*sign>=cut
         if inside:out.append(p)
@@ -218,13 +229,13 @@ def prism(name,outline,z0,z1,mat):
 
 
 def hex_stream():
-    hex_layer('River hex stone foundation',-.36,-.27,'base')
+    hex_layer('River hex stone foundation',style.HEX.bottom,-.27,'base')
     hex_layer('River hex bed',-.27,-.23,'soil')
     for sign in [-1,1]:
         bank=bank_polygon(sign)
         prism('Cut river bank',bank,-.23,-.04,'soil')
         prism('Meadow river bank',bank,-.04,0,'grass')
-    g.cube('Continuous river water',(0,0,-.18),(.91,HEIGHT*2,.025),'water',0)
+    g.cube('Continuous river water',(0,0,style.HEX.water_center),(style.HEX.water_width,HEIGHT*2,style.HEX.water_thickness),'water',0)
 
 
 def waterfall():
@@ -241,11 +252,6 @@ def component_details(kind):
         for obj in list(g.CURRENT.objects):
             if obj.type=='MESH' and obj.name.startswith(('Angular mossy','Weathered shrine')):
                 finish.rock_finish(obj)
-    elif kind.startswith('crystal'):
-        for i in [2,3,4]:
-            a=i*math.tau/5+.2
-            g.tube('Crystal sharp reflected edge',[(.30*math.cos(a),.30*math.sin(a),.27),(.27*math.cos(a),.27*math.sin(a),1.17),(.065,-.035,1.64)],.006,'crystal_edge',5)
-        g.ico('Crystal bright tip gleam',(.065,-.035,1.635),(.025,)*3,'magic_core',2,0)
     elif kind.startswith('mushroom'):
         size=.28 if kind=='mushroom_small' else 1
         for i in range(10):
@@ -280,10 +286,6 @@ def component_details(kind):
         for i in range(8):
             a=i*math.tau/8
             g.ico('Magic circle luminous node',(.48*math.cos(a),.48*math.sin(a),.024),(.025,.025,.008),'magic_core',2,0)
-    elif kind=='leaf_clump':
-        for i in range(6):
-            a=i*math.tau/6
-            g.tube('Leaf central vein',[(0,0,.05),(.17*math.sin(a),.17*math.cos(a),.233),(.38*math.sin(a),.38*math.cos(a),.19)],.004,'grass_dark',4)
     elif kind=='fern':
         for x in [-.07,.07]:g.ico('Fern unfolding leaf tip',(x,.24,.57),(.028,.055,.018),'forest_leaf_light',2,0)
     elif kind=='moss':
@@ -326,6 +328,7 @@ def main():
             if obj.type=='MESH':
                 bpy.context.view_layer.objects.active=obj
                 for mod in list(obj.modifiers):bpy.ops.object.modifier_apply(modifier=mod.name)
+        paint.apply(col)
         col.asset_mark();col.asset_data.description='Reusable magical forest component: '+kind
         col['placement_origin']='local origin; meadow surface z=0';col.use_fake_user=True
         bpy.context.scene.collection.children.unlink(col)

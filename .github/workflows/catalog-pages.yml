@@ -66,6 +66,10 @@ jobs:
         run: python -m tools.asset_catalog export
       - name: Test scaled bone attachments and deforming bones
         run: python -m tools.asset_pack.worker tools/asset_pack/test_attachments_blender.py
+      - name: Test shared art style with Blender fixtures and GLB texture exports
+        run: python -m tools.asset_pack.worker tools/asset_pack/test_style_blender.py --label style-tests
+      - name: Check authored sources against the shared art style
+        run: python -m tools.asset_pack.worker tools/asset_pack/verify_style_blender.py --label asset-style-check --all
       - name: Verify geometry, materials, rigs, animation playback, and shared meshes
         run: python -m tools.asset_pack.worker tools/asset_pack/verify_pack.py --all
       - name: Restore incremental thumbnail state

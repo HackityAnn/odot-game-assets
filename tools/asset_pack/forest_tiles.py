@@ -7,6 +7,8 @@ import bpy
 from mathutils import Vector
 import geometry as g
 import reference_finish as finish
+import painted_finish as paint
+import art_style as style
 import forest_kit as kit
 from catalog import BY_ID
 
@@ -67,11 +69,27 @@ def dress(stream=False):
     if not stream:
         for x,y,s in [(-.78,-.08,.7),(.65,.82,.62),(.49,-.67,.57)]:kit.place('leaf_clump',(x,y,0),s)
     for i in range(18):
-        a=i*math.tau/18+.17;r=1.72+(i%3)*.08
+        a=i*2.399963+.17;r=1.48+.28*math.sin(i*1.13)
         x,y=r*math.cos(a),r*math.sin(a)
         if stream and abs(x)<.68:continue
-        kit.place('moss',(x,y,.005),(1.2,1.0,.27))
-        kit.place('leaf_clump',(x,y,0),.37,(0,0,a))
+        kit.place('moss',(x,y,.005),(.95,.82,.60))
+        kit.place('leaf_clump',(x+.09,y-.04,0),.42+.09*math.sin(i),(0,0,a))
+    # Small varied blades add detail between broad leaves without a regular border.
+    vertices=[];faces=[]
+    for i in range(54):
+        a=i*2.399963;r=.86+.90*(.5+.5*math.sin(i*1.71))
+        x,y=r*math.cos(a),r*math.sin(a)
+        if stream and abs(x)<.69:continue
+        for j in range(3):
+            angle=a+j*2.1;h=.07+.035*math.sin(i+j)**2
+            dx,dy=.024*math.cos(angle),.024*math.sin(angle)
+            n=len(vertices)
+            vertices.extend([(x-dy,y+dx,.007),(x+dy,y-dx,.007),(x+dx*1.2,y+dy*1.2,h)])
+            faces.append((n,n+1,n+2))
+    tuft=g.mesh('Fine scattered woodland grasses',vertices,faces,'forest_leaf_light')
+    uv=tuft.data.uv_layers.new(name=style.TEXTURES.uv_name)
+    for poly in tuft.data.polygons:
+        for index,coord in zip(poly.loop_indices,[(0,0),(1,0),(.5,1)],strict=True):uv.data[index].uv=coord
 
 
 def climbing_growth(root,kind):
@@ -138,12 +156,16 @@ def build_one(name,render=True):
     asset=g.collection(name);g.target(asset);root=g.empty(name+'_root')
     stream=name in ['hex_lantern_bridge','hex_woodland_bridge']
     kit.place('hex_stream' if stream else 'hex_meadow')
-    for kind,pos,scale in RECIPES[name]:climbing_growth(kit.place(kind,pos,scale),kind)
+    for kind,pos,scale in RECIPES[name]:
+        climbing_growth(kit.place(kind,pos,scale),kind)
+        if kind in ['boulder','rune_monolith']:
+            kit.place('leaf_clump',(pos[0]-.23*scale,pos[1]-.24*scale,.025),.55*scale,(0,0,pos[0]*2))
+            kit.place('moss',(pos[0]+.24*scale,pos[1]-.20*scale,.015),(.72*scale,.6*scale,.5*scale))
     if stream:bridge(name=='hex_lantern_bridge')
     dress(stream);g.attach_all(asset,root)
     root['asset_role']=name;root['hex_radius']=kit.RADIUS;root['hex_orientation']='flat_top'
     root['ground_origin']='meadow surface z=0; foundation bottom=-0.36'
-    root['grid_spacing_x']=1.5*kit.RADIUS;root['grid_spacing_y']=2*kit.HEIGHT
+    root['grid_spacing_x']=style.HEX.spacing_x;root['grid_spacing_y']=style.HEX.spacing_y
     root['reference']='sources/reference/'+BY_ID[name]['reference']
     root['kit_source']='sources/environment/shared_forest_kit.blend'
     root['river_connections']='north,south' if stream else ''
@@ -151,6 +173,9 @@ def build_one(name,render=True):
     asset.asset_mark();asset.asset_data.description='Complete magical forest hex tile: '+BY_ID[name]['title']
     image=bpy.data.images.load(str(g.ROOT/root['reference']),check_existing=True);image.pack();image.use_fake_user=True
     finish.palette()
+    paint.apply(asset)
+    paint.ground(asset,name)
+    root['modeling_stage']=paint.VERSION
     g.studio(1.05,6.65);finish.studio_finish()
     scene=bpy.context.scene;scene.name=name
     scene.render.filepath=str(g.ROOT/'exports/previews'/f'{name}.png')

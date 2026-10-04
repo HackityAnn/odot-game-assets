@@ -8,9 +8,10 @@ sys.path.insert(0,str(Path(__file__).resolve().parent))
 import bpy
 from mathutils import Matrix
 import geometry as g
+import art_style as style
 
 from catalog import BUILDINGS, CHARACTERS, BY_ID
-CLIPS={'idle','walk','run','attack','hit','death'}
+CLIPS=set(style.CLIP_FRAMES)
 
 
 def export(path,objects,animated=False):

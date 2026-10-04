@@ -3,7 +3,6 @@
 Read-only worker: opens sources and compares embedded meshes to library prototypes.
 """
 import hashlib
-import math
 import sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
@@ -11,6 +10,7 @@ import bpy
 import forest_kit as kit
 from forest_tiles import RECIPES
 import geometry as g
+import art_style as style
 
 
 def geometry_signature(obj):
@@ -30,10 +30,9 @@ def main():
         assert abs(root['grid_spacing_y']-2*kit.HEIGHT)<1e-6,(name,'vertical grid spacing')
         bpy.context.view_layer.update()
         points=[obj.matrix_world @ vertex.co for obj in asset.objects if obj.type=='MESH' for vertex in obj.data.vertices]
-        assert abs(min(p.z for p in points)+.36)<1e-6,(name,'foundation height')
+        assert abs(min(p.z for p in points)-style.HEX.bottom)<style.GEOMETRY.pivot_tolerance,(name,'foundation height')
         for p in points:
-            assert abs(p.y)<=kit.HEIGHT+.025,(name,'outside hex Y edge',tuple(p))
-            assert math.sqrt(3)*abs(p.x)+abs(p.y)<=math.sqrt(3)*kit.RADIUS+.025,(name,'outside hex diagonal',tuple(p))
+            assert style.HEX.contains(p.x,p.y,style.GEOMETRY.footprint_tolerance),(name,'outside hex edge',tuple(p))
         instances=[obj for obj in asset.objects if obj.get('kit_asset') and
                    obj.get('kit_source')=='sources/environment/shared_forest_kit.blend']
         kinds=sorted({obj['kit_asset'] for obj in instances})

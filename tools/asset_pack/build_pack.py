@@ -15,6 +15,8 @@ import berserker
 import evil_units
 import more_buildings
 import reference_finish as finish
+import painted_finish as paint
+import art_style as style
 
 
 def build_one(name, render=True):
@@ -24,7 +26,7 @@ def build_one(name, render=True):
     scene.name=name
     asset=g.collection(name); g.target(asset)
     root=g.empty(name+'_root')
-    root['asset_role']=name; root['forward']='-Y'; root['ground_origin']='z=0'
+    root['asset_role']=name; root['forward']=style.UNITS.forward; root['ground_origin']='z=0'
     is_character=name in catalog.CHARACTERS
     props=None
     if is_character:
@@ -79,7 +81,10 @@ def build_one(name, render=True):
         root['modeling_stage']='upgraded_reference_pass'
         root['art_direction']='Bold role emblems, substantial timbers, projecting joinery, layered roofs and recessed portals.'
     if name in more_buildings.BUILDERS:
-        root['modeling_stage']='reference_detail_pass'
+        paint.apply(asset,'buildings')
+        paint.apply(terrain,'buildings')
+        paint.ground(terrain,name,'buildings')
+        root['modeling_stage']=paint.VERSION
         finish.studio_finish()
     bpy.ops.wm.save_as_mainfile(filepath=str(path))
     if render:

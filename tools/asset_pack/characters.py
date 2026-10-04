@@ -3,6 +3,7 @@ import math
 import bpy
 from mathutils import Matrix, Vector
 import geometry as g
+import art_style as style
 
 WEIGHTS = []
 PROP_COLLECTION = None
@@ -20,7 +21,7 @@ def part(name,pos,size,mat,bone,bevel=.04,rot=None):
 def ball(name,pos,size,mat,bone,subdivisions=2):
     obj=g.ico(name,pos,size,mat,subdivisions,.012)
     # Rounded clay faces and gloves sit alongside faceted armor and cloth.
-    if mat in ['skin','face_dark','leather','leather_light','magic']:
+    if mat in style.UNITS.rounded_materials:
         for polygon in obj.data.polygons: polygon.use_smooth=True
     return weighted(obj,bone)
 
@@ -400,7 +401,7 @@ def pose(rig,kind,clip,t):
 
 def animate(rig,kind):
     rig.animation_data_create()
-    clips={'idle':48,'walk':24,'run':18,'attack':24,'hit':12,'death':30}
+    clips=style.CLIP_FRAMES
     actions={}
     for clip,last in clips.items():
         action=bpy.data.actions.new(clip); rig.animation_data.action=action
@@ -419,7 +420,7 @@ def animate(rig,kind):
         track.mute=True
         actions[clip]=action
     rig.animation_data.action=actions['idle']
-    bpy.context.scene.frame_start=1; bpy.context.scene.frame_end=49
+    bpy.context.scene.frame_start=1; bpy.context.scene.frame_end=style.CLIP_FRAMES['idle']+1
     bpy.context.scene.frame_set(1)
     reset_pose(rig)
     return actions
@@ -452,6 +453,6 @@ def build(kind,asset,props):
         equip(bw,rig,'weapon_socket.L',(.81,-.16,.91),(0,.04,0))
         equip(ar,rig,'weapon_socket.R',(-.78,-.20,.90))
     animate(rig,kind)
-    rig['animation_notes']='idle/walk/run loop; attack/hit/death one-shot; in-place locomotion; 24fps'
+    rig['animation_notes']=f'idle/walk/run loop; attack/hit/death one-shot; in-place locomotion; {style.UNITS.fps}fps'
     rig['forward']='-Y'; rig['shared_skeleton']='chibi_v1'
     return rig

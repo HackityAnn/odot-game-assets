@@ -3,6 +3,8 @@ import math
 import random
 from pathlib import Path
 
+import art_style as style
+import style_blender
 import bmesh
 import bpy
 from mathutils import Matrix, Vector
@@ -25,7 +27,7 @@ def material(name, rgb, roughness=.8, metal=0, emission=0):
     mat.use_nodes = True
     shader = next(n for n in mat.node_tree.nodes if n.type == 'BSDF_PRINCIPLED')
     # Palette values are sRGB; convert to scene-linear for consistent renders.
-    linear = tuple(c / 12.92 if c <= .04045 else ((c + .055) / 1.055) ** 2.4 for c in rgb)
+    linear = style.srgb_to_linear(rgb)
     shader.inputs['Base Color'].default_value = (*linear, 1)
     shader.inputs['Roughness'].default_value = roughness
     shader.inputs['Metallic'].default_value = metal
@@ -37,39 +39,8 @@ def material(name, rgb, roughness=.8, metal=0, emission=0):
 
 
 def palette():
-    colors = {
-        'wood': (.43,.245,.115), 'wood_light': (.64,.385,.19),
-        'wood_edge': (.73,.47,.255), 'wood_dark': (.255,.145,.085),
-        'bark': (.40,.205,.095), 'bark_light': (.51,.285,.115),
-        'stone': (.54,.54,.51), 'stone_light': (.66,.65,.59),
-        'stone_dark': (.39,.41,.40), 'wall': (.81,.76,.62),
-        'wall_light': (.90,.85,.72), 'shadow': (.105,.075,.07),
-        'grass': (.54,.68,.20), 'grass_light': (.67,.76,.28),
-        'grass_dark': (.36,.51,.125), 'leaf': (.40,.60,.14),
-        'leaf_light': (.57,.72,.18), 'leaf_dark': (.28,.44,.105),
-        'pine': (.25,.43,.14), 'pine_light': (.34,.52,.18),
-        'soil': (.29,.28,.235), 'base': (.28,.29,.29),
-        'roof_red': (.74,.255,.125), 'roof_red_light': (.87,.36,.18),
-        'roof_red_dark': (.61,.18,.09), 'roof_blue': (.19,.39,.55),
-        'roof_blue_light': (.29,.49,.66), 'roof_blue_dark': (.13,.29,.43),
-        'blue': (.15,.34,.75), 'blue_light': (.25,.47,.94),
-        'blue_dark': (.09,.20,.48), 'purple': (.40,.18,.62),
-        'purple_light': (.58,.30,.78), 'purple_dark': (.24,.11,.39),
-        'green': (.29,.48,.14), 'green_light': (.42,.62,.20),
-        'green_dark': (.17,.33,.09), 'skin': (.96,.69,.35),
-        'skin_light': (1,.78,.47), 'leather': (.34,.205,.115),
-        'leather_light': (.46,.29,.16), 'silver': (.70,.74,.79),
-        'silver_light': (.88,.89,.87), 'silver_dark': (.40,.45,.50),
-        'gold': (.96,.65,.15), 'gold_light': (1,.79,.30),
-        'cream': (.99,.92,.73), 'red': (.82,.18,.11),
-        'mushroom': (.55,.23,.83), 'black': (.07,.047,.04),
-        'face_dark': (.19,.095,.24), 'flower': (.94,.88,.73),
-        'window': (1,.64,.075), 'magic': (.86,.19,1),
-    }
-    for name, color in colors.items():
-        material(name, color, roughness=.42 if name.startswith('silver') else .78,
-                 metal=.35 if name.startswith('silver') else .10 if name.startswith('gold') else 0,
-                 emission=1.5 if name == 'window' else 2.5 if name == 'magic' else 0)
+    for name, spec in style.BASE_MATERIALS.items():
+        material(name, spec.color, spec.roughness, spec.metallic, spec.emission)
 
 
 def collection(name):
@@ -93,11 +64,11 @@ def mesh(name, verts, faces, mat, bevel=0):
     if bevel:
         mod = obj.modifiers.new('Soft carved edges', 'BEVEL')
         mod.width = bevel
-        mod.segments = 2
+        mod.segments = style.GEOMETRY.bevel_segments
     return obj
 
 
-def cube(name, pos, size, mat, bevel=.025, rot=None):
+def cube(name, pos, size, mat, bevel=style.GEOMETRY.bevel_width, rot=None):
     transform = Matrix.Translation(Vector(pos))
     if rot is not None:
         from mathutils import Euler
@@ -286,7 +257,7 @@ def mushroom(pos, scale=.4, color='mushroom'):
             (scale*.07,scale*.06,scale*.03),'cream',1)
 
 
-def terrain(radius=2.55):
+def terrain(radius=style.HEX.radius):
     lathe('Hex stone foundation',[(-.36,radius),(-.13,radius),(-.08,radius*.97)],'base',6)
     lathe('Hex earth rim',[(-.13,radius*.98),(-.045,radius*.98),(-.025,radius*.965)],'soil',6)
     lathe('Hex meadow',[(-.024,radius*.97),(.005,radius*.965)],'grass',6)
@@ -369,26 +340,18 @@ def studio(target_z=1.6, scale=6.7):
     cam.location=(7,-11,8.0)
     cam.rotation_euler=(Vector((0,0,target_z))-cam.location).to_track_quat('-Z','Y').to_euler()
     enum(cam_data,'type','ORTHO'); cam_data.ortho_scale=scale; scene.camera=cam
-    for name,loc,energy,size,color in [
-        ('Warm key',(-3,-4,8),1100,5,(1,.86,.69)),
-        ('Soft sky',(5,-1,5),650,5,(.72,.83,1)),
-        ('Leaf rim',(1,5,7),1000,4,(1,.94,.73))]:
-        data=bpy.data.lights.new(name,'AREA'); data.energy=energy; enum(data,'shape','DISK'); data.size=size; data.color=color
-        light=bpy.data.objects.new(name,data); col.objects.link(light); light.location=loc
+    for spec in style.LIGHTS:
+        data=bpy.data.lights.new(spec.name,'AREA'); data.energy=spec.energy; enum(data,'shape','DISK'); data.size=spec.size; data.color=spec.color
+        light=bpy.data.objects.new(spec.name,data); col.objects.link(light); light.location=spec.position
         light.rotation_euler=(Vector((0,0,1.3))-light.location).to_track_quat('-Z','Y').to_euler()
     scene.world=bpy.data.worlds.new('Neutral soft ambient')
     scene.world.use_nodes=True
     background=next(n for n in scene.world.node_tree.nodes if n.type=='BACKGROUND')
-    background.inputs['Color'].default_value=(.20,.22,.25,1)
-    background.inputs['Strength'].default_value=.45
-    try: scene.render.engine='CYCLES'
-    except TypeError: pass
-    scene.cycles.samples=32; scene.cycles.use_denoising=True
-    scene.render.resolution_x=900; scene.render.resolution_y=900; scene.render.resolution_percentage=100
+    background.inputs['Color'].default_value=(*style.PREVIEW.world_color,1)
+    style_blender.preview(scene)
     enum(scene.render.image_settings,'file_format','PNG')
     # OCIO exposes a dynamic enum; preserve the valid transform from this installation.
     scene.render.film_transparent=False
-    scene.render.fps=24
     for screen in bpy.data.screens:
         for area in screen.areas:
             if area.type=='VIEW_3D':

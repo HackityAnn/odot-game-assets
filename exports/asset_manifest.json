@@ -925,7 +925,7 @@
     },
     {
       "file": "exports/buildings/archery_range.glb",
-      "bytes": 2354816,
+      "bytes": 5483064,
       "triangles": 41298,
       "materials": 38,
       "animations": [],
@@ -945,9 +945,9 @@
     },
     {
       "file": "exports/buildings/metal_mine.glb",
-      "bytes": 2083852,
-      "triangles": 36015,
-      "materials": 37,
+      "bytes": 5252972,
+      "triangles": 36248,
+      "materials": 35,
       "animations": [],
       "source": "sources/buildings/metal_mine.blend",
       "shared_kit_instances": {
@@ -963,7 +963,7 @@
     },
     {
       "file": "exports/buildings/research_tower.glb",
-      "bytes": 2339936,
+      "bytes": 5611168,
       "triangles": 41962,
       "materials": 36,
       "animations": [],
@@ -981,7 +981,7 @@
     },
     {
       "file": "exports/buildings/town_hall.glb",
-      "bytes": 4894880,
+      "bytes": 8849548,
       "triangles": 88355,
       "materials": 30,
       "animations": [],
@@ -999,7 +999,7 @@
     },
     {
       "file": "exports/buildings/weaver.glb",
-      "bytes": 2197472,
+      "bytes": 5427916,
       "triangles": 38908,
       "materials": 33,
       "animations": [],
@@ -1016,15 +1016,15 @@
     },
     {
       "file": "exports/environment/components/forest_boulder.glb",
-      "bytes": 26884,
-      "triangles": 260,
-      "materials": 6,
+      "bytes": 532572,
+      "triangles": 490,
+      "materials": 3,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_bridge_plank.glb",
-      "bytes": 21584,
+      "bytes": 350896,
       "triangles": 296,
       "materials": 3,
       "animations": [],
@@ -1032,7 +1032,7 @@
     },
     {
       "file": "exports/environment/components/forest_bridge_post.glb",
-      "bytes": 36580,
+      "bytes": 513848,
       "triangles": 524,
       "materials": 4,
       "animations": [],
@@ -1040,7 +1040,7 @@
     },
     {
       "file": "exports/environment/components/forest_bridge_rail.glb",
-      "bytes": 12896,
+      "bytes": 355064,
       "triangles": 216,
       "materials": 2,
       "animations": [],
@@ -1048,23 +1048,23 @@
     },
     {
       "file": "exports/environment/components/forest_crystal_blue.glb",
-      "bytes": 22044,
-      "triangles": 232,
-      "materials": 6,
+      "bytes": 3243124,
+      "triangles": 38,
+      "materials": 3,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_crystal_purple.glb",
-      "bytes": 21984,
-      "triangles": 232,
-      "materials": 6,
+      "bytes": 2116972,
+      "triangles": 38,
+      "materials": 2,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_fern.glb",
-      "bytes": 67524,
+      "bytes": 414796,
       "triangles": 576,
       "materials": 2,
       "animations": [],
@@ -1072,7 +1072,7 @@
     },
     {
       "file": "exports/environment/components/forest_foam.glb",
-      "bytes": 58872,
+      "bytes": 1366764,
       "triangles": 976,
       "materials": 2,
       "animations": [],
@@ -1080,7 +1080,7 @@
     },
     {
       "file": "exports/environment/components/forest_hex_meadow.glb",
-      "bytes": 13312,
+      "bytes": 355240,
       "triangles": 132,
       "materials": 4,
       "animations": [],
@@ -1088,7 +1088,7 @@
     },
     {
       "file": "exports/environment/components/forest_hex_stream.glb",
-      "bytes": 19068,
+      "bytes": 522936,
       "triangles": 216,
       "materials": 5,
       "animations": [],
@@ -1096,23 +1096,23 @@
     },
     {
       "file": "exports/environment/components/forest_lantern_post.glb",
-      "bytes": 74724,
-      "triangles": 1240,
-      "materials": 7,
+      "bytes": 814724,
+      "triangles": 1196,
+      "materials": 6,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_leaf_clump.glb",
-      "bytes": 17284,
-      "triangles": 144,
-      "materials": 3,
+      "bytes": 334612,
+      "triangles": 48,
+      "materials": 2,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_moss.glb",
-      "bytes": 28180,
+      "bytes": 344188,
       "triangles": 300,
       "materials": 2,
       "animations": [],
@@ -1120,31 +1120,31 @@
     },
     {
       "file": "exports/environment/components/forest_mushroom_blue.glb",
-      "bytes": 125396,
-      "triangles": 1496,
-      "materials": 7,
+      "bytes": 1619716,
+      "triangles": 1900,
+      "materials": 5,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_mushroom_purple.glb",
-      "bytes": 125464,
-      "triangles": 1496,
-      "materials": 7,
+      "bytes": 1629700,
+      "triangles": 1900,
+      "materials": 5,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_mushroom_small.glb",
-      "bytes": 125568,
-      "triangles": 1496,
-      "materials": 7,
+      "bytes": 1619876,
+      "triangles": 1900,
+      "materials": 5,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_root.glb",
-      "bytes": 10572,
+      "bytes": 417868,
       "triangles": 140,
       "materials": 3,
       "animations": [],
@@ -1152,7 +1152,7 @@
     },
     {
       "file": "exports/environment/components/forest_rune_circle.glb",
-      "bytes": 94504,
+      "bytes": 122584,
       "triangles": 1408,
       "materials": 2,
       "animations": [],
@@ -1160,7 +1160,7 @@
     },
     {
       "file": "exports/environment/components/forest_rune_diamond.glb",
-      "bytes": 13108,
+      "bytes": 16612,
       "triangles": 156,
       "materials": 2,
       "animations": [],
@@ -1168,15 +1168,15 @@
     },
     {
       "file": "exports/environment/components/forest_rune_monolith.glb",
-      "bytes": 36416,
-      "triangles": 436,
-      "materials": 7,
+      "bytes": 390584,
+      "triangles": 368,
+      "materials": 3,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_shrine_plinth.glb",
-      "bytes": 71176,
+      "bytes": 443148,
       "triangles": 1304,
       "materials": 3,
       "animations": [],
@@ -1184,31 +1184,31 @@
     },
     {
       "file": "exports/environment/components/forest_stone_arch_block.glb",
-      "bytes": 15804,
-      "triangles": 190,
-      "materials": 3,
+      "bytes": 228780,
+      "triangles": 108,
+      "materials": 1,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_stone_block.glb",
-      "bytes": 15812,
-      "triangles": 190,
-      "materials": 3,
+      "bytes": 228764,
+      "triangles": 108,
+      "materials": 1,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_tree_snag.glb",
-      "bytes": 31276,
-      "triangles": 446,
-      "materials": 4,
+      "bytes": 441064,
+      "triangles": 410,
+      "materials": 3,
       "animations": [],
       "source": "sources/environment/shared_forest_kit.blend"
     },
     {
       "file": "exports/environment/components/forest_waterfall.glb",
-      "bytes": 13900,
+      "bytes": 1307000,
       "triangles": 168,
       "materials": 3,
       "animations": [],
@@ -1216,9 +1216,9 @@
     },
     {
       "file": "exports/environment/hex_bioluminescent_grove.glb",
-      "bytes": 685064,
-      "triangles": 7114,
-      "materials": 54,
+      "bytes": 6879756,
+      "triangles": 8392,
+      "materials": 41,
       "animations": [],
       "source": "sources/environment/hex_bioluminescent_grove.blend",
       "shared_kit_instances": {
@@ -1226,8 +1226,8 @@
         "forest_crystal_blue": 1,
         "forest_fern": 3,
         "forest_hex_meadow": 1,
-        "forest_leaf_clump": 32,
-        "forest_moss": 29,
+        "forest_leaf_clump": 34,
+        "forest_moss": 31,
         "forest_mushroom_blue": 2,
         "forest_mushroom_purple": 2,
         "forest_mushroom_small": 3,
@@ -1240,9 +1240,9 @@
     },
     {
       "file": "exports/environment/hex_crystal_grove.glb",
-      "bytes": 701884,
-      "triangles": 7196,
-      "materials": 60,
+      "bytes": 8572872,
+      "triangles": 8248,
+      "materials": 40,
       "animations": [],
       "source": "sources/environment/hex_crystal_grove.blend",
       "shared_kit_instances": {
@@ -1251,8 +1251,8 @@
         "forest_crystal_purple": 1,
         "forest_fern": 3,
         "forest_hex_meadow": 1,
-        "forest_leaf_clump": 35,
-        "forest_moss": 32,
+        "forest_leaf_clump": 39,
+        "forest_moss": 36,
         "forest_mushroom_blue": 1,
         "forest_mushroom_purple": 1,
         "forest_mushroom_small": 3,
@@ -1264,9 +1264,9 @@
     },
     {
       "file": "exports/environment/hex_crystal_shrine.glb",
-      "bytes": 832856,
-      "triangles": 9628,
-      "materials": 60,
+      "bytes": 8785512,
+      "triangles": 10748,
+      "materials": 44,
       "animations": [],
       "source": "sources/environment/hex_crystal_shrine.blend",
       "shared_kit_instances": {
@@ -1275,8 +1275,8 @@
         "forest_crystal_purple": 2,
         "forest_fern": 3,
         "forest_hex_meadow": 1,
-        "forest_leaf_clump": 29,
-        "forest_moss": 26,
+        "forest_leaf_clump": 31,
+        "forest_moss": 28,
         "forest_mushroom_blue": 1,
         "forest_mushroom_purple": 1,
         "forest_mushroom_small": 3,
@@ -1290,9 +1290,9 @@
     },
     {
       "file": "exports/environment/hex_glowing_mushrooms.glb",
-      "bytes": 658800,
-      "triangles": 6760,
-      "materials": 53,
+      "bytes": 8514664,
+      "triangles": 7880,
+      "materials": 37,
       "animations": [],
       "source": "sources/environment/hex_glowing_mushrooms.blend",
       "shared_kit_instances": {
@@ -1301,8 +1301,8 @@
         "forest_crystal_purple": 1,
         "forest_fern": 3,
         "forest_hex_meadow": 1,
-        "forest_leaf_clump": 29,
-        "forest_moss": 26,
+        "forest_leaf_clump": 31,
+        "forest_moss": 28,
         "forest_mushroom_blue": 2,
         "forest_mushroom_purple": 2,
         "forest_mushroom_small": 3
@@ -1313,9 +1313,9 @@
     },
     {
       "file": "exports/environment/hex_lantern_bridge.glb",
-      "bytes": 890100,
-      "triangles": 9376,
-      "materials": 66,
+      "bytes": 7681604,
+      "triangles": 10422,
+      "materials": 49,
       "animations": [],
       "source": "sources/environment/hex_lantern_bridge.blend",
       "shared_kit_instances": {
@@ -1340,9 +1340,9 @@
     },
     {
       "file": "exports/environment/hex_mystical_grove.glb",
-      "bytes": 660220,
-      "triangles": 6760,
-      "materials": 53,
+      "bytes": 8554384,
+      "triangles": 7880,
+      "materials": 37,
       "animations": [],
       "source": "sources/environment/hex_mystical_grove.blend",
       "shared_kit_instances": {
@@ -1351,8 +1351,8 @@
         "forest_crystal_purple": 1,
         "forest_fern": 3,
         "forest_hex_meadow": 1,
-        "forest_leaf_clump": 30,
-        "forest_moss": 27,
+        "forest_leaf_clump": 33,
+        "forest_moss": 30,
         "forest_mushroom_blue": 2,
         "forest_mushroom_purple": 1,
         "forest_mushroom_small": 3
@@ -1363,9 +1363,9 @@
     },
     {
       "file": "exports/environment/hex_rune_shrine.glb",
-      "bytes": 808572,
-      "triangles": 9420,
-      "materials": 59,
+      "bytes": 7184748,
+      "triangles": 10218,
+      "materials": 44,
       "animations": [],
       "source": "sources/environment/hex_rune_shrine.blend",
       "shared_kit_instances": {
@@ -1374,8 +1374,8 @@
         "forest_fern": 3,
         "forest_hex_meadow": 1,
         "forest_lantern_post": 2,
-        "forest_leaf_clump": 38,
-        "forest_moss": 35,
+        "forest_leaf_clump": 43,
+        "forest_moss": 40,
         "forest_mushroom_blue": 1,
         "forest_mushroom_small": 3,
         "forest_rune_circle": 1,
@@ -1388,9 +1388,9 @@
     },
     {
       "file": "exports/environment/hex_woodland_bridge.glb",
-      "bytes": 872992,
-      "triangles": 10184,
-      "materials": 70,
+      "bytes": 7843060,
+      "triangles": 11394,
+      "materials": 57,
       "animations": [],
       "source": "sources/environment/hex_woodland_bridge.blend",
       "shared_kit_instances": {

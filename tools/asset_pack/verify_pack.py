@@ -11,6 +11,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
 import bpy
 import geometry as g
 from export_pack import BUILDINGS,CHARACTERS,CLIPS
+import art_style as style
 from tools.asset_catalog.export_sources import plan_exports
 from tools.asset_catalog.blender_selection import load_asset
 from tools.asset_catalog.index import write_json
@@ -85,7 +86,7 @@ def main(root=g.ROOT, assets=None):
         if reuse: report['shared_kit_instances']=reuse
         if animated:
             rig=next(o for o in imported if o.type=='ARMATURE')
-            assert len(rig.data.bones)==19,(name,'bone count')
+            assert len(rig.data.bones)==style.UNITS.bone_count,(name,'bone count')
             assert set(a.name for a in bpy.data.actions)==CLIPS,(name,[a.name for a in bpy.data.actions])
             assert any(o.type=='MESH' and o.vertex_groups for o in imported),(name,'skin weights')
             assert all(o.data.materials for o in imported if o.type=='MESH'),(name,'missing material')
@@ -99,7 +100,7 @@ def main(root=g.ROOT, assets=None):
                     snapshots.append(snapshot(imported))
                 if clip in ['walk','run','attack','death']:
                     assert any(snapshots[0]!=sample for sample in snapshots[1:-1]),(name,clip,'no deformation')
-                if clip in ['idle','walk','run']:
+                if clip in style.LOOP_CLIPS:
                     delta=max(abs(snapshots[0][k][i]-snapshots[-1][k][i]) for k in ['min','max'] for i in range(3))
                     assert delta<.005,(name,clip,'loop discontinuity',delta)
                 pose_error=max(abs(source[key][i]-imported_pose[key][i])

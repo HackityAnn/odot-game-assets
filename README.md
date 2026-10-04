@@ -280,13 +280,37 @@ a subset. Builders overwrite generated sources; preserve manual refinements firs
 pass forest tile IDs to render them too. Use the catalog thumbnail command for
 portable component previews. Both archive manifests retain the original filenames
 and checksums; provenance notes record what the supplied archives contain. The new
-buildings and forest tiles also have a reference detail pass: saturated material
-colors, fine timber grain and roof seams, worn stone facets and cracks, bright
-window panes, mushroom stem grooves and spores, and stronger contact shading.
-Small emissive and tinted meshes suggest amber/cyan reflected light in GLBs;
-these cues remain visible without scene lights. The presentation scenes render
-at 1200 × 1200 with 48 samples and stronger contrast. Shared component refinements
-are authored in the library and propagated to every forest tile.
+buildings and forest tiles have a painted material finish: related color gradients
+inside facets, fine timber grain, restrained stone cracks, leaf veins and root-to-tip
+shading. `painted_finish.py` samples deterministic surface fields directly into
+512-pixel image maps (1024 for crystals and receiving ground), with Base Color,
+Roughness, tangent Normal and masked Emission inputs on Principled BSDF materials.
+This avoids unsupported procedural node networks in GLB exports. PNGs live beside
+the source category in `textures/`; each source also packs its images. Shared
+prototype-local UVs preserve repeated mesh reuse.
+
+Crystal facets stay sharp, with irregular rings, blue/cyan/violet color washes and
+thin painted edge highlights. Mushroom caps are smoother; leaves have varied,
+curved silhouettes. Small stone bevels replace raised crack strokes, runes sit on
+the monolith's stone face, and fine grass tufts soften ground intersections. Terrain
+maps blend soft contact occlusion and local cyan/amber bounce into receiving surfaces,
+replacing hard light disks. These authored cues remain visible without scene lights.
+Presentation scenes render at 1200 × 1200 with 64 samples, larger Area Lights and
+subtle compositor Fog Glow. The halo is presentation-only; a game renderer can use
+the exported emission maps for its own bloom. Shared refinements are authored in the
+library and propagated to every forest tile.
+
+After the standard asset checks, audit the packed image maps, source UVs and matching
+embedded GLB texture channels with:
+
+```sh
+python3 -m tools.asset_pack.worker tools/asset_pack/verify_painted_blender.py --label painted-texture-validation buildings/archery_range environment/hex_crystal_grove environment/components/forest_crystal_blue
+```
+
+Previous sources, GLBs and renders for this pass are retained locally under
+`.cache/softness/before/`; the comparison is in `.lavish/material-softness.html`.
+Refresh the gallery, then run `python3 -m tools.asset_pack.softness_review` to
+regenerate that comparison from the saved before renders and current previews.
 
 `sources/fantasy_village.blend` assembles four buildings and three characters
 modeled from `sources/reference/fantasy_village.png`: tree house, bakery, gold
@@ -347,6 +371,30 @@ also offers a 3D viewer and a downloadable ZIP of the sources, exports, and scri
 
 ## Asset development checks
 
+The short visual rules are in [AGENTS.md](AGENTS.md). Numeric settings live in
+[`tools/asset_pack/art_style.py`](tools/asset_pack/art_style.py), a pure Python
+configuration shared by builders, Blender helpers and validators. The base palette
+keeps established unit/faction colors; the painted palette carries the building and
+forest finish. Mesh helpers use the shared bevel policy; forest builders derive
+facets, organic smoothing, UV names and hex dimensions from it; unit builders use
+its rounded-material and animation conventions. `geometry.studio()` applies the
+common preview preset, and repeated applications preserve light energy and reuse
+the compositor. Previously authored source files retain their saved presentation
+until an explicit rebuild; style checks never restyle or save them.
+
+The fast style tests run within `mise run check`. `mise run style-tests` creates
+temporary Blender fixtures and tests actual node/material application, selective
+normals, idempotent lighting, color encoding, packed maps, UVs, shared unit clips,
+attachments and a real GLB texture export. `mise run asset-style-check -- <IDs>`
+inspects selected existing sources; `--all` checks the catalog. It enforces native
+Principled materials, required painted map channels/color spaces, texture sizes,
+UVs, shape-specific normal treatment, root/hex conventions, unit sockets and clip/FPS
+conventions.
+Individual painted assets also check the saved presentation preset; older assets
+and shared libraries keep their authored presentation settings. Visual resemblance,
+palette balance and silhouette readability still require render/reference review.
+CI runs both the fixture tests and catalog style audit after Blender installation.
+
 Run `mise run check` for Python lint, Python and JavaScript syntax, worker safety
 checks, and fast unit tests. Ruff is pinned in `requirements-checks.txt`; the local
 command uses the installed Python module or `uvx` without installing mise tools.
@@ -359,6 +407,9 @@ mise run asset-check -- evil_melee_unit props/kit_skull
 mise run asset-check -- --all
 mise run asset-check -- berserker --force
 mise run blender-tests
+mise run style-tests
+mise run asset-style-check -- archery_range hex_crystal_grove knight
+mise run asset-style-check -- --all
 ```
 
 The incremental check accepts short model names or canonical `category/name` IDs.
