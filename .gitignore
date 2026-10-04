@@ -1,0 +1,14 @@
+# Blender backup files; editable .blend sources remain tracked.
+*.blend[0-9]*
+*.blend@
+
+# Local experiments, caches and Python environments.
+/scratch/
+/.lavish/
+/.cache/
+.venv/
+__pycache__/
+*.pyc
+mise.local.toml
+mise.local.lock
+.DS_Store

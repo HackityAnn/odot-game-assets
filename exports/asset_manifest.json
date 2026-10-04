@@ -1,0 +1,175 @@
+{
+  "reference": "sources/reference/fantasy_village.png",
+  "blender": "5.2.2 LTS",
+  "art_direction": "supplied reference; independent of existing game",
+  "coordinates": {
+    "source_up": "+Z",
+    "source_forward": "-Y",
+    "export_up": "+Y",
+    "export_forward": "+Z",
+    "ground": 0
+  },
+  "animation_fps": 24,
+  "looping_clips": [
+    "idle",
+    "walk",
+    "run"
+  ],
+  "one_shot_clips": [
+    "attack",
+    "hit",
+    "death"
+  ],
+  "assets": [
+    {
+      "file": "exports/buildings/woodcutter_hut.glb",
+      "bytes": 1366964,
+      "meshes": 325,
+      "triangles": 24399,
+      "materials": 20,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/environment/hex_meadow_building.glb",
+      "bytes": 228668,
+      "meshes": 104,
+      "triangles": 1972,
+      "materials": 14,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/buildings/bakery.glb",
+      "bytes": 1703676,
+      "meshes": 319,
+      "triangles": 30455,
+      "materials": 18,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/buildings/gold_mine.glb",
+      "bytes": 760092,
+      "meshes": 137,
+      "triangles": 11790,
+      "materials": 15,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/buildings/tree_house.glb",
+      "bytes": 753476,
+      "meshes": 136,
+      "triangles": 11784,
+      "materials": 15,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/characters/knight.glb",
+      "bytes": 662780,
+      "meshes": 75,
+      "triangles": 6986,
+      "materials": 13,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "skins": 1,
+      "bones": 19
+    },
+    {
+      "file": "exports/environment/hex_meadow_character.glb",
+      "bytes": 210264,
+      "meshes": 101,
+      "triangles": 1724,
+      "materials": 11,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/props/sword.glb",
+      "bytes": 41564,
+      "meshes": 8,
+      "triangles": 718,
+      "materials": 4,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/props/shield.glb",
+      "bytes": 65068,
+      "meshes": 10,
+      "triangles": 1064,
+      "materials": 4,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/characters/mage.glb",
+      "bytes": 509272,
+      "meshes": 58,
+      "triangles": 5102,
+      "materials": 12,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "skins": 1,
+      "bones": 19
+    },
+    {
+      "file": "exports/props/staff.glb",
+      "bytes": 74652,
+      "meshes": 12,
+      "triangles": 1118,
+      "materials": 6,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/characters/archer.glb",
+      "bytes": 455172,
+      "meshes": 66,
+      "triangles": 4158,
+      "materials": 14,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "skins": 1,
+      "bones": 19
+    },
+    {
+      "file": "exports/props/bow.glb",
+      "bytes": 15964,
+      "meshes": 3,
+      "triangles": 248,
+      "materials": 3,
+      "animations": [],
+      "skins": 0
+    },
+    {
+      "file": "exports/props/arrow.glb",
+      "bytes": 4960,
+      "meshes": 4,
+      "triangles": 30,
+      "materials": 3,
+      "animations": [],
+      "skins": 0
+    }
+  ]
+}

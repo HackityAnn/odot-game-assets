@@ -1,0 +1,13 @@
+[tools]
+python = "3.11"
+uv = "0"
+
+[tasks.blender-mcp]
+description = "Run the Blender MCP stdio server (normally started by Codex)"
+run = "uvx --python 3.11 mcp-for-blender==2.1.3"
+env = { UV_PYTHON_PREFERENCE = "only-managed" }
+
+[tasks.blender-addon-install]
+description = "Install or update the Blender MCP add-on"
+run = "uvx --python 3.11 mcp-for-blender==2.1.3 install-addon"
+env = { UV_PYTHON_PREFERENCE = "only-managed" }

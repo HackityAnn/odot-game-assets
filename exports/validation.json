@@ -1,0 +1,61 @@
+[
+  {
+    "asset": "woodcutter_hut",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true
+  },
+  {
+    "asset": "bakery",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true
+  },
+  {
+    "asset": "gold_mine",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true
+  },
+  {
+    "asset": "tree_house",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true
+  },
+  {
+    "asset": "knight",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "clips": {
+      "attack": "finite geometry; playback checked",
+      "death": "finite geometry; playback checked",
+      "hit": "finite geometry; playback checked",
+      "idle": "finite geometry; playback checked",
+      "run": "finite geometry; playback checked",
+      "walk": "finite geometry; playback checked"
+    }
+  },
+  {
+    "asset": "mage",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "clips": {
+      "attack": "finite geometry; playback checked",
+      "death": "finite geometry; playback checked",
+      "hit": "finite geometry; playback checked",
+      "idle": "finite geometry; playback checked",
+      "run": "finite geometry; playback checked",
+      "walk": "finite geometry; playback checked"
+    }
+  },
+  {
+    "asset": "archer",
+    "round_trip_max_bounds_error": 0.0,
+    "geometry_finite": true,
+    "clips": {
+      "attack": "finite geometry; playback checked",
+      "death": "finite geometry; playback checked",
+      "hit": "finite geometry; playback checked",
+      "idle": "finite geometry; playback checked",
+      "run": "finite geometry; playback checked",
+      "walk": "finite geometry; playback checked"
+    }
+  }
+]
