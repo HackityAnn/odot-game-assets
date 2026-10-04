@@ -1,5 +1,6 @@
 """Create a portable local review gallery from the actual Blender renders and GLBs."""
 import json
+import hashlib
 import shutil
 import zipfile
 from pathlib import Path
@@ -78,8 +79,15 @@ def main():
     shutil.copy2(ROOT/'exports'/'asset_manifest.json',OUT/'asset_manifest.json')
     validation=ROOT/'exports'/'validation.json'
     if validation.exists(): shutil.copy2(validation,OUT/'validation.json')
-    checked={a['asset'] for a in json.loads(validation.read_text())} if validation.exists() else set()
-    passed=all(a['id'] in checked for a in ASSETS)
+    checked={a['asset']: a for a in json.loads(validation.read_text())} if validation.exists() else {}
+    def current_verification(asset):
+        record=checked.get(asset['id'],{})
+        source=ROOT/'sources'/asset['category']/f"{asset['id']}.blend"
+        model=ROOT/'exports'/asset['category']/f"{asset['id']}.glb"
+        return (record.get('geometry_finite') is True
+                and record.get('source_sha256')==hashlib.sha256(source.read_bytes()).hexdigest()
+                and record.get('glb_sha256')==hashlib.sha256(model.read_bytes()).hexdigest())
+    passed=all(current_verification(a) for a in ASSETS)
     html=HTML.replace('__ASSET_DATA__',json.dumps(data)).replace('__VALIDATION__','true' if passed else 'false')
     (OUT/'asset-gallery.html').write_text(html)
     with zipfile.ZipFile(OUT/'fantasy_village_assets.zip','w',zipfile.ZIP_DEFLATED) as bundle:
