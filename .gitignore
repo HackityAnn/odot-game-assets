@@ -19,3 +19,10 @@ mise.local.lock
 /exports/thumbnails/state.json
 /exports/thumbnails/**/*.rendering.png
 /dist/
+
+# Pipeline state (pipeline-core projects/odot-game-assets)
+/worktrees/
+/logs/
+/pipeline.lock
+/PAUSED
+/gate_locks/

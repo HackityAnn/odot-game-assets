@@ -1,0 +1,10 @@
+{
+  "_doc": "Asset style profile for the shared asset kit (pipeline-core assets/README.md). Used by the lifelike3d workflow: every asset in exports/ is remade lifelike under lifelike/<category>/.",
+  "name": "odot-game-assets",
+  "dimension": "3d",
+  "work_dir": "scratch/assets",
+  "lifelike3d": {
+    "elevation": 25,
+    "max_mb": 40
+  }
+}
