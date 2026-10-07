@@ -6,5 +6,15 @@
   "lifelike3d": {
     "elevation": 25,
     "max_mb": 40
+  },
+  "realistic3d": {
+    "ground_base": {
+      "_doc": "the odot hex tile: flat-top hexagon (a corner on +X), radius 2.553, ground surface z=0, slab bottom z=-0.36 (AGENTS.md: Environment)",
+      "sides": 6,
+      "radius": 2.553,
+      "corner_deg": 0,
+      "top": 0.0,
+      "bottom": -0.36
+    }
   }
 }
