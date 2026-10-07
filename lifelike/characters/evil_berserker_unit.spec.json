@@ -1,0 +1,75 @@
+{
+  "kind": "model3d",
+  "workflow": "lifelike3d",
+  "generator": "blender+comfyui",
+  "asset": "lifelike3d -- shared asset kit (pipeline-core assets/workflows/lifelike3d)",
+  "output": "lifelike/characters/evil_berserker_unit.glb",
+  "recipe": {
+    "seed": 11,
+    "mode": "edit",
+    "prompts": {
+      "front": "<image1> is a render of a stylized 3D game model of an evil berserker creature with a white skull head with red eyes, a dark iron horned helm with two curved grey horns tipped red, a blue cloth tunic with red X-shaped wound marks on the chest, dark iron shoulder guard on the left shoulder, tan scarred arms with dark bracers, brown leather belt with a torn red skull banner in front, brown leather boots, a grey battleaxe in the right hand, a red steel axe in the left hand, seen from the front, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "back": "<image1> is a render of a stylized 3D game model of an evil berserker creature with a white skull head with red eyes, a dark iron horned helm with two curved grey horns tipped red, a blue cloth tunic with red X-shaped wound marks on the chest, dark iron shoulder guard on the left shoulder, tan scarred arms with dark bracers, brown leather belt with a torn red skull banner in front, brown leather boots, a grey battleaxe in the right hand, a red steel axe in the left hand, seen from directly behind, camera slightly above: we see its back side, details on its front are not visible. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "left": "<image1> is a render of a stylized 3D game model of an evil berserker creature with a white skull head with red eyes, a dark iron horned helm with two curved grey horns tipped red, a blue cloth tunic with red X-shaped wound marks on the chest, dark iron shoulder guard on the left shoulder, tan scarred arms with dark bracers, brown leather belt with a torn red skull banner in front, brown leather boots, a grey battleaxe in the right hand, a red steel axe in the left hand, seen from its left side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "right": "<image1> is a render of a stylized 3D game model of an evil berserker creature with a white skull head with red eyes, a dark iron horned helm with two curved grey horns tipped red, a blue cloth tunic with red X-shaped wound marks on the chest, dark iron shoulder guard on the left shoulder, tan scarred arms with dark bracers, brown leather belt with a torn red skull banner in front, brown leather boots, a grey battleaxe in the right hand, a red steel axe in the left hand, seen from its right side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow"
+    },
+    "subject": "an evil berserker creature with a white skull head with red eyes, a dark iron horned helm with two curved grey horns tipped red, a blue cloth tunic with red X-shaped wound marks on the chest, dark iron shoulder guard on the left shoulder, tan scarred arms with dark bracers, brown leather belt with a torn red skull banner in front, brown leather boots, a grey battleaxe in the right hand, a red steel axe in the left hand",
+    "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
+    "profile": "asset-profile.json",
+    "stats": {
+      "triangles": 10936,
+      "meshes": 104,
+      "bones": 19,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "height_m": 2.88,
+      "size_m": [
+        2.97,
+        0.96,
+        2.88
+      ],
+      "faces_per_view": {
+        "front": 3285,
+        "left": 2602,
+        "back": 2458,
+        "right": 2591
+      },
+      "original": {
+        "triangles": 10936,
+        "meshes": 104,
+        "bones": 19,
+        "animations": [
+          "attack",
+          "death",
+          "hit",
+          "idle",
+          "run",
+          "walk"
+        ],
+        "height_m": 2.88,
+        "size_m": [
+          2.97,
+          0.96,
+          2.88
+        ]
+      }
+    }
+  },
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py lifelike3d <source .glb> --seeds 11 --subject \"an evil berserker creature with a white skull head with red eyes, a dark iron horned helm with two curved grey horns tipped red, a blue cloth tunic with red X-shaped wound marks on the chest, dark iron shoulder guard on the left shoulder, tan scarred arms with dark bracers, brown leather belt with a torn red skull banner in front, brown leather boots, a grey battleaxe in the right hand, a red steel axe in the left hand\" --elevation 25",
+  "check": {},
+  "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "run",
+    "walk"
+  ],
+  "source_model": "exports/characters/evil_berserker_unit.glb"
+}
