@@ -1,0 +1,75 @@
+{
+  "kind": "model3d",
+  "workflow": "lifelike3d",
+  "generator": "blender+comfyui",
+  "asset": "lifelike3d -- shared asset kit (pipeline-core assets/workflows/lifelike3d)",
+  "output": "lifelike/characters/mage.glb",
+  "recipe": {
+    "seed": 7,
+    "mode": "edit",
+    "prompts": {
+      "front": "<image1> is a render of a stylized 3D game model of a medieval mage with a tall curved violet cloth wizard hat with a wide brim and a gold buckle band, a violet cloth cowl and robe, a dark face cowl with two glowing pale pink eyes, a brown leather belt with a gold buckle, a small brown leather satchel slung diagonally across the chest, thick brown leather boots, a bare right hand, holding a brown wooden staff in the left hand topped with a glowing faceted purple crystal orb, seen from the front, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "back": "<image1> is a render of a stylized 3D game model of a medieval mage with a tall curved violet cloth wizard hat with a wide brim and a gold buckle band, a violet cloth cowl and robe, a dark face cowl with two glowing pale pink eyes, a brown leather belt with a gold buckle, a small brown leather satchel slung diagonally across the chest, thick brown leather boots, a bare right hand, holding a brown wooden staff in the left hand topped with a glowing faceted purple crystal orb, seen from directly behind, camera slightly above: we see its back side, details on its front are not visible. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "left": "<image1> is a render of a stylized 3D game model of a medieval mage with a tall curved violet cloth wizard hat with a wide brim and a gold buckle band, a violet cloth cowl and robe, a dark face cowl with two glowing pale pink eyes, a brown leather belt with a gold buckle, a small brown leather satchel slung diagonally across the chest, thick brown leather boots, a bare right hand, holding a brown wooden staff in the left hand topped with a glowing faceted purple crystal orb, seen from its left side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "right": "<image1> is a render of a stylized 3D game model of a medieval mage with a tall curved violet cloth wizard hat with a wide brim and a gold buckle band, a violet cloth cowl and robe, a dark face cowl with two glowing pale pink eyes, a brown leather belt with a gold buckle, a small brown leather satchel slung diagonally across the chest, thick brown leather boots, a bare right hand, holding a brown wooden staff in the left hand topped with a glowing faceted purple crystal orb, seen from its right side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow"
+    },
+    "subject": "a medieval mage with a tall curved violet cloth wizard hat with a wide brim and a gold buckle band, a violet cloth cowl and robe, a dark face cowl with two glowing pale pink eyes, a brown leather belt with a gold buckle, a small brown leather satchel slung diagonally across the chest, thick brown leather boots, a bare right hand, holding a brown wooden staff in the left hand topped with a glowing faceted purple crystal orb",
+    "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
+    "profile": "asset-profile.json",
+    "stats": {
+      "triangles": 5102,
+      "meshes": 58,
+      "bones": 19,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "height_m": 3.33,
+      "size_m": [
+        2.18,
+        1.54,
+        3.33
+      ],
+      "faces_per_view": {
+        "front": 1428,
+        "left": 1167,
+        "back": 1398,
+        "right": 1109
+      },
+      "original": {
+        "triangles": 5102,
+        "meshes": 58,
+        "bones": 19,
+        "animations": [
+          "attack",
+          "death",
+          "hit",
+          "idle",
+          "run",
+          "walk"
+        ],
+        "height_m": 3.33,
+        "size_m": [
+          2.18,
+          1.54,
+          3.33
+        ]
+      }
+    }
+  },
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py lifelike3d <source .glb> --seeds 7 --subject \"a medieval mage with a tall curved violet cloth wizard hat with a wide brim and a gold buckle band, a violet cloth cowl and robe, a dark face cowl with two glowing pale pink eyes, a brown leather belt with a gold buckle, a small brown leather satchel slung diagonally across the chest, thick brown leather boots, a bare right hand, holding a brown wooden staff in the left hand topped with a glowing faceted purple crystal orb\" --elevation 25",
+  "check": {},
+  "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "run",
+    "walk"
+  ],
+  "source_model": "exports/characters/mage.glb"
+}
