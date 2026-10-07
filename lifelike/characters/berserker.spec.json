@@ -1,0 +1,75 @@
+{
+  "kind": "model3d",
+  "workflow": "lifelike3d",
+  "generator": "blender+comfyui",
+  "asset": "lifelike3d -- shared asset kit (pipeline-core assets/workflows/lifelike3d)",
+  "output": "lifelike/characters/berserker.glb",
+  "recipe": {
+    "seed": 7,
+    "mode": "edit",
+    "prompts": {
+      "front": "<image1> is a render of a stylized 3D game model of a muscular viking berserker, bare-chested with tanned skin, fiery orange-red hair in a high topknot, a thick orange-red beard, a white wolf-fur pelt draped over both shoulders, a brown leather belt with a blue cloth hanging at the waist, brown leather boots with white fur trim, holding a double-headed steel battle axe in the right hand and a single-headed steel axe in the left hand, seen from the front, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "back": "<image1> is a render of a stylized 3D game model of a muscular viking berserker, bare-chested with tanned skin, fiery orange-red hair in a high topknot, a thick orange-red beard, a white wolf-fur pelt draped over both shoulders, a brown leather belt with a blue cloth hanging at the waist, brown leather boots with white fur trim, holding a double-headed steel battle axe in the right hand and a single-headed steel axe in the left hand, seen from directly behind, camera slightly above: we see its back side, details on its front are not visible. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "left": "<image1> is a render of a stylized 3D game model of a muscular viking berserker, bare-chested with tanned skin, fiery orange-red hair in a high topknot, a thick orange-red beard, a white wolf-fur pelt draped over both shoulders, a brown leather belt with a blue cloth hanging at the waist, brown leather boots with white fur trim, holding a double-headed steel battle axe in the right hand and a single-headed steel axe in the left hand, seen from its left side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "right": "<image1> is a render of a stylized 3D game model of a muscular viking berserker, bare-chested with tanned skin, fiery orange-red hair in a high topknot, a thick orange-red beard, a white wolf-fur pelt draped over both shoulders, a brown leather belt with a blue cloth hanging at the waist, brown leather boots with white fur trim, holding a double-headed steel battle axe in the right hand and a single-headed steel axe in the left hand, seen from its right side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow"
+    },
+    "subject": "a muscular viking berserker, bare-chested with tanned skin, fiery orange-red hair in a high topknot, a thick orange-red beard, a white wolf-fur pelt draped over both shoulders, a brown leather belt with a blue cloth hanging at the waist, brown leather boots with white fur trim, holding a double-headed steel battle axe in the right hand and a single-headed steel axe in the left hand",
+    "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
+    "profile": "asset-profile.json",
+    "stats": {
+      "triangles": 10537,
+      "meshes": 194,
+      "bones": 19,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "height_m": 3.16,
+      "size_m": [
+        2.93,
+        1.09,
+        3.16
+      ],
+      "faces_per_view": {
+        "front": 2878,
+        "left": 2510,
+        "back": 2692,
+        "right": 2457
+      },
+      "original": {
+        "triangles": 10537,
+        "meshes": 194,
+        "bones": 19,
+        "animations": [
+          "attack",
+          "death",
+          "hit",
+          "idle",
+          "run",
+          "walk"
+        ],
+        "height_m": 3.16,
+        "size_m": [
+          2.93,
+          1.09,
+          3.16
+        ]
+      }
+    }
+  },
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py lifelike3d <source .glb> --seeds 7 --subject \"a muscular viking berserker, bare-chested with tanned skin, fiery orange-red hair in a high topknot, a thick orange-red beard, a white wolf-fur pelt draped over both shoulders, a brown leather belt with a blue cloth hanging at the waist, brown leather boots with white fur trim, holding a double-headed steel battle axe in the right hand and a single-headed steel axe in the left hand\" --elevation 25",
+  "check": {},
+  "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "run",
+    "walk"
+  ],
+  "source_model": "exports/characters/berserker.glb"
+}
