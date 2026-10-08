@@ -1,42 +1,48 @@
 {
   "kind": "model3d",
-  "workflow": "realistic3d",
+  "workflow": "lifelike3d",
   "generator": "blender+comfyui",
-  "asset": "realistic3d -- shared asset kit (pipeline-core assets/workflows/realistic3d)",
+  "asset": "lifelike3d -- shared asset kit (pipeline-core assets/workflows/lifelike3d)",
   "output": "lifelike/characters/evil_ranged_unit.glb",
   "recipe": {
-    "seed": 11,
+    "seed": 7,
+    "mode": "edit",
     "prompts": {
-      "turnaround": "<image1> is a 2x2 turnaround sheet showing a cartoon-style 3D game model from four sides: top-left its FRONT, top-right its RIGHT side, bottom-left its BACK, bottom-right its LEFT side. Replace every one of the four views with a real photograph of the real-world object this model stands for: an evil skull archer, a real creature of ordinary human proportions, standing upright and facing forward, both arms bent with both hands gripping a wooden crossbow across the chest, a bare white skull head with glowing red eyes and bared teeth inside a folded purple wool hood pinned by a bone clasp, dark iron spiked pauldrons on both shoulders, a dark iron breastplate, a torn red cloth banner at the waist, dark iron greaves, brown leather boots with iron buckles, and a nocked iron bolt on the crossbow. The photographs are documentary photographs taken on location with a full-frame DSLR and a 50 mm lens, in soft natural overcast daylight that lights every side evenly, with true-to-life colours that are muted and natural rather than bright. Everything is made of real materials and shows its age: stone is rough, hand-cut and stained, with dirt and patches of moss; wood is aged oak with deep grain, cracks and worn edges; metal is real forged steel or iron with scratches, dents and spots of rust; cloth is real woven fabric with folds and fraying; leather is creased and scuffed; skin, hair and fur are those of a real living being; slate and tiles are uneven and carry lichen; plants are real living plants. The proportions are those of the real thing, not the oversized, rounded, simplified shapes of the game model: a person has the proportions of a real adult, a building those of a real building. This is not a 3D render, not a game asset, not a toy, figurine or miniature, not clay or plastic, not a painting or an illustration and not a cartoon: it is a real object photographed in the real world. Keep exactly the same design as <image1>: the same parts in the same places, the same colour scheme, the same pose, and in each of the four views the same camera angle and the same side of the object. Each photograph shows the whole object, centred, cut out on a plain flat light grey background, with no ground beneath it, no base, platform or patch of grass, no shadow on the ground, no text, no labels and no lines or frames between the four views."
+      "front": "<image1> is a render of a stylized 3D game model of an evil skull archer: a bare white skull with glowing red eyes in a purple wool hood with a bone clasp, dark iron spiked pauldrons and breastplate, a torn red cloth banner at the waist, dark iron greaves, brown leather boots with iron buckles, holding a wooden crossbow with an iron bolt, seen from the front, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "back": "<image1> is a render of a stylized 3D game model of an evil skull archer: a bare white skull with glowing red eyes in a purple wool hood with a bone clasp, dark iron spiked pauldrons and breastplate, a torn red cloth banner at the waist, dark iron greaves, brown leather boots with iron buckles, holding a wooden crossbow with an iron bolt, seen from directly behind, camera slightly above: we see its back side, details on its front are not visible. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "left": "<image1> is a render of a stylized 3D game model of an evil skull archer: a bare white skull with glowing red eyes in a purple wool hood with a bone clasp, dark iron spiked pauldrons and breastplate, a torn red cloth banner at the waist, dark iron greaves, brown leather boots with iron buckles, holding a wooden crossbow with an iron bolt, seen from its left side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "right": "<image1> is a render of a stylized 3D game model of an evil skull archer: a bare white skull with glowing red eyes in a purple wool hood with a bone clasp, dark iron spiked pauldrons and breastplate, a torn red cloth banner at the waist, dark iron greaves, brown leather boots with iron buckles, holding a wooden crossbow with an iron bolt, seen from its right side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow"
     },
-    "subject": "an evil skull archer, a real creature of ordinary human proportions, standing upright and facing forward, both arms bent with both hands gripping a wooden crossbow across the chest, a bare white skull head with glowing red eyes and bared teeth inside a folded purple wool hood pinned by a bone clasp, dark iron spiked pauldrons on both shoulders, a dark iron breastplate, a torn red cloth banner at the waist, dark iron greaves, brown leather boots with iron buckles, and a nocked iron bolt on the crossbow",
+    "subject": "an evil skull archer: a bare white skull with glowing red eyes in a purple wool hood with a bone clasp, dark iron spiked pauldrons and breastplate, a torn red cloth banner at the waist, dark iron greaves, brown leather boots with iron buckles, holding a wooden crossbow with an iron bolt",
     "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
     "profile": "asset-profile.json",
     "stats": {
-      "triangles": 77015,
-      "fit": {
-        "triangles": 77015,
-        "turn_deg": 0,
-        "scale": 2.6624,
-        "iou": 0.526,
-        "size_m": [
-          1.615,
-          1.458,
-          2.625
-        ],
-        "original_size_m": [
-          2.186,
-          1.219,
-          2.625
-        ],
-        "fits_original": true,
-        "fit": "height",
-        "original_ground": 0.02
+      "triangles": 7171,
+      "meshes": 91,
+      "bones": 19,
+      "animations": [
+        "attack",
+        "death",
+        "hit",
+        "idle",
+        "run",
+        "walk"
+      ],
+      "height_m": 2.62,
+      "size_m": [
+        2.19,
+        1.22,
+        2.62
+      ],
+      "faces_per_view": {
+        "front": 2125,
+        "left": 1700,
+        "back": 1683,
+        "right": 1663
       },
-      "rig": {
-        "pose_missing": [],
-        "pose_confidence": 0.77,
-        "pose_mirrored": false,
+      "original": {
+        "triangles": 7171,
+        "meshes": 91,
         "bones": 19,
         "animations": [
           "attack",
@@ -46,62 +52,16 @@
           "run",
           "walk"
         ],
-        "weights": "heat",
-        "rigid_hand_vertices": 4340,
-        "held_items": [
-          "L",
-          "R"
-        ],
-        "bridge_faces_cut": 731,
-        "hip_ratio": 1.419
-      },
-      "animation": {
-        "ground": 0.02,
-        "height": 2.625,
-        "clips": {
-          "attack": {
-            "max_stretch": 65.02,
-            "stretched_pct": 1.12
-          },
-          "death": {
-            "max_stretch": 64.93,
-            "stretched_pct": 1.33
-          },
-          "hit": {
-            "max_stretch": 64.93,
-            "stretched_pct": 1.19
-          },
-          "idle": {
-            "max_stretch": 64.93,
-            "stretched_pct": 1.12
-          },
-          "run": {
-            "max_stretch": 65.12,
-            "stretched_pct": 1.62
-          },
-          "walk": {
-            "max_stretch": 65.09,
-            "stretched_pct": 1.34
-          }
-        },
-        "rendered_clips": [
-          "walk",
-          "attack"
+        "height_m": 2.62,
+        "size_m": [
+          2.19,
+          1.22,
+          2.62
         ]
-      },
-      "seconds_mesh": 348,
-      "tile": null,
-      "animations": [
-        "attack",
-        "death",
-        "hit",
-        "idle",
-        "run",
-        "walk"
-      ]
+      }
     }
   },
-  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py realistic3d <source .glb> --seeds 11 --subject \"an evil skull archer, a real creature of ordinary human proportions, standing upright and facing forward, both arms bent with both hands gripping a wooden crossbow across the chest, a bare white skull head with glowing red eyes and bared teeth inside a folded purple wool hood pinned by a bone clasp, dark iron spiked pauldrons on both shoulders, a dark iron breastplate, a torn red cloth banner at the waist, dark iron greaves, brown leather boots with iron buckles, and a nocked iron bolt on the crossbow\"",
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py lifelike3d <source .glb> --seeds 7 --subject \"an evil skull archer: a bare white skull with glowing red eyes in a purple wool hood with a bone clasp, dark iron spiked pauldrons and breastplate, a torn red cloth banner at the waist, dark iron greaves, brown leather boots with iron buckles, holding a wooden crossbow with an iron bolt\" --elevation 25",
   "check": {},
   "animations": [
     "attack",
