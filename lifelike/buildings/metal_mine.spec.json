@@ -1,0 +1,51 @@
+{
+  "kind": "model3d",
+  "workflow": "realistic3d",
+  "generator": "blender+comfyui",
+  "asset": "realistic3d -- shared asset kit (pipeline-core assets/workflows/realistic3d)",
+  "output": "lifelike/buildings/metal_mine.glb",
+  "recipe": {
+    "seed": 7,
+    "prompts": {
+      "turnaround": "<image1> is a 2x2 turnaround sheet showing a cartoon-style 3D game model from four sides: top-left its FRONT, top-right its RIGHT side, bottom-left its BACK, bottom-right its LEFT side. Replace every one of the four views with a real photograph of the real-world object this model stands for: a medieval iron mine: a low hut in cream limestone and dark oak, a steep blue-grey slate roof, a grey stone chimney at the back, a blue banner with crossed pickaxes and a hammer on the front gable, a warm amber arched window below it, a crate of grey ore ingots and a pickaxe at the left, a dark cave mouth under a heavy oak lintel, an amber lantern, on the right, an iron-wheeled oak minecart loaded with grey ore on rails, a tall oak hoist frame with a rope pulley and a wooden bucket beside a grey rock outcrop. The photographs are documentary photographs taken on location with a full-frame DSLR and a 50 mm lens, in soft natural overcast daylight that lights every side evenly, with true-to-life colours that are muted and natural rather than bright. Everything is made of real materials and shows its age: stone is rough, hand-cut and stained, with dirt and patches of moss; wood is aged oak with deep grain, cracks and worn edges; metal is real forged steel or iron with scratches, dents and spots of rust; cloth is real woven fabric with folds and fraying; leather is creased and scuffed; skin, hair and fur are those of a real living being; slate and tiles are uneven and carry lichen; plants are real living plants. The proportions are those of the real thing, not the oversized, rounded, simplified shapes of the game model: a person has the proportions of a real adult, a building those of a real building. This is not a 3D render, not a game asset, not a toy, figurine or miniature, not clay or plastic, not a painting or an illustration and not a cartoon: it is a real object photographed in the real world. Keep exactly the same design as <image1>: the same parts in the same places, the same colour scheme, the same pose, and in each of the four views the same camera angle and the same side of the object. Each photograph shows the whole object, centred, cut out on a plain flat light grey background, with no ground beneath it, no base, platform or patch of grass, no shadow on the ground, no text, no labels and no lines or frames between the four views."
+    },
+    "subject": "a medieval iron mine: a low hut in cream limestone and dark oak, a steep blue-grey slate roof, a grey stone chimney at the back, a blue banner with crossed pickaxes and a hammer on the front gable, a warm amber arched window below it, a crate of grey ore ingots and a pickaxe at the left, a dark cave mouth under a heavy oak lintel, an amber lantern, on the right, an iron-wheeled oak minecart loaded with grey ore on rails, a tall oak hoist frame with a rope pulley and a wooden bucket beside a grey rock outcrop",
+    "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
+    "profile": "asset-profile.json",
+    "stats": {
+      "triangles": 79436,
+      "fit": {
+        "triangles": 79436,
+        "turn_deg": 0,
+        "scale": 3.6889,
+        "iou": 0.634,
+        "size_m": [
+          3.388,
+          3.616,
+          3.176
+        ],
+        "original_size_m": [
+          4.181,
+          3.616,
+          3.533
+        ],
+        "fits_original": true,
+        "fit": "box",
+        "original_ground": -0.153
+      },
+      "rig": {},
+      "animation": {
+        "ground": -0.153,
+        "height": 3.176,
+        "clips": {},
+        "rendered_clips": []
+      },
+      "seconds_mesh": 462,
+      "tile": null
+    }
+  },
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py realistic3d <source .glb> --seeds 7 --subject \"a medieval iron mine: a low hut in cream limestone and dark oak, a steep blue-grey slate roof, a grey stone chimney at the back, a blue banner with crossed pickaxes and a hammer on the front gable, a warm amber arched window below it, a crate of grey ore ingots and a pickaxe at the left, a dark cave mouth under a heavy oak lintel, an amber lantern, on the right, an iron-wheeled oak minecart loaded with grey ore on rails, a tall oak hoist frame with a rope pulley and a wooden bucket beside a grey rock outcrop\"",
+  "check": {},
+  "animations": [],
+  "source_model": "exports/buildings/metal_mine.glb"
+}
