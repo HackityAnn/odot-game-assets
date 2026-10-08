@@ -1,0 +1,56 @@
+{
+  "kind": "model3d",
+  "workflow": "lifelike3d",
+  "generator": "blender+comfyui",
+  "asset": "lifelike3d -- shared asset kit (pipeline-core assets/workflows/lifelike3d)",
+  "output": "lifelike/environment/hex_hollow_watchers.glb",
+  "recipe": {
+    "seed": 11,
+    "mode": "i2i",
+    "prompts": {
+      "front": "<image1> is a render of a stylized 3D game model of a hexagonal piece of forest floor with bright green grass over dark brown earth, a tall twisted dead tree trunk in the centre, weathered purple-brown wood with a carved face and two glowing cyan eyes, a branch curving up into a hook, two white moths on its branches, a large purple mushroom with pale blue spots at the left, a blue mushroom with white spots at the front, a small purple mushroom near the trunk, a snail with a coral spiral shell in front, a grey granite boulder at the right, green leafy plants and moss around, seen from the front, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "back": "<image1> is a render of a stylized 3D game model of a hexagonal piece of forest floor with bright green grass over dark brown earth, a tall twisted dead tree trunk in the centre, weathered purple-brown wood with a carved face and two glowing cyan eyes, a branch curving up into a hook, two white moths on its branches, a large purple mushroom with pale blue spots at the left, a blue mushroom with white spots at the front, a small purple mushroom near the trunk, a snail with a coral spiral shell in front, a grey granite boulder at the right, green leafy plants and moss around, seen from directly behind, camera slightly above: we see its back side, details on its front are not visible. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "left": "<image1> is a render of a stylized 3D game model of a hexagonal piece of forest floor with bright green grass over dark brown earth, a tall twisted dead tree trunk in the centre, weathered purple-brown wood with a carved face and two glowing cyan eyes, a branch curving up into a hook, two white moths on its branches, a large purple mushroom with pale blue spots at the left, a blue mushroom with white spots at the front, a small purple mushroom near the trunk, a snail with a coral spiral shell in front, a grey granite boulder at the right, green leafy plants and moss around, seen from its left side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "right": "<image1> is a render of a stylized 3D game model of a hexagonal piece of forest floor with bright green grass over dark brown earth, a tall twisted dead tree trunk in the centre, weathered purple-brown wood with a carved face and two glowing cyan eyes, a branch curving up into a hook, two white moths on its branches, a large purple mushroom with pale blue spots at the left, a blue mushroom with white spots at the front, a small purple mushroom near the trunk, a snail with a coral spiral shell in front, a grey granite boulder at the right, green leafy plants and moss around, seen from its right side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "top": "<image1> is a render of a stylized 3D game model of a hexagonal piece of forest floor with bright green grass over dark brown earth, a tall twisted dead tree trunk in the centre, weathered purple-brown wood with a carved face and two glowing cyan eyes, a branch curving up into a hook, two white moths on its branches, a large purple mushroom with pale blue spots at the left, a blue mushroom with white spots at the front, a small purple mushroom near the trunk, a snail with a coral spiral shell in front, a grey granite boulder at the right, green leafy plants and moss around, seen from directly above, looking straight down. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow"
+    },
+    "subject": "a hexagonal piece of forest floor with bright green grass over dark brown earth, a tall twisted dead tree trunk in the centre, weathered purple-brown wood with a carved face and two glowing cyan eyes, a branch curving up into a hook, two white moths on its branches, a large purple mushroom with pale blue spots at the left, a blue mushroom with white spots at the front, a small purple mushroom near the trunk, a snail with a coral spiral shell in front, a grey granite boulder at the right, green leafy plants and moss around",
+    "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
+    "profile": "asset-profile.json",
+    "stats": {
+      "triangles": 28244,
+      "meshes": 712,
+      "bones": 0,
+      "animations": [],
+      "height_m": 3.56,
+      "size_m": [
+        5.11,
+        4.42,
+        3.56
+      ],
+      "faces_per_view": {
+        "front": 6037,
+        "left": 6216,
+        "back": 6047,
+        "right": 6447,
+        "top": 3497
+      },
+      "original": {
+        "triangles": 28244,
+        "meshes": 712,
+        "bones": 0,
+        "animations": [],
+        "height_m": 3.56,
+        "size_m": [
+          5.11,
+          4.42,
+          3.56
+        ]
+      }
+    }
+  },
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py lifelike3d <source .glb> --seeds 11 --subject \"a hexagonal piece of forest floor with bright green grass over dark brown earth, a tall twisted dead tree trunk in the centre, weathered purple-brown wood with a carved face and two glowing cyan eyes, a branch curving up into a hook, two white moths on its branches, a large purple mushroom with pale blue spots at the left, a blue mushroom with white spots at the front, a small purple mushroom near the trunk, a snail with a coral spiral shell in front, a grey granite boulder at the right, green leafy plants and moss around\" --top --elevation 40.0",
+  "check": {},
+  "animations": [],
+  "source_model": "exports/environment/hex_hollow_watchers.glb"
+}
