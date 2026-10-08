@@ -1,0 +1,51 @@
+{
+  "kind": "model3d",
+  "workflow": "realistic3d",
+  "generator": "blender+comfyui",
+  "asset": "realistic3d -- shared asset kit (pipeline-core assets/workflows/realistic3d)",
+  "output": "lifelike/buildings/bombarding_tower.glb",
+  "recipe": {
+    "seed": 7,
+    "prompts": {
+      "turnaround": "<image1> is a 2x2 turnaround sheet showing a cartoon-style 3D game model from four sides: top-left its FRONT, top-right its RIGHT side, bottom-left its BACK, bottom-right its LEFT side. Replace every one of the four views with a real photograph of the real-world object this model stands for: a medieval bombarding tower: a squat square keep of rough cream limestone blocks in mortar, crenellated stone battlements and corner merlons, a flat wooden gun platform on corner posts at the top carrying a large black wrought-iron cannon with bronze reinforcing rings on a four-wheeled oak gun carriage, a blue banner with a white rook emblem and gold border on the front, a dark oak plank door with iron straps in a rounded stone arch reached by oak steps, an arched leaded window with warm amber glass at the left, an iron lantern with amber glass at the right, an open oak crate of black iron cannonballs at the left, two oak barrels with iron hoops and a short oak fence at the right, low green shrubs at the base. The photographs are documentary photographs taken on location with a full-frame DSLR and a 50 mm lens, in soft natural overcast daylight that lights every side evenly, with true-to-life colours that are muted and natural rather than bright. Everything is made of real materials and shows its age: stone is rough, hand-cut and stained, with dirt and patches of moss; wood is aged oak with deep grain, cracks and worn edges; metal is real forged steel or iron with scratches, dents and spots of rust; cloth is real woven fabric with folds and fraying; leather is creased and scuffed; skin, hair and fur are those of a real living being; slate and tiles are uneven and carry lichen; plants are real living plants. The proportions are those of the real thing, not the oversized, rounded, simplified shapes of the game model: a person has the proportions of a real adult, a building those of a real building. This is not a 3D render, not a game asset, not a toy, figurine or miniature, not clay or plastic, not a painting or an illustration and not a cartoon: it is a real object photographed in the real world. Keep exactly the same design as <image1>: the same parts in the same places, the same colour scheme, the same pose, and in each of the four views the same camera angle and the same side of the object. Each photograph shows the whole object, centred, cut out on a plain flat light grey background, with no ground beneath it, no base, platform or patch of grass, no shadow on the ground, no text, no labels and no lines or frames between the four views."
+    },
+    "subject": "a medieval bombarding tower: a squat square keep of rough cream limestone blocks in mortar, crenellated stone battlements and corner merlons, a flat wooden gun platform on corner posts at the top carrying a large black wrought-iron cannon with bronze reinforcing rings on a four-wheeled oak gun carriage, a blue banner with a white rook emblem and gold border on the front, a dark oak plank door with iron straps in a rounded stone arch reached by oak steps, an arched leaded window with warm amber glass at the left, an iron lantern with amber glass at the right, an open oak crate of black iron cannonballs at the left, two oak barrels with iron hoops and a short oak fence at the right, low green shrubs at the base",
+    "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
+    "profile": "asset-profile.json",
+    "stats": {
+      "triangles": 79592,
+      "fit": {
+        "triangles": 79592,
+        "turn_deg": 0,
+        "scale": 3.9163,
+        "iou": 0.646,
+        "size_m": [
+          3.833,
+          3.575,
+          3.507
+        ],
+        "original_size_m": [
+          4.087,
+          3.575,
+          4.53
+        ],
+        "fits_original": true,
+        "fit": "box",
+        "original_ground": -0.153
+      },
+      "rig": {},
+      "animation": {
+        "ground": -0.153,
+        "height": 3.507,
+        "clips": {},
+        "rendered_clips": []
+      },
+      "seconds_mesh": 558,
+      "tile": null
+    }
+  },
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py realistic3d <source .glb> --seeds 7 --subject \"a medieval bombarding tower: a squat square keep of rough cream limestone blocks in mortar, crenellated stone battlements and corner merlons, a flat wooden gun platform on corner posts at the top carrying a large black wrought-iron cannon with bronze reinforcing rings on a four-wheeled oak gun carriage, a blue banner with a white rook emblem and gold border on the front, a dark oak plank door with iron straps in a rounded stone arch reached by oak steps, an arched leaded window with warm amber glass at the left, an iron lantern with amber glass at the right, an open oak crate of black iron cannonballs at the left, two oak barrels with iron hoops and a short oak fence at the right, low green shrubs at the base\"",
+  "check": {},
+  "animations": [],
+  "source_model": "exports/buildings/bombarding_tower.glb"
+}
