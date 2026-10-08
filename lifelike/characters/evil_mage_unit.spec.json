@@ -5,38 +5,39 @@
   "asset": "realistic3d -- shared asset kit (pipeline-core assets/workflows/realistic3d)",
   "output": "lifelike/characters/evil_mage_unit.glb",
   "recipe": {
-    "seed": 7,
+    "seed": 9,
     "prompts": {
-      "turnaround": "<image1> is a 2x2 turnaround sheet showing a cartoon-style 3D game model from four sides: top-left its FRONT, top-right its RIGHT side, bottom-left its BACK, bottom-right its LEFT side. Replace every one of the four views with a real photograph of the real-world object this model stands for: a hooded evil wizard, a real adult of ordinary human proportions, standing upright and facing forward, wearing a dark purple wool robe with leather trim, a black cowl over the face with red eyes, two grey horns tipped red on the hood, dark leather gloves, a brown leather belt with a red skull cloth banner and satchel, brown leather boots, a flame in the right hand, a brown wooden staff with a dark iron horned head in the left hand. The photographs are documentary photographs taken on location with a full-frame DSLR and a 50 mm lens, in soft natural overcast daylight that lights every side evenly, with true-to-life colours that are muted and natural rather than bright. Everything is made of real materials and shows its age: stone is rough, hand-cut and stained, with dirt and patches of moss; wood is aged oak with deep grain, cracks and worn edges; metal is real forged steel or iron with scratches, dents and spots of rust; cloth is real woven fabric with folds and fraying; leather is creased and scuffed; skin, hair and fur are those of a real living being; slate and tiles are uneven and carry lichen; plants are real living plants. The proportions are those of the real thing, not the oversized, rounded, simplified shapes of the game model: a person has the proportions of a real adult, a building those of a real building. This is not a 3D render, not a game asset, not a toy, figurine or miniature, not clay or plastic, not a painting or an illustration and not a cartoon: it is a real object photographed in the real world. Keep exactly the same design as <image1>: the same parts in the same places, the same colour scheme, the same pose, and in each of the four views the same camera angle and the same side of the object. Each photograph shows the whole object, centred, cut out on a plain flat light grey background, with no ground beneath it, no base, platform or patch of grass, no shadow on the ground, no text, no labels and no lines or frames between the four views."
+      "turnaround": "<image1> is a 2x2 turnaround sheet showing a cartoon-style 3D game model from four sides: top-left its FRONT, top-right its RIGHT side, bottom-left its BACK, bottom-right its LEFT side. Replace every one of the four views with a real photograph of the real-world object this model stands for: a hooded evil wizard, a real adult of ordinary human proportions, standing upright and facing forward with the arms held out from the body, wearing a dark purple wool robe with leather trim that ends above the boots, a black cowl over the face with red eyes, two grey horns tipped red on the hood, dark leather gloves, a brown leather belt with a red skull cloth banner and satchel, two separate legs in brown leather boots. The photographs are documentary photographs taken on location with a full-frame DSLR and a 50 mm lens, in soft natural overcast daylight that lights every side evenly, with true-to-life colours that are muted and natural rather than bright. Everything is made of real materials and shows its age: stone is rough, hand-cut and stained, with dirt and patches of moss; wood is aged oak with deep grain, cracks and worn edges; metal is real forged steel or iron with scratches, dents and spots of rust; cloth is real woven fabric with folds and fraying; leather is creased and scuffed; skin, hair and fur are those of a real living being; slate and tiles are uneven and carry lichen; plants are real living plants. The proportions are those of the real thing, not the oversized, rounded, simplified shapes of the game model: a person has the proportions of a real adult, a building those of a real building. This is not a 3D render, not a game asset, not a toy, figurine or miniature, not clay or plastic, not a painting or an illustration and not a cartoon: it is a real object photographed in the real world. Keep exactly the same design as <image1>: the same parts in the same places, the same colour scheme, the same pose, and in each of the four views the same camera angle and the same side of the object. Each photograph shows the whole object, centred, cut out on a plain flat light grey background, with no ground beneath it, no base, platform or patch of grass, no shadow on the ground, no text, no labels and no lines or frames between the four views. The hands are empty: they hold nothing at all, no weapon, shield, staff, tool or light, and keep the same pose as in <image1>."
     },
-    "subject": "a hooded evil wizard, a real adult of ordinary human proportions, standing upright and facing forward, wearing a dark purple wool robe with leather trim, a black cowl over the face with red eyes, two grey horns tipped red on the hood, dark leather gloves, a brown leather belt with a red skull cloth banner and satchel, brown leather boots, a flame in the right hand, a brown wooden staff with a dark iron horned head in the left hand",
+    "subject": "a hooded evil wizard, a real adult of ordinary human proportions, standing upright and facing forward with the arms held out from the body, wearing a dark purple wool robe with leather trim that ends above the boots, a black cowl over the face with red eyes, two grey horns tipped red on the hood, dark leather gloves, a brown leather belt with a red skull cloth banner and satchel, two separate legs in brown leather boots",
     "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
     "profile": "asset-profile.json",
     "stats": {
-      "triangles": 76297,
+      "triangles": 74727,
       "fit": {
-        "triangles": 76297,
+        "triangles": 74727,
         "turn_deg": 0,
-        "scale": 2.9714,
-        "iou": 0.619,
+        "scale": 2.9718,
+        "iou": 0.855,
         "size_m": [
-          2.085,
-          1.175,
-          2.912
+          1.962,
+          1.053,
+          2.926
         ],
         "original_size_m": [
-          2.396,
-          1.055,
-          2.912
+          1.999,
+          1.017,
+          2.926
         ],
         "fits_original": true,
         "fit": "height",
-        "original_ground": 0.02
+        "original_ground": 0.006
       },
       "rig": {
         "pose_missing": [],
-        "pose_confidence": 0.71,
+        "pose_confidence": 0.75,
         "pose_mirrored": false,
+        "pose_estimated": [],
         "bones": 19,
         "animations": [
           "attack",
@@ -47,41 +48,40 @@
           "walk"
         ],
         "weights": "heat",
-        "rigid_hand_vertices": 8090,
-        "held_items": [
-          "L",
-          "R"
-        ],
-        "bridge_faces_cut": 2112,
-        "hip_ratio": 1.23
+        "rigid_hand_vertices": 0,
+        "held_items": [],
+        "bridge_faces_cut": 328,
+        "leg_vertices_fixed": 4949,
+        "hip_ratio": 1.203,
+        "held_meshes_attached": 15
       },
       "animation": {
-        "ground": 0.02,
-        "height": 2.912,
+        "ground": 0.006,
+        "height": 2.926,
         "clips": {
           "attack": {
-            "max_stretch": 60.27,
-            "stretched_pct": 3.13
+            "max_stretch": 46.01,
+            "stretched_pct": 1.19
           },
           "death": {
-            "max_stretch": 38.09,
-            "stretched_pct": 2.01
+            "max_stretch": 26.31,
+            "stretched_pct": 0.84
           },
           "hit": {
-            "max_stretch": 28.51,
-            "stretched_pct": 1.56
+            "max_stretch": 25.0,
+            "stretched_pct": 0.72
           },
           "idle": {
-            "max_stretch": 25.21,
-            "stretched_pct": 1.42
+            "max_stretch": 23.49,
+            "stretched_pct": 0.72
           },
           "run": {
-            "max_stretch": 42.98,
-            "stretched_pct": 2.71
+            "max_stretch": 38.17,
+            "stretched_pct": 1.28
           },
           "walk": {
-            "max_stretch": 36.86,
-            "stretched_pct": 2.04
+            "max_stretch": 28.25,
+            "stretched_pct": 1.01
           }
         },
         "rendered_clips": [
@@ -89,7 +89,8 @@
           "attack"
         ]
       },
-      "seconds_mesh": 321,
+      "seconds_mesh": 243,
+      "tile": null,
       "animations": [
         "attack",
         "death",
@@ -100,7 +101,7 @@
       ]
     }
   },
-  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py realistic3d <source .glb> --seeds 7 --subject \"a hooded evil wizard, a real adult of ordinary human proportions, standing upright and facing forward, wearing a dark purple wool robe with leather trim, a black cowl over the face with red eyes, two grey horns tipped red on the hood, dark leather gloves, a brown leather belt with a red skull cloth banner and satchel, brown leather boots, a flame in the right hand, a brown wooden staff with a dark iron horned head in the left hand\"",
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py realistic3d <source .glb> --seeds 9 --subject \"a hooded evil wizard, a real adult of ordinary human proportions, standing upright and facing forward with the arms held out from the body, wearing a dark purple wool robe with leather trim that ends above the boots, a black cowl over the face with red eyes, two grey horns tipped red on the hood, dark leather gloves, a brown leather belt with a red skull cloth banner and satchel, two separate legs in brown leather boots\"",
   "check": {},
   "animations": [
     "attack",
