@@ -1,0 +1,60 @@
+{
+  "kind": "model3d",
+  "workflow": "realistic3d",
+  "generator": "blender+comfyui",
+  "asset": "realistic3d -- shared asset kit (pipeline-core assets/workflows/realistic3d)",
+  "output": "lifelike/environment/hex_meadow_building.glb",
+  "recipe": {
+    "seed": 7,
+    "prompts": {
+      "turnaround": "<image1> is a 2x2 turnaround sheet showing a cartoon-style 3D game model from four sides: top-left its FRONT, top-right its RIGHT side, bottom-left its BACK, bottom-right its LEFT side. Replace every one of the four views with a real photograph of the real-world object this model stands for: a hexagonal piece of meadow ground with a flat top of short living green meadow grass on a dark brown soil slab with grey stone sides, two evergreen conifer trees with dense dark green needle foliage in the back, the taller one at the back left and a slightly shorter one at the back right, a round leafy green bush at the base of each tree, small grey granite rocks and tiny white wildflowers scattered over the lawn. The photographs are documentary photographs taken on location with a full-frame DSLR and a 50 mm lens, in soft natural overcast daylight that lights every side evenly, with true-to-life colours that are muted and natural rather than bright. Everything is made of real materials and shows its age: stone is rough, hand-cut and stained, with dirt and patches of moss; wood is aged oak with deep grain, cracks and worn edges; metal is real forged steel or iron with scratches, dents and spots of rust; cloth is real woven fabric with folds and fraying; leather is creased and scuffed; skin, hair and fur are those of a real living being; slate and tiles are uneven and carry lichen; plants are real living plants. The proportions are those of the real thing, not the oversized, rounded, simplified shapes of the game model: a person has the proportions of a real adult, a building those of a real building. This is not a 3D render, not a game asset, not a toy, figurine or miniature, not clay or plastic, not a painting or an illustration and not a cartoon: it is a real object photographed in the real world. Keep exactly the same design as <image1>: the same parts in the same places, the same colour scheme, the same pose, and in each of the four views the same camera angle and the same side of the object. The object is a piece of real ground with everything that stands on it, and its ground, soil and edges are part of the object. Each photograph shows the whole piece, centred, cut out on a plain flat light grey background, with no text, no labels and no lines or frames between the four views."
+    },
+    "subject": "a hexagonal piece of meadow ground with a flat top of short living green meadow grass on a dark brown soil slab with grey stone sides, two evergreen conifer trees with dense dark green needle foliage in the back, the taller one at the back left and a slightly shorter one at the back right, a round leafy green bush at the base of each tree, small grey granite rocks and tiny white wildflowers scattered over the lawn",
+    "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
+    "profile": "asset-profile.json",
+    "stats": {
+      "triangles": 79097,
+      "fit": {
+        "triangles": 79097,
+        "turn_deg": 0,
+        "scale": 3.8508,
+        "iou": 0.388,
+        "size_m": [
+          3.82,
+          3.783,
+          3.16
+        ],
+        "original_size_m": [
+          5.1,
+          4.417,
+          3.16
+        ],
+        "fits_original": true,
+        "fit": "box",
+        "original_ground": -0.36
+      },
+      "rig": {},
+      "animation": {
+        "ground": -0.36,
+        "height": 4.574,
+        "clips": {},
+        "rendered_clips": []
+      },
+      "seconds_mesh": 585,
+      "tile": {
+        "scale": 1.7254,
+        "ground_shift": -1.2379,
+        "faces_kept": 66390,
+        "faces_before": 79097,
+        "sides": 6,
+        "radius": 2.553,
+        "top": 0.0,
+        "bottom": -0.36
+      }
+    }
+  },
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py realistic3d <source .glb> --seeds 7 --subject \"a hexagonal piece of meadow ground with a flat top of short living green meadow grass on a dark brown soil slab with grey stone sides, two evergreen conifer trees with dense dark green needle foliage in the back, the taller one at the back left and a slightly shorter one at the back right, a round leafy green bush at the base of each tree, small grey granite rocks and tiny white wildflowers scattered over the lawn\" --ground",
+  "check": {},
+  "animations": [],
+  "source_model": "exports/environment/hex_meadow_building.glb"
+}
