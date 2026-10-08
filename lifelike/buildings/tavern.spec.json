@@ -1,0 +1,56 @@
+{
+  "kind": "model3d",
+  "workflow": "lifelike3d",
+  "generator": "blender+comfyui",
+  "asset": "lifelike3d -- shared asset kit (pipeline-core assets/workflows/lifelike3d)",
+  "output": "lifelike/buildings/tavern.glb",
+  "recipe": {
+    "seed": 8,
+    "mode": "edit",
+    "prompts": {
+      "front": "<image1> is a render of a stylized 3D game model of small medieval tavern: cream plastered walls in a dark oak timber frame, steep light blue slate roof, stone chimney at the ridge, gabled dormer with amber window in one roof slope, one amber leaded window on each long wall, plain unadorned plaster on the back gable, projecting oak signboard with a white beer mug on the front corner, one dark oak plank door with iron bands in a rounded stone arch on the front only, oak table with beer mugs, two hooped oak barrels, green conifer tree at the back corner, seen from the front, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "back": "<image1> is a render of a stylized 3D game model of small medieval tavern: cream plastered walls in a dark oak timber frame, steep light blue slate roof, stone chimney at the ridge, gabled dormer with amber window in one roof slope, one amber leaded window on each long wall, plain unadorned plaster on the back gable, projecting oak signboard with a white beer mug on the front corner, one dark oak plank door with iron bands in a rounded stone arch on the front only, oak table with beer mugs, two hooped oak barrels, green conifer tree at the back corner, seen from directly behind, camera slightly above: we see its back side, details on its front are not visible. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "left": "<image1> is a render of a stylized 3D game model of small medieval tavern: cream plastered walls in a dark oak timber frame, steep light blue slate roof, stone chimney at the ridge, gabled dormer with amber window in one roof slope, one amber leaded window on each long wall, plain unadorned plaster on the back gable, projecting oak signboard with a white beer mug on the front corner, one dark oak plank door with iron bands in a rounded stone arch on the front only, oak table with beer mugs, two hooped oak barrels, green conifer tree at the back corner, seen from its left side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "right": "<image1> is a render of a stylized 3D game model of small medieval tavern: cream plastered walls in a dark oak timber frame, steep light blue slate roof, stone chimney at the ridge, gabled dormer with amber window in one roof slope, one amber leaded window on each long wall, plain unadorned plaster on the back gable, projecting oak signboard with a white beer mug on the front corner, one dark oak plank door with iron bands in a rounded stone arch on the front only, oak table with beer mugs, two hooped oak barrels, green conifer tree at the back corner, seen from its right side, camera slightly above. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow",
+      "top": "<image1> is a render of a stylized 3D game model of small medieval tavern: cream plastered walls in a dark oak timber frame, steep light blue slate roof, stone chimney at the ridge, gabled dormer with amber window in one roof slope, one amber leaded window on each long wall, plain unadorned plaster on the back gable, projecting oak signboard with a white beer mug on the front corner, one dark oak plank door with iron bands in a rounded stone arch on the front only, oak table with beer mugs, two hooped oak barrels, green conifer tree at the back corner, seen from directly above, looking straight down. Redraw exactly this model as the real thing: keep the exact shape, proportions, pose, camera angle, framing, silhouette, layout of every part and the main colours of <image1>, and change only the surface, from stylized to lifelike. Replace painted or flat colours with real materials: genuine wood grain, stone, metal, cloth weave, leather, skin, fur, foliage, glass, with natural roughness and gentle variation, and keep the same colour scheme. photorealistic, real-world materials with physically accurate surface detail, natural micro-texture, believable wear and weathering, true-to-life proportions of the same design, high detail, soft even overcast daylight from all sides, no cast shadows, no baked highlights, no dramatic lighting, single subject fully visible, isolated on a plain flat light grey background, no ground, no shadow"
+    },
+    "subject": "small medieval tavern: cream plastered walls in a dark oak timber frame, steep light blue slate roof, stone chimney at the ridge, gabled dormer with amber window in one roof slope, one amber leaded window on each long wall, plain unadorned plaster on the back gable, projecting oak signboard with a white beer mug on the front corner, one dark oak plank door with iron bands in a rounded stone arch on the front only, oak table with beer mugs, two hooped oak barrels, green conifer tree at the back corner",
+    "model": "qwen-image-2.1 Q6_K, euler/simple, 25 steps, cfg 1; cutout RMBG-2.0",
+    "profile": "asset-profile.json",
+    "stats": {
+      "triangles": 35258,
+      "meshes": 384,
+      "bones": 0,
+      "animations": [],
+      "height_m": 4.2,
+      "size_m": [
+        4.25,
+        3.63,
+        4.2
+      ],
+      "faces_per_view": {
+        "front": 7585,
+        "left": 8404,
+        "back": 6972,
+        "right": 7375,
+        "top": 4922
+      },
+      "original": {
+        "triangles": 35258,
+        "meshes": 384,
+        "bones": 0,
+        "animations": [],
+        "height_m": 4.2,
+        "size_m": [
+          4.25,
+          3.63,
+          4.2
+        ]
+      }
+    }
+  },
+  "regenerate": "python3 ${PC_ASSET_KIT:-/home/wealot/Projects/pipeline-core/assets}/kit/assetkit.py lifelike3d <source .glb> --seeds 8 --subject \"small medieval tavern: cream plastered walls in a dark oak timber frame, steep light blue slate roof, stone chimney at the ridge, gabled dormer with amber window in one roof slope, one amber leaded window on each long wall, plain unadorned plaster on the back gable, projecting oak signboard with a white beer mug on the front corner, one dark oak plank door with iron bands in a rounded stone arch on the front only, oak table with beer mugs, two hooped oak barrels, green conifer tree at the back corner\" --top --elevation 25",
+  "check": {},
+  "animations": [],
+  "source_model": "exports/buildings/tavern.glb"
+}
