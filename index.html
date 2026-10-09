@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="catalog-endpoint" content="catalog.json">
+  <meta name="catalog-mode" content="static">
+  <title>Odot · Asset catalog</title>
+  <link rel="stylesheet" href="catalog/catalog.css?v=c99df0420b2e">
+  <script type="module" src="catalog/vendor/model-viewer.min.js"></script>
+  <script type="module" src="catalog/catalog.js?v=b846402be444"></script>
+</head>
+<body>
+<main>
+  <header><div class="eyebrow">Odot · Local asset library</div><h1>Asset catalog</h1>
+    <p class="intro">Models, editable sources, and animation clips.</p>
+  </header>
+  <form id="filters" role="search">
+    <label>Search <input id="search" type="search" placeholder="Find an asset…" autocomplete="off"></label>
+    <label>Version <select id="variant"><option value="">All versions</option><option value="lifelike">Lifelike</option><option value="original">Original</option></select></label>
+    <label>Category <select id="category"><option value="">All categories</option></select></label>
+    <label class="checkbox"><input id="animated" type="checkbox"> Animated assets</label>
+    <button type="button" id="refresh">Refresh index</button>
+  </form>
+  <div class="summary"><p id="count" role="status"></p><span id="sync" role="status">Connecting…</span></div>
+  <p id="warnings" class="warning" hidden></p>
+  <section id="grid" class="grid" aria-label="Exported assets"></section>
+  <p id="empty" hidden>No assets match these filters.</p>
+  <footer>Drag to orbit · scroll or pinch to zoom · exports refresh automatically.
+    <a href="catalog/vendor/LICENSE-model-viewer">Viewer license</a></footer>
+</main>
+<dialog id="detail" aria-labelledby="asset-title">
+  <div class="detail-head"><div><div id="asset-category" class="eyebrow"></div><h2 id="asset-title"></h2></div><button id="close">Close</button></div>
+  <p id="asset-message" class="warning" role="status" hidden></p>
+  <div class="detail-grid">
+    <section><div id="viewer-host"></div>
+      <p id="load-status" role="status"></p>
+      <div class="camera-controls"><button id="zoom-in" aria-label="Zoom in">Zoom +</button><button id="zoom-out" aria-label="Zoom out">Zoom −</button><button id="reset-camera">Reset camera</button><button id="retry" hidden>Retry model</button></div>
+      <fieldset id="animations" disabled>
+        <legend>Animation playback</legend>
+        <div class="animation-row"><label>Clip <select id="clip"></select></label>
+          <button id="play">Play</button>
+          <label>Speed <select id="speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label>
+          <label class="checkbox"><input type="checkbox" id="loop"> Loop</label>
+        </div>
+        <label class="timeline-label" for="timeline">Timeline <output id="time">0.00 / 0.00 s</output></label>
+        <input id="timeline" type="range" min="0" max="1" step="0.001" value="0" aria-label="Animation timeline">
+        <p id="policy" class="muted"></p>
+      </fieldset>
+      <p id="animation-note" class="muted"></p>
+    </section>
+    <aside>
+      <dl id="stats"></dl>
+      <div id="links" class="links"></div>
+      <h3>Rendered preview</h3><div id="preview" class="media"></div>
+      <h3>Reference</h3><div id="reference" class="media"></div>
+    </aside>
+  </div>
+</dialog>
+</body>
+</html>

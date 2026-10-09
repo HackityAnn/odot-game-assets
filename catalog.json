@@ -1,0 +1,4956 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "bytes": 5811660,
+      "triangles": 53366,
+      "materials": 5,
+      "animations": [],
+      "version": "45a1c4ae4cd32c42775dc5be126a59ce2d76054af7fe8ca12096f472e2de9135",
+      "title": "Archery Range",
+      "id": "lifelike/buildings/archery_range",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/archery_range.glb",
+        "version": "45a1c4ae4cd32c42775dc5be126a59ce2d76054af7fe8ca12096f472e2de9135"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/low_poly_fantasy_archery_range.png",
+        "version": "d8e068ee01b45ca5b0ab657095eb6f8513a14534c8fdbf743d52150115e0c7ac"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/archery_range.sheet.png",
+        "version": "9a7a3ccfd498f7b2c5aec31a06b5915f5cc26a6496daffcd91899f147fbde190"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/archery_range.png",
+        "version": "e3ee0083125ba7eb5e33782aab3f21e82ce62eb521e5dccc87a66cc2903a42f3"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 5564576,
+      "triangles": 74236,
+      "materials": 1,
+      "animations": [],
+      "version": "07d7c9d8f48546056f190755187215dad072185deebe902c610e0928feb0ae1f",
+      "title": "Arrow Tower",
+      "id": "lifelike/buildings/arrow_tower",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/arrow_tower.glb",
+        "version": "07d7c9d8f48546056f190755187215dad072185deebe902c610e0928feb0ae1f"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/arrow_tower.png",
+        "version": "5bf640be5a094ee208b6696e9d4843777cb5279ab0440c8f25235f4fd5751c05"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/arrow_tower.sheet.png",
+        "version": "5980480dc809b0387f9bf6a98fc86628483efe0a4e41a6309be7f6bfdb41c988"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/arrow_tower.png",
+        "version": "00d844bca66186f22495bb5fb85e502934a47131c6a1d858f6330061b681f309"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4645856,
+      "triangles": 77038,
+      "materials": 1,
+      "animations": [],
+      "version": "a34a6a0b70aca60216df449868fee55ec4f28082912c5c02d4bb57a34df38ce2",
+      "title": "Bakery",
+      "id": "lifelike/buildings/bakery",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/bakery.glb",
+        "version": "a34a6a0b70aca60216df449868fee55ec4f28082912c5c02d4bb57a34df38ce2"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          383,
+          0,
+          384,
+          440
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/bakery.sheet.png",
+        "version": "8d3f1b1d85a012eb6215f5e18082907db3c3d122600aed2dbbf26a49effba328"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/bakery.png",
+        "version": "a0d9f678ea59a3eb36115763b1efa1f4ec51022a410b1c83f0e5c9c7e4e24fd9"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4654332,
+      "triangles": 77269,
+      "materials": 1,
+      "animations": [],
+      "version": "babdca4e1e1bad0ef007788a9c3911668df6270d5bd8946a8c48e1f72b7a39e3",
+      "title": "Barracks",
+      "id": "lifelike/buildings/barracks",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/barracks.glb",
+        "version": "babdca4e1e1bad0ef007788a9c3911668df6270d5bd8946a8c48e1f72b7a39e3"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/barracks.png",
+        "version": "2793d83d2bcdc0e4ae2e5f1207e4ad1e2029da5c72bb94f5b19e8b94dfce6085"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/barracks.sheet.png",
+        "version": "e242181a4e27d67448053d481338d6673e89be8fb623a478a258ae97acfa8590"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/barracks.png",
+        "version": "1a76181114e4acf516393a8c56daa7fbc55378da24cc4b8d25b7692ba5d97deb"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 5715052,
+      "triangles": 79592,
+      "materials": 1,
+      "animations": [],
+      "version": "a1d793e9630d6ad2d781fa8720398875cacdc5d537d4a1cd566802d35321c807",
+      "title": "Bombarding Tower",
+      "id": "lifelike/buildings/bombarding_tower",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/bombarding_tower.glb",
+        "version": "a1d793e9630d6ad2d781fa8720398875cacdc5d537d4a1cd566802d35321c807"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/bombarding_tower.png",
+        "version": "1ad1048ebc0535e6dbd0861be104841c208435c065520632b5be4f9561e572de"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/bombarding_tower.sheet.png",
+        "version": "15ed47e00ccf45a0c70e7ec26cf2ab93a1685cc982db64b34b6ac8023111c07e"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/bombarding_tower.png",
+        "version": "e7bb5aa04c0505363db47310aa1f276af7504ae32c9c509c3a8862cef2efbc70"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 5620128,
+      "triangles": 78622,
+      "materials": 1,
+      "animations": [],
+      "version": "5c9c2f940648f89cedaf0cb5eae28546ca276605a4ca418836d94813be07f3fd",
+      "title": "Gold Mine",
+      "id": "lifelike/buildings/gold_mine",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/gold_mine.glb",
+        "version": "5c9c2f940648f89cedaf0cb5eae28546ca276605a4ca418836d94813be07f3fd"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          769,
+          0,
+          383,
+          440
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/gold_mine.sheet.png",
+        "version": "65305fee94dd02a0162a5de6e8f564d2578c63d61a8c7192ee6f913b3958b70d"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/gold_mine.png",
+        "version": "a634df67dce1531e9d77bd0ca7c13228e034661936c1f6968a641a0f438b1a02"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4742588,
+      "triangles": 78653,
+      "materials": 1,
+      "animations": [],
+      "version": "ca81925b4d580fea462d06e5b3db42e268a211f170cff013b4421762e19c1ff2",
+      "title": "Magic Academy",
+      "id": "lifelike/buildings/magic_academy",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/magic_academy.glb",
+        "version": "ca81925b4d580fea462d06e5b3db42e268a211f170cff013b4421762e19c1ff2"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/magic_academy.png",
+        "version": "33dbe652ee0101e6d15148b52e4b5e4b1a5cdbbae51710999b698f5177067475"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/magic_academy.sheet.png",
+        "version": "e6dbfef9920def6909b6f9d838a3a52951e87b7dee73c23e9db0d0d1f8b7abaf"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/magic_academy.png",
+        "version": "708f86e50489632cb4c618eb861482161d27317d00884b171e4476bb452ad56c"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4388572,
+      "triangles": 79436,
+      "materials": 1,
+      "animations": [],
+      "version": "0446cdf597147d4028b9f2cc53ec5248924b335444c5458f734ad0254d548f6f",
+      "title": "Metal Mine",
+      "id": "lifelike/buildings/metal_mine",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/metal_mine.glb",
+        "version": "0446cdf597147d4028b9f2cc53ec5248924b335444c5458f734ad0254d548f6f"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/low_poly_medieval_iron_mine_diorama.png",
+        "version": "4fe41dbda1eb4caa6cf36c0858c1f686f91b5878bee8ec9018d7ef8e859a7330"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/metal_mine.sheet.png",
+        "version": "349064dbaee070bed88706cfb599473f98bca65f577038278f0d93e6591a689b"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/metal_mine.png",
+        "version": "4d36871214c5d6925d3a2e6d57f812ff4e79503c6ba3ad1f0162cd992b909805"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 5410720,
+      "triangles": 78508,
+      "materials": 1,
+      "animations": [],
+      "version": "96fc6370bfdd4e03a25e810b74d8804aa009ae1b923d33adedaeb4a99bf893db",
+      "title": "Research Tower",
+      "id": "lifelike/buildings/research_tower",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/research_tower.glb",
+        "version": "96fc6370bfdd4e03a25e810b74d8804aa009ae1b923d33adedaeb4a99bf893db"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/fantasy_observatory_cottage_diorama.png",
+        "version": "c3b363a31db8c613a6e3c08290249a9921e9cabc80a22a52d1b3b5c94334c81a"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/research_tower.sheet.png",
+        "version": "71c1b20606c4fec0759eb9845ee7be49199a9867a3b3b6a98cb25b5bc5da681a"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/research_tower.png",
+        "version": "c6f43ce8655de2c932a5acea1e97da86675ad52698bd14f43e56f5a65e950acd"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3188192,
+      "triangles": 28123,
+      "materials": 5,
+      "animations": [],
+      "version": "0c630e441fd3764ff8b16a2797c83ae1f8d99b0ad0982358672e1bc4b4ee2b29",
+      "title": "Stone Cutter",
+      "id": "lifelike/buildings/stone_cutter",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/stone_cutter.glb",
+        "version": "0c630e441fd3764ff8b16a2797c83ae1f8d99b0ad0982358672e1bc4b4ee2b29"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/stone_cutter.png",
+        "version": "76808fc1cd077b5658ed7de2b83248213a194e09a65b6794c859b373323058fd"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/stone_cutter.sheet.png",
+        "version": "eef133589a27af45706facaa16128cd76b987fe01f641dcc8a1a9efdb033ba4c"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/stone_cutter.png",
+        "version": "8b0fb8c985a88c17bf67aa11e115a28646f63478f9dbe029671ace8644a56595"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3888876,
+      "triangles": 35258,
+      "materials": 5,
+      "animations": [],
+      "version": "813db623ff496021b15aac40ad600df662614aa1aae84b7e66f5ac12de497282",
+      "title": "Tavern",
+      "id": "lifelike/buildings/tavern",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/tavern.glb",
+        "version": "813db623ff496021b15aac40ad600df662614aa1aae84b7e66f5ac12de497282"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/tavern.png",
+        "version": "9ec237a6113ea27481129f8368fe81d2af7a93bd14b773b1f5fb47d512f8fe93"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/tavern.sheet.png",
+        "version": "60cac488926249c749a40272165161216ff53861d28d25001b990ec8b9617b05"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/tavern.png",
+        "version": "90d4a2181b8299690a6a870d8ac58264b7678d709adb2d156488eb9bb9f125dd"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 5200636,
+      "triangles": 77565,
+      "materials": 1,
+      "animations": [],
+      "version": "52ee6beaba1638c6501f00b66846ed896055e5fc72aa8c5f3ff55746b4d75cec",
+      "title": "Town Hall",
+      "id": "lifelike/buildings/town_hall",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/town_hall.glb",
+        "version": "52ee6beaba1638c6501f00b66846ed896055e5fc72aa8c5f3ff55746b4d75cec"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/fantasy_town_hall_diorama.png",
+        "version": "14dbfcad395fd4746bfefc68c4d618a7d1f7bcee61fd9385a84d52c900cb3693"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/town_hall.sheet.png",
+        "version": "6b42b480b74023504592ea61ffda855b01c1d69d9ab2538fe8fb61971f202531"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/town_hall.png",
+        "version": "33b574989fcde07b33ce2e8f35d5e14a533a200089ef47b5bfd8bf3559c3935d"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3828948,
+      "triangles": 33500,
+      "materials": 5,
+      "animations": [],
+      "version": "9d9ea791228a43526ff648460a820dc3d0bf7639634dce7dce85b929a3e33282",
+      "title": "Trade Market",
+      "id": "lifelike/buildings/trade_market",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/trade_market.glb",
+        "version": "9d9ea791228a43526ff648460a820dc3d0bf7639634dce7dce85b929a3e33282"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/trade_market.png",
+        "version": "a0403cc931c47d20f6265b43cc9f31d6ff3c11c31166659bc1b782c8345133dc"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/trade_market.sheet.png",
+        "version": "6de38f6270ab36f3e946dbce00de33fa8f6afd967ae4072a0b10e2ffeb738a29"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/trade_market.png",
+        "version": "c8819516d64c00c83e629f87a61b9e7f440e68e667717cb4563b8caba839d91a"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4457788,
+      "triangles": 76225,
+      "materials": 1,
+      "animations": [],
+      "version": "c9a7ea0ee970ba51a6352c2eec5c7011eedb6aa059e6a3a8fa7a5534922e9bae",
+      "title": "Tree House",
+      "id": "lifelike/buildings/tree_house",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/tree_house.glb",
+        "version": "c9a7ea0ee970ba51a6352c2eec5c7011eedb6aa059e6a3a8fa7a5534922e9bae"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          0,
+          0,
+          382,
+          440
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/tree_house.sheet.png",
+        "version": "cd26cdf799bffb493ef24f373eba9a67ad399447dc5dd8b690a53c1c7e898477"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/tree_house.png",
+        "version": "e6914e6b5d4919308ac4486e3ac69211084aad371ab367d8188a7867e3e6e6b5"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 5779944,
+      "triangles": 77990,
+      "materials": 1,
+      "animations": [],
+      "version": "c07b2752e94ed7fa5bd8e302e5bf24aca3ecdba212884bc99f9a36675768ae7d",
+      "title": "Weaver",
+      "id": "lifelike/buildings/weaver",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/weaver.glb",
+        "version": "c07b2752e94ed7fa5bd8e302e5bf24aca3ecdba212884bc99f9a36675768ae7d"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/cozy_fantasy_weaver_s_workshop.png",
+        "version": "049526aa24b29815ed66c9a6c12c9da09ebdea934057d8ffa31fcbdd8557fb91"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/weaver.sheet.png",
+        "version": "cdfb3c5a89d78f1dcb925fde3a7a5b811c9acbb1d334a956e50280d08e98c7c8"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/weaver.png",
+        "version": "0045495c1b4bbf7d7ac298b4966676a2cddc5f93c4e1962abbef7d2cc9db16ae"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3995344,
+      "triangles": 78801,
+      "materials": 1,
+      "animations": [],
+      "version": "deebad4cf54726cef4e9dd013e05255d677094f178ffdf8872de0792c0adf37c",
+      "title": "Woodcutter’s Hut",
+      "id": "lifelike/buildings/woodcutter_hut",
+      "category": "buildings",
+      "model": {
+        "path": "exports/lifelike/buildings/woodcutter_hut.glb",
+        "version": "deebad4cf54726cef4e9dd013e05255d677094f178ffdf8872de0792c0adf37c"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          1153,
+          0,
+          383,
+          440
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/buildings/woodcutter_hut.sheet.png",
+        "version": "cd26a53832e0c740c4725c683574651e0f724304dd3e4fc1e353fb1fb9a297d6"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/buildings/woodcutter_hut.png",
+        "version": "29ac7acfca0365ef1d9b2c35592feb02d04afe052567058c98ffe592d43e38bf"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 821176,
+      "triangles": 4158,
+      "materials": 4,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666269302368,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666269302368,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666865348816,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416667461395264,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666865348816,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666269302368,
+          "loop": null
+        }
+      ],
+      "version": "9a95c7f2fe7d2558208e06a9cbfd4033ac159d3b665fb924c8f0b3d457de5499",
+      "title": "Archer",
+      "id": "lifelike/characters/archer",
+      "category": "characters",
+      "model": {
+        "path": "exports/lifelike/characters/archer.glb",
+        "version": "9a95c7f2fe7d2558208e06a9cbfd4033ac159d3b665fb924c8f0b3d457de5499"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          989,
+          515,
+          547,
+          388
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/characters/archer.sheet.png",
+        "version": "cc9b840f694c93857e54db173a50aa055850d3b980cf633098f2beec3fe882d8"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/characters/archer.png",
+        "version": "11b47d656de99d0527dc64ab185d5704c6505212c2e90ccea1567be18affcbe6"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 1942756,
+      "triangles": 10537,
+      "materials": 4,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666269302368,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666269302368,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666865348816,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416667461395264,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666865348816,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666269302368,
+          "loop": null
+        }
+      ],
+      "version": "8c65634f36ba44d3fa486eb33e87a3615dcc83acbe9bfa07553a9ba82421c7b9",
+      "title": "Berserker",
+      "id": "lifelike/characters/berserker",
+      "category": "characters",
+      "model": {
+        "path": "exports/lifelike/characters/berserker.glb",
+        "version": "8c65634f36ba44d3fa486eb33e87a3615dcc83acbe9bfa07553a9ba82421c7b9"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/berserker.png",
+        "version": "2d99bbd6edd74aaf4b860f8ea0e76ad4766f2be1233089568a65dfa9cfa14e05"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/characters/berserker.sheet.png",
+        "version": "1bf016cfada636c02d2688dbba90fb8fa420d1eae8f91740ee668011747f1496"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/characters/berserker.png",
+        "version": "4688081a7d098e5f1145326911661d844780341aeb8cf755e76838275889a053"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 1469472,
+      "triangles": 10936,
+      "materials": 4,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666269302368,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666269302368,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666865348816,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416667461395264,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666865348816,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666269302368,
+          "loop": null
+        }
+      ],
+      "version": "a1f3b41b0165ad12c2b3a0991f3b00d22764139e1628b09b84f6ac2cd9f2b27b",
+      "title": "Evil Berserker Unit",
+      "id": "lifelike/characters/evil_berserker_unit",
+      "category": "characters",
+      "model": {
+        "path": "exports/lifelike/characters/evil_berserker_unit.glb",
+        "version": "a1f3b41b0165ad12c2b3a0991f3b00d22764139e1628b09b84f6ac2cd9f2b27b"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_berserker_unit.png",
+        "version": "12e210b3e8396ab5c68434ef1da002ec3b1ab5d0372bc24c2e3b16175bc21525",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/characters/evil_berserker_unit.sheet.png",
+        "version": "52b5eae32ab26cc77bcdbeb138e2bda0f151b0d50a06fd141a3251e957fe0a6f"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/characters/evil_berserker_unit.png",
+        "version": "6c1b969c57def18106b0cc1c02608d035a7ff1160af00f9f4617d406d70d8dd7"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 5084352,
+      "triangles": 75311,
+      "materials": 5,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666269302368,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666269302368,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666865348816,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416667461395264,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666865348816,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666269302368,
+          "loop": null
+        }
+      ],
+      "version": "0d8772d18fbe41da52aec6a365e70c5636b76e8104d6a87c863cba2cad468218",
+      "title": "Evil Mage Unit",
+      "id": "lifelike/characters/evil_mage_unit",
+      "category": "characters",
+      "model": {
+        "path": "exports/lifelike/characters/evil_mage_unit.glb",
+        "version": "0d8772d18fbe41da52aec6a365e70c5636b76e8104d6a87c863cba2cad468218"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_mage_unit.png",
+        "version": "d1b1d2a5a2e5b47013d9266b4a4c35f026d04339ca4f1c552c0e7bd662a53c13",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/characters/evil_mage_unit.sheet.png",
+        "version": "527606a96c0b9f60179ce791a92827024f4bab20f8c80dd1c211358a2308310c"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/characters/evil_mage_unit.png",
+        "version": "ead43c08685d87e7b361929db455121841ff97931085ecb120dceba83ef86440"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 1311016,
+      "triangles": 8615,
+      "materials": 4,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666269302368,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666269302368,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666865348816,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416667461395264,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666865348816,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666269302368,
+          "loop": null
+        }
+      ],
+      "version": "f2dba4fa86142c0aaf0bf348b9ee3697d8899750b48789b8d2f94d0bd80f412a",
+      "title": "Evil Melee Unit",
+      "id": "lifelike/characters/evil_melee_unit",
+      "category": "characters",
+      "model": {
+        "path": "exports/lifelike/characters/evil_melee_unit.glb",
+        "version": "f2dba4fa86142c0aaf0bf348b9ee3697d8899750b48789b8d2f94d0bd80f412a"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_melee_unit.png",
+        "version": "856210e62968b55391b0942f59530a7d44f2a998a6ac06142af4eed0805d1b79",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/characters/evil_melee_unit.sheet.png",
+        "version": "a05969ee52cd2a543da475670f0f858524d76b901415a179a48a430ffef87995"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/characters/evil_melee_unit.png",
+        "version": "b453dd10ff42815fb297b19e190ba7debaf4d56b6343bf5b1b045f7dadde4637"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 5898300,
+      "triangles": 79254,
+      "materials": 5,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666269302368,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666269302368,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666865348816,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416667461395264,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666865348816,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666269302368,
+          "loop": null
+        }
+      ],
+      "version": "48e1283f3353e5a7a5a7ba8bca8c58d6cd315ce5ab6364a62e2ea945b40a8496",
+      "title": "Evil Ranged Unit",
+      "id": "lifelike/characters/evil_ranged_unit",
+      "category": "characters",
+      "model": {
+        "path": "exports/lifelike/characters/evil_ranged_unit.glb",
+        "version": "48e1283f3353e5a7a5a7ba8bca8c58d6cd315ce5ab6364a62e2ea945b40a8496"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_ranged_unit.png",
+        "version": "576e0a0d4c32f86a79cc023d574ef73279ef15cc3c85717b675eef09183eeb28",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/characters/evil_ranged_unit.sheet.png",
+        "version": "f7f81d507d26639ac0a9b02e7771f0f90568d2892d1274cc29882623bb71d514"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/characters/evil_ranged_unit.png",
+        "version": "7116de4664a21f17310bfda2854631cc140fe88280ade019748f15f946e9f208"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4938540,
+      "triangles": 81537,
+      "materials": 5,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666269302368,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666269302368,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666865348816,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416667461395264,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666865348816,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666269302368,
+          "loop": null
+        }
+      ],
+      "version": "b67e6c50fb5357c9db6c86a7938d7c12beae3d068617a3d14733547e784dcc47",
+      "title": "Knight",
+      "id": "lifelike/characters/knight",
+      "category": "characters",
+      "model": {
+        "path": "exports/lifelike/characters/knight.glb",
+        "version": "b67e6c50fb5357c9db6c86a7938d7c12beae3d068617a3d14733547e784dcc47"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          0,
+          515,
+          486,
+          388
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/characters/knight.sheet.png",
+        "version": "afffc980a5e893868b80a6f529c52c84299899829557a41b54c5f9b56b6200f0"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/characters/knight.png",
+        "version": "6cca42b673ca87a7853e467f461c6b0b56c4ef89f5b5311fb11c46d7111f790c"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 881812,
+      "triangles": 5102,
+      "materials": 4,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666269302368,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666269302368,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666865348816,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416667461395264,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666865348816,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666269302368,
+          "loop": null
+        }
+      ],
+      "version": "0f00ccc23532b5232a2e65369001b5576cabe49b8b89df8999141df003af4c7e",
+      "title": "Mage",
+      "id": "lifelike/characters/mage",
+      "category": "characters",
+      "model": {
+        "path": "exports/lifelike/characters/mage.glb",
+        "version": "0f00ccc23532b5232a2e65369001b5576cabe49b8b89df8999141df003af4c7e"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          488,
+          515,
+          499,
+          388
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/characters/mage.sheet.png",
+        "version": "6c90313d91c0fa33661c569b788a53ef80c7162c51928af5e727ef1a0677e618"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/characters/mage.png",
+        "version": "8563759d29591e8e6c92d80b486325a669cd201dd43a2e982551cacde31160c9"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4751684,
+      "triangles": 29688,
+      "materials": 5,
+      "animations": [],
+      "version": "b866ec9988c489794e7b7276c8136bd12c59b878d1f92d9fac511ec53c120abf",
+      "title": "Bioluminescent Grove",
+      "id": "lifelike/environment/hex_bioluminescent_grove",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_bioluminescent_grove.glb",
+        "version": "b866ec9988c489794e7b7276c8136bd12c59b878d1f92d9fac511ec53c120abf"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_bioluminescent_mushroom_grove.png",
+        "version": "0baaa0e3cc9d312e4c4eee2399e6157fca0c68793fda689adda8d22fe68fe481"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_bioluminescent_grove.sheet.png",
+        "version": "40b84461b52c011e579642cd429354e601c747c8f48d79f1187169c1376fdad3"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_bioluminescent_grove.png",
+        "version": "ed5fa486918ad7e6294d1565d1df38c8c1403b9e98d474a255079501339f98ec"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4438376,
+      "triangles": 62635,
+      "materials": 1,
+      "animations": [],
+      "version": "3a756364ccd5110afed2504679c204b6f63b520b922e1fe4a71df6bd381df1fe",
+      "title": "Butterfly Dream Glade",
+      "id": "lifelike/environment/hex_butterfly_glade",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_butterfly_glade.glb",
+        "version": "3a756364ccd5110afed2504679c204b6f63b520b922e1fe4a71df6bd381df1fe"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_butterfly_glade.sheet.png",
+        "version": "1d4c6a746c931adfc7c65b642470faec084b87ac14fa7c7ee80f2457db553d22"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_butterfly_glade.png",
+        "version": "1ed09e30ad50e9c451f03266d20ebb2820c9dd39b98ee59d65f537cf7c060cbf"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4761756,
+      "triangles": 67869,
+      "materials": 1,
+      "animations": [],
+      "version": "8df277f83fcda6e582d748c9713375d92c052d27afe15f653a75144f61ddf042",
+      "title": "Crystal Grove",
+      "id": "lifelike/environment/hex_crystal_grove",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_crystal_grove.glb",
+        "version": "8df277f83fcda6e582d748c9713375d92c052d27afe15f653a75144f61ddf042"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png",
+        "version": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_crystal_grove.sheet.png",
+        "version": "8c7faf3d79d6fe1fbf3b6a08fbbb2d43c5ca2b3fe5d859eea1bdad4ddb3c0314"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_crystal_grove.png",
+        "version": "59817df412b69be3f30e3dd79234f9ca79a816828bd57b6a7e4ef2cdd3f87cf0"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4749100,
+      "triangles": 62142,
+      "materials": 1,
+      "animations": [],
+      "version": "fefbaadad76c18edf208b1727502d139d8538bad90570bbcb5162701c96d89b7",
+      "title": "Crystal Shrine",
+      "id": "lifelike/environment/hex_crystal_shrine",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_crystal_shrine.glb",
+        "version": "fefbaadad76c18edf208b1727502d139d8538bad90570bbcb5162701c96d89b7"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_shrine_diorama.png",
+        "version": "5aac6480a3fba6d485b2ba53823328039b837a24c3c77bdfbd4d791a1f9107e8"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_crystal_shrine.sheet.png",
+        "version": "4a95d1bd6380148442daf41b2a38189b428775ac9eb3491051927cdcf9afef72"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_crystal_shrine.png",
+        "version": "64aebafc19a6752b650ecf9b543600c21d0aa6b061807c8dd4a32aa98abc942c"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4278972,
+      "triangles": 67185,
+      "materials": 1,
+      "animations": [],
+      "version": "bbbc836fb520a4e0178ca67c4598f1d253c617f4e9467ebe81a59d5c18ec1bba",
+      "title": "Dream Forest Menagerie",
+      "id": "lifelike/environment/hex_dream_menagerie",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_dream_menagerie.glb",
+        "version": "bbbc836fb520a4e0178ca67c4598f1d253c617f4e9467ebe81a59d5c18ec1bba"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_dream_menagerie.sheet.png",
+        "version": "28eb12fb862d8245f23a1c8787a5bf0c65b3d2ea14a01b67ff098111748133b1"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_dream_menagerie.png",
+        "version": "4fee67e0b81eae2e917dcbc7253882af0f21d8c56dc566d69f27f01066a7499e"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4563172,
+      "triangles": 28132,
+      "materials": 5,
+      "animations": [],
+      "version": "ffbb74ce4cb1f9b1ada34a4b041b8e4f68a9fa6180335f6fb3e92be7b11967e7",
+      "title": "Glowing Mushrooms",
+      "id": "lifelike/environment/hex_glowing_mushrooms",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_glowing_mushrooms.glb",
+        "version": "ffbb74ce4cb1f9b1ada34a4b041b8e4f68a9fa6180335f6fb3e92be7b11967e7"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_glowing_mushroom_grove.png",
+        "version": "0d8e2898d05e862c6bdf7dd9cdeb8a9753db30be789e91c9ddc8d55fb657fdc3"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_glowing_mushrooms.sheet.png",
+        "version": "2d12e5f7899fe5aa913cb1e45e5997801b71cd7288aef0cfa1e389724a949da6"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_glowing_mushrooms.png",
+        "version": "5102976f84893aae92861357e44d90aa22d82666ed0a44a0da39ac21ea46891e"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3629276,
+      "triangles": 28244,
+      "materials": 5,
+      "animations": [],
+      "version": "10032a404a4b6e4e14ced0ebcdf5f62028469f86583c275db94f55957945742d",
+      "title": "Hollow Watchers Grove",
+      "id": "lifelike/environment/hex_hollow_watchers",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_hollow_watchers.glb",
+        "version": "10032a404a4b6e4e14ced0ebcdf5f62028469f86583c275db94f55957945742d"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_hollow_watchers.sheet.png",
+        "version": "c7e53743c60d3d336aae6b4ca724c928fd8db7cf4b09c54cfe2ef0cfd11aaba7"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_hollow_watchers.png",
+        "version": "d77fc363fdc0495388a2c1195163c258e0814c2c2e63670d0f78caa9e0f8c8b4"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4462596,
+      "triangles": 64006,
+      "materials": 1,
+      "animations": [],
+      "version": "59846d2a959691d08242e275fe910175a465288992ec544d3d5be41acfe5c1df",
+      "title": "Lantern Bridge",
+      "id": "lifelike/environment/hex_lantern_bridge",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_lantern_bridge.glb",
+        "version": "59846d2a959691d08242e275fe910175a465288992ec544d3d5be41acfe5c1df"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png",
+        "version": "1b70936dbe0d39db9121c683712fd98c5825e1fccd16f92401c4c5af2f066d53"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_lantern_bridge.sheet.png",
+        "version": "5a6717a4c85083de1fc78f3fb98c97dd353119075d624f8030b151058f8f54d8"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_lantern_bridge.png",
+        "version": "b18e590f7750bf33ff2cfe836f6862678e1e8766689953a67fc3734fdf8064f0"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 6978344,
+      "triangles": 70267,
+      "materials": 1,
+      "animations": [],
+      "version": "b307cf079e25b30bc46e65c5529192ec8dd873c19c2b94cb5f9925142c50cfea",
+      "title": "Hex Meadow Building",
+      "id": "lifelike/environment/hex_meadow_building",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_meadow_building.glb",
+        "version": "b307cf079e25b30bc46e65c5529192ec8dd873c19c2b94cb5f9925142c50cfea"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_meadow_building.sheet.png",
+        "version": "38a8cede0dfa2c81484987224eedc6acb2e3263169b674121d8e643cdc6dfdfb"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_meadow_building.png",
+        "version": "726f3009e136fa3595c16e05eaa5ab1db9ffc90aea72e6d454f6171eaed34f07"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 839040,
+      "triangles": 1724,
+      "materials": 5,
+      "animations": [],
+      "version": "2ba5091d553eafdb6051a39c07cf48e3b4a01818d1d7a1119c515f9c7e13cc8c",
+      "title": "Hex Meadow Character",
+      "id": "lifelike/environment/hex_meadow_character",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_meadow_character.glb",
+        "version": "2ba5091d553eafdb6051a39c07cf48e3b4a01818d1d7a1119c515f9c7e13cc8c"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_meadow_character.sheet.png",
+        "version": "0a19348937d58e346d95fdba22914f9a68de3fd9dd1810794d659c5f1de48d03"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_meadow_character.png",
+        "version": "ca35b1d4eeaed89cd292bd5661f50991aabb371a8c52fbacc6794467905f21a5"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4289764,
+      "triangles": 69004,
+      "materials": 1,
+      "animations": [],
+      "version": "9cedd64b09c94a7bcbd37f80115b7d51b2008dc3ebd083a90ade57f2d67c2014",
+      "title": "Mystical Grove",
+      "id": "lifelike/environment/hex_mystical_grove",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_mystical_grove.glb",
+        "version": "9cedd64b09c94a7bcbd37f80115b7d51b2008dc3ebd083a90ade57f2d67c2014"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/mystical_crystal_grove_diorama.png",
+        "version": "2beb6273fffa63650afc8b4841921a01606f9365bf3c6c453c23e77356c0f488"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_mystical_grove.sheet.png",
+        "version": "6c4214ef67545949316beeebc69a935591249c24aabf0df6746145112404d7fd"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_mystical_grove.png",
+        "version": "9de8977b364cc87d95f2f841a8234e2c358e966bdcede90913b6a0755a576094"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4775088,
+      "triangles": 68056,
+      "materials": 1,
+      "animations": [],
+      "version": "f5fc860e423a42a728d3198e6bede6bc6e8a3ea9735f2a02b3655009fa610150",
+      "title": "Rune Shrine",
+      "id": "lifelike/environment/hex_rune_shrine",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_rune_shrine.glb",
+        "version": "f5fc860e423a42a728d3198e6bede6bc6e8a3ea9735f2a02b3655009fa610150"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png",
+        "version": "c3000fe81c2f8a676f770c9a03d6468e154c36873c9f36f3af02fd8b6ce81dae"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_rune_shrine.sheet.png",
+        "version": "deb79977037fb8edbc6a03b65f3f45210f0fcf2699188560e0ac7832964f4953"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_rune_shrine.png",
+        "version": "a322e5c8729b411a49faf08765e1b5fe3fd4f64030841a05dbc86292a4e22110"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 4308580,
+      "triangles": 44504,
+      "materials": 1,
+      "animations": [],
+      "version": "096046f1e71aa5d09186902e9d265c9d1c12a2abe51527906b32fb67ad3c4920",
+      "title": "Woodland Bridge",
+      "id": "lifelike/environment/hex_woodland_bridge",
+      "category": "environment",
+      "model": {
+        "path": "exports/lifelike/environment/hex_woodland_bridge.glb",
+        "version": "096046f1e71aa5d09186902e9d265c9d1c12a2abe51527906b32fb67ad3c4920"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_woodland_bridge_diorama.png",
+        "version": "2a35f71da0afc8ea5d77f2324b294db829f24aebb1e668f9f0aba1d01c130d53"
+      },
+      "preview": {
+        "path": "exports/previews/lifelike/environment/hex_woodland_bridge.sheet.png",
+        "version": "32ddc3f010f8e89f12b743e2b2bd95e094eda9554823c9feededf8de79c351c8"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/environment/hex_woodland_bridge.png",
+        "version": "7b6c2a6f779ce1baa78ac2ed4d7fb25357ff1b7f48e65ec398f06e951c8eef3c"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 33276,
+      "triangles": 30,
+      "materials": 4,
+      "animations": [],
+      "version": "8594cd90c2d701bef406b6218f6618810ae31bf0136feddaeaf6d9587d882d68",
+      "title": "Arrow",
+      "id": "lifelike/props/arrow",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/arrow.glb",
+        "version": "8594cd90c2d701bef406b6218f6618810ae31bf0136feddaeaf6d9587d882d68"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/arrow.sheet.png",
+        "version": "1a680b78a264ab12606fa61cc7716d2383c0fb2515c3d1e235cb630750ef5fd3"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/arrow.png",
+        "version": "15556fe5336014aac72bed3f1bdff4d4315583d0d4992b8254dee84a7e204ed1"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 177464,
+      "triangles": 1202,
+      "materials": 4,
+      "animations": [],
+      "version": "27b646c0d840e7047ca52b1ed49ccd35c96a3ecff8c1bc980fce49a4e8150ef9",
+      "title": "Axe",
+      "id": "lifelike/props/axe",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/axe.glb",
+        "version": "27b646c0d840e7047ca52b1ed49ccd35c96a3ecff8c1bc980fce49a4e8150ef9"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/axe.sheet.png",
+        "version": "b67ba71b622cd049b434fb03aaaaa8e52e63309e86ed6c667af7bb743fcd45e2"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/axe.png",
+        "version": "862dffc757c0a5cee406aec53e4eccd688a1b164b4342df68cd5dfb010113cf9"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 178332,
+      "triangles": 1202,
+      "materials": 4,
+      "animations": [],
+      "version": "253771445780cc4a6a2d250d143ff2e0101df8138fc617f7f63a6086f0de1e58",
+      "title": "Axe Offhand",
+      "id": "lifelike/props/axe_offhand",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/axe_offhand.glb",
+        "version": "253771445780cc4a6a2d250d143ff2e0101df8138fc617f7f63a6086f0de1e58"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/axe_offhand.sheet.png",
+        "version": "c788b5ab318227436460d1de6c692bc4733268b7bd91b489c02f1574541c44cb"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/axe_offhand.png",
+        "version": "0088165f06640ea23584fb252d4a52c7f7ea6481f775438a88b04f4468fed012"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 89020,
+      "triangles": 248,
+      "materials": 4,
+      "animations": [],
+      "version": "7ce680d4ca6d8aa82491e96b9f6fddb21365d5a261c728369fbba2814f264d9f",
+      "title": "Bow",
+      "id": "lifelike/props/bow",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/bow.glb",
+        "version": "7ce680d4ca6d8aa82491e96b9f6fddb21365d5a261c728369fbba2814f264d9f"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/bow.sheet.png",
+        "version": "6aeb355aaf7ad24ba175c268ad569e7ab35e4c27cc62e19c099111d9bcfbc47e"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/bow.png",
+        "version": "a52f678bb3b73f40736350f0ccbe3a8f700f604ca445791168d59ba9c6df3140"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 176048,
+      "triangles": 814,
+      "materials": 4,
+      "animations": [],
+      "version": "9261a42b4485bff2a635e675fb915aebab3307e1df79bc0f3ac7c17aa2013d50",
+      "title": "Crossbow",
+      "id": "lifelike/props/crossbow",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/crossbow.glb",
+        "version": "9261a42b4485bff2a635e675fb915aebab3307e1df79bc0f3ac7c17aa2013d50"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/crossbow.sheet.png",
+        "version": "819649492dc330b45390fe81e03e72534280c748949436da4a391cb891ed1e72"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/crossbow.png",
+        "version": "daca690fae1652ce01aaf36d179c5f90600d981a5d40846477988b1bb77afb13"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 188288,
+      "triangles": 1207,
+      "materials": 4,
+      "animations": [],
+      "version": "974b0fcd0e72f81de9c5845e5a8ead002ffc23324781b75a531a5149452b5111",
+      "title": "Evil Axe",
+      "id": "lifelike/props/evil_axe",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/evil_axe.glb",
+        "version": "974b0fcd0e72f81de9c5845e5a8ead002ffc23324781b75a531a5149452b5111"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/evil_axe.sheet.png",
+        "version": "41063f62288adf916e6e563a84e88832ff0aef997406bb5c33544a09314665f1"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/evil_axe.png",
+        "version": "1a871be9eb75131188ade7bdd195b47832272bec1e23219075016a3cfcf8d15b"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 188140,
+      "triangles": 1207,
+      "materials": 4,
+      "animations": [],
+      "version": "9540e9750fa5cacfa8aac57ee0c756035cc5681fa53b0b898d46c35d73c0c621",
+      "title": "Evil Axe Offhand",
+      "id": "lifelike/props/evil_axe_offhand",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/evil_axe_offhand.glb",
+        "version": "9540e9750fa5cacfa8aac57ee0c756035cc5681fa53b0b898d46c35d73c0c621"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/evil_axe_offhand.sheet.png",
+        "version": "89efd72af73293718a18cfeb11bf5a8b55eada4a8a1adea8d1a2c8d426200c61"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/evil_axe_offhand.png",
+        "version": "db91c9b28586d08c40ccebbb19b4987bff107e713de8c8725e8745272dbce787"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 209020,
+      "triangles": 154,
+      "materials": 4,
+      "animations": [],
+      "version": "2082057e1fcca13f87d4527b75e20c3e6f3b6fb5730cbff944a2a57df053bebd",
+      "title": "Evil Hand Flame",
+      "id": "lifelike/props/evil_hand_flame",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/evil_hand_flame.glb",
+        "version": "2082057e1fcca13f87d4527b75e20c3e6f3b6fb5730cbff944a2a57df053bebd"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/evil_hand_flame.sheet.png",
+        "version": "b32eb50a15fe469ae7349104bc188eb332d8ff4f54379b7ea511ea3abbb6fd73"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/evil_hand_flame.png",
+        "version": "2f8382564ab1ed792d8b16fd27d67764b7dcbb2375e659f9d98deced46b9638d"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 288928,
+      "triangles": 1064,
+      "materials": 4,
+      "animations": [],
+      "version": "5eee994f2def7cfd7226631cb9337d2d494d577d19c3bf72421883a5d1c26378",
+      "title": "Evil Shield",
+      "id": "lifelike/props/evil_shield",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/evil_shield.glb",
+        "version": "5eee994f2def7cfd7226631cb9337d2d494d577d19c3bf72421883a5d1c26378"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/evil_shield.sheet.png",
+        "version": "6c769423d77500ff9dfdbf0ec16e721f679ac5ef9b50c0ad22e100530c2de373"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/evil_shield.png",
+        "version": "6129ab5126e8c55baec60e04e7b732720945374b092f83953d87e7b8dd9c249c"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 141512,
+      "triangles": 758,
+      "materials": 4,
+      "animations": [],
+      "version": "2170c7b1f9477b661e0f02745215382672c16b036251b5de06da1e9a5f05c66f",
+      "title": "Evil Staff",
+      "id": "lifelike/props/evil_staff",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/evil_staff.glb",
+        "version": "2170c7b1f9477b661e0f02745215382672c16b036251b5de06da1e9a5f05c66f"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/evil_staff.sheet.png",
+        "version": "35684d9d324030530d249cb58ea1f86dce87a92902d2eb5d8beb33b89e2b63c8"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/evil_staff.png",
+        "version": "90b5f8e42535a8503596090bacfb7020b8be91fb9c061caf2fc76735aaca1cab"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 2760060,
+      "triangles": 79996,
+      "materials": 1,
+      "animations": [],
+      "version": "114e6694f415222dd1903109c7c33ec19ff164d329fb9a57d197b49f049cdea0",
+      "title": "Evil Sword",
+      "id": "lifelike/props/evil_sword",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/evil_sword.glb",
+        "version": "114e6694f415222dd1903109c7c33ec19ff164d329fb9a57d197b49f049cdea0"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/evil_sword.sheet.png",
+        "version": "38312b531b7bb3e348021597b365d64def0aef39243168869f99dcd16f71af92"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/evil_sword.png",
+        "version": "8c365da9c85eef45733964fb16dd2432bb4dbb1e46dceba8a335b559f5937cf8"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3090632,
+      "triangles": 79968,
+      "materials": 1,
+      "animations": [],
+      "version": "8d188b52baf52c68db4c3248018cf08b4f4173a898556d0981e59cecbaec11c4",
+      "title": "Kit Arrow",
+      "id": "lifelike/props/kit_arrow",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_arrow.glb",
+        "version": "8d188b52baf52c68db4c3248018cf08b4f4173a898556d0981e59cecbaec11c4"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_arrow.sheet.png",
+        "version": "3f3c22b4cd2529c002d1f64ee41aa4b6695772856ce14343074586549974eda1"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_arrow.png",
+        "version": "cb2710544dd4f8630baa9520b9e706f6a9ec267da0329ca60a79672c31e5e0ad"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 175828,
+      "triangles": 1202,
+      "materials": 4,
+      "animations": [],
+      "version": "a9a4da965ab483fb73547bf453f48c936955537ffb6895c607f4cb87037aab8d",
+      "title": "Kit Axe",
+      "id": "lifelike/props/kit_axe",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_axe.glb",
+        "version": "a9a4da965ab483fb73547bf453f48c936955537ffb6895c607f4cb87037aab8d"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_axe.sheet.png",
+        "version": "d259c5006ce599f3f81ecd4425296b88fed5bb6e1f33b1668836d5aad34565a9"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_axe.png",
+        "version": "50ab26d80b825184770f2ac7e5d4806469bdaad4ecfaa3b2da99659baf5e65c8"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3135512,
+      "triangles": 79850,
+      "materials": 1,
+      "animations": [],
+      "version": "3e773ecb91b7a4a2f1de6424d8b7d14672b36fc604c4fc9375b507836850d8cf",
+      "title": "Kit Barrel",
+      "id": "lifelike/props/kit_barrel",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_barrel.glb",
+        "version": "3e773ecb91b7a4a2f1de6424d8b7d14672b36fc604c4fc9375b507836850d8cf"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_barrel.sheet.png",
+        "version": "531dc0972df559d92fd08b1a7984680f8ecff3f894130385714519d7b0a2a936"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_barrel.png",
+        "version": "8787181565b37eb39985a73285c5b1a625b4aaf9af016b505b212850d08c7a62"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 274980,
+      "triangles": 540,
+      "materials": 5,
+      "animations": [],
+      "version": "043429988d1692fae268f5715f1e7f30f56ccdcf9ba3d2cf27c24a3d4b537097",
+      "title": "Kit Bench",
+      "id": "lifelike/props/kit_bench",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_bench.glb",
+        "version": "043429988d1692fae268f5715f1e7f30f56ccdcf9ba3d2cf27c24a3d4b537097"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_bench.sheet.png",
+        "version": "38a23c6d7c8969a6d4cac8145d0eae39d2652f0b644591ede83dde686c0e511d"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_bench.png",
+        "version": "d3a84dc61227e3ec40decdde25b773af7dd2ab8d60555b8475a5173b5844dce0"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 2751060,
+      "triangles": 79844,
+      "materials": 1,
+      "animations": [],
+      "version": "b12cff5b3122e77b645a47f6d9e488b4c657488b4c314d207fc421dc93b63929",
+      "title": "Kit Book",
+      "id": "lifelike/props/kit_book",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_book.glb",
+        "version": "b12cff5b3122e77b645a47f6d9e488b4c657488b4c314d207fc421dc93b63929"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_book.sheet.png",
+        "version": "70ac76a867be9e49f4e4620944a17c0ebee88d77fc3ad78e4ffa4106649940c0"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_book.png",
+        "version": "bdb220bea4749f81fc094463147cd78607678d752278a1cff9dfb1c4d121a59e"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3141296,
+      "triangles": 79887,
+      "materials": 1,
+      "animations": [],
+      "version": "c1fed13afde88badec46ae11a7ce22c6ab52e53f12b97aad14cd88e48e5e81c0",
+      "title": "Kit Cannonball",
+      "id": "lifelike/props/kit_cannonball",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_cannonball.glb",
+        "version": "c1fed13afde88badec46ae11a7ce22c6ab52e53f12b97aad14cd88e48e5e81c0"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_cannonball.sheet.png",
+        "version": "b30b3cc01c73980594c1b3b4bc34d57ccf10609ffe9e5b65499e853874320661"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_cannonball.png",
+        "version": "a3d1e27894165dcd3daec466610937218a7e92bd145bc224e59bf248455e9924"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3558152,
+      "triangles": 79968,
+      "materials": 1,
+      "animations": [],
+      "version": "22332cd26897cad5ce11ab64e9739c6c8a7ebcd84e8be3235f59abda22744fba",
+      "title": "Kit Crate",
+      "id": "lifelike/props/kit_crate",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_crate.glb",
+        "version": "22332cd26897cad5ce11ab64e9739c6c8a7ebcd84e8be3235f59abda22744fba"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_crate.sheet.png",
+        "version": "8d3e438aa8a056824e4e0404b4c7026deb484d6ae213293174f48b3670c406dd"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_crate.png",
+        "version": "bf38b9aabbb04cda9b5e2241e945fa0fb75f2139288627e4c90afdd80ccb290d"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 3314236,
+      "triangles": 79964,
+      "materials": 1,
+      "animations": [],
+      "version": "b27e5a7dc6b840854ddedac04dcacea62e9c5c7e6ced7e7b32683a9971c9fc68",
+      "title": "Kit Lantern",
+      "id": "lifelike/props/kit_lantern",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_lantern.glb",
+        "version": "b27e5a7dc6b840854ddedac04dcacea62e9c5c7e6ced7e7b32683a9971c9fc68"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_lantern.sheet.png",
+        "version": "43c5b7f648c52dc1be87c5e007011801fd7b0ecb676e9a3f1a42933498cdb372"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_lantern.png",
+        "version": "e86814510af425b13c81e9c2c3486dc3a272701de22c7b85c75e0732db447080"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 166392,
+      "triangles": 704,
+      "materials": 4,
+      "animations": [],
+      "version": "5ba549cc6511d3ce2bb70fb8cbee26ce244ea18d0c11f0eb7d05d17697967d82",
+      "title": "Kit Mug",
+      "id": "lifelike/props/kit_mug",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_mug.glb",
+        "version": "5ba549cc6511d3ce2bb70fb8cbee26ce244ea18d0c11f0eb7d05d17697967d82"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_mug.sheet.png",
+        "version": "93c3ef6efa02d2f64badf6160121bb93a5c922c13083cdb4a6fdc5db0f267fff"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_mug.png",
+        "version": "5c0780b56ac1f2ab3bbfa1c3268008d6a0293d3ea4d5133e37ad6fd5dcd3cd17"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 634280,
+      "triangles": 836,
+      "materials": 5,
+      "animations": [],
+      "version": "58d8339a371c6887856c8b4f570d0c1cb7f50d4918613dbf526b72d595eceee1",
+      "title": "Kit Open Barrel",
+      "id": "lifelike/props/kit_open_barrel",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_open_barrel.glb",
+        "version": "58d8339a371c6887856c8b4f570d0c1cb7f50d4918613dbf526b72d595eceee1"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_open_barrel.sheet.png",
+        "version": "f686edfbb311ea96806d67e2fac565b7a30d5cce26113524153efa2f625218a6"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_open_barrel.png",
+        "version": "ed05fac9d62428846216ff5f1c5592c8d27de3b7b873f5d0e906425dd0dd36b2"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 775976,
+      "triangles": 1620,
+      "materials": 5,
+      "animations": [],
+      "version": "9ff8e3dbe651dc63689c0750b3ea5ce07d8334ed8756dee389e898d0bc8cba81",
+      "title": "Kit Open Crate",
+      "id": "lifelike/props/kit_open_crate",
+      "category": "props",
+      "model": {
+        "path": "exports/lifelike/props/kit_open_crate.glb",
+        "version": "9ff8e3dbe651dc63689c0750b3ea5ce07d8334ed8756dee389e898d0bc8cba81"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/lifelike/props/kit_open_crate.sheet.png",
+        "version": "af3147ca47a651599222517aaad69080f951bf61f99abd266b0734947c5777ce"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/lifelike/props/kit_open_crate.png",
+        "version": "eb6950396781e439ffae18c964d333a499f7f692bf4654beb678e904e296f575"
+      },
+      "error": null,
+      "variant": "lifelike"
+    },
+    {
+      "bytes": 5483064,
+      "triangles": 41298,
+      "materials": 38,
+      "animations": [],
+      "version": "773325095940b3b3379338e2d84af5398c41a922b676e5f1f15ef3762babbf81",
+      "title": "Archery Range",
+      "id": "original/buildings/archery_range",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/archery_range.glb",
+        "version": "773325095940b3b3379338e2d84af5398c41a922b676e5f1f15ef3762babbf81"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/low_poly_fantasy_archery_range.png",
+        "version": "d8e068ee01b45ca5b0ab657095eb6f8513a14534c8fdbf743d52150115e0c7ac"
+      },
+      "preview": {
+        "path": "exports/previews/archery_range.png",
+        "version": "b706ae18d8c302c3e32646fde27d2857960789ddac9d82d5a4b61a9cc75ac46c"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/archery_range.png",
+        "version": "28d04779cf23c5006632be171ac89b65ad5c7c4ecf8ac2f393945b4313eabd5c"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1261112,
+      "triangles": 21443,
+      "materials": 35,
+      "animations": [],
+      "version": "c23bada7f7e3fee2ba1a954cb55efcb8de68731136e9785e9de9ea7d6a030a76",
+      "title": "Arrow Tower",
+      "id": "original/buildings/arrow_tower",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/arrow_tower.glb",
+        "version": "c23bada7f7e3fee2ba1a954cb55efcb8de68731136e9785e9de9ea7d6a030a76"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/arrow_tower.png",
+        "version": "5bf640be5a094ee208b6696e9d4843777cb5279ab0440c8f25235f4fd5751c05"
+      },
+      "preview": {
+        "path": "exports/previews/arrow_tower.png",
+        "version": "ea4b3fd42d44e9b8fe3ee76024f139ed66f691151da0e26917750f7175fb956c"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/arrow_tower.png",
+        "version": "31bf49c1d87535838047d48021e02865e7ae4233aa313436f3f87a5e3ddae1a2"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1607316,
+      "triangles": 28185,
+      "materials": 16,
+      "animations": [],
+      "version": "643158e9b686a6a1d9e1f8b90533da47deb57923baa3b7a3e1e1a3bc894e27fe",
+      "title": "Bakery",
+      "id": "original/buildings/bakery",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/bakery.glb",
+        "version": "643158e9b686a6a1d9e1f8b90533da47deb57923baa3b7a3e1e1a3bc894e27fe"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          383,
+          0,
+          384,
+          440
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/bakery.png",
+        "version": "0b85bef06294d2e727bc953f9a6a342942f5a4daac4343306b12792fa114b529"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/bakery.png",
+        "version": "50e5af8e9c4d5fe7ecd64cd2a9de442d8e8287a3d8d229dbe08ccaadf19f969d"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1480168,
+      "triangles": 25425,
+      "materials": 35,
+      "animations": [],
+      "version": "142fc3044369e6e6af04f4dd3c81966280d7ccffe2d335a9033f103d2e1ade7b",
+      "title": "Barracks",
+      "id": "original/buildings/barracks",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/barracks.glb",
+        "version": "142fc3044369e6e6af04f4dd3c81966280d7ccffe2d335a9033f103d2e1ade7b"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/barracks.png",
+        "version": "2793d83d2bcdc0e4ae2e5f1207e4ad1e2029da5c72bb94f5b19e8b94dfce6085"
+      },
+      "preview": {
+        "path": "exports/previews/barracks.png",
+        "version": "ebf4b5da69d7b92f3a46e22e68a8326f83d5168b3d43b6fcdcb43a09acc0c186"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/barracks.png",
+        "version": "7922d02ac2e8d50f9841a14ccadfe5e126b3c652cc1b203ca64880c004bcbde5"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1082380,
+      "triangles": 18091,
+      "materials": 29,
+      "animations": [],
+      "version": "d85259b5fd09e071d15d1da153312b07556017cbbd7b6746b5b1319a709840a8",
+      "title": "Bombarding Tower",
+      "id": "original/buildings/bombarding_tower",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/bombarding_tower.glb",
+        "version": "d85259b5fd09e071d15d1da153312b07556017cbbd7b6746b5b1319a709840a8"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/bombarding_tower.png",
+        "version": "1ad1048ebc0535e6dbd0861be104841c208435c065520632b5be4f9561e572de"
+      },
+      "preview": {
+        "path": "exports/previews/bombarding_tower.png",
+        "version": "d04d9b732249e06f1f29b7b09c701a2df9697de74061bf933e69686de4fa69ec"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/bombarding_tower.png",
+        "version": "80ca59a55a6636d538ec02dbc5178542cf1a37cf667f839e26ab713b2c451871"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 789880,
+      "triangles": 12398,
+      "materials": 15,
+      "animations": [],
+      "version": "9b7dd112218fe0241c89ec7482cb0175c35219e82f3091f4270de97b1036902f",
+      "title": "Gold Mine",
+      "id": "original/buildings/gold_mine",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/gold_mine.glb",
+        "version": "9b7dd112218fe0241c89ec7482cb0175c35219e82f3091f4270de97b1036902f"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          769,
+          0,
+          383,
+          440
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/gold_mine.png",
+        "version": "2f4a5514a1264830b8e98df3c878a5b17a4b9bd5c17b82d0492968c5969c05ad"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/gold_mine.png",
+        "version": "097f55a2a755719fcc1f33a5f684af776f85eeae36b4bf742210d63e8b2aecf8"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1480140,
+      "triangles": 24732,
+      "materials": 32,
+      "animations": [],
+      "version": "e2bcefa7a3ead6afff0400198b895d4b5af448c4e831aa24653c3c92438107c4",
+      "title": "Magic Academy",
+      "id": "original/buildings/magic_academy",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/magic_academy.glb",
+        "version": "e2bcefa7a3ead6afff0400198b895d4b5af448c4e831aa24653c3c92438107c4"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/magic_academy.png",
+        "version": "33dbe652ee0101e6d15148b52e4b5e4b1a5cdbbae51710999b698f5177067475"
+      },
+      "preview": {
+        "path": "exports/previews/magic_academy.png",
+        "version": "3b618c237516b37bac6d8e3a26b632775f32865b7b191e3890da6ea4849e22ba"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/magic_academy.png",
+        "version": "6aaecbd97e38b607d6c533d69afa765bdee73eedcb1ad9ddd14b827f29036a03"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 5252972,
+      "triangles": 36248,
+      "materials": 35,
+      "animations": [],
+      "version": "f03e7487735ac055a06acf7c6715cae87ff9cd771284168ee16fcf0b6cd1cbaa",
+      "title": "Metal Mine",
+      "id": "original/buildings/metal_mine",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/metal_mine.glb",
+        "version": "f03e7487735ac055a06acf7c6715cae87ff9cd771284168ee16fcf0b6cd1cbaa"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/low_poly_medieval_iron_mine_diorama.png",
+        "version": "4fe41dbda1eb4caa6cf36c0858c1f686f91b5878bee8ec9018d7ef8e859a7330"
+      },
+      "preview": {
+        "path": "exports/previews/metal_mine.png",
+        "version": "0dcb7cb66e9b8340e0d700574463a528c66dc54592652ed9cbe25f120b945796"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/metal_mine.png",
+        "version": "9e2fab8e78573332d9f77aaa2c6a25bdb420f0f51a6dc174e9b13f2ba5b483e7"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 5611168,
+      "triangles": 41962,
+      "materials": 36,
+      "animations": [],
+      "version": "22ee71ebef473aec72d869d49cc1faa12d724ed8c4f408abb68d15d678d09ac4",
+      "title": "Research Tower",
+      "id": "original/buildings/research_tower",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/research_tower.glb",
+        "version": "22ee71ebef473aec72d869d49cc1faa12d724ed8c4f408abb68d15d678d09ac4"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/fantasy_observatory_cottage_diorama.png",
+        "version": "c3b363a31db8c613a6e3c08290249a9921e9cabc80a22a52d1b3b5c94334c81a"
+      },
+      "preview": {
+        "path": "exports/previews/research_tower.png",
+        "version": "f8605af8c3ab447df0b8e8b22c00a3d197a6d3fa47b8508f78fd65877af82f0f"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/research_tower.png",
+        "version": "59a3c19bd8eec55740bac0966b4405bfaad326c7ce2513b65c5b4ffe3848575e"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1279604,
+      "triangles": 21979,
+      "materials": 27,
+      "animations": [],
+      "version": "b794740ad916ed966cdde669e0fe582820b30051524260cdf8564b39e732d384",
+      "title": "Stone Cutter",
+      "id": "original/buildings/stone_cutter",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/stone_cutter.glb",
+        "version": "b794740ad916ed966cdde669e0fe582820b30051524260cdf8564b39e732d384"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/stone_cutter.png",
+        "version": "76808fc1cd077b5658ed7de2b83248213a194e09a65b6794c859b373323058fd"
+      },
+      "preview": {
+        "path": "exports/previews/stone_cutter.png",
+        "version": "a63b683339af18b06c7075da1a31adc4632ea3b72eda68adfea6668a6adac22b"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/stone_cutter.png",
+        "version": "9a0b2d8eca4cb571938290de54fc03ea4adf0be828cd8ef3008c0ca8ab2732e9"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1562028,
+      "triangles": 27134,
+      "materials": 35,
+      "animations": [],
+      "version": "2a72735cd74e43cecee0c2ea777d3657cfad4e2f57a950a545805700f67dff29",
+      "title": "Tavern",
+      "id": "original/buildings/tavern",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/tavern.glb",
+        "version": "2a72735cd74e43cecee0c2ea777d3657cfad4e2f57a950a545805700f67dff29"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/tavern.png",
+        "version": "9ec237a6113ea27481129f8368fe81d2af7a93bd14b773b1f5fb47d512f8fe93"
+      },
+      "preview": {
+        "path": "exports/previews/tavern.png",
+        "version": "1ea1feb8962978adbc51f8ad6d564a82c5c3e00de31ab0b0ae28180468397f53"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/tavern.png",
+        "version": "683a1ce0ba546b08af4a844085572b8f4b5ff641558c3a65ef2632f0090e22aa"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 8849548,
+      "triangles": 88355,
+      "materials": 30,
+      "animations": [],
+      "version": "d4e38bbf4a1754701211f937b6eee79fb105b03a13e547c179ba18172822150b",
+      "title": "Town Hall",
+      "id": "original/buildings/town_hall",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/town_hall.glb",
+        "version": "d4e38bbf4a1754701211f937b6eee79fb105b03a13e547c179ba18172822150b"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/fantasy_town_hall_diorama.png",
+        "version": "14dbfcad395fd4746bfefc68c4d618a7d1f7bcee61fd9385a84d52c900cb3693"
+      },
+      "preview": {
+        "path": "exports/previews/town_hall.png",
+        "version": "4d417a2fbf226de261b01c37535ae91c6c47dfb37d91d2ce564185419cc04ca9"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/town_hall.png",
+        "version": "ca18f305090de12a64138ba08b829ea6ed6fa205d99701dca8b573f0112c2fb2"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1256240,
+      "triangles": 21808,
+      "materials": 29,
+      "animations": [],
+      "version": "3279b62cc6eb67da1ff95210b91735575daa0aa93f1ddf79e8ad3b8ab6d09fdb",
+      "title": "Trade Market",
+      "id": "original/buildings/trade_market",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/trade_market.glb",
+        "version": "3279b62cc6eb67da1ff95210b91735575daa0aa93f1ddf79e8ad3b8ab6d09fdb"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/trade_market.png",
+        "version": "a0403cc931c47d20f6265b43cc9f31d6ff3c11c31166659bc1b782c8345133dc"
+      },
+      "preview": {
+        "path": "exports/previews/trade_market.png",
+        "version": "788e628b8b09c8c92898ad799182b85a1f4b6277b436612a023ce73e86a3c22d"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/trade_market.png",
+        "version": "19a43d27f7ee9a4da3472f9e645c1fe3708f3962ed1eb421ed52913cc974fb68"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 796256,
+      "triangles": 12637,
+      "materials": 15,
+      "animations": [],
+      "version": "77b46f53fa0dc56e1a7102e9f14dd4d04ad474167f4ef626c8c718519d476d5e",
+      "title": "Tree House",
+      "id": "original/buildings/tree_house",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/tree_house.glb",
+        "version": "77b46f53fa0dc56e1a7102e9f14dd4d04ad474167f4ef626c8c718519d476d5e"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          0,
+          0,
+          382,
+          440
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/tree_house.png",
+        "version": "8e990e8b4dd8863fd5866da2c92beed82d940aef2f78d18e38874e2cea6fff2d"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/tree_house.png",
+        "version": "f1069a2ad998f06f76f8c159800ae4266d6392affba7fc267caabd96e94ea458"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 5427916,
+      "triangles": 38908,
+      "materials": 33,
+      "animations": [],
+      "version": "bbffda6346918180bfe8b72cd54870dde97559cafc66309e078c52318c1f5247",
+      "title": "Weaver",
+      "id": "original/buildings/weaver",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/weaver.glb",
+        "version": "bbffda6346918180bfe8b72cd54870dde97559cafc66309e078c52318c1f5247"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/more_buildings/cozy_fantasy_weaver_s_workshop.png",
+        "version": "049526aa24b29815ed66c9a6c12c9da09ebdea934057d8ffa31fcbdd8557fb91"
+      },
+      "preview": {
+        "path": "exports/previews/weaver.png",
+        "version": "32dbc3d32033cec2bef93d1ea96e57687c3330b4da015c7a9ae94f2b03f6536c"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/weaver.png",
+        "version": "f089aa2c7c874704c468c94360815bc44da918d6bf566a269ad4e103ed089a10"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1376604,
+      "triangles": 24383,
+      "materials": 20,
+      "animations": [],
+      "version": "145107c3a2f3154da970bd1a76ecfba0110af7c841aa211324ac6415d39e33ee",
+      "title": "Woodcutter’s Hut",
+      "id": "original/buildings/woodcutter_hut",
+      "category": "buildings",
+      "model": {
+        "path": "exports/original/buildings/woodcutter_hut.glb",
+        "version": "145107c3a2f3154da970bd1a76ecfba0110af7c841aa211324ac6415d39e33ee"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          1153,
+          0,
+          383,
+          440
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/woodcutter_hut.png",
+        "version": "c5c1cf2b26b3ffbbdda13ba6d4d8df84336d6e25c067ba5009f5e8024e354d7b"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/buildings/woodcutter_hut.png",
+        "version": "3f9a76f110a4f571a66fefe11d9ae79bbc3cde5a94bfa1fcb1ce7e0a46d5a595"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 455172,
+      "triangles": 4158,
+      "materials": 14,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666666666667,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666666666667,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666666666666,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416666666666665,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666666666666,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666666666667,
+          "loop": null
+        }
+      ],
+      "version": "904f890755acd43276e5f4f832a0194ac7f2485b07095f44a40f1990d700fc42",
+      "title": "Archer",
+      "id": "original/characters/archer",
+      "category": "characters",
+      "model": {
+        "path": "exports/original/characters/archer.glb",
+        "version": "904f890755acd43276e5f4f832a0194ac7f2485b07095f44a40f1990d700fc42"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          989,
+          515,
+          547,
+          388
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/archer.png",
+        "version": "65101e81ff5efe0cd4b38ed31465a6e2aa9ac2346231ad343eba3bfd0f479011"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/characters/archer.png",
+        "version": "aacef9950aa10251cfe194d6c10050fa20be4ab00e8dca10868ca5e0618af037"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1080084,
+      "triangles": 9335,
+      "materials": 17,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666666666667,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666666666667,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666666666666,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416666666666665,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666666666666,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666666666667,
+          "loop": null
+        }
+      ],
+      "version": "a9782457f77466439d5881f6c0051cd84ad7173ec6a364aac8a094a4cfa25930",
+      "title": "Berserker",
+      "id": "original/characters/berserker",
+      "category": "characters",
+      "model": {
+        "path": "exports/original/characters/berserker.glb",
+        "version": "a9782457f77466439d5881f6c0051cd84ad7173ec6a364aac8a094a4cfa25930"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/autobattler/berserker.png",
+        "version": "2d99bbd6edd74aaf4b860f8ea0e76ad4766f2be1233089568a65dfa9cfa14e05"
+      },
+      "preview": {
+        "path": "exports/previews/berserker.png",
+        "version": "74490634d44e492255492250aac7b37a8839ba8cb0e021de2abe4cccbfd9779a"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/characters/berserker.png",
+        "version": "5593962232affebabcc91b90015dfc4f41d5290d4aae0d4396624c98b3d78d5e"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 716616,
+      "triangles": 7821,
+      "materials": 15,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666666666667,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666666666667,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666666666666,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416666666666665,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666666666666,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666666666667,
+          "loop": null
+        }
+      ],
+      "version": "3902fd908b742c9ab2b3e5d8dfcb052a2e61dde50ee56fc48eec0041893fe3fb",
+      "title": "Evil Berserker Unit",
+      "id": "original/characters/evil_berserker_unit",
+      "category": "characters",
+      "model": {
+        "path": "exports/original/characters/evil_berserker_unit.glb",
+        "version": "3902fd908b742c9ab2b3e5d8dfcb052a2e61dde50ee56fc48eec0041893fe3fb"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_berserker_unit.png",
+        "version": "12e210b3e8396ab5c68434ef1da002ec3b1ab5d0372bc24c2e3b16175bc21525",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/evil_berserker_unit.png",
+        "version": "75c12746c9dee260ea70bec5e57f6099635399261708f4dc384372ad4c5f70bb"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/characters/evil_berserker_unit.png",
+        "version": "df709160bab57250a8fa273cd626af5548565d110aa2bf244b075810e5e393a1"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 631112,
+      "triangles": 6821,
+      "materials": 16,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666666666667,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666666666667,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666666666666,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416666666666665,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666666666666,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666666666667,
+          "loop": null
+        }
+      ],
+      "version": "e7c0d79a21d618124db1a43258110c830e0a6a4163144f092107294edfab438d",
+      "title": "Evil Mage Unit",
+      "id": "original/characters/evil_mage_unit",
+      "category": "characters",
+      "model": {
+        "path": "exports/original/characters/evil_mage_unit.glb",
+        "version": "e7c0d79a21d618124db1a43258110c830e0a6a4163144f092107294edfab438d"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_mage_unit.png",
+        "version": "d1b1d2a5a2e5b47013d9266b4a4c35f026d04339ca4f1c552c0e7bd662a53c13",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/evil_mage_unit.png",
+        "version": "5bbafcea6b79323934fef31d94f5d898cbc84d080dfd3400dfc7317650d6cb5e"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/characters/evil_mage_unit.png",
+        "version": "4edf9a05d7c7f3c0a200092cfad5a60a385af78e939fdb7ac8f3bf20c029cfbb"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 791840,
+      "triangles": 8535,
+      "materials": 15,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666666666667,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666666666667,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666666666666,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416666666666665,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666666666666,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666666666667,
+          "loop": null
+        }
+      ],
+      "version": "9d97c29db7eb0e1639508b0ec7943bb7bd062bda5fed8a24219d92c9a7bc3e84",
+      "title": "Evil Melee Unit",
+      "id": "original/characters/evil_melee_unit",
+      "category": "characters",
+      "model": {
+        "path": "exports/original/characters/evil_melee_unit.glb",
+        "version": "9d97c29db7eb0e1639508b0ec7943bb7bd062bda5fed8a24219d92c9a7bc3e84"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_melee_unit.png",
+        "version": "856210e62968b55391b0942f59530a7d44f2a998a6ac06142af4eed0805d1b79",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/evil_melee_unit.png",
+        "version": "0e2bfb6a266e2c0607cc26880078ce537f64544f3fc6bd00801dc20d0d29be14"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/characters/evil_melee_unit.png",
+        "version": "dd62373df737a3e3d871587a8362437e22dd174d7cdd269b985f8278d7a4aa3a"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 712228,
+      "triangles": 7151,
+      "materials": 23,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666666666667,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666666666667,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666666666666,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416666666666665,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666666666666,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666666666667,
+          "loop": null
+        }
+      ],
+      "version": "5808c64a27e3ae9e0ce193c1b979625d76c55b50d96bc390e73415a5df7a95bc",
+      "title": "Evil Ranged Unit",
+      "id": "original/characters/evil_ranged_unit",
+      "category": "characters",
+      "model": {
+        "path": "exports/original/characters/evil_ranged_unit.glb",
+        "version": "5808c64a27e3ae9e0ce193c1b979625d76c55b50d96bc390e73415a5df7a95bc"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/evil_autobattler/evil_ranged_unit.png",
+        "version": "576e0a0d4c32f86a79cc023d574ef73279ef15cc3c85717b675eef09183eeb28",
+        "crop": [
+          0,
+          0,
+          1024,
+          1024
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/evil_ranged_unit.png",
+        "version": "894cc20d7b03f0f23f51aed52505dbba4f487b2a06d520e0c75f5914dbadfe29"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/characters/evil_ranged_unit.png",
+        "version": "4ef9b03d137d317b813cf2b5a026e6c38c3a93d272f84525688ff7d7aeaf457e"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 662780,
+      "triangles": 6986,
+      "materials": 13,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666666666667,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666666666667,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666666666666,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416666666666665,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666666666666,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666666666667,
+          "loop": null
+        }
+      ],
+      "version": "1ffa02091ffae7617cd7cbb1c1108150703409086e8380f12c080e9f6bbb2130",
+      "title": "Knight",
+      "id": "original/characters/knight",
+      "category": "characters",
+      "model": {
+        "path": "exports/original/characters/knight.glb",
+        "version": "1ffa02091ffae7617cd7cbb1c1108150703409086e8380f12c080e9f6bbb2130"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          0,
+          515,
+          486,
+          388
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/knight.png",
+        "version": "695235ea6a7ce120ca009e0fe9102fb0fe8010379ab08ad25e7b70a2de857824"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/characters/knight.png",
+        "version": "2864c7a984ad71636a07fbceb7982618f58e02c5a06bf0586e966eb8bd28da49"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 509272,
+      "triangles": 5102,
+      "materials": 12,
+      "animations": [
+        {
+          "name": "attack",
+          "duration": 1.0416666666666667,
+          "loop": null
+        },
+        {
+          "name": "death",
+          "duration": 1.2916666666666667,
+          "loop": null
+        },
+        {
+          "name": "hit",
+          "duration": 0.5416666666666666,
+          "loop": null
+        },
+        {
+          "name": "idle",
+          "duration": 2.0416666666666665,
+          "loop": null
+        },
+        {
+          "name": "run",
+          "duration": 0.7916666666666666,
+          "loop": null
+        },
+        {
+          "name": "walk",
+          "duration": 1.0416666666666667,
+          "loop": null
+        }
+      ],
+      "version": "76b9980295c51ea178878afb6fc7a5ea7e93af2ccf2930e0bcffcbd99ff6ff55",
+      "title": "Mage",
+      "id": "original/characters/mage",
+      "category": "characters",
+      "model": {
+        "path": "exports/original/characters/mage.glb",
+        "version": "76b9980295c51ea178878afb6fc7a5ea7e93af2ccf2930e0bcffcbd99ff6ff55"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/fantasy_village.png",
+        "version": "b25f5421dea51daf82dbed988afd87a6e2e7f8431d5d7db17ea576836ee6b32a",
+        "crop": [
+          488,
+          515,
+          499,
+          388
+        ]
+      },
+      "preview": {
+        "path": "exports/previews/mage.png",
+        "version": "2bab8bf72e57c9f5efb58dc4d6198086c45a4b4c24ed94eebda935a8a9929224"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/characters/mage.png",
+        "version": "41fb0b17ae707f9de04866474485ab2471ea62e84707771fcac69ee3ad82c05d"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 532572,
+      "triangles": 490,
+      "materials": 3,
+      "animations": [],
+      "version": "88d721b332224223a91b03f0185a80079b29da321c126af8f11d70fbf9335c1e",
+      "title": "Forest boulder",
+      "id": "original/environment/components/forest_boulder",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_boulder.glb",
+        "version": "88d721b332224223a91b03f0185a80079b29da321c126af8f11d70fbf9335c1e"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png",
+        "version": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_boulder.png",
+        "version": "ad53264f49e1de0c4ab8e2d0b65c18124d2c92e4d60ffd218cf16e8a2fb31999"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 350896,
+      "triangles": 296,
+      "materials": 3,
+      "animations": [],
+      "version": "3bbe29bf0da09a8854e91fa1a1d0d7cec4101fe364599f97b92258ba2517955e",
+      "title": "Forest bridge plank",
+      "id": "original/environment/components/forest_bridge_plank",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_bridge_plank.glb",
+        "version": "3bbe29bf0da09a8854e91fa1a1d0d7cec4101fe364599f97b92258ba2517955e"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_woodland_bridge_diorama.png",
+        "version": "2a35f71da0afc8ea5d77f2324b294db829f24aebb1e668f9f0aba1d01c130d53"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_bridge_plank.png",
+        "version": "2491712d19f6c861b7761bbe313028580b8e46ad5d4e6cf8552a962099c702e3"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 513848,
+      "triangles": 524,
+      "materials": 4,
+      "animations": [],
+      "version": "3203700af34d91dd830a51bf0c139a5af6bb811d80632e3dc0da9f5b5697a0dc",
+      "title": "Forest bridge post",
+      "id": "original/environment/components/forest_bridge_post",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_bridge_post.glb",
+        "version": "3203700af34d91dd830a51bf0c139a5af6bb811d80632e3dc0da9f5b5697a0dc"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_woodland_bridge_diorama.png",
+        "version": "2a35f71da0afc8ea5d77f2324b294db829f24aebb1e668f9f0aba1d01c130d53"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_bridge_post.png",
+        "version": "ffcae28125dcffda181ec9d637fe457eabb9d1750ac48c5fd39f7ec5b4596936"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 355064,
+      "triangles": 216,
+      "materials": 2,
+      "animations": [],
+      "version": "530d673b3b837a5bec8437fcb0a042be09c6340defbb14eea4144efff549715a",
+      "title": "Forest bridge rail",
+      "id": "original/environment/components/forest_bridge_rail",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_bridge_rail.glb",
+        "version": "530d673b3b837a5bec8437fcb0a042be09c6340defbb14eea4144efff549715a"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_woodland_bridge_diorama.png",
+        "version": "2a35f71da0afc8ea5d77f2324b294db829f24aebb1e668f9f0aba1d01c130d53"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_bridge_rail.png",
+        "version": "0c24a17b3f44b8da4a383716e19dfc3177d6e9d5637bc635dbda860e978b588b"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 557464,
+      "triangles": 1176,
+      "materials": 4,
+      "animations": [],
+      "version": "43067049e83fc117922c16f186133bb991bd31793fe353e6f5f597615028fcf6",
+      "title": "Painted Cyan Butterfly",
+      "id": "original/environment/components/forest_butterfly_cyan",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_butterfly_cyan.glb",
+        "version": "43067049e83fc117922c16f186133bb991bd31793fe353e6f5f597615028fcf6"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_butterfly_cyan.png",
+        "version": "912b6590aa0d527be25828b7963577de05e201249176953c70333fa68fb85b4a"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 557688,
+      "triangles": 1176,
+      "materials": 4,
+      "animations": [],
+      "version": "56134d27ae19dabdf491ef5ae923305196bcc18a1815cf78d3d52ef2ee963594",
+      "title": "Painted Sunset Butterfly",
+      "id": "original/environment/components/forest_butterfly_sunset",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_butterfly_sunset.glb",
+        "version": "56134d27ae19dabdf491ef5ae923305196bcc18a1815cf78d3d52ef2ee963594"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_butterfly_sunset.png",
+        "version": "9c46230012d80aec90addb64967ba47146967accaf1c0fe374e69145b720f1c6"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 3243124,
+      "triangles": 38,
+      "materials": 3,
+      "animations": [],
+      "version": "66bbe689d10d2cc87b262247adb8d461f6c99e0318416a8067efb44eab915a47",
+      "title": "Forest crystal blue",
+      "id": "original/environment/components/forest_crystal_blue",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_crystal_blue.glb",
+        "version": "66bbe689d10d2cc87b262247adb8d461f6c99e0318416a8067efb44eab915a47"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png",
+        "version": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_crystal_blue.png",
+        "version": "3fa6b8caf1b6a9337a644bdcbfdbd56935499b4702756ad3973607ec7ab8f0dc"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 2116972,
+      "triangles": 38,
+      "materials": 2,
+      "animations": [],
+      "version": "43225b52a57a1ca1aa435f7ea40938db4952aae3231d9391f93248656e32c543",
+      "title": "Forest crystal purple",
+      "id": "original/environment/components/forest_crystal_purple",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_crystal_purple.glb",
+        "version": "43225b52a57a1ca1aa435f7ea40938db4952aae3231d9391f93248656e32c543"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png",
+        "version": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_crystal_purple.png",
+        "version": "5d1697831faa83d6c24468d6d921d58575e516344a18ea1726651c968457b167"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 414796,
+      "triangles": 576,
+      "materials": 2,
+      "animations": [],
+      "version": "4758429b9344dd459518dccb51807a63353b5cce8d48b3ef97dbf905514d5ec9",
+      "title": "Forest fern",
+      "id": "original/environment/components/forest_fern",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_fern.glb",
+        "version": "4758429b9344dd459518dccb51807a63353b5cce8d48b3ef97dbf905514d5ec9"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png",
+        "version": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_fern.png",
+        "version": "ab3efc9d891720b026c7a27deca6e38226c1bd4f7e45e02303ce750c021ddb5a"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1366764,
+      "triangles": 976,
+      "materials": 2,
+      "animations": [],
+      "version": "a6b6b5d01a5e52263786e58b577b41815d704c454cb93d81a877c5dfa66092e8",
+      "title": "Forest foam",
+      "id": "original/environment/components/forest_foam",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_foam.glb",
+        "version": "a6b6b5d01a5e52263786e58b577b41815d704c454cb93d81a877c5dfa66092e8"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png",
+        "version": "1b70936dbe0d39db9121c683712fd98c5825e1fccd16f92401c4c5af2f066d53"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_foam.png",
+        "version": "66c10b842004e318e458a3ffb62e6e67f613cc3c392ac04df3887ea1c901edf5"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 355240,
+      "triangles": 132,
+      "materials": 4,
+      "animations": [],
+      "version": "36406de0a4db79e007694d1b2e83418ed1e46ea370c9b65780ea93be676d4829",
+      "title": "Forest hex meadow",
+      "id": "original/environment/components/forest_hex_meadow",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_hex_meadow.glb",
+        "version": "36406de0a4db79e007694d1b2e83418ed1e46ea370c9b65780ea93be676d4829"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png",
+        "version": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_hex_meadow.png",
+        "version": "fdd43d1c2a666719ec00dbcf381bd958c23c90f7c1d7b38a4b894813387ebe66"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 522936,
+      "triangles": 216,
+      "materials": 5,
+      "animations": [],
+      "version": "c83cf0f4509e2183a20eff14d8a82f97ef687edc8ab3e46c8d66ac008aac315b",
+      "title": "Forest hex stream",
+      "id": "original/environment/components/forest_hex_stream",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_hex_stream.glb",
+        "version": "c83cf0f4509e2183a20eff14d8a82f97ef687edc8ab3e46c8d66ac008aac315b"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png",
+        "version": "1b70936dbe0d39db9121c683712fd98c5825e1fccd16f92401c4c5af2f066d53"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_hex_stream.png",
+        "version": "1192d69a3c5762467c30a0798e71b9941f4397f2ddd4db537a22ada7f440892e"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 2280864,
+      "triangles": 6288,
+      "materials": 6,
+      "animations": [],
+      "version": "c8f5cf4f06aef9cc7414d879cd3bb4755407fbec4169c5c4f5aa8d22e678f8ea",
+      "title": "Hollow Watcher Tree",
+      "id": "original/environment/components/forest_hollow_tree",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_hollow_tree.glb",
+        "version": "c8f5cf4f06aef9cc7414d879cd3bb4755407fbec4169c5c4f5aa8d22e678f8ea"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_hollow_tree.png",
+        "version": "9300546056fb431efe3f37d5be14f8c4e5a552cd099dbe4439a1810e510eacd1"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 832100,
+      "triangles": 6232,
+      "materials": 6,
+      "animations": [],
+      "version": "f6d8ff16aec90fb4e3960a99f9412a0fc80365a6aef1fb463159883e29ab5448",
+      "title": "Lavender Jackalope",
+      "id": "original/environment/components/forest_jackalope",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_jackalope.glb",
+        "version": "f6d8ff16aec90fb4e3960a99f9412a0fc80365a6aef1fb463159883e29ab5448"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_jackalope.png",
+        "version": "7a8839793ca4a71514f825cbb50b4c588cc4a40a35933b48f8c5a1990d6ce965"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 513188,
+      "triangles": 424,
+      "materials": 3,
+      "animations": [],
+      "version": "cb386f1001b948e126970bb0d51fc3e87e19639d9cd1e8269070066d89ab456e",
+      "title": "Hanging Lantern Flower",
+      "id": "original/environment/components/forest_lantern_flower",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_lantern_flower.glb",
+        "version": "cb386f1001b948e126970bb0d51fc3e87e19639d9cd1e8269070066d89ab456e"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_lantern_flower.png",
+        "version": "32d68d312d457fac8dcc8b3b4d5767123e943a34cd9a1369b57c2a507913aacd"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 814724,
+      "triangles": 1196,
+      "materials": 6,
+      "animations": [],
+      "version": "3dc307419001367a0954c26d7e68294ce538f9ff6d4c454595dbb569e5c9b87d",
+      "title": "Forest lantern post",
+      "id": "original/environment/components/forest_lantern_post",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_lantern_post.glb",
+        "version": "3dc307419001367a0954c26d7e68294ce538f9ff6d4c454595dbb569e5c9b87d"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png",
+        "version": "1b70936dbe0d39db9121c683712fd98c5825e1fccd16f92401c4c5af2f066d53"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_lantern_post.png",
+        "version": "5972eea9874fa72da043e6376afdffaea54d40d7c9960aec1c8b26e4399fe826"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 887236,
+      "triangles": 2970,
+      "materials": 6,
+      "animations": [],
+      "version": "b2693993b574e86743cfa5cb133831be1483e70d99af8121886f731bae4b9c65",
+      "title": "Lantern Snail",
+      "id": "original/environment/components/forest_lantern_snail",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_lantern_snail.glb",
+        "version": "b2693993b574e86743cfa5cb133831be1483e70d99af8121886f731bae4b9c65"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_lantern_snail.png",
+        "version": "3bca882b055404c86e185ec0033f4f95940369734662ff2e8d59081a3da6a355"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 334612,
+      "triangles": 48,
+      "materials": 2,
+      "animations": [],
+      "version": "3b41297dc9e70d3d111b13c911bd272aa58e808531b8d59ef54ad3fccad86a09",
+      "title": "Forest leaf clump",
+      "id": "original/environment/components/forest_leaf_clump",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_leaf_clump.glb",
+        "version": "3b41297dc9e70d3d111b13c911bd272aa58e808531b8d59ef54ad3fccad86a09"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png",
+        "version": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_leaf_clump.png",
+        "version": "f4cbafcc58b81d13c213a5cb4e275ae4ebd4da86dd0b182862b6b15c14864eef"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 443248,
+      "triangles": 1120,
+      "materials": 3,
+      "animations": [],
+      "version": "d5f8a0224aa3d36342d9c2c9b993e630919985ce9071a8a4c445c6e0549aef48",
+      "title": "Long-Tailed Moon Moth",
+      "id": "original/environment/components/forest_moon_moth",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_moon_moth.glb",
+        "version": "d5f8a0224aa3d36342d9c2c9b993e630919985ce9071a8a4c445c6e0549aef48"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_moon_moth.png",
+        "version": "58cbdb254a48d44cfb3035607d9987b0ddc62f0dde9bfbaf4f5d73bb50365943"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 344188,
+      "triangles": 300,
+      "materials": 2,
+      "animations": [],
+      "version": "12ddfecd05b27bd16faeaf73b0965d381a81428567341f762d8ec625205d8469",
+      "title": "Forest moss",
+      "id": "original/environment/components/forest_moss",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_moss.glb",
+        "version": "12ddfecd05b27bd16faeaf73b0965d381a81428567341f762d8ec625205d8469"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png",
+        "version": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_moss.png",
+        "version": "3ec69664573e872a5f02e9e3048bf97d9d6fb3eabc3fb1d6726c117f758e274d"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1619716,
+      "triangles": 1900,
+      "materials": 5,
+      "animations": [],
+      "version": "b34f746791a47c73b4608a732900521c4cc11e7cb810f2ce2304a6849a4c6c91",
+      "title": "Forest mushroom blue",
+      "id": "original/environment/components/forest_mushroom_blue",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_mushroom_blue.glb",
+        "version": "b34f746791a47c73b4608a732900521c4cc11e7cb810f2ce2304a6849a4c6c91"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_glowing_mushroom_grove.png",
+        "version": "0d8e2898d05e862c6bdf7dd9cdeb8a9753db30be789e91c9ddc8d55fb657fdc3"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_mushroom_blue.png",
+        "version": "3b59abfb9d4f20c617668ebb8599f75e8b07ae4657ecbb1b66150f9faef18552"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1629700,
+      "triangles": 1900,
+      "materials": 5,
+      "animations": [],
+      "version": "fe6e178aa81e09e163ed69d7c96a5e196c73cdc87f766508cfbce985917abd91",
+      "title": "Forest mushroom purple",
+      "id": "original/environment/components/forest_mushroom_purple",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_mushroom_purple.glb",
+        "version": "fe6e178aa81e09e163ed69d7c96a5e196c73cdc87f766508cfbce985917abd91"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_glowing_mushroom_grove.png",
+        "version": "0d8e2898d05e862c6bdf7dd9cdeb8a9753db30be789e91c9ddc8d55fb657fdc3"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_mushroom_purple.png",
+        "version": "f3fa984c55521bab258e34fdbf19a6b4123f945c9e40bf162263e53e0a53edc4"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1619876,
+      "triangles": 1900,
+      "materials": 5,
+      "animations": [],
+      "version": "c98d4556cb00aafd690419a9a1298bd6b5aa01cc25dd02a56d107e212aec2f27",
+      "title": "Forest mushroom small",
+      "id": "original/environment/components/forest_mushroom_small",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_mushroom_small.glb",
+        "version": "c98d4556cb00aafd690419a9a1298bd6b5aa01cc25dd02a56d107e212aec2f27"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_glowing_mushroom_grove.png",
+        "version": "0d8e2898d05e862c6bdf7dd9cdeb8a9753db30be789e91c9ddc8d55fb657fdc3"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_mushroom_small.png",
+        "version": "ea4e5fd2df2d90c0b2c753ae6b724ff2d4e3a94d0268c85c583dcb9df6964edd"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 417868,
+      "triangles": 140,
+      "materials": 3,
+      "animations": [],
+      "version": "05e9b439119815638f850301327865d9379931eb172c5e998e91d473147a72a4",
+      "title": "Forest root",
+      "id": "original/environment/components/forest_root",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_root.glb",
+        "version": "05e9b439119815638f850301327865d9379931eb172c5e998e91d473147a72a4"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_bioluminescent_mushroom_grove.png",
+        "version": "0baaa0e3cc9d312e4c4eee2399e6157fca0c68793fda689adda8d22fe68fe481"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_root.png",
+        "version": "9f6327ff7d6dd699bd7de3c82e6522811e9be5f7a79dcd49206e80cc6cca6ef8"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 122584,
+      "triangles": 1408,
+      "materials": 2,
+      "animations": [],
+      "version": "50e7e76938c15693fa655e751ec4648beef7e69f29691a555bb1febc4a3f8ed2",
+      "title": "Forest rune circle",
+      "id": "original/environment/components/forest_rune_circle",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_rune_circle.glb",
+        "version": "50e7e76938c15693fa655e751ec4648beef7e69f29691a555bb1febc4a3f8ed2"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png",
+        "version": "c3000fe81c2f8a676f770c9a03d6468e154c36873c9f36f3af02fd8b6ce81dae"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_rune_circle.png",
+        "version": "5162a32132e10269bf4332edb6d9f175b7cdb77e208b3e5fde94be251090655b"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 16612,
+      "triangles": 156,
+      "materials": 2,
+      "animations": [],
+      "version": "8df109603befea666f724ab5c0dd78f56c916c02c95fba857b4874684de09cf2",
+      "title": "Forest rune diamond",
+      "id": "original/environment/components/forest_rune_diamond",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_rune_diamond.glb",
+        "version": "8df109603befea666f724ab5c0dd78f56c916c02c95fba857b4874684de09cf2"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png",
+        "version": "c3000fe81c2f8a676f770c9a03d6468e154c36873c9f36f3af02fd8b6ce81dae"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_rune_diamond.png",
+        "version": "817cb30064bfa18c6bcb301c32169ff674a14fe6dba26a73ae712fdac6dfea15"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 390584,
+      "triangles": 368,
+      "materials": 3,
+      "animations": [],
+      "version": "c6fb4c929116d719923852d02c7cc8197fd94131d753a54866c1c50d82c2df60",
+      "title": "Forest rune monolith",
+      "id": "original/environment/components/forest_rune_monolith",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_rune_monolith.glb",
+        "version": "c6fb4c929116d719923852d02c7cc8197fd94131d753a54866c1c50d82c2df60"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png",
+        "version": "c3000fe81c2f8a676f770c9a03d6468e154c36873c9f36f3af02fd8b6ce81dae"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_rune_monolith.png",
+        "version": "9d635150eacecce0fcf8b1328096ef707c94bf8d502968038cb55a2e0f394bae"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 443148,
+      "triangles": 1304,
+      "materials": 3,
+      "animations": [],
+      "version": "0048c6c81f4a0e17c506a935b8b3525f3ee8953e4765622d1c7359d972117ebe",
+      "title": "Forest shrine plinth",
+      "id": "original/environment/components/forest_shrine_plinth",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_shrine_plinth.glb",
+        "version": "0048c6c81f4a0e17c506a935b8b3525f3ee8953e4765622d1c7359d972117ebe"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png",
+        "version": "c3000fe81c2f8a676f770c9a03d6468e154c36873c9f36f3af02fd8b6ce81dae"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_shrine_plinth.png",
+        "version": "1c8937da58856684699b591b0764cc759c6273ae9deb61cfb327177d403f2f7f"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 440444,
+      "triangles": 1152,
+      "materials": 2,
+      "animations": [],
+      "version": "dbc8161adb560e647dfdbe1965f660e33d882ba666b1f2a7d411b4e3e3a8b306",
+      "title": "Dream Spiral Fern",
+      "id": "original/environment/components/forest_spiral_fern",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_spiral_fern.glb",
+        "version": "dbc8161adb560e647dfdbe1965f660e33d882ba666b1f2a7d411b4e3e3a8b306"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_spiral_fern.png",
+        "version": "d8d1c1ea4fd6520eeeb1ebf85575f948291bed28e786b915ffcb531257795c03"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1038932,
+      "triangles": 3798,
+      "materials": 5,
+      "animations": [],
+      "version": "c49a9dfd4cd1ebd52a05c04eddeeb72c88fb83eee599410764fe1c2981b82260",
+      "title": "Dream Spiral Willow",
+      "id": "original/environment/components/forest_spiral_tree",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_spiral_tree.glb",
+        "version": "c49a9dfd4cd1ebd52a05c04eddeeb72c88fb83eee599410764fe1c2981b82260"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_spiral_tree.png",
+        "version": "3aeb9bd3c048956e02aa97ac98efc3c139821a9751f4cbb978b2a64912fc80e4"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 228780,
+      "triangles": 108,
+      "materials": 1,
+      "animations": [],
+      "version": "058ec621f97be94b7d78717830c00341b7f3841d009f080b417477d8be90ec80",
+      "title": "Forest stone arch block",
+      "id": "original/environment/components/forest_stone_arch_block",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_stone_arch_block.glb",
+        "version": "058ec621f97be94b7d78717830c00341b7f3841d009f080b417477d8be90ec80"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png",
+        "version": "1b70936dbe0d39db9121c683712fd98c5825e1fccd16f92401c4c5af2f066d53"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_stone_arch_block.png",
+        "version": "7136f3a1340d97e8b44c0cf4085ac24ddf047b7e09ccf5488631fd4dd8757d1b"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 228764,
+      "triangles": 108,
+      "materials": 1,
+      "animations": [],
+      "version": "69c953ea885275355092859af46f1afe13d65babef98c78d612ce33ec4c35f48",
+      "title": "Forest stone block",
+      "id": "original/environment/components/forest_stone_block",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_stone_block.glb",
+        "version": "69c953ea885275355092859af46f1afe13d65babef98c78d612ce33ec4c35f48"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png",
+        "version": "1b70936dbe0d39db9121c683712fd98c5825e1fccd16f92401c4c5af2f066d53"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_stone_block.png",
+        "version": "26c3998ed5c317115bcd36a454603a2c90bcd43d7c8591b41ca8fc9d435e12dd"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 441064,
+      "triangles": 410,
+      "materials": 3,
+      "animations": [],
+      "version": "6f3920303ed5104cb1fc554dc45b7b42c175420212391d5d8a17c2ca0c551c3e",
+      "title": "Forest tree snag",
+      "id": "original/environment/components/forest_tree_snag",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_tree_snag.glb",
+        "version": "6f3920303ed5104cb1fc554dc45b7b42c175420212391d5d8a17c2ca0c551c3e"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_bioluminescent_mushroom_grove.png",
+        "version": "0baaa0e3cc9d312e4c4eee2399e6157fca0c68793fda689adda8d22fe68fe481"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_tree_snag.png",
+        "version": "0503135a7bc7feae010354b64a0215133593d75d0846a1c94d3c2ad5e560637c"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 1307000,
+      "triangles": 168,
+      "materials": 3,
+      "animations": [],
+      "version": "8438d9f1b06450daa5d4e4ad48dd3dac43cd09eb4056bd8b4c293e5bcde205a4",
+      "title": "Forest waterfall",
+      "id": "original/environment/components/forest_waterfall",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/components/forest_waterfall.glb",
+        "version": "8438d9f1b06450daa5d4e4ad48dd3dac43cd09eb4056bd8b4c293e5bcde205a4"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png",
+        "version": "1b70936dbe0d39db9121c683712fd98c5825e1fccd16f92401c4c5af2f066d53"
+      },
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/components/forest_waterfall.png",
+        "version": "53ce8a5070bbc14dba9aee8ba14e4e0f40a70943c268d3af7e52fc91ecf77661"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 6879756,
+      "triangles": 8392,
+      "materials": 41,
+      "animations": [],
+      "version": "8b94aa8c805109f35af8459de70c538557493f2c1f87c0039be84f368b215720",
+      "title": "Bioluminescent Grove",
+      "id": "original/environment/hex_bioluminescent_grove",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_bioluminescent_grove.glb",
+        "version": "8b94aa8c805109f35af8459de70c538557493f2c1f87c0039be84f368b215720"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_bioluminescent_mushroom_grove.png",
+        "version": "0baaa0e3cc9d312e4c4eee2399e6157fca0c68793fda689adda8d22fe68fe481"
+      },
+      "preview": {
+        "path": "exports/previews/hex_bioluminescent_grove.png",
+        "version": "89a9cb3520336a8e452461387dd2113ea7a098ec9ac8818ec4afe30fbd602ce1"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_bioluminescent_grove.png",
+        "version": "3a1d78e8e34108c4ba37720caf7b8c3bc81a7819662008b7f3dc3268f9e50cba"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 6042676,
+      "triangles": 14234,
+      "materials": 45,
+      "animations": [],
+      "version": "88f0569f9c880509f93acb2f8c4f3bebee94506b070d66d3de339d3fef233cb9",
+      "title": "Butterfly Dream Glade",
+      "id": "original/environment/hex_butterfly_glade",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_butterfly_glade.glb",
+        "version": "88f0569f9c880509f93acb2f8c4f3bebee94506b070d66d3de339d3fef233cb9"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/hex_butterfly_glade.png",
+        "version": "6f4ac5dfd6f4f3e6da40c5b911e3fcab549b7ba36f5953880031f78675e66fc2"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_butterfly_glade.png",
+        "version": "cafde69a3e867d6f589cc775da0d7a8ec7dc60591a7263ec4e4279701d80bb82"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 8572872,
+      "triangles": 8248,
+      "materials": 40,
+      "animations": [],
+      "version": "065f7a0e01e07565eac078fd1b2cbc4eef2f2d2ee562fa197dc507550ecd8169",
+      "title": "Crystal Grove",
+      "id": "original/environment/hex_crystal_grove",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_crystal_grove.glb",
+        "version": "065f7a0e01e07565eac078fd1b2cbc4eef2f2d2ee562fa197dc507550ecd8169"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_grove_tile.png",
+        "version": "c3a79ec55a75539bc840248b3992d9fca7d445266e54721eeddd76615f868abc"
+      },
+      "preview": {
+        "path": "exports/previews/hex_crystal_grove.png",
+        "version": "6af51aee831675fd9cd7e7d76ad22d3d02000292d2aa3c365d757446dbf807d6"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_crystal_grove.png",
+        "version": "703818f83ffd8166a0714e3d105605ef585d9bc92f1a6a9a062abe4c24cb1957"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 8785512,
+      "triangles": 10748,
+      "materials": 44,
+      "animations": [],
+      "version": "7e6ac9aa491a2bda302fb4d80a58959e23d369ad3b170bc0268496628f6a9279",
+      "title": "Crystal Shrine",
+      "id": "original/environment/hex_crystal_shrine",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_crystal_shrine.glb",
+        "version": "7e6ac9aa491a2bda302fb4d80a58959e23d369ad3b170bc0268496628f6a9279"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_crystal_shrine_diorama.png",
+        "version": "5aac6480a3fba6d485b2ba53823328039b837a24c3c77bdfbd4d791a1f9107e8"
+      },
+      "preview": {
+        "path": "exports/previews/hex_crystal_shrine.png",
+        "version": "1b27e2ae847374e469af6612d7f4bb4b6e494689a4defe034084b8d0b4312f0a"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_crystal_shrine.png",
+        "version": "0cb4c4ad24a1b61f96ce859ff7800d5a7c352dee39f63ccf546a5e53fe98594d"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 8390756,
+      "triangles": 20456,
+      "materials": 56,
+      "animations": [],
+      "version": "b951f6fffc707a2b7ef3314e0659f4c72450dddec9ebb58bb4f55098433bb67a",
+      "title": "Dream Forest Menagerie",
+      "id": "original/environment/hex_dream_menagerie",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_dream_menagerie.glb",
+        "version": "b951f6fffc707a2b7ef3314e0659f4c72450dddec9ebb58bb4f55098433bb67a"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/hex_dream_menagerie.png",
+        "version": "787fc0f91a3ab8f08f4aa76999ede6e44779d77a1e66bc76c4915aa8e9b13df9"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_dream_menagerie.png",
+        "version": "e7b258b62f6eb9141d5c2b0bd26b3ad5d0043a428bab0451a3a1bc9118e08dba"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 8514664,
+      "triangles": 7880,
+      "materials": 37,
+      "animations": [],
+      "version": "a2e59df05aa671bcd2ab41dc3363051679c6785a2c1fc2706b415e5a453172a5",
+      "title": "Glowing Mushrooms",
+      "id": "original/environment/hex_glowing_mushrooms",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_glowing_mushrooms.glb",
+        "version": "a2e59df05aa671bcd2ab41dc3363051679c6785a2c1fc2706b415e5a453172a5"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_glowing_mushroom_grove.png",
+        "version": "0d8e2898d05e862c6bdf7dd9cdeb8a9753db30be789e91c9ddc8d55fb657fdc3"
+      },
+      "preview": {
+        "path": "exports/previews/hex_glowing_mushrooms.png",
+        "version": "d5db6c7c6944dfe8715eaa175f525868be52d2dcb8dbe2d58f618c79d617c93a"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_glowing_mushrooms.png",
+        "version": "b79089980824b4ac1b59202fa5f87045f0145eb6b5967ec6603e387342240ea2"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 8267572,
+      "triangles": 19280,
+      "materials": 51,
+      "animations": [],
+      "version": "c3e7367fea62376e21fad6866b1fd8b94fdfb1af3f1005316d7e2353600f9701",
+      "title": "Hollow Watchers Grove",
+      "id": "original/environment/hex_hollow_watchers",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_hollow_watchers.glb",
+        "version": "c3e7367fea62376e21fad6866b1fd8b94fdfb1af3f1005316d7e2353600f9701"
+      },
+      "source": null,
+      "reference": null,
+      "preview": {
+        "path": "exports/previews/hex_hollow_watchers.png",
+        "version": "432bc06365c4df70f2151bb4540c46c44a925ef5393b339d421d0a96ebcd3188"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_hollow_watchers.png",
+        "version": "9af76f66a85046f64f80d9471cf898a5a6139004c56dce9469d436aecc5b1c55"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 7681604,
+      "triangles": 10422,
+      "materials": 49,
+      "animations": [],
+      "version": "7139818ffda722002f52385ed47e46d0fc687ce3bfc03b08d3d292967f338c95",
+      "title": "Lantern Bridge",
+      "id": "original/environment/hex_lantern_bridge",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_lantern_bridge.glb",
+        "version": "7139818ffda722002f52385ed47e46d0fc687ce3bfc03b08d3d292967f338c95"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_lantern_bridge_diorama.png",
+        "version": "1b70936dbe0d39db9121c683712fd98c5825e1fccd16f92401c4c5af2f066d53"
+      },
+      "preview": {
+        "path": "exports/previews/hex_lantern_bridge.png",
+        "version": "88b9ea77ee2791864e3bceac9e684cd578e2d4e42fe6c8df5a8c252b36c62f3a"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_lantern_bridge.png",
+        "version": "671b144077740332b1df23112971cff5717d903f8d76f03e77a826a822e604f5"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 228636,
+      "triangles": 1972,
+      "materials": 14,
+      "animations": [],
+      "version": "240a93d7a6ba3cf88dddea5704327e0c13f52699c00bc923524b69a6726d6c40",
+      "title": "Hex Meadow Building",
+      "id": "original/environment/hex_meadow_building",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_meadow_building.glb",
+        "version": "240a93d7a6ba3cf88dddea5704327e0c13f52699c00bc923524b69a6726d6c40"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_meadow_building.png",
+        "version": "f1659bcab88639a9696b2a7d7c61db0bfe355fd186eea760711b6390eba50a37"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 210264,
+      "triangles": 1724,
+      "materials": 11,
+      "animations": [],
+      "version": "71ada6837e3a1a8bf0b363638ea22947fce902db7297e698910dfff52b1d5ffd",
+      "title": "Hex Meadow Character",
+      "id": "original/environment/hex_meadow_character",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_meadow_character.glb",
+        "version": "71ada6837e3a1a8bf0b363638ea22947fce902db7297e698910dfff52b1d5ffd"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_meadow_character.png",
+        "version": "0529e5bd7cefaa28ef9b462be755836bc7bc65bf0d3d9383cc604b438308bde5"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 8554384,
+      "triangles": 7880,
+      "materials": 37,
+      "animations": [],
+      "version": "2571f36dbfd74a08d078bbbc4daff293d6cf139f97038a1809eedf6bb1cc81c5",
+      "title": "Mystical Grove",
+      "id": "original/environment/hex_mystical_grove",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_mystical_grove.glb",
+        "version": "2571f36dbfd74a08d078bbbc4daff293d6cf139f97038a1809eedf6bb1cc81c5"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/mystical_crystal_grove_diorama.png",
+        "version": "2beb6273fffa63650afc8b4841921a01606f9365bf3c6c453c23e77356c0f488"
+      },
+      "preview": {
+        "path": "exports/previews/hex_mystical_grove.png",
+        "version": "026b5bf3470af18b513dc62380908c3edf48d7ae8b7bda21059569fec9b4d872"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_mystical_grove.png",
+        "version": "9fa93a4b2ed86694c3cc9ada9f905d1bcf591cd0a7cf2cbf1e4a332f8a749c9c"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 7184748,
+      "triangles": 10218,
+      "materials": 44,
+      "animations": [],
+      "version": "7b762f9055e0cd5e1f35ac698f102e5b70d7525bb54d590896ae20237de6da32",
+      "title": "Rune Shrine",
+      "id": "original/environment/hex_rune_shrine",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_rune_shrine.glb",
+        "version": "7b762f9055e0cd5e1f35ac698f102e5b70d7525bb54d590896ae20237de6da32"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_forest_rune_shrine.png",
+        "version": "c3000fe81c2f8a676f770c9a03d6468e154c36873c9f36f3af02fd8b6ce81dae"
+      },
+      "preview": {
+        "path": "exports/previews/hex_rune_shrine.png",
+        "version": "f9e45959982c51465feadd0466315890224ff67dd6f885a1cfcc73d341b1ecda"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_rune_shrine.png",
+        "version": "c97cfe8f1b09250895688ce8f0dc730304090d4b6a2702d2db27c13c0c4b147c"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 7843060,
+      "triangles": 11394,
+      "materials": 57,
+      "animations": [],
+      "version": "2195443dbb4712b58dc623c3dbf1fa3d3037f212ed3cd30db24f4c026f113024",
+      "title": "Woodland Bridge",
+      "id": "original/environment/hex_woodland_bridge",
+      "category": "environment",
+      "model": {
+        "path": "exports/original/environment/hex_woodland_bridge.glb",
+        "version": "2195443dbb4712b58dc623c3dbf1fa3d3037f212ed3cd30db24f4c026f113024"
+      },
+      "source": null,
+      "reference": {
+        "path": "sources/reference/magical_forest/enchanted_woodland_bridge_diorama.png",
+        "version": "2a35f71da0afc8ea5d77f2324b294db829f24aebb1e668f9f0aba1d01c130d53"
+      },
+      "preview": {
+        "path": "exports/previews/hex_woodland_bridge.png",
+        "version": "40e3335c9a2cf344420c79c9e46d89fcc8db4f5ce1a4c61515be858a91348bbd"
+      },
+      "thumbnail": {
+        "path": "exports/thumbnails/original/environment/hex_woodland_bridge.png",
+        "version": "4521a5b4aa0948422d8c0bb2c575c8668a46a50ec00f679d0a59f09dada15d93"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 4960,
+      "triangles": 30,
+      "materials": 3,
+      "animations": [],
+      "version": "c699a5cfb4c0df39f88fdb4a8c7b29bb4f196589d46c24a13d377423b515c397",
+      "title": "Arrow",
+      "id": "original/props/arrow",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/arrow.glb",
+        "version": "c699a5cfb4c0df39f88fdb4a8c7b29bb4f196589d46c24a13d377423b515c397"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/arrow.png",
+        "version": "5ff48a5e34f4ba33776f3e451f580169c73e79724944ae345c27687456713d30"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 64960,
+      "triangles": 1202,
+      "materials": 6,
+      "animations": [],
+      "version": "ce8e678056501236ef0842476bd390a24e8110b19db420eccb2b29562adcf1a8",
+      "title": "Axe",
+      "id": "original/props/axe",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/axe.glb",
+        "version": "ce8e678056501236ef0842476bd390a24e8110b19db420eccb2b29562adcf1a8"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/axe.png",
+        "version": "dfa0edf3f121030349782310b7d30acaa414217263c0d9963e226ea1fbf721a5"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 64968,
+      "triangles": 1202,
+      "materials": 6,
+      "animations": [],
+      "version": "208bbed25fc15561ea2bba17f9d2e4fffd48f2aa49d3c659424412e5e7110149",
+      "title": "Axe Offhand",
+      "id": "original/props/axe_offhand",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/axe_offhand.glb",
+        "version": "208bbed25fc15561ea2bba17f9d2e4fffd48f2aa49d3c659424412e5e7110149"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/axe_offhand.png",
+        "version": "3c700c6607e268323fec79dbbcaed8d11205e69a975460e79e8cf692b6703ef1"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 15964,
+      "triangles": 248,
+      "materials": 3,
+      "animations": [],
+      "version": "c5725360b6b27da5ff8f127d1eaa84b08cf8d8ec894564d9f1b2cdf16a2dbe84",
+      "title": "Bow",
+      "id": "original/props/bow",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/bow.glb",
+        "version": "c5725360b6b27da5ff8f127d1eaa84b08cf8d8ec894564d9f1b2cdf16a2dbe84"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/bow.png",
+        "version": "fa9cd669f27951d33354c0b3df7fffec2f9af0755c667fea91f6d3df3273e496"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 49168,
+      "triangles": 814,
+      "materials": 7,
+      "animations": [],
+      "version": "b98c917d5829c3065f1cc05fe0b2fdf2745bb834cdb15e689765b372c9b91502",
+      "title": "Crossbow",
+      "id": "original/props/crossbow",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/crossbow.glb",
+        "version": "b98c917d5829c3065f1cc05fe0b2fdf2745bb834cdb15e689765b372c9b91502"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/crossbow.png",
+        "version": "c6b507523e28ae9921f4c14081808a7ca647c283024c3b5683f43a42c3fbfdd9"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 66040,
+      "triangles": 1207,
+      "materials": 7,
+      "animations": [],
+      "version": "68b6548973685d099a689812b81634b6888f070d1aa7e8f27fe808cdb1546122",
+      "title": "Evil Axe",
+      "id": "original/props/evil_axe",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/evil_axe.glb",
+        "version": "68b6548973685d099a689812b81634b6888f070d1aa7e8f27fe808cdb1546122"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/evil_axe.png",
+        "version": "09fac2fb51fe9ea16308185c2c91356ff386799316e4f137dab7dfaba03ec043"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 66040,
+      "triangles": 1207,
+      "materials": 7,
+      "animations": [],
+      "version": "ec530814a8aa485c87383d73892aa987e67a6cb1e49a1a0fe4989f10d1ff2c06",
+      "title": "Evil Axe Offhand",
+      "id": "original/props/evil_axe_offhand",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/evil_axe_offhand.glb",
+        "version": "ec530814a8aa485c87383d73892aa987e67a6cb1e49a1a0fe4989f10d1ff2c06"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/evil_axe_offhand.png",
+        "version": "09fac2fb51fe9ea16308185c2c91356ff386799316e4f137dab7dfaba03ec043"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 11568,
+      "triangles": 154,
+      "materials": 2,
+      "animations": [],
+      "version": "2a5ce2c0d6bbf99087444db11228976f1fd8b3364ebee1e78f95697eca98f583",
+      "title": "Evil Hand Flame",
+      "id": "original/props/evil_hand_flame",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/evil_hand_flame.glb",
+        "version": "2a5ce2c0d6bbf99087444db11228976f1fd8b3364ebee1e78f95697eca98f583"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/evil_hand_flame.png",
+        "version": "1727c848ff03411644c2ca2989ce24679801603c9b0d2af3198d8087c693f4ca"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 65076,
+      "triangles": 1064,
+      "materials": 4,
+      "animations": [],
+      "version": "19ac0f606cb5d9b70529b8ed5e4f2b08a375db9d72c7102c219d75c34aa8e67f",
+      "title": "Evil Shield",
+      "id": "original/props/evil_shield",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/evil_shield.glb",
+        "version": "19ac0f606cb5d9b70529b8ed5e4f2b08a375db9d72c7102c219d75c34aa8e67f"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/evil_shield.png",
+        "version": "2392a032b3b93f78cd8d9cd1e5e5ba9724d7067557434facf68050e4acbe58d9"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 44572,
+      "triangles": 758,
+      "materials": 5,
+      "animations": [],
+      "version": "eb691fe2587d3f986e1ffc517cb1fadfd78fc8bf970d098ca0eb1116e6e1a29e",
+      "title": "Evil Staff",
+      "id": "original/props/evil_staff",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/evil_staff.glb",
+        "version": "eb691fe2587d3f986e1ffc517cb1fadfd78fc8bf970d098ca0eb1116e6e1a29e"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/evil_staff.png",
+        "version": "1fbad677c31d862e4b357bf59e7618d1fa3269b9590bac93eea65bfa37aa8aeb"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 41580,
+      "triangles": 718,
+      "materials": 4,
+      "animations": [],
+      "version": "5c762005c61c0d409d8f4bfc73691e3f5d877935d78ac5bbda8d892bdd2e8856",
+      "title": "Evil Sword",
+      "id": "original/props/evil_sword",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/evil_sword.glb",
+        "version": "5c762005c61c0d409d8f4bfc73691e3f5d877935d78ac5bbda8d892bdd2e8856"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/evil_sword.png",
+        "version": "3650488edb88288e00d7b559f66b6f40b84bc23ed31f530e13c708182aff1cd8"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 4840,
+      "triangles": 28,
+      "materials": 3,
+      "animations": [],
+      "version": "e6abe58dd890875f9145f257f20110ac256126ffefec576974dc54b715c6ecbc",
+      "title": "Kit Arrow",
+      "id": "original/props/kit_arrow",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_arrow.glb",
+        "version": "e6abe58dd890875f9145f257f20110ac256126ffefec576974dc54b715c6ecbc"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_arrow.png",
+        "version": "b6e9b1650af4ffda7c412dffcaab433149e18f3696b40396d7bb6d041e203486"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 64840,
+      "triangles": 1202,
+      "materials": 6,
+      "animations": [],
+      "version": "d114921f83b0c1884476cc84f7a82bc2e716de684cf17eb1de732105630eca3b",
+      "title": "Kit Axe",
+      "id": "original/props/kit_axe",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_axe.glb",
+        "version": "d114921f83b0c1884476cc84f7a82bc2e716de684cf17eb1de732105630eca3b"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_axe.png",
+        "version": "95361f5865bef7d23a0e49f3e49766eb39b620b7ab980b57d642b1334b8b379c"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 43640,
+      "triangles": 688,
+      "materials": 4,
+      "animations": [],
+      "version": "f0b9e517005a7ed474ef812638df72dbc3aa2e4f1b74b7145a0d714993530505",
+      "title": "Kit Barrel",
+      "id": "original/props/kit_barrel",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_barrel.glb",
+        "version": "f0b9e517005a7ed474ef812638df72dbc3aa2e4f1b74b7145a0d714993530505"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_barrel.png",
+        "version": "6a38f2435ea5efa839087513d54a560e2f34e651ee12097fab44851baa0e2c68"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 31024,
+      "triangles": 540,
+      "materials": 3,
+      "animations": [],
+      "version": "7bb672a180d1c47e688a921f50e81e5b91c90742f0e9862b182d71360c34c04a",
+      "title": "Kit Bench",
+      "id": "original/props/kit_bench",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_bench.glb",
+        "version": "7bb672a180d1c47e688a921f50e81e5b91c90742f0e9862b182d71360c34c04a"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_bench.png",
+        "version": "e8c538a6b0f760280d451f605f8776f3f2e6c283cad6161ecc0f3ac75b0537d6"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 36232,
+      "triangles": 648,
+      "materials": 4,
+      "animations": [],
+      "version": "26f8c966a14ffb6cb14d88d0d901fec95bad51d1b4805a9125f5902499f716b2",
+      "title": "Kit Book",
+      "id": "original/props/kit_book",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_book.glb",
+        "version": "26f8c966a14ffb6cb14d88d0d901fec95bad51d1b4805a9125f5902499f716b2"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_book.png",
+        "version": "186dbfe05c050be8f358dc82674386564575fa1860708bfcfe7158379a01aa89"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 7420,
+      "triangles": 80,
+      "materials": 1,
+      "animations": [],
+      "version": "a1c481ac12d25b8bf1ac75916a2e485405c7524352eb8809a56d9f964f36ee59",
+      "title": "Kit Cannonball",
+      "id": "original/props/kit_cannonball",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_cannonball.glb",
+        "version": "a1c481ac12d25b8bf1ac75916a2e485405c7524352eb8809a56d9f964f36ee59"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_cannonball.png",
+        "version": "3d86ac7955c3a700221558a4a759419f7c3a127ab2582f90d8b2c17052641608"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 106308,
+      "triangles": 1944,
+      "materials": 3,
+      "animations": [],
+      "version": "028c087d09acc750e137035caa32985318bd56f002aadd9b3a776b6f321735bf",
+      "title": "Kit Crate",
+      "id": "original/props/kit_crate",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_crate.glb",
+        "version": "028c087d09acc750e137035caa32985318bd56f002aadd9b3a776b6f321735bf"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_crate.png",
+        "version": "8adefa7c49a7753ce9ee1242f1ef889fce78ee9e19b5c1e440c7ffd346818b62"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 44856,
+      "triangles": 804,
+      "materials": 3,
+      "animations": [],
+      "version": "490e7e48e0c2eaeef2da5f53ab9be631bb85e6609315bbee466c63f14363a92c",
+      "title": "Kit Lantern",
+      "id": "original/props/kit_lantern",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_lantern.glb",
+        "version": "490e7e48e0c2eaeef2da5f53ab9be631bb85e6609315bbee466c63f14363a92c"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_lantern.png",
+        "version": "c6278325e7cd0d1bdf31ce11d3ecdef38ccadc356b2d49a743a89a3ebb2569a7"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 45640,
+      "triangles": 704,
+      "materials": 4,
+      "animations": [],
+      "version": "e196448af6ccdf0b92a70935ae4611dcf1c640b2a4fc37627bae34b5b2f7c6a4",
+      "title": "Kit Mug",
+      "id": "original/props/kit_mug",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_mug.glb",
+        "version": "e196448af6ccdf0b92a70935ae4611dcf1c640b2a4fc37627bae34b5b2f7c6a4"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_mug.png",
+        "version": "32e5fbf47444f0c1e98542f0c4298ccd3f853ec1fe3d90795c8b99968a3e3dca"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 52532,
+      "triangles": 836,
+      "materials": 4,
+      "animations": [],
+      "version": "baeb2fa060bae123666252f3225814350f7be726c1a655dd7d08914eacce3172",
+      "title": "Kit Open Barrel",
+      "id": "original/props/kit_open_barrel",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_open_barrel.glb",
+        "version": "baeb2fa060bae123666252f3225814350f7be726c1a655dd7d08914eacce3172"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_open_barrel.png",
+        "version": "080a06f18c833ca81c887218bc913ec883aa4c5b3ef5d0f222e5f7e3f127a7a2"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 90172,
+      "triangles": 1620,
+      "materials": 3,
+      "animations": [],
+      "version": "544609a16eaa953ad380f283d8286ce256742452680047d3f8f2c6a0ae6735f4",
+      "title": "Kit Open Crate",
+      "id": "original/props/kit_open_crate",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_open_crate.glb",
+        "version": "544609a16eaa953ad380f283d8286ce256742452680047d3f8f2c6a0ae6735f4"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_open_crate.png",
+        "version": "05f0e15c5d614ff3d7f2a884eab0cc0d4b762b8caeaad7b4a8f27bdc942d4f1d"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 24268,
+      "triangles": 432,
+      "materials": 2,
+      "animations": [],
+      "version": "4a49bff67c836c80f2cf17418e7306f5685a7b7c736d488d46dd37ef04f931b7",
+      "title": "Kit Parcel",
+      "id": "original/props/kit_parcel",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_parcel.glb",
+        "version": "4a49bff67c836c80f2cf17418e7306f5685a7b7c736d488d46dd37ef04f931b7"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_parcel.png",
+        "version": "7758b0280b236126ba1513ad9487f7fad07d1848c4b1643a1290ced33b95e182"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 12328,
+      "triangles": 142,
+      "materials": 3,
+      "animations": [],
+      "version": "cf28aa3d7993aef40496fb4c706bcc9877ee8c571d24204fc2354df31c2751e4",
+      "title": "Kit Pine",
+      "id": "original/props/kit_pine",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_pine.glb",
+        "version": "cf28aa3d7993aef40496fb4c706bcc9877ee8c571d24204fc2354df31c2751e4"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_pine.png",
+        "version": "a3d91a7f2d1057d0b2335a044e11b9388e27c5dbb8fa2e05db344de170003201"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 7012,
+      "triangles": 108,
+      "materials": 1,
+      "animations": [],
+      "version": "6f45ca8d6785b3912e014e8a236e21e52b9c97376a16d8ce44fab7b0021f623a",
+      "title": "Kit Roof Tile",
+      "id": "original/props/kit_roof_tile",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_roof_tile.glb",
+        "version": "6f45ca8d6785b3912e014e8a236e21e52b9c97376a16d8ce44fab7b0021f623a"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_roof_tile.png",
+        "version": "ce672f729394d35e65ddea43cc23f86463213bfe9c880236e4b4e86fc3fec3c4"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 33280,
+      "triangles": 320,
+      "materials": 3,
+      "animations": [],
+      "version": "397c6251efa9cd2e876e7896a699f94cecdb4d8dfa4f677939a6f0d811dd70ad",
+      "title": "Kit Shrub",
+      "id": "original/props/kit_shrub",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_shrub.glb",
+        "version": "397c6251efa9cd2e876e7896a699f94cecdb4d8dfa4f677939a6f0d811dd70ad"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_shrub.png",
+        "version": "5660f76609f5568a6a8b59e8f5357cd9977e97797b5ccf4dea53c1f17307b122"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 126200,
+      "triangles": 1913,
+      "materials": 2,
+      "animations": [],
+      "version": "5aa41b17d3390ef8bf2a3f4418dcc148f63994164197980cc4b762e5cc3578e1",
+      "title": "Kit Skull",
+      "id": "original/props/kit_skull",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_skull.glb",
+        "version": "5aa41b17d3390ef8bf2a3f4418dcc148f63994164197980cc4b762e5cc3578e1"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_skull.png",
+        "version": "c395cdfd250c945df5cbf413ee343100b167f1ae9e95f8465f0c32ab0310d1b8"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 18508,
+      "triangles": 322,
+      "materials": 3,
+      "animations": [],
+      "version": "f8de355f656c58cf1f2a64ac3c658fa227fe0102ee329da6be3087889dc730cf",
+      "title": "Kit Spear",
+      "id": "original/props/kit_spear",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_spear.glb",
+        "version": "f8de355f656c58cf1f2a64ac3c658fa227fe0102ee329da6be3087889dc730cf"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_spear.png",
+        "version": "8fbc460db04bdbc8f17ad762cee66616cb7d8e03ed895bbc1527798c257cf4d8"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 2240,
+      "triangles": 20,
+      "materials": 1,
+      "animations": [],
+      "version": "d291e286bcfecd8b29b56f049b0904ed5829a1e5ed2140d0ba8a32fe13c3f472",
+      "title": "Kit Spike",
+      "id": "original/props/kit_spike",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_spike.glb",
+        "version": "d291e286bcfecd8b29b56f049b0904ed5829a1e5ed2140d0ba8a32fe13c3f472"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_spike.png",
+        "version": "83224d9dc99a29f882cee7f0ce47d67b9370af698e07f792f1eb81b5cb18aed6"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 6976,
+      "triangles": 108,
+      "materials": 1,
+      "animations": [],
+      "version": "723dcd07e16553211e9a5590c1101b369371441210435594d5482354e323ec0c",
+      "title": "Kit Stone Block",
+      "id": "original/props/kit_stone_block",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_stone_block.glb",
+        "version": "723dcd07e16553211e9a5590c1101b369371441210435594d5482354e323ec0c"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_stone_block.png",
+        "version": "cb1e171e4021ddff601ec1c7817c377f9778fc7e198a06dd7c3e39884be1e90e"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 41276,
+      "triangles": 784,
+      "materials": 4,
+      "animations": [],
+      "version": "991d682bea6337b0c9579b7f8bf16ef13889f4b3d949f1fd0e1c4297b803862b",
+      "title": "Kit Target",
+      "id": "original/props/kit_target",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/kit_target.glb",
+        "version": "991d682bea6337b0c9579b7f8bf16ef13889f4b3d949f1fd0e1c4297b803862b"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/kit_target.png",
+        "version": "6296ed63e62901b068b0a4113d712c072d4f406b5c3a2b7918025365bfd9d98b"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 65068,
+      "triangles": 1064,
+      "materials": 4,
+      "animations": [],
+      "version": "08509c87f1b092eea4131b2a7b2b0b0b2d8395dfd9fc17634b95b871ae177564",
+      "title": "Shield",
+      "id": "original/props/shield",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/shield.glb",
+        "version": "08509c87f1b092eea4131b2a7b2b0b0b2d8395dfd9fc17634b95b871ae177564"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/shield.png",
+        "version": "7607a2021140a1e1b10189508ee16dbc1eb4d9ec41dee6aa10962c0cfbb56255"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 74652,
+      "triangles": 1118,
+      "materials": 6,
+      "animations": [],
+      "version": "463069697a45662a1cfae72b4eaa54040c6fb207fd6ec9a5af7abd1d15d46fba",
+      "title": "Staff",
+      "id": "original/props/staff",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/staff.glb",
+        "version": "463069697a45662a1cfae72b4eaa54040c6fb207fd6ec9a5af7abd1d15d46fba"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/staff.png",
+        "version": "05fef658bdfa2176a0db2a2d25d5c50f578c3fface7f0a396f8fab8560bf0d07"
+      },
+      "error": null,
+      "variant": "original"
+    },
+    {
+      "bytes": 41564,
+      "triangles": 718,
+      "materials": 4,
+      "animations": [],
+      "version": "5b0e9ad9a9521ef29bbf4b3425e8af3617fd9cec016012cbdf38511c2ede8822",
+      "title": "Sword",
+      "id": "original/props/sword",
+      "category": "props",
+      "model": {
+        "path": "exports/original/props/sword.glb",
+        "version": "5b0e9ad9a9521ef29bbf4b3425e8af3617fd9cec016012cbdf38511c2ede8822"
+      },
+      "source": null,
+      "reference": null,
+      "preview": null,
+      "thumbnail": {
+        "path": "exports/thumbnails/original/props/sword.png",
+        "version": "1e3fbd86484b328cd1c4896a330728972842ff116775e735b312bb90fd4d6472"
+      },
+      "error": null,
+      "variant": "original"
+    }
+  ],
+  "warnings": [],
+  "revision": "5c9e8bfe1d6a36bbfad66980d1498f55ce8c67653ee000679f5bcad378a2175b"
+}
